@@ -1,0 +1,31 @@
+{
+  "title": "Sample Quiz - Human Body Basics",
+  "subtitle": "Demo | How QuizForge works | 4 questions",
+  "questions": [
+    {
+      "text": "Which organ pumps blood through the body?",
+      "options": ["The liver", "The heart", "The lungs", "The kidneys"],
+      "correct": 1,
+      "explanation": "<strong>The heart is correct.</strong> It is a muscular pump that pushes blood through the circulation. The liver filters blood and makes proteins but doesn't pump it, the lungs add oxygen to blood, and the kidneys filter waste.",
+      "citation": "Demo"
+    },
+    {
+      "text": "How many chromosomes are in a typical human body (somatic) cell?",
+      "options": ["23", "46", "48", "92"],
+      "correct": 1,
+      "explanation": "<strong>46 is correct.</strong> A typical somatic cell has 23 pairs, so 46 chromosomes in total. 23 is the number in a single egg or sperm, and 92 would be a cell that has copied its DNA just before dividing."
+    },
+    {
+      "text": "What is the largest organ of the human body?",
+      "options": ["The liver", "The brain", "The skin", "The heart"],
+      "correct": 2,
+      "explanation": "<strong>The skin is correct.</strong> By surface area and weight, skin is the body's largest organ. The liver is the largest organ found inside the body, but it is smaller than the skin overall, and the brain and heart are smaller still."
+    },
+    {
+      "text": "What do red blood cells mainly carry?",
+      "options": ["Hormones", "Oxygen", "Digestive enzymes", "Antibodies"],
+      "correct": 1,
+      "explanation": "<strong>Oxygen is correct.</strong> Red blood cells carry oxygen from the lungs to the tissues, bound to hemoglobin. Hormones travel loose in plasma, digestive enzymes come from the gut and pancreas, and antibodies are made by white blood cells."
+    }
+  ]
+}
