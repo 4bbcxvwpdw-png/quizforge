@@ -10,15 +10,6 @@ QuizForge turns your own lecture notes into a polished multiple-choice quiz. You
 
 Each quiz you load stays in your library, and every attempt adds to its score history so you can see how you're doing over time.
 
-## Deploy it on GitHub Pages
-
-1. Put the `QuizForge/` folder in a GitHub repository.
-2. In the repo, go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, pick your branch, and set the folder to the repo root.
-4. Save. GitHub gives you a URL in a minute or two. The site's home page is `index.html`.
-
-If you keep QuizForge in a subfolder of a larger repo, point people at that subfolder's `index.html` instead.
-
 ## Where your data lives
 
 Everything runs in your browser. Quizzes and scores are saved to the browser's own storage (localStorage), and nothing is uploaded anywhere. That has two practical effects: your library is private to the device and browser you're using, and clearing your browser data will wipe it. Use the **Export** button on any quiz card to save a copy of its JSON that you can reload later or share.
