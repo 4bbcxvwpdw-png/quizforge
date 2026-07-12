@@ -29,6 +29,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
   --cscale:1;
   --accent-base:#1f5562;
+  --grain:.028;
 
   /* ── LIGHT THEME (default) ── */
   --paper:#f4f5f7; --surface:#ffffff;
@@ -55,6 +56,7 @@
 :root[data-accent="slate"]{--accent-base:#506087}
 /* ── DARK THEME ── */
 :root[data-theme="dark"]{
+  --grain:.05;
   --paper:#14161b; --surface:#1c1f26;
   --ink:#e6e9ef; --ink-2:#9aa3b1; --ink-3:#6a727f;
   --line:#2a2e37; --line-strong:#3a3f4a;
@@ -82,6 +84,17 @@ svg{display:block}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:none;box-shadow:var(--ring);border-radius:4px}
 button:active,.take:active{transform:translateY(1px)}
+
+/* ══ SPREZZATURA (paper grain · topbar keyline · text selection) ══ */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:2;
+  opacity:var(--grain);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size:160px 160px;
+}
+.topbar::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:linear-gradient(90deg,var(--accent),transparent 62%);pointer-events:none}
+::selection{background:color-mix(in srgb, var(--accent) 24%, transparent)}
 
 /* ══ TOP BAR (matches player topbar) ══ */
 .topbar{
@@ -144,17 +157,19 @@ button:active,.take:active{transform:translateY(1px)}
 /* ══ PAGE ══ */
 .wrap{max-width:1020px;margin:0 auto;padding:34px 30px 80px}
 .section{margin-top:38px}
-.section:first-child{margin-top:30px}
-.eyebrow{font-family:var(--font-read);font-size:1.15rem;font-weight:600;letter-spacing:-.01em;color:var(--ink);margin-bottom:4px}
-.eyebrow-sub{font-size:.9rem;color:var(--ink-2);margin-bottom:16px}
+.section:first-child{margin-top:46px}
+.eyebrow{font-family:var(--font-read);font-size:1.22rem;font-weight:600;letter-spacing:-.01em;color:var(--ink);margin-bottom:4px}
+.eyebrow-sub{font-size:.95rem;color:var(--ink-2);margin-bottom:16px}
 .eyebrow-sub b{color:var(--ink);font-weight:600}
+.mast{font-size:clamp(1.95rem, 1.1rem + 2.6vw, 3.05rem);font-weight:600;letter-spacing:-.018em;line-height:1.14;margin-bottom:10px;padding-bottom:2px}
+.mast-em{font-style:italic;color:var(--accent)}
 .section>.card{margin-top:14px}
 
 /* how it works (unboxed hairline row, sits on the paper) */
 .how{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0 24px;align-items:start;margin-top:8px}
 .how-sep{width:1px;align-self:stretch;background:var(--line)}
-.step-head{display:flex;align-items:baseline;gap:10px;margin-bottom:5px}
-.step-n{font-family:var(--font-mono);font-size:.82rem;font-weight:500;color:var(--ink-3)}
+.step-head{display:flex;align-items:baseline;gap:12px;margin-bottom:5px}
+.step-n{font-family:var(--font-read);font-style:italic;font-size:1.45rem;color:var(--ink-3);line-height:1}
 .step h3{font-size:.94rem;font-weight:600;color:var(--ink)}
 .step p{font-size:.86rem;color:var(--ink-2);line-height:1.5}
 
@@ -174,8 +189,12 @@ button:active,.take:active{transform:translateY(1px)}
 .prompt-box{
   font-family:var(--font-mono);font-size:.8rem;line-height:1.6;color:var(--ink);
   background:var(--paper);border:1px solid var(--line);border-radius:10px;
-  padding:16px 18px 34px;max-height:340px;overflow:auto;white-space:pre-wrap;word-break:break-word;
+  padding:16px 18px 34px;max-height:260px;overflow:auto;white-space:pre-wrap;word-break:break-word;
+  scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent;
 }
+.prompt-box::-webkit-scrollbar{width:8px}
+.prompt-box::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:8px}
+.prompt-box::-webkit-scrollbar-track{background:transparent}
 /* buttons */
 .btn{font-family:var(--font-ui);font-size:.86rem;font-weight:600;cursor:pointer;
   border-radius:7px;padding:9px 16px;border:1px solid transparent;transition:background .13s var(--ease),border-color .13s}
@@ -203,9 +222,13 @@ button:active,.take:active{transform:translateY(1px)}
 
 /* ══ LIBRARY CARDS (ported from the hub .lec component) ══ */
 .lec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:15px;margin-top:16px}
-.lec{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+.lec{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;
   transition:transform .14s var(--ease),border-color .14s,box-shadow .18s}
-.lec:hover{transform:translateY(-1px);border-color:var(--line-strong)}
+.lec::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);
+  transform:scaleY(0);transform-origin:top;transition:transform .22s var(--ease);z-index:1}
+.lec:hover::before{transform:scaleY(1)}
+.lec:hover{transform:translateY(-2px);border-color:var(--line-strong);box-shadow:0 10px 28px rgba(20,24,33,.09)}
+:root[data-theme="dark"] .lec:hover{box-shadow:0 10px 28px rgba(0,0,0,.38)}
 .lec.flash{border-color:var(--accent)}
 .lec-head{display:flex;align-items:flex-start;gap:13px;padding:15px 17px;border-bottom:1px solid var(--line)}
 .badge{flex:none;min-width:30px;height:30px;padding:0 8px;border-radius:8px;display:grid;place-items:center;
@@ -235,7 +258,8 @@ button:active,.take:active{transform:translateY(1px)}
   padding:8px 15px;border-radius:7px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;
   cursor:pointer;transition:background .12s}
 .take:hover{background:var(--accent)}
-.take svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.9}
+.take svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.9;transition:transform .15s var(--ease)}
+.take:hover svg{transform:translateX(2px)}
 .mini-btn{font-family:var(--font-ui);font-size:12.5px;font-weight:600;cursor:pointer;
   background:var(--surface);border:1px solid var(--line-strong);color:var(--ink);border-radius:7px;padding:7px 12px;
   transition:border-color .12s,background .12s}
@@ -281,6 +305,7 @@ button:active,.take:active{transform:translateY(1px)}
 @media (prefers-reduced-motion: reduce){
   *{transition:none !important;animation:none !important}
   .lec:hover{transform:none}
+  .lec:hover::before{transform:none}
 }
 </style>
 </head>
@@ -337,7 +362,7 @@ button:active,.take:active{transform:translateY(1px)}
   <!-- HOW IT WORKS -->
   <section class="section" aria-labelledby="how-h">
     <div id="hero-head">
-      <h2 class="eyebrow" id="how-h">Build a quiz from your own notes</h2>
+      <h2 class="eyebrow mast" id="how-h">Build a quiz from <em class="mast-em">your own notes</em></h2>
       <div class="eyebrow-sub">Turn any lecture into practice questions in three steps. Nothing leaves your browser.</div>
     </div>
     <div class="how">

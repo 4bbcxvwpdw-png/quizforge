@@ -13,6 +13,7 @@
   var t = L.getItem('quizTheme') || 'system';
   var r = t==='system' ? (matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light') : t;
   d.setAttribute('data-theme', r);
+  d.setAttribute('data-skin', L.getItem('quizSkin') || 'ledger');
 }catch(e){}})();
 </script>
 <script src="anime.min.js" defer></script>
@@ -30,6 +31,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
   --cscale:1;                 /* reading text scale (set by data-size) */
   --accent-base:#1f5562;      /* brand accent (set by data-accent) */
+  --grain:.028;               /* paper grain overlay opacity */
 
   /* ── LIGHT THEME (default) ── */
   --paper:#f4f5f7; --surface:#ffffff;
@@ -56,6 +58,7 @@
 /* (text size is applied as an inline --cscale value from the slider) */
 /* ── DARK THEME ── */
 :root[data-theme="dark"]{
+  --grain:.05;
   --paper:#14161b; --surface:#1c1f26;
   --ink:#e6e9ef; --ink-2:#9aa3b1; --ink-3:#6a727f;
   --line:#2a2e37; --line-strong:#3a3f4a;
@@ -71,6 +74,26 @@
   --accent-tint:color-mix(in srgb, var(--accent) 22%, var(--surface));
   --ring:0 0 0 3px color-mix(in srgb, var(--accent) 38%, transparent);
 }
+/* ── EXAMPLIFY SKIN VARIABLES ──
+   Placed after the dark block so the light Examplify palette wins even in dark mode
+   (the real exam always renders this light palette). Re-declares every var the dark
+   block overrides. */
+:root[data-skin="examsoft"]{
+  --paper:#f7f8f9; --surface:#ffffff;
+  --ink:#202124; --ink-2:#5f6672; --ink-3:#8a919c;
+  --line:#e3e6ea; --line-strong:#c9ced6;
+  --spine:#24303e;                       /* navy top bar */
+  --correct:#1a9a50; --correct-bg:#e6f6ec;   /* saturated so rings + reveals read on the light palette */
+  --wrong:#d43d24;   --wrong-bg:#fdeae5;
+  --flag:#f59e42;    --flag-bg:#fdf1e3;  /* Examplify orange */
+  --sh-menu:0 6px 20px rgba(20,24,33,.10);
+  --sh-modal:0 18px 50px rgba(20,24,33,.20);
+  --overlay:rgba(20,24,33,.42);
+  --accent:#2287d2; --accent-hover:#1b73b5;   /* Examplify blue */
+  --accent-tint:#e8f2fb;
+  --ring:0 0 0 3px rgba(34,135,210,.28);
+  --grain:0;
+}
 html{transition:none}
 body,.topbar,.toolbar,.sidebar,.main-content,.choice-row,.dropdown-menu,.explanation-box,.q-circle{
   transition:background-color .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease)}
@@ -83,6 +106,18 @@ body{
 }
 svg{display:block}
 :focus-visible{outline:none;box-shadow:var(--ring);border-radius:4px}
+
+/* ══ SPREZZATURA (paper grain · topbar keyline · text selection) ══ */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:2;
+  opacity:var(--grain);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size:160px 160px;
+}
+.topbar{position:relative}
+.topbar::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:linear-gradient(90deg,var(--accent),transparent 62%);pointer-events:none}
+::selection{background:color-mix(in srgb, var(--accent) 24%, transparent)}
 
 /* ══ TOP BAR ══ */
 .topbar{
@@ -107,11 +142,6 @@ svg{display:block}
 }
 .tb-btn:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.28)}
 .tb-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.6;opacity:.85}
-.tb-submit{
-  background:var(--accent);border:1px solid var(--accent);color:#fff;
-  font-weight:600;margin-left:4px;
-}
-.tb-submit:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
 
 /* ══ DROPDOWNS ══ */
 .dropdown{position:relative;display:flex;align-items:stretch}
@@ -119,7 +149,11 @@ svg{display:block}
   display:none;position:absolute;top:calc(100% + 8px);right:0;
   background:var(--surface);border:1px solid var(--line);border-radius:10px;
   min-width:218px;box-shadow:var(--sh-menu);z-index:200;overflow:hidden;padding:5px;
+  scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent;
 }
+.dropdown-menu::-webkit-scrollbar{width:8px}
+.dropdown-menu::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:8px}
+.dropdown-menu::-webkit-scrollbar-track{background:transparent}
 .dropdown-menu.open{display:block}
 .dropdown-item{
   width:100%;text-align:left;background:none;border:none;font-family:var(--font-ui);
@@ -178,10 +212,13 @@ svg{display:block}
 /* ══ SECONDARY TOOLBAR ══ */
 .toolbar{
   background:var(--surface);border-bottom:1px solid var(--line);height:50px;flex-shrink:0;
+  position:relative;
   display:flex;align-items:center;padding:0 8px 0 0;gap:0;
   overflow-x:auto;scrollbar-width:none;            /* never clip controls at narrow widths */
 }
 .toolbar::-webkit-scrollbar{display:none}
+#answer-progress{position:absolute;left:0;bottom:-1px;height:2px;background:var(--accent);width:0;
+  transition:width .35s var(--ease);z-index:5;pointer-events:none}
 .bar-btn{
   display:flex;align-items:center;gap:8px;padding:0 15px;height:100%;white-space:nowrap;
   font-family:var(--font-ui);font-size:.82rem;font-weight:500;color:var(--ink-2);
@@ -221,6 +258,11 @@ svg{display:block}
   content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
   background:var(--accent);margin-right:7px;vertical-align:middle;
 }
+@media (prefers-reduced-motion: no-preference){
+  .timer-display::before{animation:qtick 2.4s ease-in-out infinite}
+}
+@keyframes qtick{0%,100%{opacity:1}50%{opacity:.35}}
+.timer-display.done::before{animation:none;background:var(--ink-3)}
 .toolbar-right{margin-left:auto;display:flex;align-items:center;padding-right:8px}
 .kbd-hint{
   font-size:.72rem;color:var(--ink-2);font-family:var(--font-ui);
@@ -267,6 +309,7 @@ svg{display:block}
   position:relative;flex-shrink:0;transform:scale(1);
 }
 .q-circle:hover{border-color:var(--accent);color:var(--accent)}
+.q-circle:hover:not(.current){transform:scale(1.05)}
 .q-circle.answered{background:var(--ink);border-color:var(--ink);color:#fff}
 .q-circle.current{border-color:var(--accent);box-shadow:var(--ring);transform:scale(1.06)}
 .q-circle.answered.current{background:var(--ink)}
@@ -322,10 +365,12 @@ svg{display:block}
 .choice-row.selected .choice-action{color:var(--accent)}
 .eliminate-btn{
   background:none;border:none;cursor:pointer;color:var(--ink-3);padding:9px;border-radius:6px;
-  display:flex;align-items:center;justify-content:center;transition:color .12s,background .12s;
+  display:flex;align-items:center;justify-content:center;transition:color .12s,background .12s,opacity .12s;
 }
 .eliminate-btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.5}
 .eliminate-btn:hover{color:var(--ink);background:rgba(25,28,34,.05)}
+.choice-row:hover:not(.eliminated):not(.locked) .choice-letter-col{color:var(--accent)}
+@media(hover:hover){.eliminate-btn{opacity:.45}.choice-row:hover .eliminate-btn,.eliminate-btn:focus-visible{opacity:1}}
 
 /* Post-submit reveal */
 .choice-row.reveal-correct{background:var(--correct-bg);border-color:var(--correct);cursor:default;pointer-events:none}
@@ -340,7 +385,7 @@ svg{display:block}
 /* ══ EXPLANATION ══ */
 .explanation-box{
   display:none;margin-top:34px;max-width:760px;background:var(--paper);
-  border:1px solid var(--line);border-radius:12px;padding:22px 26px;
+  border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:22px 26px 22px 25px;
 }
 .explanation-box.visible{display:block}
 .exp-label{
@@ -398,10 +443,10 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
 .empty-state a:hover{background:var(--accent)}
 
 /* ══ QUIZ HUB BAR + TOAST ══ */
-#qhub-bar{position:fixed;left:12px;bottom:12px;z-index:99999;font:600 13px/1 var(--font-ui)}
-#qhub-bar a{background:var(--spine);color:#fff;padding:8px 13px;border-radius:8px;text-decoration:none;
-  font-weight:600;box-shadow:0 6px 20px rgba(20,24,33,.18);transition:background .14s;display:inline-block}
-#qhub-bar a:hover{background:var(--accent)}
+#qhub-bar{position:fixed;left:12px;bottom:70px;z-index:99999;font:600 13px/1 var(--font-ui)}  /* clear the exam footer */
+#qhub-bar a{background:var(--surface);color:var(--ink);border:1px solid var(--line-strong);padding:8px 13px;border-radius:8px;text-decoration:none;
+  font-weight:600;box-shadow:var(--sh-menu);transition:background .14s,border-color .14s,color .14s;display:inline-block}
+#qhub-bar a:hover{border-color:var(--accent);color:var(--accent)}
 #qhub-toast{position:fixed;right:16px;bottom:16px;z-index:99999;background:var(--correct);color:#fff;
   padding:10px 14px;border-radius:8px;font:600 13px/1.3 var(--font-ui);
   box-shadow:0 6px 20px rgba(20,24,33,.22);display:none}
@@ -421,10 +466,77 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
   .topbar-right{gap:5px}
   .tb-btn{padding:6px 10px;font-size:.76rem;gap:5px}
   .tb-btn svg{display:none}   /* phones: compact text-only chrome buttons, no cramped icons */
+  #ef-count{display:none}     /* phones: footer keeps just the two buttons */
 }
 @media (prefers-reduced-motion: reduce){
   *{transition:none !important;animation:none !important}
 }
+
+/* ══ EXAM FOOTER (bottom Previous/Next bar - shown in both skins) ══ */
+#exam-footer{display:flex;align-items:center;flex-shrink:0;height:56px;background:var(--surface);border-top:1px solid var(--line);padding:0 18px}
+#ef-count{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.ef-btns{margin-left:auto;display:flex;gap:10px}
+.ef-btn{min-width:110px;height:38px;border-radius:4px;font-family:var(--font-ui);font-size:.9rem;font-weight:600;cursor:pointer;
+  transition:background .12s var(--ease),border-color .12s var(--ease)}
+#ef-prev{background:var(--surface);border:1px solid var(--line-strong);color:var(--ink)}
+#ef-prev:hover:not(:disabled){border-color:var(--ink-3)}
+#ef-next{background:var(--spine);border:none;color:#fff}
+#ef-next:hover:not(:disabled){background:var(--accent)}
+#ef-next[data-mode="submit"]{background:var(--accent)}
+#ef-next[data-mode="submit"]:hover:not(:disabled){background:var(--accent-hover)}
+.ef-btn:disabled{opacity:.4;cursor:default}
+
+/* ════════════════════════════════════════════════════════════════════════
+   EXAMPLIFY SKIN - component overrides (all scoped to [data-skin="examsoft"])
+   Pure re-skin: no functional change, restores to Ledger when the attr is gone.
+   ════════════════════════════════════════════════════════════════════════ */
+[data-skin="examsoft"] body::after{content:none}
+[data-skin="examsoft"] .topbar::after{content:none}
+[data-skin="examsoft"] .tb-btn{text-transform:uppercase;font-size:.74rem;letter-spacing:.05em;border-color:transparent}
+[data-skin="examsoft"] #settings-dd .tb-btn{background:#1b2530;border-radius:0;height:54px;padding:0 18px;margin:0 -22px 0 0}
+[data-skin="examsoft"] .question-text{font-family:var(--font-ui);font-size:calc(1rem * var(--cscale))}
+[data-skin="examsoft"] .currently-selected{font-weight:700;color:var(--ink)}
+
+/* Choices as Examplify pills */
+[data-skin="examsoft"] .choice-row{border-radius:28px;background:#f1f3f4;border-color:transparent;min-height:52px}
+[data-skin="examsoft"] .choice-row:hover{background:#e9ecee;border-color:transparent}
+[data-skin="examsoft"] .choice-letter-col{border-right:none;font-family:var(--font-ui);font-weight:700;color:var(--ink)}
+[data-skin="examsoft"] .choice-row.selected{background:#fff;border:2px solid var(--accent)}
+[data-skin="examsoft"] .choice-row.selected .choice-letter-col{border-right:none}
+/* post-submit reveal keeps its green/red border + tint on the skin pills */
+[data-skin="examsoft"] .choice-row.reveal-correct{background:var(--correct-bg);border:2px solid var(--correct)}
+[data-skin="examsoft"] .choice-row.reveal-wrong-pick{background:var(--wrong-bg);border:2px solid var(--wrong)}
+
+/* Left rail like Examplify */
+[data-skin="examsoft"] .sidebar{background:var(--surface)}
+[data-skin="examsoft"] .q-circle{border-radius:50%;border-color:transparent;background:transparent;color:var(--ink-2);font-family:var(--font-ui)}
+[data-skin="examsoft"] .q-circle:hover{color:var(--accent)}
+[data-skin="examsoft"] .q-circle.answered{background:var(--accent);border-color:var(--accent);color:#fff}
+[data-skin="examsoft"] .q-circle.current{background:var(--surface);border:2px solid var(--accent);color:var(--accent);box-shadow:none}
+[data-skin="examsoft"] .q-circle.answered.current{background:var(--accent);color:#fff}
+/* Post-submit: right/wrong shown as a colored ring around the number (more obvious + accessible).
+   Higher specificity + later position than the plain .q-circle override above, so these win. */
+[data-skin="examsoft"] .q-circle.got-correct{background:transparent;border:2.5px solid var(--correct);color:var(--correct);font-weight:700}
+[data-skin="examsoft"] .q-circle.got-wrong{background:transparent;border:2.5px solid var(--wrong);color:var(--wrong);font-weight:700}
+[data-skin="examsoft"] .q-circle.got-correct.current{box-shadow:0 0 0 3px rgba(26,154,80,.30)}
+[data-skin="examsoft"] .q-circle.got-wrong.current{box-shadow:0 0 0 3px rgba(212,61,36,.30)}
+
+/* Flag button as Examplify pill */
+[data-skin="examsoft"] #flag-btn{align-self:center;height:30px;border:1px solid var(--line-strong);background:#eceff1;border-radius:999px;padding:0 14px;margin:0 10px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);border-right:1px solid var(--line-strong)}
+[data-skin="examsoft"] #flag-btn svg{display:none}
+[data-skin="examsoft"] #flag-btn.flagged{background:var(--flag);border-color:var(--flag);color:#fff}
+
+[data-skin="examsoft"] #answer-progress{display:none}
+[data-skin="examsoft"] .kbd-hint{display:none}
+
+/* Bottom Previous/Next bar (layout comes from the base rules; skin recolors) */
+[data-skin="examsoft"] #ef-count{font-family:var(--font-ui);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+[data-skin="examsoft"] #ef-prev{background:var(--spine);border:none;color:#fff}
+[data-skin="examsoft"] #ef-next{background:var(--accent);border:none;color:#fff}
+[data-skin="examsoft"] #ef-next:hover:not(:disabled){background:var(--accent-hover)}
+
+/* Eliminate eyes are always visible in Examplify (after the hover-media rule) */
+[data-skin="examsoft"] .eliminate-btn{opacity:1}
 </style>
 </head>
 <body>
@@ -440,13 +552,13 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
     <div class="dropdown" id="exam-controls-dd">
       <button class="tb-btn" onclick="toggleDropdown('exam-controls-dd')">
         <svg viewBox="0 0 20 20"><path d="M4 5h12M4 10h12M4 15h8"/></svg>
-        Review
+        <span id="review-label">Review</span>
         <svg viewBox="0 0 20 20" style="width:12px;height:12px"><path d="M5 8l5 5 5-5"/></svg>
       </button>
       <div class="dropdown-menu" id="exam-controls-dd-menu">
         <button class="dropdown-item" onclick="openEndModal()">
           <svg viewBox="0 0 20 20"><path d="M5 3h7l3 3v11H5z"/><path d="M12 3v3h3"/><path d="M7.5 11l1.6 1.6 3-3.4"/></svg>
-          End &amp; submit exam
+          <span id="end-exam-label">End &amp; submit exam</span>
         </button>
         <div class="dropdown-divider"></div>
         <button class="dropdown-item" onclick="viewFlagged()">
@@ -462,9 +574,16 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
     <div class="dropdown" id="settings-dd">
       <button class="tb-btn" onclick="toggleDropdown('settings-dd')">
         <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="2.6"/><path d="M10 1.8v2.1M10 16.1v2.1M3.2 3.2l1.5 1.5M15.3 15.3l1.5 1.5M1.8 10h2.1M16.1 10h2.1M3.2 16.8l1.5-1.5M15.3 4.7l1.5-1.5"/></svg>
-        Settings
+        <span id="settings-label">Settings</span>
       </button>
       <div class="dropdown-menu settings-menu" id="settings-dd-menu">
+        <div class="set-group">
+          <div class="set-label">Exam skin</div>
+          <div class="seg" id="seg-skin">
+            <button class="seg-btn" data-skin-val="ledger"   onclick="setSkin('ledger')">Ledger</button>
+            <button class="seg-btn" data-skin-val="examsoft" onclick="setSkin('examsoft')">Examplify</button>
+          </div>
+        </div>
         <div class="set-group">
           <div class="set-label">Appearance</div>
           <div class="seg" id="seg-theme">
@@ -494,7 +613,6 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
         </div>
       </div>
     </div>
-    <button class="tb-btn tb-submit" onclick="openEndModal()">Submit quiz</button>
   </div>
 </div>
 
@@ -533,7 +651,7 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
 
   <button class="bar-btn flag-btn" id="flag-btn" onclick="toggleFlag()">
     <svg viewBox="0 0 20 20"><path d="M5 3v14"/><path d="M5 3h9l-1.6 3L14 9H5"/></svg>
-    Flag
+    <span id="flag-label">Flag</span>
   </button>
 
   <div class="tool-group">
@@ -556,6 +674,7 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
   <div class="toolbar-right">
     <span class="kbd-hint"><span><kbd>1</kbd>-<kbd>5</kbd> answer</span><span><kbd>←</kbd><kbd>→</kbd> move</span><span><kbd>F</kbd> flag</span></span>
   </div>
+  <div id="answer-progress" aria-hidden="true"></div>
 </div>
 
 <!-- SCORE BANNER -->
@@ -591,6 +710,15 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
     </div>
   </div>
 
+</div>
+
+<!-- EXAM FOOTER (both skins; Next doubles as Submit on the last question) -->
+<div id="exam-footer" aria-hidden="false">
+  <span id="ef-count"></span>
+  <div class="ef-btns">
+    <button class="ef-btn" id="ef-prev" onclick="navigate(-1)">Previous</button>
+    <button class="ef-btn" id="ef-next" data-mode="next">Next</button>
+  </div>
 </div>
 
 
@@ -709,11 +837,31 @@ function render() {
 
   const fb = document.getElementById('flag-btn');
   fb.className = 'bar-btn flag-btn' + (flagged[current] ? ' flagged' : '');
+  const skin = skinOn();
+  const flagLabel = document.getElementById('flag-label');
+  if (flagLabel) flagLabel.textContent = skin ? (flagged[current] ? 'Unflag Question' : 'Flag Question') : 'Flag';
 
   // Currently selected label
   const sel = selected[current];
-  document.getElementById('currently-selected').textContent =
-    sel !== null ? `Selected answer · ${letters[sel]}` : 'No answer selected';
+  document.getElementById('currently-selected').textContent = skin
+    ? (sel !== null ? `Currently Selected : ${letters[sel]}` : 'No Answer Selected')
+    : (sel !== null ? `Selected answer · ${letters[sel]}` : 'No answer selected');
+
+  // Bottom bar (count + Previous/Next state mirror the arrow logic).
+  // On the last unsubmitted question, Next becomes the submit action.
+  const efCount = document.getElementById('ef-count');
+  if (efCount) efCount.textContent = questions.length
+    ? `${current + 1} OF ${questions.length} QUESTIONS` : '';
+  const efPrev = document.getElementById('ef-prev');
+  const efNext = document.getElementById('ef-next');
+  const onLast = current === questions.length - 1;
+  if (efPrev) efPrev.disabled = current === 0;
+  if (efNext) {
+    const submitMode = onLast && !submitted;
+    efNext.dataset.mode = submitMode ? 'submit' : 'next';
+    efNext.textContent = submitMode ? (skin ? 'Submit Exam' : 'Submit quiz') : 'Next';
+    efNext.disabled = onLast && submitted;
+  }
 
   // Question text
   document.getElementById('question-text').innerHTML = q.text;
@@ -810,6 +958,16 @@ function render() {
 
   updateSidebar();
   buildQNavMenu();
+  updateProgress();
+}
+
+// ── ANSWERED-PROGRESS HAIRLINE ────────────────────────────────────────────
+function updateProgress() {
+  const bar = document.getElementById('answer-progress');
+  if (!bar) return;
+  if (submitted || !questions.length) { bar.style.display = 'none'; return; }
+  const answered = selected.filter(s => s !== null).length;
+  bar.style.width = (answered / questions.length * 100) + '%';
 }
 
 // ── SIDEBAR ──────────────────────────────────────────────────────────────
@@ -828,7 +986,7 @@ function buildTiles() {
       const prev = current;
       current = qi;
       render();
-      if (qi !== prev) animateQuestionIn();
+      if (qi !== prev) animateQuestionIn(Math.sign(qi - prev));
     });
     container.appendChild(c);
     return c;
@@ -874,17 +1032,23 @@ function navigate(dir) {
   const prev = current;
   current = Math.max(0, Math.min(questions.length - 1, current + dir));
   render();
-  if (current !== prev) animateQuestionIn();
+  if (current !== prev) animateQuestionIn(dir);
 }
 
+// Footer Next routes on data-mode: 'next' navigates, 'submit' opens the end modal.
+document.getElementById('ef-next').addEventListener('click', function () {
+  if (this.dataset.mode === 'submit') openEndModal(); else navigate(1);
+});
+
 // ── QUESTION-CHANGE MOTION (called only from navigation call sites) ──────
-function animateQuestionIn() {
+function animateQuestionIn(dir) {
   if (!motionOK()) return;
   const els = [document.getElementById('question-text'),
                ...document.querySelectorAll('#choices .choice-row')].filter(Boolean);
   if (!els.length) return;
-  anime({ targets: els, translateY: [8, 0], opacity: [0, 1], duration: 160, easing: EASE_FN,
-          complete: () => els.forEach(el => { el.style.opacity = ''; el.style.transform = ''; }) });
+  const slide = dir ? { translateX: [dir * 14, 0] } : { translateY: [8, 0] };
+  anime(Object.assign({ targets: els, opacity: [0, 1], duration: 170, easing: EASE_FN,
+          complete: () => els.forEach(el => { el.style.opacity = ''; el.style.transform = ''; }) }, slide));
   unstickAfter(els, 1000);
 }
 
@@ -895,6 +1059,11 @@ function popSelectionIcon() {
   if (!ic) return;
   anime({ targets: ic, scale: [.6, 1], duration: 170, easing: EASE_FN,
           complete: () => { ic.style.transform = ''; } });
+  const path = ic.querySelector('path');
+  if (path) {
+    anime({ targets: path, strokeDashoffset: [anime.setDashoffset, 0], duration: 220, easing: EASE_FN,
+            complete: () => { path.style.strokeDasharray = ''; path.style.strokeDashoffset = ''; } });
+  }
 }
 
 // ── FLAG ───────────────────────────────────────────────────────────────
@@ -954,7 +1123,7 @@ function buildQNavMenu() {
       current = qi;
       closeDropdown('q-nav-dd');
       render();
-      if (qi !== prev) animateQuestionIn();
+      if (qi !== prev) animateQuestionIn(Math.sign(qi - prev));
     });
     menu.appendChild(item);
   });
@@ -964,8 +1133,24 @@ function toggleDropdown(id) {
   document.querySelectorAll('.dropdown-menu').forEach(m => {
     if (m.id !== id + '-menu') m.classList.remove('open');
   });
-  document.getElementById(id + '-menu').classList.toggle('open');
+  const menu = document.getElementById(id + '-menu');
+  // Toolbar menus escape the toolbar's overflow-x:auto clipping by going fixed,
+  // repositioned from the trigger's rect on every open.
+  if (!menu.classList.contains('open') && (id === 'filter-dd' || id === 'q-nav-dd')) {
+    const btn = document.querySelector('#' + id + ' > button');
+    if (btn) {
+      const rect = btn.getBoundingClientRect();
+      menu.style.position = 'fixed';
+      menu.style.top = (rect.bottom + 8) + 'px';
+      menu.style.left = rect.left + 'px';
+      menu.style.right = 'auto';
+    }
+  }
+  menu.classList.toggle('open');
 }
+window.addEventListener('resize', () => {
+  document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
+});
 function closeDropdown(id) {
   document.getElementById(id + '-menu').classList.remove('open');
 }
@@ -977,6 +1162,7 @@ document.addEventListener('click', (e) => {
 
 // ── END MODAL ───────────────────────────────────────────────────────────
 function openEndModal() {
+  if (submitted) return;
   closeDropdown('exam-controls-dd');
   const answeredCount   = selected.filter(s => s !== null).length;
   const unansweredCount = questions.length - answeredCount;
@@ -1001,7 +1187,7 @@ function viewFlagged() {
     const prev = current;
     current = i;
     render();
-    if (i !== prev) animateQuestionIn();
+    if (i !== prev) animateQuestionIn(Math.sign(i - prev));
   }
 }
 function statusCounts() {
@@ -1024,6 +1210,7 @@ function closeStatusModal() { document.getElementById('status-overlay').classLis
 
 // ── SUBMIT ──────────────────────────────────────────────────────────────
 function submitExam() {
+  if (submitted) { closeEndModal(); return; }
   closeEndModal();
   submitted = true;
 
@@ -1031,13 +1218,33 @@ function submitExam() {
   questions.forEach((q, qi) => { if (selected[qi] === q.correct) correct++; });
   const pct  = Math.round((correct / questions.length) * 100);
   const pass = pct >= 70;
+  const total = questions.length;
 
   const banner = document.getElementById('score-banner');
   banner.classList.add('visible');
   const tally = document.getElementById('score-tally');
-  tally.textContent = `${correct} / ${questions.length} correct`;
   tally.className = `score-tally ${pass ? 'pass' : 'fail'}`;
-  document.getElementById('score-pct-label').textContent = `(${pct}%)`;
+  const pctLabel = document.getElementById('score-pct-label');
+  pctLabel.textContent = `(${pct}%)`;
+
+  if (motionOK()) {
+    // Count the tally up to its final value, then fade the percentage in.
+    const counter = { v: 0 };
+    tally.textContent = `0 / ${total} correct`;
+    anime({ targets: counter, v: correct, round: 1, duration: 650, easing: EASE_FN,
+            update: () => { tally.textContent = counter.v + ' / ' + total + ' correct'; },
+            complete: () => { tally.textContent = correct + ' / ' + total + ' correct'; } });
+    pctLabel.style.opacity = '0';
+    anime({ targets: pctLabel, opacity: [0, 1], duration: 250, delay: 500, easing: EASE_FN,
+            complete: () => { pctLabel.style.opacity = ''; } });
+    /* force-reveal guards: if rAF stalls (backgrounded tab), still land on the final values */
+    setTimeout(() => { tally.textContent = correct + ' / ' + total + ' correct'; }, 900);
+    unstickAfter([pctLabel], 1000);
+  } else {
+    tally.textContent = `${correct} / ${total} correct`;
+  }
+
+  timerEl.classList.add('done');
 
   const firstWrong = questions.findIndex((q, qi) => selected[qi] !== q.correct);
   if (firstWrong !== -1) current = firstWrong;
@@ -1142,9 +1349,11 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ── SETTINGS (theme / accent / text size) ────────────────────────────────
-const THEME_KEY = 'quizTheme', ACCENT_KEY = 'quizAccent', SCALE_KEY = 'quizTextScale';
+const THEME_KEY = 'quizTheme', ACCENT_KEY = 'quizAccent', SCALE_KEY = 'quizTextScale', SKIN_KEY = 'quizSkin';
 const _ls = { get(k, d){ try { return localStorage.getItem(k) || d; } catch(e){ return d; } },
               set(k, v){ try { localStorage.setItem(k, v); } catch(e){} } };
+
+function skinOn(){ return _ls.get(SKIN_KEY, 'ledger') === 'examsoft'; }
 
 function applySettings() {
   const d = document.documentElement;
@@ -1154,21 +1363,36 @@ function applySettings() {
     : theme;
   d.setAttribute('data-theme', resolved);
   d.setAttribute('data-accent', _ls.get(ACCENT_KEY, 'petrol'));
+  d.setAttribute('data-skin', skinOn() ? 'examsoft' : 'ledger');
   d.style.setProperty('--cscale', parseFloat(_ls.get(SCALE_KEY, '1')) || 1);
+  applySkinChrome();
   syncSettingsUI();
 }
 function syncSettingsUI() {
   const theme = _ls.get(THEME_KEY, 'system'),
         accent = _ls.get(ACCENT_KEY, 'petrol'),
-        scale = parseFloat(_ls.get(SCALE_KEY, '1')) || 1;
+        scale = parseFloat(_ls.get(SCALE_KEY, '1')) || 1,
+        skin = _ls.get(SKIN_KEY, 'ledger');
   document.querySelectorAll('#seg-theme .seg-btn').forEach(b => b.classList.toggle('active', b.dataset.themeVal === theme));
+  document.querySelectorAll('#seg-skin .seg-btn').forEach(b => b.classList.toggle('active', b.dataset.skinVal === skin));
   document.querySelectorAll('#sw-accent .sw').forEach(b => b.classList.toggle('active', b.dataset.accentVal === accent));
   const slider = document.getElementById('size-slider'); if (slider) slider.value = scale;
   const ro = document.getElementById('size-readout'); if (ro) ro.textContent = Math.round(scale * 100) + '%';
 }
+// Relabel chrome text for the current skin. Every branch restores the Ledger string,
+// so switching back is a clean round-trip.
+function applySkinChrome() {
+  const on = skinOn();
+  const set = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
+  const brand = document.querySelector('.brand-mark'); if (brand) brand.textContent = on ? 'Examplify' : 'Quizbook';
+  set('review-label',   on ? 'Exam Controls' : 'Review');
+  set('settings-label', on ? 'Tool Kit'      : 'Settings');
+  set('end-exam-label', on ? 'Submit Exam'   : 'End & submit exam');
+}
 function setTheme(t)  { _ls.set(THEME_KEY, t);  applySettings(); }
 function setAccent(a) { _ls.set(ACCENT_KEY, a); applySettings(); }
 function setScale(v)  { _ls.set(SCALE_KEY, String(v)); applySettings(); }
+function setSkin(v)   { _ls.set(SKIN_KEY, v); applySettings(); if (questions.length) render(); }
 matchMedia('(prefers-color-scheme:dark)').addEventListener('change', () => {
   if (_ls.get(THEME_KEY, 'system') === 'system') applySettings();
 });
@@ -1177,7 +1401,7 @@ matchMedia('(prefers-color-scheme:dark)').addEventListener('change', () => {
 function showEmptyState() {
   const tb = document.querySelector('.toolbar'); if (tb) tb.style.display = 'none';
   const ec = document.getElementById('exam-controls-dd'); if (ec) ec.style.display = 'none';
-  const sub = document.querySelector('.tb-submit'); if (sub) sub.style.display = 'none';
+  const ef = document.getElementById('exam-footer'); if (ef) ef.style.display = 'none';
   const bl = document.getElementById('body-layout');
   bl.innerHTML =
     '<div class="empty-state">' +
