@@ -7,7 +7,8 @@
 <script>
 /* Apply saved theme/accent/size before first paint (no flash of the wrong theme). */
 (function(){try{var d=document.documentElement,L=window.localStorage;
-  d.setAttribute('data-accent', L.getItem('quizAccent') || 'petrol');
+  var a=L.getItem('quizAccent')||'examplify'; if(a==='petrol') a='examplify';
+  d.setAttribute('data-accent', a);
   var sc = parseFloat(L.getItem('quizTextScale') || '1') || 1;
   d.style.setProperty('--cscale', sc);
   var t = L.getItem('quizTheme') || 'system';
@@ -23,24 +24,24 @@
    System fonts only. Fully self-contained (inline CSS/JS, no network).
    ════════════════════════════════════════════════════════════════════════ */
 :root{
-  --font-read:Charter,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  /* ── EXAMPLIFY THEME: flat, light, credible ── */
+  --font-read:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   --font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   --font-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   --ease:cubic-bezier(.22,1,.36,1);
   --cscale:1;
-  --accent-base:#1f5562;
-  --grain:.028;
+  --accent-base:#1f6db5;
 
-  /* ── LIGHT THEME (default) ── */
-  --paper:#f4f5f7; --surface:#ffffff;
-  --ink:#191c22; --ink-2:#565d68; --ink-3:#8b929c;
-  --line:#e3e6ea; --line-strong:#cdd2d9;
-  --spine:#16181d;
-  --correct:#2f7d5b; --correct-bg:#edf5f0;
-  --wrong:#b0432f;   --wrong-bg:#fbede9;
+  /* ── LIGHT (Examplify default) ── */
+  --paper:#eef1f4; --surface:#ffffff;
+  --ink:#1e2430; --ink-2:#5a6472; --ink-3:#8f98a5;
+  --line:#dde2e8; --line-strong:#c3cad3;
+  --spine:#1c2e4a;
+  --correct:#2e7d4f; --correct-bg:#e9f4ee;
+  --wrong:#b3402e;   --wrong-bg:#fbece8;
   --flag:#b07d22;    --flag-bg:#fbf4e6;
   /* aliases used by the ported hub-card components */
-  --good:#2f7d5b; --good-bg:#edf5f0; --bad:#b0432f; --bad-bg:#fbede9; --warn:#b07d22;
+  --good:#2e7d4f; --good-bg:#e9f4ee; --bad:#b3402e; --bad-bg:#fbece8; --warn:#b07d22;
   --sh-menu:0 6px 20px rgba(20,24,33,.10);
   --sh-modal:0 18px 50px rgba(20,24,33,.20);
   --overlay:rgba(20,24,33,.42);
@@ -50,13 +51,13 @@
   --ring:0 0 0 3px color-mix(in srgb, var(--accent-base) 30%, transparent);
 }
 /* ── ACCENT CHOICES ── */
+:root[data-accent="examplify"]{--accent-base:#1f6db5}
 :root[data-accent="ocean"]{--accent-base:#1f6f8b}
 :root[data-accent="indigo"]{--accent-base:#4f4bd0}
 :root[data-accent="violet"]{--accent-base:#7350c9}
 :root[data-accent="slate"]{--accent-base:#506087}
 /* ── DARK THEME ── */
 :root[data-theme="dark"]{
-  --grain:.05;
   --paper:#14161b; --surface:#1c1f26;
   --ink:#e6e9ef; --ink-2:#9aa3b1; --ink-3:#6a727f;
   --line:#2a2e37; --line-strong:#3a3f4a;
@@ -85,13 +86,7 @@ a{color:inherit;text-decoration:none}
 :focus-visible{outline:none;box-shadow:var(--ring);border-radius:4px}
 button:active,.take:active{transform:translateY(1px)}
 
-/* ══ SPREZZATURA (paper grain · topbar keyline · text selection) ══ */
-body::after{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:2;
-  opacity:var(--grain);
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  background-size:160px 160px;
-}
+/* ══ TOPBAR KEYLINE + TEXT SELECTION ══ */
 .topbar::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
   background:linear-gradient(90deg,var(--accent),transparent 62%);pointer-events:none}
 ::selection{background:color-mix(in srgb, var(--accent) 24%, transparent)}
@@ -155,35 +150,19 @@ body::after{
 .size-slider:focus-visible{box-shadow:var(--ring)}
 
 /* ══ PAGE ══ */
-.wrap{max-width:1020px;margin:0 auto;padding:34px 30px 80px}
-.section{margin-top:38px}
-.section:first-child{margin-top:46px}
-.eyebrow{font-family:var(--font-read);font-size:1.22rem;font-weight:600;letter-spacing:-.01em;color:var(--ink);margin-bottom:4px}
-.eyebrow-sub{font-size:.95rem;color:var(--ink-2);margin-bottom:16px}
-.eyebrow-sub b{color:var(--ink);font-weight:600}
-.mast{font-size:clamp(1.95rem, 1.1rem + 2.6vw, 3.05rem);font-weight:600;letter-spacing:-.018em;line-height:1.14;margin-bottom:10px;padding-bottom:2px}
-.mast-em{font-style:italic;color:var(--accent)}
-.section>.card{margin-top:14px}
+.wrap{max-width:1440px;margin:0 auto;padding:0 30px 80px}
 
-/* question-count slider (sits directly on the paper, like the old sub line) */
-.qcount-row{display:flex;align-items:center;gap:14px;margin-bottom:16px;flex-wrap:wrap}
-.qcount-slider{max-width:240px}
-.qcount-readout{font-family:var(--font-mono);font-size:.85rem;color:var(--ink-2);font-variant-numeric:tabular-nums;min-width:9ch}
+/* question-count slider */
+.qcount-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.qcount-slider{max-width:180px}
+.qcount-readout{font-family:var(--font-mono);font-size:.82rem;color:var(--ink-2);font-variant-numeric:tabular-nums;min-width:9ch}
 .qcount-readout b{color:var(--ink);font-weight:600}
-
-/* how it works (unboxed hairline row, sits on the paper) */
-.how{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0 24px;align-items:start;margin-top:8px}
-.how-sep{width:1px;align-self:stretch;background:var(--line)}
-.step-head{display:flex;align-items:baseline;gap:12px;margin-bottom:5px}
-.step-n{font-family:var(--font-read);font-style:italic;font-size:1.45rem;color:var(--ink-3);line-height:1}
-.step h3{font-size:.94rem;font-weight:600;color:var(--ink)}
-.step p{font-size:.86rem;color:var(--ink-2);line-height:1.5}
 
 /* pre-animation state: only ever added by JS right before animating in */
 .pre-anim{opacity:0}
 
 /* cards */
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px 24px}
 #sec-prompt .card{padding:12px}  /* the prompt card hugs its block */
 .prompt-wrap{position:relative}
 .prompt-wrap .copy-btn{position:absolute;top:12px;right:18px;z-index:1}  /* right inset clears the scrollbar */
@@ -228,7 +207,7 @@ body::after{
 
 /* ══ LIBRARY CARDS (ported from the hub .lec component) ══ */
 .lec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:15px;margin-top:16px}
-.lec{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+.lec{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;
   transition:transform .14s var(--ease),border-color .14s,box-shadow .18s}
 .lec::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);
   transform:scaleY(0);transform-origin:top;transition:transform .22s var(--ease);z-index:1}
@@ -259,27 +238,29 @@ body::after{
 .p-last{outline:2px solid currentColor;outline-offset:1px}
 .best{font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.4px}
 .noatt{font-size:12px;color:var(--ink-3);font-style:italic;font-family:var(--font-read)}
-.actions-row{gap:8px}
+/* Four buttons have to survive a 3-column card, so this row runs tighter than
+   the score row above it and keeps its own padding. */
+.actions-row{gap:6px;padding-left:7px;padding-right:7px}
 .take{flex:none;font-weight:600;font-size:13px;color:#fff;background:var(--spine);
   padding:8px 15px;border-radius:7px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;
   cursor:pointer;transition:background .12s}
 .take:hover{background:var(--accent)}
 .take svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.9;transition:transform .15s var(--ease)}
 .take:hover svg{transform:translateX(2px)}
-.mini-btn{font-family:var(--font-ui);font-size:12.5px;font-weight:600;cursor:pointer;
-  background:var(--surface);border:1px solid var(--line-strong);color:var(--ink);border-radius:7px;padding:7px 12px;
+.mini-btn{font-family:var(--font-ui);font-size:12.5px;font-weight:600;cursor:pointer;white-space:nowrap;
+  background:var(--surface);border:1px solid var(--line-strong);color:var(--ink);border-radius:7px;padding:7px 10px;
   transition:border-color .12s,background .12s}
 .mini-btn:hover{border-color:var(--ink-3)}
 .mini-btn.danger{color:var(--ink-3);background:transparent;border:1px solid var(--line)}
 .mini-btn.danger:hover{color:var(--bad);background:var(--bad-bg);border-color:var(--line)}
 .spacer{margin-left:auto}
 .empty{text-align:center;color:var(--ink-3);padding:52px 20px;font-size:15px;font-family:var(--font-read);
-  border:1px dashed var(--line-strong);border-radius:14px;margin-top:16px}
+  border:1px dashed var(--line-strong);border-radius:10px;margin-top:16px}
 
 /* ══ DELETE MODAL (matches player .overlay/.modal) ══ */
 .overlay{display:none;position:fixed;inset:0;background:var(--overlay);z-index:300;align-items:center;justify-content:center}
 .overlay.open{display:flex}
-.modal{background:var(--surface);border-radius:14px;padding:32px 34px;max-width:440px;width:90%;box-shadow:var(--sh-modal)}
+.modal{background:var(--surface);border-radius:10px;padding:32px 34px;max-width:440px;width:90%;box-shadow:var(--sh-modal)}
 .modal h2{font-size:1.2rem;font-weight:650;color:var(--ink);margin-bottom:9px;letter-spacing:-.01em}
 .modal p{font-size:.9rem;color:var(--ink-2);line-height:1.6}
 .modal p b{color:var(--ink)}
@@ -291,27 +272,130 @@ body::after{
 
 /* ══ FOOTER ══ */
 .footer{
-  max-width:1020px;margin:72px auto 0;padding:20px 30px 30px;
+  max-width:1440px;margin:72px auto 0;padding:20px 30px 30px;
   border-top:1px solid var(--line);text-align:center;
   font-size:.78rem;color:var(--ink-3);
 }
 
-@media(max-width:720px){
-  .how{grid-template-columns:1fr}
-  .how-sep{width:auto;height:1px;align-self:auto;margin:16px 0}
-  .wrap{padding:26px 18px 40px}
+/* ════════════════════════════════════════
+   TWO-COLUMN WORKBENCH LAYOUT
+   ════════════════════════════════════════ */
+.two-col-layout{
+  display:grid;
+  grid-template-columns:1fr 330px;
+  gap:28px;
+  align-items:start;
+  padding-top:36px;
+}
+
+/* ── Library column ── */
+.lib-col-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.lib-title{font-size:1.5rem;font-weight:600;letter-spacing:-.015em;line-height:1.15;color:var(--ink)}
+.lib-sub{font-size:.87rem;color:var(--ink-2);margin-top:3px}
+.lib-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:14px}
+
+/* ── Folder sections ── */
+.folder-section{margin-bottom:24px}
+.folder-hdr{display:flex;align-items:center;gap:8px;margin-bottom:10px;position:relative}
+.folder-chevron{background:none;border:none;cursor:pointer;padding:4px;border-radius:5px;
+  display:flex;align-items:center;color:var(--ink-2);transition:color .12s}
+.folder-chevron:hover{color:var(--ink)}
+.folder-chevron svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;
+  transition:transform .18s var(--ease)}
+.folder-chevron.open svg{transform:rotate(90deg)}
+.folder-name{font-size:.94rem;font-weight:600;color:var(--ink);flex:1;min-width:0;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.folder-count{font-family:var(--font-mono);font-size:.72rem;font-weight:600;
+  background:var(--line);color:var(--ink-2);border-radius:10px;padding:1px 7px}
+.folder-menu-btn{background:none;border:none;cursor:pointer;padding:4px 6px;border-radius:5px;
+  color:var(--ink-3);font-size:.75rem;display:flex;align-items:center;gap:3px;transition:color .12s,background .12s}
+.folder-menu-btn:hover{color:var(--ink);background:var(--line)}
+.folder-menu-btn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8}
+.folder-grid-wrap{overflow:hidden;transition:opacity .18s var(--ease)}
+.folder-grid-wrap.collapsed{display:none}
+.folder-drop-zone{border:1.5px dashed var(--line-strong);border-radius:10px;padding:18px;
+  text-align:center;font-size:.82rem;color:var(--ink-3);margin-top:8px;
+  transition:border-color .14s,background .14s}
+.folder-drop-zone.drag-over{border-color:var(--accent);background:var(--accent-tint)}
+.unfiled-section{margin-bottom:24px}
+.unfiled-hdr{font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--ink-3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+
+/* ── Right create rail ── */
+.create-rail{position:sticky;top:62px}
+.create-rail-inner{
+  background:var(--surface);border:1px solid var(--line);border-radius:10px;
+  padding:18px 17px;
+}
+.rail-title{font-size:1rem;font-weight:650;letter-spacing:-.01em;color:var(--ink);margin-bottom:14px}
+.rail-steps{border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--paper);margin-bottom:16px}
+.rail-step{display:flex;align-items:baseline;gap:9px;padding:9px 12px;font-size:.81rem;color:var(--ink-2);line-height:1.45}
+.rail-step+.rail-step{border-top:1px solid var(--line)}
+.rail-n{font-family:var(--font-mono);font-size:1rem;color:var(--ink-3);flex-shrink:0;line-height:1;font-weight:600}
+.rail-section{margin-top:15px}
+.rail-label{font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px}
+.rail-prompt-hdr{display:flex;align-items:center;gap:7px;margin-bottom:9px;flex-wrap:wrap}
+.btn-sm{font-size:.80rem;padding:7px 12px}
+.prompt-disclosure{overflow:hidden;max-height:0;transition:max-height .32s var(--ease)}
+.prompt-disclosure.open{max-height:360px}
+.rail-divider{height:1px;background:var(--line);margin:15px 0}
+
+/* ── Grip handle for DnD ── */
+/* The grip is a <button>, so the user-agent border/background must be reset
+   explicitly - the dots sit directly on the card surface. */
+.grip{cursor:grab;padding:4px 5px;border:none;background:none;appearance:none;-webkit-appearance:none;
+  border-radius:4px;color:var(--ink-3);flex-shrink:0;
+  display:flex;align-items:center;transition:color .12s;opacity:.55;
+  -webkit-user-select:none;user-select:none}
+.lec:hover .grip{opacity:1}
+.grip:hover{color:var(--ink-2)}
+.grip svg{width:10px;height:16px;display:block}
+.lec.dragging{opacity:.45;box-shadow:none}
+/* insertion bar: before or after another card */
+.lec.drop-before::before{transform:scaleY(1);background:var(--accent)} /* reuse ::before */
+.lec.drop-after{border-bottom:3px solid var(--accent)}
+/* folder header drag-over highlight */
+.folder-hdr.drag-over-folder .folder-name{color:var(--accent)}
+.folder-hdr.drag-over-folder{background:var(--accent-tint);border-radius:8px}
+
+/* ── Move dropdown (per-card fallback) ── */
+.move-menu{min-width:180px}
+.move-item{display:block;width:100%;text-align:left;background:none;border:none;
+  font-family:var(--font-ui);font-size:.83rem;color:var(--ink);padding:8px 12px;cursor:pointer;
+  border-radius:6px;transition:background .1s}
+.move-item:hover{background:var(--paper)}
+.move-item.current{color:var(--ink-3);cursor:default}
+.move-item.current:hover{background:none}
+.move-section-label{font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-3);padding:6px 12px 3px;display:block}
+
+/* ── Folder / rename modals ── */
+.modal-label{display:block;font-size:.83rem;font-weight:600;color:var(--ink);margin-bottom:7px}
+.modal-input{width:100%;border:1px solid var(--line-strong);border-radius:7px;
+  background:var(--paper);color:var(--ink);font-family:var(--font-ui);font-size:.9rem;
+  padding:9px 12px;outline:none;transition:border-color .14s,box-shadow .14s}
+.modal-input:focus{border-color:var(--accent);box-shadow:var(--ring)}
+
+@media(max-width:900px){
+  .two-col-layout{display:block}
+  .create-rail{position:static;margin-top:30px}
+  .wrap{padding:0 18px 40px}
   .footer{margin-top:44px;padding:18px 18px 26px}
+  .lib-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:720px){
   .topbar{padding:0 14px}
   .topbar-title{display:none}
+  .lib-grid{grid-template-columns:1fr}
 }
-@media(max-width:660px){
-  /* narrow screens: the first prompt line wraps under the floating button, so push the text down */
-  .prompt-box{padding-top:58px}
+@media(max-width:1200px){
+  .lib-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-@media (prefers-reduced-motion: reduce){
+@media(prefers-reduced-motion:reduce){
   *{transition:none !important;animation:none !important}
   .lec:hover{transform:none}
   .lec:hover::before{transform:none}
+  .prompt-disclosure{transition:none !important}
 }
 </style>
 </head>
@@ -320,7 +404,7 @@ body::after{
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="brand">
-    <span class="brand-mark">Quizbook</span>
+    <span class="brand-mark">QuizForge</span>
     <span class="brand-sep"></span>
     <span class="topbar-title">Make-your-own quiz studio</span>
   </div>
@@ -342,7 +426,7 @@ body::after{
         <div class="set-group">
           <div class="set-label">Accent color</div>
           <div class="swatches" id="sw-accent">
-            <button class="sw" data-accent-val="petrol" style="--sw:#1f5562" onclick="setAccent('petrol')" title="Petrol" aria-label="Petrol accent"></button>
+            <button class="sw" data-accent-val="examplify" style="--sw:#1f6db5" onclick="setAccent('examplify')" title="Examplify blue" aria-label="Examplify blue accent"></button>
             <button class="sw" data-accent-val="ocean"  style="--sw:#1f6f8b" onclick="setAccent('ocean')"  title="Ocean"  aria-label="Ocean accent"></button>
             <button class="sw" data-accent-val="indigo" style="--sw:#4f4bd0" onclick="setAccent('indigo')" title="Indigo" aria-label="Indigo accent"></button>
             <button class="sw" data-accent-val="violet" style="--sw:#7350c9" onclick="setAccent('violet')" title="Violet" aria-label="Violet accent"></button>
@@ -364,72 +448,75 @@ body::after{
 </div>
 
 <div class="wrap">
+  <div class="two-col-layout">
 
-  <!-- HOW IT WORKS -->
-  <section class="section" aria-labelledby="how-h">
-    <div id="hero-head">
-      <h2 class="eyebrow mast" id="how-h">Build a quiz from <em class="mast-em">your own notes</em></h2>
-      <div class="eyebrow-sub">Turn any lecture into practice questions in three steps. Nothing leaves your browser.</div>
-    </div>
-    <div class="how">
-      <div class="step">
-        <div class="step-head"><span class="step-n">1</span><h3>Copy the prompt</h3></div>
-        <p>Grab the prompt below with one click.</p>
+    <!-- LEFT: Library -->
+    <div class="lib-col" id="lib-col">
+      <div class="lib-col-head" id="lib-col-head">
+        <div>
+          <h1 class="lib-title">Your quizzes</h1>
+          <div class="lib-sub">Saved in this browser. Scores build with every attempt.</div>
+        </div>
+        <button class="mini-btn" id="new-folder-btn" onclick="openNewFolderModal()">+ New folder</button>
       </div>
-      <div class="how-sep" aria-hidden="true"></div>
-      <div class="step">
-        <div class="step-head"><span class="step-n">2</span><h3>Paste it into your AI chatbot</h3></div>
-        <p>Send it along with your lecture slides or notes and let the chatbot write the quiz.</p>
-      </div>
-      <div class="how-sep" aria-hidden="true"></div>
-      <div class="step">
-        <div class="step-head"><span class="step-n">3</span><h3>Paste the answer back here</h3></div>
-        <p>Drop the JSON it returns into the box below, press Load, and start practicing.</p>
+      <!-- folder sections + unfiled grid rendered here by JS -->
+      <div id="library-root"></div>
+      <div class="empty" id="library-empty" style="display:none">
+        No quizzes yet. Use the panel on the right to create your first one.
       </div>
     </div>
-  </section>
 
-  <!-- THE PROMPT -->
-  <section class="section" id="sec-prompt">
-    <h2 class="eyebrow">The prompt</h2>
-    <div class="qcount-row">
-      <input type="range" class="size-slider qcount-slider" id="qcount-slider" min="5" max="40" step="1" value="10" aria-label="Number of questions">
-      <span class="qcount-readout"><b id="qcount-num">10</b> questions</span>
-    </div>
-    <div class="card">
-      <div class="prompt-wrap">
-        <button class="btn btn-primary copy-btn" id="copy-btn" onclick="copyPrompt()">Copy prompt</button>
-        <div class="prompt-box" id="prompt-box" tabindex="0" aria-label="Quiz prompt text"></div>
+    <!-- RIGHT: Create rail -->
+    <div class="create-rail" id="create-rail">
+      <div class="create-rail-inner">
+        <div class="rail-title">Create a quiz</div>
+
+        <div class="rail-steps">
+          <div class="rail-step"><span class="rail-n">1</span>Set the question count, then copy the prompt</div>
+          <div class="rail-step"><span class="rail-n">2</span>Paste it into your AI chatbot with your lecture notes</div>
+          <div class="rail-step"><span class="rail-n">3</span>Paste the JSON it returns here and press Load</div>
+        </div>
+
+        <div class="rail-section">
+          <div class="rail-label">Number of questions</div>
+          <div class="qcount-row">
+            <input type="range" class="size-slider qcount-slider" id="qcount-slider" min="5" max="40" step="1" value="10" aria-label="Number of questions">
+            <span class="qcount-readout"><b id="qcount-num">10</b> questions</span>
+          </div>
+        </div>
+
+        <div class="rail-section">
+          <div class="rail-label">Prompt</div>
+          <div class="rail-prompt-hdr">
+            <button class="btn btn-primary btn-sm" id="copy-btn" onclick="copyPrompt()">Copy prompt</button>
+            <button class="btn btn-ghost btn-sm" id="show-prompt-btn" onclick="togglePromptDisclosure()">Show prompt</button>
+          </div>
+          <div class="prompt-disclosure" id="prompt-disclosure">
+            <div class="prompt-wrap">
+              <div class="prompt-box" id="prompt-box" tabindex="0" aria-label="Quiz prompt text"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rail-divider"></div>
+
+        <div class="rail-section" style="margin-top:0">
+          <div class="rail-label">Paste quiz JSON</div>
+          <textarea class="paste-area" id="paste-area" spellcheck="false"
+            placeholder="Paste the AI's JSON output here..." aria-label="Paste quiz JSON" style="min-height:110px"></textarea>
+          <div class="paste-actions">
+            <button class="btn btn-primary btn-sm" onclick="loadQuiz()">Load quiz</button>
+            <span class="status" id="load-status" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+
       </div>
     </div>
-  </section>
 
-  <!-- PASTE YOUR QUIZ -->
-  <section class="section" id="sec-paste">
-    <h2 class="eyebrow">Paste your quiz</h2>
-    <div class="card">
-      <textarea class="paste-area" id="paste-area" spellcheck="false"
-        placeholder="Paste the AI's JSON output here…" aria-label="Paste quiz JSON"></textarea>
-      <div class="paste-actions">
-        <button class="btn btn-primary" onclick="loadQuiz()">Load quiz</button>
-        <span class="status" id="load-status" role="status" aria-live="polite"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- LIBRARY -->
-  <section class="section" id="sec-library">
-    <h2 class="eyebrow">Your quizzes</h2>
-    <div class="eyebrow-sub">Everything you load is saved in this browser. Scores build up each time you take a quiz.</div>
-    <div class="lec-grid" id="library"></div>
-    <div class="empty" id="library-empty" style="display:none">
-      No quizzes yet. Copy the prompt, run it through your AI chatbot, then paste the result above.
-    </div>
-  </section>
-
+  </div>
 </div>
 
-<footer class="footer">Quizbook · quizzes and scores are stored only in this browser</footer>
+<footer class="footer">QuizForge &middot; quizzes and scores are stored only in this browser</footer>
 
 <!-- DELETE MODAL -->
 <div class="overlay" id="del-overlay" onclick="closeDeleteModal()">
@@ -439,6 +526,35 @@ body::after{
     <div class="modal-actions">
       <button class="btn-cancel" onclick="closeDeleteModal()">Keep it</button>
       <button class="btn-danger" onclick="confirmDelete()">Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- NEW FOLDER MODAL -->
+<div class="overlay" id="folder-modal-overlay" onclick="closeFolderModal()">
+  <div class="modal" onclick="event.stopPropagation()" style="max-width:380px">
+    <h2 id="folder-modal-title">New folder</h2>
+    <div style="margin-top:14px">
+      <label class="modal-label" for="folder-name-input">Folder name</label>
+      <input class="modal-input" id="folder-name-input" type="text" maxlength="80" autocomplete="off"
+        placeholder="e.g. Cardiology" oninput="clearFolderModalErr()" onkeydown="folderModalKeydown(event)">
+      <div id="folder-modal-err" style="font-size:.82rem;color:var(--wrong);margin-top:6px;display:none"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeFolderModal()">Cancel</button>
+      <button class="btn btn-primary" id="folder-modal-save" onclick="saveFolderModal()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- DELETE FOLDER MODAL -->
+<div class="overlay" id="del-folder-overlay" onclick="closeDeleteFolderModal()">
+  <div class="modal" onclick="event.stopPropagation()">
+    <h2>Delete this folder?</h2>
+    <p>The quizzes inside <b id="del-folder-name">this folder</b> will move to Unfiled. The quizzes themselves are not deleted.</p>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeDeleteFolderModal()">Keep it</button>
+      <button class="btn-danger" onclick="confirmDeleteFolder()">Delete folder</button>
     </div>
   </div>
 </div>
@@ -499,7 +615,7 @@ Return only the JSON code block.
 /* ── The seeded sample quiz (also written to sample-quiz.json) ── */
 const SAMPLE_QUIZ = {
   title: "Sample Quiz - Human Body Basics",
-  subtitle: "Demo | How QuizForge works | 4 questions",
+  subtitle: "Demo | How QuizForge works | 10 questions",
   questions: [
     {
       text: "Which organ pumps blood through the body?",
@@ -525,6 +641,42 @@ const SAMPLE_QUIZ = {
       options: ["Hormones", "Oxygen", "Digestive enzymes", "Antibodies"],
       correct: 1,
       explanation: "<strong>Oxygen is correct.</strong> Red blood cells carry oxygen from the lungs to the tissues, bound to hemoglobin. Hormones travel loose in plasma, digestive enzymes come from the gut and pancreas, and antibodies are made by white blood cells."
+    },
+    {
+      text: "How many chambers does the human heart have?",
+      options: ["Two", "Three", "Four", "Six"],
+      correct: 2,
+      explanation: "<strong>Four is correct.</strong> The heart has two upper chambers (the left and right atria) and two lower chambers (the left and right ventricles). Two chambers describes a fish heart. Three is a misconception with no anatomical basis. Six is not a real option."
+    },
+    {
+      text: "Which bone is the longest in the human body?",
+      options: ["The femur", "The humerus", "The radius", "The tibia"],
+      correct: 0,
+      explanation: "<strong>The femur is correct.</strong> The femur, or thigh bone, is the longest bone in the body. The tibia is the next longest leg bone. The humerus runs from shoulder to elbow, and the radius is one of the two forearm bones - both shorter than the femur."
+    },
+    {
+      text: "Where does gas exchange take place in the lungs?",
+      options: ["Alveoli", "Bronchi", "Bronchioles", "Trachea"],
+      correct: 0,
+      explanation: "<strong>Alveoli is correct.</strong> The alveoli are tiny air sacs at the end of the airway tree where oxygen diffuses into the blood and carbon dioxide diffuses out. Bronchi and bronchioles are conducting airways that carry air but do not exchange gases. The trachea is the windpipe leading from the throat into the lungs."
+    },
+    {
+      text: "Which organ produces insulin?",
+      options: ["The liver", "The pancreas", "The small intestine", "The stomach"],
+      correct: 1,
+      explanation: "<strong>The pancreas is correct.</strong> Insulin is produced by beta cells in the islets of Langerhans, which are clusters of endocrine cells within the pancreas. The liver responds to insulin but does not make it. The stomach produces gastric acid and digestive enzymes. The small intestine absorbs nutrients."
+    },
+    {
+      text: "What is the normal core body temperature in a healthy adult?",
+      options: ["35 degrees C", "37 degrees C", "39 degrees C", "41 degrees C"],
+      correct: 1,
+      explanation: "<strong>37 degrees C is correct.</strong> Normal core temperature is approximately 37 degrees C (98.6 degrees F), though there is a small range around this value. Temperatures at or above 38 degrees C are generally considered fever. 35 degrees C suggests mild hypothermia. Values of 39 and 41 degrees C indicate fever and high fever respectively."
+    },
+    {
+      text: "What is the common name for the trachea?",
+      options: ["Gullet", "Larynx", "Voice box", "Windpipe"],
+      correct: 3,
+      explanation: "<strong>Windpipe is correct.</strong> The trachea is the tube that carries air from the throat down to the bronchi that enter the lungs. The larynx (also called the voice box) sits just above the trachea and houses the vocal cords. The gullet is the common name for the esophagus, which carries food."
     }
   ]
 };
@@ -539,24 +691,60 @@ function getQuizzes(){ try{ const a = JSON.parse(store.get(QUIZZES_KEY, '[]')); 
 function setQuizzes(a){ store.set(QUIZZES_KEY, JSON.stringify(a)); }
 function getScores(){ try{ const a = JSON.parse(store.get(SCORES_KEY, '[]')); return Array.isArray(a) ? a : []; }catch(e){ return []; } }
 function setScores(a){ store.set(SCORES_KEY, JSON.stringify(a)); }
+/* ── Folder storage ── */
+const FOLDERS_KEY = 'qf_folders';
+/* Folders are read defensively: a half-written or hand-edited value must never
+   take the library down with it, so every entry is checked and normalized. */
+function getFolders(){
+  try{
+    const a = JSON.parse(store.get(FOLDERS_KEY, '[]'));
+    if(!Array.isArray(a)) return [];
+    return a.filter(f => f && typeof f === 'object' && typeof f.id === 'string' && f.id)
+            .map(f => ({
+              id: f.id,
+              name: (typeof f.name === 'string' && f.name.trim()) ? f.name : 'Untitled folder',
+              collapsed: !!f.collapsed
+            }));
+  }catch(e){ return []; }
+}
+function setFolders(a){ store.set(FOLDERS_KEY, JSON.stringify(a)); }
+function newFolderId(){ return 'f_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 6); }
 
 function newId(){
   return 'q_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 8);
 }
 
-/* ── Seed the sample once ── */
+/* ── Seed the sample (version-2 scheme) ──
+   If qf_seeded is already '2', we're up to date - nothing to do.
+   If it's not '2':
+     (a) A quiz titled "Sample Quiz - Human Body Basics" exists: update its
+         questions and subtitle in place, keeping the id so score history survives.
+     (b) No match found and seeded was '' (first-ever visit): push the sample fresh.
+     (c) No match found but seeded was '1' (user deleted the old sample): skip re-adding.
+   Then set qf_seeded to '2'. */
 function seedIfNeeded(){
-  if(store.get(SEEDED_KEY, '') === '1') return;
+  const seeded = store.get(SEEDED_KEY, '');
+  if(seeded === '2') return;
   const quizzes = getQuizzes();
-  quizzes.push({
-    id: newId(),
-    title: SAMPLE_QUIZ.title,
-    subtitle: SAMPLE_QUIZ.subtitle,
-    questions: SAMPLE_QUIZ.questions,
-    addedTs: new Date().toISOString()
-  });
-  setQuizzes(quizzes);
-  store.set(SEEDED_KEY, '1');
+  const existingIdx = quizzes.findIndex(q => q.title === SAMPLE_QUIZ.title);
+  if(existingIdx !== -1){
+    /* update to 10 questions in place; id and addedTs are preserved */
+    quizzes[existingIdx].questions = SAMPLE_QUIZ.questions;
+    quizzes[existingIdx].subtitle  = SAMPLE_QUIZ.subtitle;
+    setQuizzes(quizzes);
+  } else if(seeded === ''){
+    /* brand-new browser with no prior seeding */
+    quizzes.push({
+      id: newId(),
+      title: SAMPLE_QUIZ.title,
+      subtitle: SAMPLE_QUIZ.subtitle,
+      questions: SAMPLE_QUIZ.questions,
+      addedTs: new Date().toISOString()
+    });
+    setQuizzes(quizzes);
+  }
+  /* else: v1 browser where the user deleted the sample - don't re-add it */
+  store.set(SEEDED_KEY, '2');
 }
 
 /* ── Prompt: read verbatim from the plain-text block ── */
@@ -698,12 +886,12 @@ function loadQuiz(){
   const raw = document.getElementById('paste-area').value;
   const candidate = extractCandidate(raw);
   if(candidate === null){
-    setStatus('Could not find any JSON. Paste the AI’s full answer, including the { … } block.', 'err');
+    setStatus('Could not find any JSON. Paste the AI\'s full answer, including the { ... } block.', 'err');
     return;
   }
   const data = looseParse(candidate);
   if(data === undefined){
-    setStatus('That text isn’t valid JSON. Copy the AI’s answer again and make sure the code block came across whole.', 'err');
+    setStatus('That text is not valid JSON. Copy the AI\'s answer again and make sure the code block came across whole.', 'err');
     return;
   }
   const problem = validate(data);
@@ -724,10 +912,11 @@ function loadQuiz(){
     addedTs: new Date().toISOString()
   };
   const quizzes = getQuizzes();
-  quizzes.push(rec);
+  quizzes.unshift(rec);  /* new quizzes go to the top of Unfiled */
   setQuizzes(quizzes);
 
-  setStatus('Loaded “' + dash(title) + '” · ' + rec.questions.length + ' question' + (rec.questions.length === 1 ? '' : 's') + '. It’s in your library below.', 'ok');
+  const n = rec.questions.length;
+  setStatus('Loaded “' + dash(title) + '” - ' + n + ' question' + (n === 1 ? '' : 's') + '. It is in your library below.', 'ok');
   document.getElementById('paste-area').value = '';
   renderLibrary(rec.id);
 }
@@ -750,84 +939,440 @@ function dash(s){
 const EASE_FN = 'cubicBezier(.22,1,.36,1)';
 const motionOK = () => !!window.anime && !matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-function renderLibrary(flashId){
-  const grid = document.getElementById('library');
-  const emptyEl = document.getElementById('library-empty');
-  const quizzes = getQuizzes().slice().sort((a, b) => String(b.addedTs).localeCompare(String(a.addedTs)));
-  const scores = getScores();
-
-  grid.innerHTML = '';
-  if(quizzes.length === 0){
-    emptyEl.style.display = 'block';
-    return;
+/* Build a single quiz card element. */
+function buildCard(qz, scores){
+  const atts = attemptsFor(qz.id, scores);
+  const last = atts.length ? atts[atts.length - 1] : null;
+  let dot = 'none', dotT = 'No attempts yet';
+  if(last){
+    if(last.pct >= 70){ dot = 'good'; dotT = 'Last attempt ' + last.pct + '%'; }
+    else { dot = 'warn'; dotT = 'Last attempt ' + last.pct + '% - needs work'; }
   }
-  emptyEl.style.display = 'none';
+  let scoreHtml;
+  if(atts.length){
+    const shown = atts.slice(-8);
+    const lead = atts.length > 8 ? '... ' : '';
+    const pills = lead + shown.map((a, i) =>
+      '<span class="pill ' + (a.pct >= 70 ? 'p-good' : 'p-bad') +
+      (i === shown.length - 1 ? ' p-last' : '') + '">' + a.score + '/' + a.total + '</span>'
+    ).join('');
+    const best = Math.max.apply(null, atts.map(a => a.pct));
+    scoreHtml = '<div class="pills">' + pills + '</div><span class="best">best ' + best + '%</span>';
+  } else {
+    scoreHtml = '<span class="noatt">no attempts yet</span>';
+  }
+  const n = qz.questions.length;
+  const card = document.createElement('section');
+  card.className = 'lec';
+  card.dataset.id = qz.id;
+  card.draggable = true;
+  /* Grip handle (6-dot): only drag when initiated here */
+  const gripSvg = '<svg viewBox="0 0 10 16" fill="currentColor" aria-hidden="true">' +
+    '<circle cx="3" cy="3" r="1.4"/><circle cx="7" cy="3" r="1.4"/>' +
+    '<circle cx="3" cy="8" r="1.4"/><circle cx="7" cy="8" r="1.4"/>' +
+    '<circle cx="3" cy="13" r="1.4"/><circle cx="7" cy="13" r="1.4"/>' +
+    '</svg>';
+  const folders = getFolders();
+  const moveItems = folders.map(f =>
+    '<button class="move-item' + (qz.folderId === f.id ? ' current' : '') + '" data-move-to="' + esc(f.id) + '">' + esc(f.name) + '</button>'
+  ).join('') +
+    '<button class="move-item' + (!qz.folderId || !folders.find(f => f.id === qz.folderId) ? ' current' : '') + '" data-move-to="">Unfiled</button>';
 
-  quizzes.forEach(qz => {
-    const atts = attemptsFor(qz.id, scores);
-    const last = atts.length ? atts[atts.length - 1] : null;
-    let dot = 'none', dotT = 'No attempts yet';
-    if(last){
-      if(last.pct >= 70){ dot = 'good'; dotT = 'Last attempt ' + last.pct + '%'; }
-      else { dot = 'warn'; dotT = 'Last attempt ' + last.pct + '% · needs work'; }
-    }
-
-    let scoreHtml;
-    if(atts.length){
-      const shown = atts.slice(-8);
-      const lead = atts.length > 8 ? '… ' : '';
-      const pills = lead + shown.map((a, i) =>
-        '<span class="pill ' + (a.pct >= 70 ? 'p-good' : 'p-bad') +
-        (i === shown.length - 1 ? ' p-last' : '') + '">' + a.score + '/' + a.total + '</span>'
-      ).join('');
-      const best = Math.max.apply(null, atts.map(a => a.pct));
-      scoreHtml = '<div class="pills">' + pills + '</div><span class="best">best ' + best + '%</span>';
-    } else {
-      scoreHtml = '<span class="noatt">no attempts yet</span>';
-    }
-
-    const n = qz.questions.length;
-    const card = document.createElement('section');
-    card.className = 'lec';
-    card.dataset.id = qz.id;
-    card.innerHTML =
-      '<div class="lec-head">' +
-        '<span class="badge" title="' + n + ' questions" aria-label="' + n + ' questions">' + n + '</span>' +
-        '<div class="lec-title">' +
-          '<div class="q-title">' + esc(dash(qz.title)) + '</div>' +
-          (qz.subtitle ? '<div class="q-sub">' + esc(dash(qz.subtitle)) + '</div>' : '') +
-        '</div>' +
-        '<span class="dot dot-' + dot + '" title="' + esc(dotT) + '"></span>' +
+  card.innerHTML =
+    '<div class="lec-head">' +
+      '<button class="grip" aria-label="Drag to reorder" tabindex="0">' + gripSvg + '</button>' +
+      '<span class="badge" title="' + n + ' questions" aria-label="' + n + ' questions">' + n + '</span>' +
+      '<div class="lec-title">' +
+        '<div class="q-title">' + esc(dash(qz.title)) + '</div>' +
+        (qz.subtitle ? '<div class="q-sub">' + esc(dash(qz.subtitle)) + '</div>' : '') +
       '</div>' +
-      '<div class="rows">' +
-        '<div class="row"><div class="qscore">' + scoreHtml + '</div></div>' +
-        '<div class="row actions-row">' +
-          '<a class="take" href="quiz.html?id=' + encodeURIComponent(qz.id) + '">Take ' +
-            '<svg viewBox="0 0 20 20"><path d="M8 5l5 5-5 5"/></svg></a>' +
-          '<button class="mini-btn" data-act="export">Export</button>' +
-          '<button class="mini-btn danger spacer" data-act="delete">Delete</button>' +
-        '</div>' +
-      '</div>';
+      '<span class="dot dot-' + dot + '" title="' + esc(dotT) + '"></span>' +
+    '</div>' +
+    '<div class="rows">' +
+      '<div class="row"><div class="qscore">' + scoreHtml + '</div></div>' +
+      '<div class="row actions-row">' +
+        '<a class="take" href="quiz.html?id=' + encodeURIComponent(qz.id) + '">Take ' +
+          '<svg viewBox="0 0 20 20"><path d="M8 5l5 5-5 5"/></svg></a>' +
+        '<button class="mini-btn" data-act="export">Export</button>' +
+        (folders.length > 0
+          ? '<div class="dropdown" data-card-dd="' + esc(qz.id) + '">' +
+              '<button class="mini-btn" data-act="move" onclick="toggleCardMoveMenu(this)">Move</button>' +
+              '<div class="dropdown-menu move-menu" style="top:calc(100% + 4px);left:0;right:auto">' +
+                '<span class="move-section-label">Move to...</span>' + moveItems +
+              '</div>' +
+            '</div>'
+          : '') +
+        '<button class="mini-btn danger spacer" data-act="delete">Delete</button>' +
+      '</div>' +
+    '</div>';
 
-    card.querySelector('[data-act="export"]').addEventListener('click', () => exportQuiz(qz.id));
-    card.querySelector('[data-act="delete"]').addEventListener('click', () => openDeleteModal(qz.id, qz.title));
-    grid.appendChild(card);
+  /* Grip: only allow drag when mousedown was on the grip */
+  const grip = card.querySelector('.grip');
+  grip.addEventListener('mousedown', () => { dragFromHandle = true; });
+  card.addEventListener('mousedown', e => { if(e.target !== grip && !grip.contains(e.target)) dragFromHandle = false; });
+  card.addEventListener('dragstart', e => dndStart(e, qz.id));
+  card.addEventListener('dragover',  e => dndOver(e, card));
+  card.addEventListener('dragleave', () => dndLeaveCard(card));
+  card.addEventListener('drop',      e => dndDrop(e));
+  card.addEventListener('dragend',   () => dndCleanup());
+
+  /* Move menu items */
+  card.querySelectorAll('.move-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const toFolderId = btn.dataset.moveTo || null;
+      moveQuizToFolder(qz.id, toFolderId || '');
+      document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
+    });
   });
 
+  card.querySelector('[data-act="export"]').addEventListener('click', () => exportQuiz(qz.id));
+  card.querySelector('[data-act="delete"]').addEventListener('click', () => openDeleteModal(qz.id, qz.title));
+  return card;
+}
+
+function renderLibrary(flashId, quiet){
+  const root = document.getElementById('library-root');
+  const emptyEl = document.getElementById('library-empty');
+  if(!root) return;
+  const quizzes = getQuizzes();  /* use stored order; no re-sort */
+  const scores = getScores();
+  const folders = getFolders();
+
+  root.innerHTML = '';
+  if(quizzes.length === 0){
+    if(emptyEl) emptyEl.style.display = 'block';
+    return;
+  }
+  if(emptyEl) emptyEl.style.display = 'none';
+
+  /* If no folders at all, just render a flat grid like the old layout. */
+  if(folders.length === 0){
+    const grid = document.createElement('div');
+    grid.className = 'lib-grid';
+    quizzes.forEach(qz => grid.appendChild(buildCard(qz, scores)));
+    root.appendChild(grid);
+  } else {
+    /* Render each folder section */
+    folders.forEach(folder => {
+      const folderQuizzes = quizzes.filter(qz => qz.folderId === folder.id);
+      const sec = document.createElement('div');
+      sec.className = 'folder-section';
+      sec.dataset.folderId = folder.id;
+
+      const hdr = document.createElement('div');
+      hdr.className = 'folder-hdr';
+      hdr.dataset.folderId = folder.id;
+      hdr.innerHTML =
+        '<button class="folder-chevron' + (folder.collapsed ? '' : ' open') + '" aria-label="' + (folder.collapsed ? 'Expand' : 'Collapse') + ' folder" data-folder-id="' + esc(folder.id) + '">' +
+          '<svg viewBox="0 0 20 20"><path d="M7 5l6 5-6 5"/></svg>' +
+        '</button>' +
+        '<span class="folder-name">' + esc(folder.name) + '</span>' +
+        '<span class="folder-count">' + folderQuizzes.length + '</span>' +
+        '<button class="folder-menu-btn" aria-label="Folder options" onclick="toggleFolderMenu(this,\'' + esc(folder.id) + '\')">' +
+          '<svg viewBox="0 0 20 20"><circle cx="5" cy="10" r="1.5"/><circle cx="10" cy="10" r="1.5"/><circle cx="15" cy="10" r="1.5"/></svg>' +
+        '</button>' +
+        '<div class="dropdown-menu" style="top:calc(100% + 4px);right:0;left:auto">' +
+          '<button class="move-item" onclick="openRenameFolderModal(\'' + esc(folder.id) + '\',\'' + esc(folder.name) + '\')">Rename</button>' +
+          '<button class="move-item" style="color:var(--bad)" onclick="openDeleteFolderModal(\'' + esc(folder.id) + '\',\'' + esc(folder.name) + '\')">Delete folder</button>' +
+        '</div>';
+
+      /* Chevron toggle */
+      hdr.querySelector('.folder-chevron').addEventListener('click', () => {
+        const folders2 = getFolders();
+        const fi = folders2.findIndex(f => f.id === folder.id);
+        if(fi !== -1){ folders2[fi].collapsed = !folders2[fi].collapsed; setFolders(folders2); }
+        renderLibrary();
+      });
+
+      /* DnD drop on folder header */
+      hdr.addEventListener('dragover', e => { e.preventDefault(); hdr.classList.add('drag-over-folder'); });
+      hdr.addEventListener('dragleave', () => hdr.classList.remove('drag-over-folder'));
+      hdr.addEventListener('drop', e => { e.preventDefault(); hdr.classList.remove('drag-over-folder'); dndDropToFolder(folder.id); });
+
+      sec.appendChild(hdr);
+
+      const gridWrap = document.createElement('div');
+      gridWrap.className = 'folder-grid-wrap' + (folder.collapsed ? ' collapsed' : '');
+
+      if(folderQuizzes.length === 0){
+        const dz = document.createElement('div');
+        dz.className = 'folder-drop-zone';
+        dz.textContent = 'Drag quizzes here';
+        dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag-over'); });
+        dz.addEventListener('dragleave', () => dz.classList.remove('drag-over'));
+        dz.addEventListener('drop', e => { e.preventDefault(); dz.classList.remove('drag-over'); dndDropToFolder(folder.id); });
+        gridWrap.appendChild(dz);
+      } else {
+        const grid = document.createElement('div');
+        grid.className = 'lib-grid';
+        folderQuizzes.forEach(qz => grid.appendChild(buildCard(qz, scores)));
+        gridWrap.appendChild(grid);
+      }
+      sec.appendChild(gridWrap);
+      root.appendChild(sec);
+    });
+
+    /* Unfiled section */
+    const validFolderIds = new Set(folders.map(f => f.id));
+    const unfiledQuizzes = quizzes.filter(qz => !qz.folderId || !validFolderIds.has(qz.folderId));
+    if(unfiledQuizzes.length > 0){
+      const uf = document.createElement('div');
+      uf.className = 'unfiled-section';
+      uf.innerHTML = '<div class="unfiled-hdr">Unfiled</div>';
+      const grid = document.createElement('div');
+      grid.className = 'lib-grid';
+      unfiledQuizzes.forEach(qz => grid.appendChild(buildCard(qz, scores)));
+      uf.appendChild(grid);
+      root.appendChild(uf);
+    }
+  }
+
+  /* Flash the newly added card. `quiet` marks a card the user just dropped:
+     it is already under their cursor, so no scroll and no fade-in. */
   if(flashId){
-    const el = grid.querySelector('.lec[data-id="' + (window.CSS && CSS.escape ? CSS.escape(flashId) : flashId) + '"]');
+    const cssId = window.CSS && CSS.escape ? CSS.escape(flashId) : flashId;
+    const el = root.querySelector('.lec[data-id="' + cssId + '"]');
     if(el){
-      el.scrollIntoView({ behavior: motionOK() ? 'smooth' : 'auto', block: 'center' });
+      if(!quiet) el.scrollIntoView({ behavior: motionOK() ? 'smooth' : 'auto', block: 'center' });
       el.classList.add('flash');
       setTimeout(() => el.classList.remove('flash'), 1200);
-      if(motionOK()){
-        el.style.transition = 'none';  /* keep the card's hover transition out of the way */
+      if(motionOK() && !quiet){
+        el.style.transition = 'none';
         anime({ targets: el, translateY: [10, 0], opacity: [0, 1], duration: 320, easing: EASE_FN,
                 complete: () => { el.style.opacity = ''; el.style.transform = ''; el.style.transition = ''; } });
         unstickAfter([el], 1500);
       }
     }
   }
+}
+
+/* ── Prompt disclosure (right rail) ── */
+function togglePromptDisclosure(){
+  const disc = document.getElementById('prompt-disclosure');
+  const btn  = document.getElementById('show-prompt-btn');
+  if(!disc) return;
+  const isOpen = disc.classList.toggle('open');
+  if(btn) btn.textContent = isOpen ? 'Hide prompt' : 'Show prompt';
+}
+
+/* ── Drag-and-drop state ── */
+let draggingId = null;
+let dragFromHandle = false;
+let dragFadeTimer = null;
+
+function dndStart(e, id){
+  if(!dragFromHandle){ e.preventDefault(); return; }
+  draggingId = id;
+  try{ e.dataTransfer.setData('text/plain', id); e.dataTransfer.effectAllowed = 'move'; }catch(_){}
+  /* Delay the class so the element doesn't vanish from under the cursor as the
+     browser snapshots the drag image. A very fast drop can land before this
+     fires, so cleanup cancels the timer and the callback re-checks the drag is
+     still live - otherwise the class would be pinned onto the re-rendered card. */
+  clearTimeout(dragFadeTimer);
+  dragFadeTimer = setTimeout(() => {
+    dragFadeTimer = null;
+    if(draggingId !== id) return;
+    const el = document.querySelector('.lec[data-id="' + (window.CSS && CSS.escape ? CSS.escape(id) : id) + '"]');
+    if(el) el.classList.add('dragging');
+  }, 0);
+}
+
+function dndOver(e, targetCard){
+  if(!draggingId) return;
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  /* Determine insertion side from pointer position */
+  const rect = targetCard.getBoundingClientRect();
+  const midY = rect.top + rect.height / 2;
+  dndCleanupIndicators();
+  if(e.clientY < midY){
+    targetCard.classList.add('drop-before');
+  } else {
+    targetCard.classList.add('drop-after');
+  }
+}
+
+function dndLeaveCard(card){
+  card.classList.remove('drop-before', 'drop-after');
+}
+
+function dndDrop(e){
+  e.preventDefault();
+  const targetCard = e.currentTarget;
+  const targetId = targetCard.dataset.id;
+  if(!draggingId || draggingId === targetId){ dndCleanup(); return; }
+  const before = targetCard.classList.contains('drop-before');
+  /* Read the dragged id before cleanup, which clears the drag state. */
+  const movedId = draggingId;
+  dndCleanup();
+
+  const quizzes = getQuizzes();
+  const fromIdx = quizzes.findIndex(q => q.id === movedId);
+  let   toIdx   = quizzes.findIndex(q => q.id === targetId);
+  if(fromIdx === -1 || toIdx === -1) return;
+
+  /* Copy folderId from target so the quiz moves to the same folder */
+  quizzes[fromIdx].folderId = quizzes[toIdx].folderId || null;
+
+  const [moved] = quizzes.splice(fromIdx, 1);
+  toIdx = quizzes.findIndex(q => q.id === targetId);  /* recalc after splice */
+  quizzes.splice(before ? toIdx : toIdx + 1, 0, moved);
+  setQuizzes(quizzes);
+  renderLibrary(movedId, true);
+}
+
+function dndDropToFolder(folderId){
+  if(!draggingId){ return; }
+  const movedId = draggingId;
+  dndCleanup();
+  const quizzes = getQuizzes();
+  const idx = quizzes.findIndex(q => q.id === movedId);
+  if(idx === -1) return;
+  quizzes[idx].folderId = folderId || null;
+  /* Move to front of array so it sits at top of that folder's list */
+  const [moved] = quizzes.splice(idx, 1);
+  quizzes.unshift(moved);
+  setQuizzes(quizzes);
+  renderLibrary(movedId, true);
+}
+
+function dndCleanupIndicators(){
+  document.querySelectorAll('.lec').forEach(c => c.classList.remove('drop-before', 'drop-after'));
+  document.querySelectorAll('.folder-hdr').forEach(h => h.classList.remove('drag-over-folder'));
+  document.querySelectorAll('.folder-drop-zone').forEach(dz => dz.classList.remove('drag-over'));
+}
+
+function dndCleanup(){
+  clearTimeout(dragFadeTimer);
+  dragFadeTimer = null;
+  /* Sweep every card: the dragged one may already have been re-rendered. */
+  document.querySelectorAll('.lec.dragging').forEach(c => c.classList.remove('dragging'));
+  dndCleanupIndicators();
+  dragFromHandle = false;
+  draggingId = null;
+}
+
+/* ── Move quiz to folder (Move button fallback) ── */
+function moveQuizToFolder(quizId, folderId){
+  const quizzes = getQuizzes();
+  const idx = quizzes.findIndex(q => q.id === quizId);
+  if(idx === -1) return;
+  quizzes[idx].folderId = folderId || null;
+  setQuizzes(quizzes);
+  renderLibrary();
+}
+
+/* ── Card move-menu toggle ── */
+function toggleCardMoveMenu(btn){
+  const dd = btn.closest('[data-card-dd]');
+  if(!dd) return;
+  const menu = dd.querySelector('.dropdown-menu');
+  if(!menu) return;
+  /* Close all others first */
+  document.querySelectorAll('.dropdown-menu').forEach(m => { if(m !== menu) m.classList.remove('open'); });
+  menu.classList.toggle('open');
+}
+
+/* ── Folder menu toggle ── */
+function toggleFolderMenu(btn, folderId){
+  const menu = btn.parentElement.querySelector('.dropdown-menu');
+  if(!menu) return;
+  document.querySelectorAll('.dropdown-menu').forEach(m => { if(m !== menu) m.classList.remove('open'); });
+  menu.classList.toggle('open');
+}
+
+/* ── Folder CRUD ── */
+let folderModalMode = 'new';   /* 'new' or 'rename' */
+let folderModalId   = null;
+
+function openNewFolderModal(){
+  folderModalMode = 'new'; folderModalId = null;
+  const ti = document.getElementById('folder-modal-title');
+  const inp = document.getElementById('folder-name-input');
+  const save = document.getElementById('folder-modal-save');
+  if(ti) ti.textContent = 'New folder';
+  if(inp){ inp.value = ''; }
+  if(save) save.textContent = 'Create';
+  clearFolderModalErr();
+  document.getElementById('folder-modal-overlay').classList.add('open');
+  if(inp) setTimeout(() => inp.focus(), 40);
+}
+
+function openRenameFolderModal(id, currentName){
+  folderModalMode = 'rename'; folderModalId = id;
+  const ti = document.getElementById('folder-modal-title');
+  const inp = document.getElementById('folder-name-input');
+  const save = document.getElementById('folder-modal-save');
+  if(ti) ti.textContent = 'Rename folder';
+  if(inp){ inp.value = currentName; }
+  if(save) save.textContent = 'Save';
+  clearFolderModalErr();
+  document.getElementById('folder-modal-overlay').classList.add('open');
+  if(inp) setTimeout(() => { inp.focus(); inp.select(); }, 40);
+}
+
+function closeFolderModal(){
+  document.getElementById('folder-modal-overlay').classList.remove('open');
+  folderModalId = null;
+}
+
+function clearFolderModalErr(){
+  const err = document.getElementById('folder-modal-err');
+  if(err){ err.style.display = 'none'; err.textContent = ''; }
+}
+
+function showFolderModalErr(msg){
+  const err = document.getElementById('folder-modal-err');
+  if(err){ err.textContent = msg; err.style.display = 'block'; }
+}
+
+function folderModalKeydown(e){
+  if(e.key === 'Enter'){ e.preventDefault(); saveFolderModal(); }
+  if(e.key === 'Escape'){ closeFolderModal(); }
+}
+
+function saveFolderModal(){
+  const inp = document.getElementById('folder-name-input');
+  const name = (inp ? inp.value : '').trim();
+  if(!name){ showFolderModalErr('Folder name cannot be empty.'); return; }
+  const folders = getFolders();
+  if(folderModalMode === 'new'){
+    folders.push({ id: newFolderId(), name: name, collapsed: false });
+    setFolders(folders);
+  } else {
+    const idx = folders.findIndex(f => f.id === folderModalId);
+    if(idx !== -1){ folders[idx].name = name; setFolders(folders); }
+  }
+  closeFolderModal();
+  renderLibrary();
+}
+
+let pendingDeleteFolder = null;
+
+function openDeleteFolderModal(id, name){
+  pendingDeleteFolder = id;
+  const dn = document.getElementById('del-folder-name');
+  if(dn) dn.textContent = name || 'this folder';
+  document.getElementById('del-folder-overlay').classList.add('open');
+}
+
+function closeDeleteFolderModal(){
+  pendingDeleteFolder = null;
+  document.getElementById('del-folder-overlay').classList.remove('open');
+}
+
+function confirmDeleteFolder(){
+  if(!pendingDeleteFolder){ closeDeleteFolderModal(); return; }
+  const id = pendingDeleteFolder;
+  closeDeleteFolderModal();
+  /* Move quizzes to unfiled */
+  const quizzes = getQuizzes().map(qz => {
+    if(qz.folderId === id){ const q2 = Object.assign({}, qz); q2.folderId = null; return q2; }
+    return qz;
+  });
+  setQuizzes(quizzes);
+  setFolders(getFolders().filter(f => f.id !== id));
+  renderLibrary();
 }
 
 /* ── Export a single quiz as canonical JSON ── */
@@ -886,11 +1431,21 @@ function confirmDelete(){
   }
 }
 document.addEventListener('keydown', e => {
-  if(e.key === 'Escape' && document.getElementById('del-overlay').classList.contains('open')) closeDeleteModal();
+  if(e.key !== 'Escape') return;
+  if(document.getElementById('del-overlay').classList.contains('open'))        closeDeleteModal();
+  if(document.getElementById('folder-modal-overlay').classList.contains('open')) closeFolderModal();
+  if(document.getElementById('del-folder-overlay').classList.contains('open'))   closeDeleteFolderModal();
+});
+/* Close card/folder move menus on outside click */
+document.addEventListener('click', e => {
+  if(!e.target.closest('.dropdown') && !e.target.closest('.folder-menu-btn'))
+    document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
 });
 
 /* ── Settings (theme / accent / text size) ── */
 const THEME_KEY = 'quizTheme', ACCENT_KEY = 'quizAccent', SCALE_KEY = 'quizTextScale';
+/* petrol was the old default; treat it as examplify */
+function resolvedAccent(){ const a = store.get(ACCENT_KEY, 'examplify'); return (a === 'petrol' || !a) ? 'examplify' : a; }
 function applySettings(){
   const d = document.documentElement;
   const theme = store.get(THEME_KEY, 'system');
@@ -898,13 +1453,13 @@ function applySettings(){
     ? (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light')
     : theme;
   d.setAttribute('data-theme', resolved);
-  d.setAttribute('data-accent', store.get(ACCENT_KEY, 'petrol'));
+  d.setAttribute('data-accent', resolvedAccent());
   d.style.setProperty('--cscale', parseFloat(store.get(SCALE_KEY, '1')) || 1);
   syncSettingsUI();
 }
 function syncSettingsUI(){
   const theme = store.get(THEME_KEY, 'system'),
-        accent = store.get(ACCENT_KEY, 'petrol'),
+        accent = resolvedAccent(),
         scale = parseFloat(store.get(SCALE_KEY, '1')) || 1;
   document.querySelectorAll('#seg-theme .seg-btn').forEach(b => b.classList.toggle('active', b.dataset.themeVal === theme));
   document.querySelectorAll('#sw-accent .sw').forEach(b => b.classList.toggle('active', b.dataset.accentVal === accent));
@@ -918,16 +1473,13 @@ matchMedia('(prefers-color-scheme:dark)').addEventListener('change', () => {
   if(store.get(THEME_KEY, 'system') === 'system') applySettings();
 });
 
-/* ── Dropdown ── */
+/* ── Dropdown (settings topbar) ── */
 function toggleDropdown(id){
   document.querySelectorAll('.dropdown-menu').forEach(m => {
     if(m.id !== id + '-menu') m.classList.remove('open');
   });
   document.getElementById(id + '-menu').classList.toggle('open');
 }
-document.addEventListener('click', e => {
-  if(!e.target.closest('.dropdown')) document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
-});
 
 /* ── Init ── */
 seedIfNeeded();
@@ -940,11 +1492,9 @@ renderLibrary();
    anime.min.js load. */
 function loadInTargets(){
   return [
-    document.getElementById('hero-head'),
-    ...document.querySelectorAll('.how .step'),
-    document.getElementById('sec-prompt'),
-    document.getElementById('sec-paste'),
-    document.getElementById('sec-library')
+    document.getElementById('lib-col-head'),
+    document.getElementById('library-root'),
+    document.getElementById('create-rail')
   ].filter(Boolean);
 }
 function clearPreAnim(){
