@@ -597,7 +597,7 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
 /* Dedicated hairline below row 2, above all row-2 items */
 [data-skin="examsoft"] .topbar::after{
   content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
-  background:var(--line);z-index:5;pointer-events:none;
+  background:var(--line);z-index:2;pointer-events:none;
 }
 
 /* Brand: row 1, spans cols 1-5 (through the flexible track) so its width never
@@ -659,10 +659,10 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
 /* topbar-right: children join the grid */
 [data-skin="examsoft"] .topbar-right{display:contents}
 [data-skin="examsoft"] #exam-controls-dd{
-  grid-row:1;grid-column:7;z-index:1;display:flex;align-items:center;
+  grid-row:1;grid-column:7;display:flex;align-items:center;
 }
 [data-skin="examsoft"] #settings-dd{
-  grid-row:1;grid-column:8;z-index:1;display:flex;align-items:stretch;
+  grid-row:1;grid-column:8;display:flex;align-items:stretch;
 }
 
 /* Row-1: Exam Controls button — borderless, uppercase */
@@ -803,6 +803,39 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
 }
 [data-skin="examsoft"] #ef-prev:hover:not(:disabled){
   background:var(--paper);color:var(--ink);border-color:var(--ink-3);
+}
+
+/* ---- DARK EXAMSOFT: contrast fixes for pills + sidebar ---- */
+[data-theme="dark"][data-skin="examsoft"] .choice-row{
+  background:color-mix(in srgb, var(--ink) 12%, var(--surface));
+  border:1px solid color-mix(in srgb, var(--ink) 18%, var(--surface));
+}
+[data-theme="dark"][data-skin="examsoft"] .choice-row:hover{
+  background:color-mix(in srgb, var(--ink) 16%, var(--surface));
+  border-color:color-mix(in srgb, var(--ink) 22%, var(--surface));
+}
+[data-theme="dark"][data-skin="examsoft"] .choice-row.selected{
+  background:var(--accent-tint);border:2px solid var(--accent);
+}
+[data-theme="dark"][data-skin="examsoft"] .choice-row.reveal-correct{
+  background:var(--correct-bg);border:2px solid var(--correct);
+}
+[data-theme="dark"][data-skin="examsoft"] .choice-row.reveal-wrong-pick{
+  background:var(--wrong-bg);border:2px solid var(--wrong);
+}
+[data-theme="dark"][data-skin="examsoft"] .q-circle{
+  color:var(--ink);
+  border:1.5px solid color-mix(in srgb, var(--ink) 16%, var(--surface));
+}
+[data-theme="dark"][data-skin="examsoft"] .q-circle:hover{color:var(--accent)}
+[data-theme="dark"][data-skin="examsoft"] .q-circle.answered{
+  background:var(--accent);border-color:var(--accent);color:#fff;
+}
+[data-theme="dark"][data-skin="examsoft"] .q-circle.current{
+  border:2px solid var(--accent);color:var(--accent);
+}
+[data-theme="dark"][data-skin="examsoft"] .q-circle.answered.current{
+  background:var(--accent);border-color:var(--accent);color:#fff;
 }
 </style>
 </head>
