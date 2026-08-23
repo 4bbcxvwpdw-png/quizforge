@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "qf-demo-sample",
+  "revision": 1,
+  "question_count": 10,
+  "title": "Sample Quiz - Human Body Basics",
+  "subtitle": "Demo | How QuizForge works | 10 questions",
+  "questions": [
+    {
+      "qid": "q01",
+      "text": "Which organ pumps blood through the body?",
+      "options": ["The liver", "The heart", "The lungs", "The kidneys"],
+      "correct": 1,
+      "explanation": "<strong>The heart is correct.</strong> It is a muscular pump that pushes blood through the circulation. The liver filters blood and makes proteins but doesn't pump it, the lungs add oxygen to blood, and the kidneys filter waste.",
+      "citation": "Demo"
+    },
+    {
+      "qid": "q02",
+      "text": "How many chromosomes are in a typical human body (somatic) cell?",
+      "options": ["23", "46", "48", "92"],
+      "correct": 1,
+      "explanation": "<strong>46 is correct.</strong> A typical somatic cell has 23 pairs, so 46 chromosomes in total. 23 is the number in a single egg or sperm, and 92 would be a cell that has copied its DNA just before dividing."
+    },
+    {
+      "qid": "q03",
+      "text": "What is the largest organ of the human body?",
+      "options": ["The liver", "The brain", "The skin", "The heart"],
+      "correct": 2,
+      "explanation": "<strong>The skin is correct.</strong> By surface area and weight, skin is the body's largest organ. The liver is the largest organ found inside the body, but it is smaller than the skin overall, and the brain and heart are smaller still."
+    },
+    {
+      "qid": "q04",
+      "text": "What do red blood cells mainly carry?",
+      "options": ["Hormones", "Oxygen", "Digestive enzymes", "Antibodies"],
+      "correct": 1,
+      "explanation": "<strong>Oxygen is correct.</strong> Red blood cells carry oxygen from the lungs to the tissues, bound to hemoglobin. Hormones travel loose in plasma, digestive enzymes come from the gut and pancreas, and antibodies are made by white blood cells."
+    },
+    {
+      "qid": "q05",
+      "text": "How many chambers does the human heart have?",
+      "options": ["Two", "Three", "Four", "Six"],
+      "correct": 2,
+      "explanation": "<strong>Four is correct.</strong> The heart has two upper chambers (the left and right atria) and two lower chambers (the left and right ventricles). Two chambers describes a fish heart. Three is a misconception with no anatomical basis. Six is not a real option."
+    },
+    {
+      "qid": "q06",
+      "text": "Which bone is the longest in the human body?",
+      "options": ["The femur", "The humerus", "The radius", "The tibia"],
+      "correct": 0,
+      "explanation": "<strong>The femur is correct.</strong> The femur, or thigh bone, is the longest bone in the body. The tibia is the next longest leg bone. The humerus runs from shoulder to elbow, and the radius is one of the two forearm bones - both shorter than the femur."
+    },
+    {
+      "qid": "q07",
+      "text": "Where does gas exchange take place in the lungs?",
+      "options": ["Alveoli", "Bronchi", "Bronchioles", "Trachea"],
+      "correct": 0,
+      "explanation": "<strong>Alveoli is correct.</strong> The alveoli are tiny air sacs at the end of the airway tree where oxygen diffuses into the blood and carbon dioxide diffuses out. Bronchi and bronchioles are conducting airways that carry air but do not exchange gases. The trachea is the windpipe leading from the throat into the lungs."
+    },
+    {
+      "qid": "q08",
+      "text": "Which organ produces insulin?",
+      "options": ["The liver", "The pancreas", "The small intestine", "The stomach"],
+      "correct": 1,
+      "explanation": "<strong>The pancreas is correct.</strong> Insulin is produced by beta cells in the islets of Langerhans, which are clusters of endocrine cells within the pancreas. The liver responds to insulin but does not make it. The stomach produces gastric acid and digestive enzymes. The small intestine absorbs nutrients."
+    },
+    {
+      "qid": "q09",
+      "text": "What is the normal core body temperature in a healthy adult?",
+      "options": ["35 degrees C", "37 degrees C", "39 degrees C", "41 degrees C"],
+      "correct": 1,
+      "explanation": "<strong>37 degrees C is correct.</strong> Normal core temperature is approximately 37 degrees C (98.6 degrees F), though there is a small range around this value. Temperatures at or above 38 degrees C are generally considered fever. 35 degrees C suggests mild hypothermia. Values of 39 and 41 degrees C indicate fever and high fever respectively."
+    },
+    {
+      "qid": "q10",
+      "text": "What is the common name for the trachea?",
+      "options": ["Gullet", "Larynx", "Voice box", "Windpipe"],
+      "correct": 3,
+      "explanation": "<strong>Windpipe is correct.</strong> The trachea is the tube that carries air from the throat down to the bronchi that enter the lungs. The larynx (also called the voice box) sits just above the trachea and houses the vocal cords. The gullet is the common name for the esophagus, which carries food."
+    }
+  ]
+}

@@ -428,6 +428,8 @@ svg{display:block}
 .exp-text strong{font-weight:700}
 .exp-text em{color:var(--ink-2);font-style:italic;font-size:.9rem}
 .exp-text img{max-width:100%;max-height:440px;border-radius:8px;border:1px solid var(--line);margin:10px 0}
+/* stem images - mirrors .exp-text img so question-text images render the same way */
+.question-text img{max-width:100%;max-height:440px;border-radius:8px;border:1px solid var(--line);margin:10px 0}
 
 /* ══ MODAL ══ */
 .overlay{display:none;position:fixed;inset:0;background:var(--overlay);z-index:300;align-items:center;justify-content:center}
@@ -1066,9 +1068,13 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
 <div id="qhub-toast"></div>
 
 <script>
-// ── LOAD QUIZ FROM localStorage (?id=) ──────────────────────────────────────
-const _params  = new URLSearchParams(location.search);
-const _quizId  = _params.get('id');
+// ── STATE ────────────────────────────────────────────────────────────────────
+const _params      = new URLSearchParams(location.search);
+const _quizId      = _params.get('id');   /* ?id= path (localStorage) */
+const _srcParam    = _params.get('src');  /* ?src= path (shipped file) */
+let _isShipped     = false;               /* true when loaded via ?src= */
+let _shippedQuizId = null;               /* id field from the shipped quiz JSON */
+let _quizRevision  = null;               /* revision field from the shipped quiz JSON */
 let _quizTitle = '', _quizSubtitle = '';
 let questions  = [];
 
@@ -1082,7 +1088,59 @@ function _composeExplanation(q){
   }
   return e;
 }
-(function loadQuizRecord(){
+/* ── HTML sanitizer (identical to index.html) ────────────────────────────────
+   sanitizeHtml(rawHtml, context)
+   context: 'shipped' - only quizzes/media/ img src allowed
+            'pasted'  - also data:image/(png|jpeg|gif|webp);base64, ≤2MB
+   Template-element walking. Allowed tags: strong, em, br, table, thead, tbody,
+   tr, th, td, img. img: only src (policy-gated) and alt. All on-event handlers,
+   style, class and other attrs stripped. REMOVE tags (script/iframe/object/embed/
+   svg) dropped with entire subtree. Other disallowed tags unwrapped (text kept). */
+function sanitizeHtml(rawHtml, context) {
+  var ALLOWED = {strong:1,em:1,br:1,table:1,thead:1,tbody:1,tr:1,th:1,td:1,img:1};
+  var REMOVE  = {script:1,iframe:1,object:1,embed:1,svg:1};
+  function allowedSrc(src) {
+    if (/^quizzes\/media\/[A-Za-z0-9._-]+$/.test(src)) return true;
+    if (context !== 'pasted') return false;
+    var m = src.match(/^data:image\/(png|jpeg|gif|webp);base64,([A-Za-z0-9+/]+=*)$/);
+    if (!m) return false;
+    return Math.floor(m[2].length * 3 / 4) <= 2097152; /* 2 MB */
+  }
+  function walk(node) {
+    var i = 0, child, tag, attrs, n, a;
+    while (i < node.childNodes.length) {
+      child = node.childNodes[i];
+      if (child.nodeType === 3) { i++; continue; }
+      if (child.nodeType !== 1) { node.removeChild(child); continue; }
+      tag = child.tagName.toLowerCase();
+      if (REMOVE[tag]) { node.removeChild(child); continue; }
+      if (!ALLOWED[tag]) {
+        while (child.firstChild) node.insertBefore(child.firstChild, child);
+        node.removeChild(child);
+        continue;
+      }
+      attrs = Array.prototype.slice.call(child.attributes);
+      for (n = 0; n < attrs.length; n++) {
+        a = attrs[n];
+        var aName = a.name.toLowerCase();
+        if (tag === 'img' && aName === 'alt') continue;
+        if (tag === 'img' && aName === 'src' && allowedSrc(a.value)) continue;
+        child.removeAttribute(a.name);
+      }
+      walk(child);
+      i++;
+    }
+  }
+  var tpl = document.createElement('template');
+  tpl.innerHTML = rawHtml || '';
+  walk(tpl.content);
+  var div = document.createElement('div');
+  div.appendChild(tpl.content.cloneNode(true));
+  return div.innerHTML;
+}
+
+/* ── Load quiz from localStorage (?id= path) ─────────────────────────────── */
+function loadQuizRecord(){
   try{
     const arr = JSON.parse(localStorage.getItem('qf_quizzes') || '[]');
     const rec = Array.isArray(arr) ? arr.find(x => x && x.id === _quizId) : null;
@@ -1097,7 +1155,62 @@ function _composeExplanation(q){
       }));
     }
   }catch(e){ questions = []; }
-})();
+}
+
+/* ── Load shipped quiz from file (?src= path) ───────────────────────────────
+   Validates the path, fetches the JSON, populates the shared questions[] array.
+   Returns true on success (caller should then run initUI), false on any error
+   (error is shown on-page; caller should NOT call initUI/showEmptyState). */
+async function loadShippedQuiz(src) {
+  /* Path validation: must match the allow-list regex and contain no traversal */
+  if(!/^quizzes\/[A-Za-z0-9._\/-]+\.json$/.test(src) || src.indexOf('..') !== -1){
+    _showQuizError('Invalid quiz path.');
+    return false;
+  }
+  try{
+    const r = await fetch(src + '?v=' + Date.now());
+    if(!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    if(!data || !Array.isArray(data.questions) || !data.questions.length)
+      throw new Error('invalid quiz JSON — missing questions array');
+    _isShipped     = true;
+    _shippedQuizId = (typeof data.id === 'string' && data.id) ? data.id : null;
+    _quizRevision  = Number.isInteger(data.revision) ? data.revision : null;
+    _quizTitle     = (typeof data.title === 'string' && data.title) ? data.title : 'Quiz';
+    _quizSubtitle  = (typeof data.subtitle === 'string') ? data.subtitle : '';
+    questions = data.questions.map(q => ({
+      text: q.text,
+      options: Array.isArray(q.options) ? q.options.slice() : [],
+      correct: q.correct,
+      explanation: _composeExplanation(q)
+    }));
+    return true;
+  }catch(err){
+    _showQuizError('Could not load quiz — ' + (err && err.message ? err.message : 'network error'));
+    return false;
+  }
+}
+
+/* Show an on-page error when a shipped quiz cannot be fetched.
+   Hides the quiz chrome so a blank toolbar is not left visible. */
+function _showQuizError(msg) {
+  const qt = document.getElementById('qbar-tools');      if(qt) qt.style.display = 'none';
+  const ec = document.getElementById('exam-controls-dd'); if(ec) ec.style.display = 'none';
+  const ef = document.getElementById('exam-footer');      if(ef) ef.style.display = 'none';
+  const bl = document.getElementById('body-layout');
+  const div = document.createElement('div');
+  div.className = 'empty-state';
+  const h2 = document.createElement('h2');
+  h2.textContent = 'Quiz unavailable';
+  const p = document.createElement('p');
+  p.textContent = msg;
+  const a = document.createElement('a');
+  a.href = 'index.html';
+  a.textContent = '← Back to QuizForge';
+  div.appendChild(h2); div.appendChild(p); div.appendChild(a);
+  bl.innerHTML = '';
+  bl.appendChild(div);
+}
 
 /* Chrome dash convention: em/en dashes become hyphens in titles shown in chrome
    (topbar, document.title). Question and explanation content is never touched. */
@@ -1111,9 +1224,12 @@ const motionOK = () => !!window.anime && !matchMedia('(prefers-reduced-motion: r
 
 const letters = ['A','B','C','D','E'];
 let current    = 0;
-let selected   = new Array(questions.length).fill(null);
-let eliminated = questions.map(q => new Array(q.options.length).fill(false));
-let flagged    = new Array(questions.length).fill(false);
+/* selected / eliminated / flagged are sized to questions[] in initUI(), after
+   the quiz is loaded (synchronously for ?id=, asynchronously for ?src=).
+   Declaring them here so all downstream functions can close over them. */
+let selected   = [];
+let eliminated = [];
+let flagged    = [];
 let submitted  = false;
 let highlightMode  = false;
 let seconds = 0;
@@ -1190,8 +1306,8 @@ function render() {
     efNext.disabled = onLast && submitted;
   }
 
-  // Question text
-  document.getElementById('question-text').innerHTML = q.text;
+  // Question text (sanitized before innerHTML)
+  document.getElementById('question-text').innerHTML = sanitizeHtml(q.text, _isShipped ? 'shipped' : 'pasted');
 
   // Answers range label (examsoft only; CSS hides it in ledger)
   const arDiv = document.getElementById('answers-range');
@@ -1278,7 +1394,7 @@ function render() {
   // Explanation
   const expBox = document.getElementById('explanation-box');
   if (submitted) {
-    document.getElementById('exp-text').innerHTML = q.explanation;
+    document.getElementById('exp-text').innerHTML = sanitizeHtml(q.explanation, _isShipped ? 'shipped' : 'pasted');
     expBox.classList.add('visible');
   } else {
     expBox.classList.remove('visible');
@@ -1609,12 +1725,14 @@ function animateSubmitReveal() {
   unstickAfter([banner, ...rows, exp], 2000);
 }
 
-// ── SAVE ATTEMPT → qf_scores ───────────────────────────────────────────────
+// ── SAVE ATTEMPT ──────────────────────────────────────────────────────────────
+// Shipped quizzes → qf_shipped_attempts (keyed by quiz id, includes revision)
+// Custom/pasted quizzes → qf_scores (existing key, unchanged)
 function saveAttempt(correct, pct) {
   try {
     const per = questions.map((q, qi) => ({ q: qi, correct: selected[qi] === q.correct, picked: selected[qi] }));
     const attempt = {
-      quizId: _quizId,
+      quizId: _isShipped ? _shippedQuizId : _quizId,
       title: _quizTitle,
       score: correct,
       total: questions.length,
@@ -1622,10 +1740,18 @@ function saveAttempt(correct, pct) {
       ts: new Date().toISOString(),
       perQuestion: per
     };
-    let arr = [];
-    try { const raw = JSON.parse(localStorage.getItem('qf_scores') || '[]'); arr = Array.isArray(raw) ? raw : []; } catch(e) {}
-    arr.push(attempt);
-    localStorage.setItem('qf_scores', JSON.stringify(arr));
+    if(_isShipped){
+      if(_quizRevision !== null) attempt.revision = _quizRevision;
+      let arr = [];
+      try{ const raw = JSON.parse(localStorage.getItem('qf_shipped_attempts') || '[]'); arr = Array.isArray(raw) ? raw : []; }catch(e){}
+      arr.push(attempt);
+      localStorage.setItem('qf_shipped_attempts', JSON.stringify(arr));
+    } else {
+      let arr = [];
+      try{ const raw = JSON.parse(localStorage.getItem('qf_scores') || '[]'); arr = Array.isArray(raw) ? raw : []; }catch(e){}
+      arr.push(attempt);
+      localStorage.setItem('qf_scores', JSON.stringify(arr));
+    }
     showToast(correct, questions.length);
   } catch(e) { /* storage unavailable - quiz still works */ }
 }
@@ -1761,17 +1887,43 @@ function showEmptyState() {
     '</div>';
 }
 
-// ── INIT ────────────────────────────────────────────────────────────────
+// ── INIT ─────────────────────────────────────────────────────────────────────
+// applySettings() runs synchronously first so the theme is correct before any
+// content renders. Then we branch: ?src= fetches a shipped quiz asynchronously;
+// ?id= reads localStorage synchronously. Both paths call initUI() at the end.
 applySettings();
-if (questions.length) {
-  document.title = _dash(_quizTitle) + ' · QuizForge';
-  document.getElementById('topbar-title').textContent = _dash(_quizSubtitle);
-  startTimer();
-  render();
-  primeLoadIn();
+
+function initUI() {
+  if (questions.length) {
+    /* Reinitialize per-question state arrays now that questions[] is final.
+       This runs for both ?id= (sync) and ?src= (async) paths. */
+    selected   = new Array(questions.length).fill(null);
+    eliminated = questions.map(q => new Array(q.options.length).fill(false));
+    flagged    = new Array(questions.length).fill(false);
+    qTiles     = null; /* force sidebar tile rebuild for the loaded question set */
+    document.title = _dash(_quizTitle) + ' · QuizForge';
+    document.getElementById('topbar-title').textContent = _dash(_quizSubtitle);
+    startTimer();
+    render();
+    primeLoadIn();
+  } else {
+    document.title = 'No quiz loaded · QuizForge';
+    showEmptyState();
+  }
+}
+
+if (_srcParam) {
+  /* Shipped quiz: async fetch, then initUI on success.
+     On failure, loadShippedQuiz shows an on-page error and returns false —
+     do NOT call initUI/showEmptyState in that case. */
+  (async function() {
+    const ok = await loadShippedQuiz(_srcParam);
+    if (ok) initUI();
+  })();
 } else {
-  document.title = 'No quiz loaded · QuizForge';
-  showEmptyState();
+  /* Custom quiz: synchronous localStorage read */
+  loadQuizRecord();
+  initUI();
 }
 
 // ── ONE-TIME LOAD-IN ─────────────────────────────────────────────────────

@@ -394,6 +394,20 @@ button:active,.take:active{transform:translateY(1px)}
   .lec:hover::before{transform:none}
   .prompt-disclosure{transition:none !important}
 }
+
+/* ── SHIPPED QUIZZES ── */
+.shipped-banner{
+  background:var(--flag-bg);color:var(--flag);
+  border:1px solid color-mix(in srgb,var(--flag) 40%,transparent);
+  border-radius:8px;padding:10px 14px;font-size:.84rem;margin-bottom:18px;
+  display:none;line-height:1.45;
+}
+.shipped-banner.visible{display:block}
+.custom-heading{
+  font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--ink-3);margin:20px 0 10px;padding:4px 6px 6px;
+  border-bottom:1px solid var(--line);display:none;
+}
 </style>
 </head>
 <body>
@@ -456,6 +470,12 @@ button:active,.take:active{transform:translateY(1px)}
         </div>
         <button class="mini-btn" id="new-folder-btn" onclick="openNewFolderModal()">+ New folder</button>
       </div>
+      <!-- shipped quiz warning banner (hidden until shown by JS) -->
+      <div class="shipped-banner" id="shipped-banner"></div>
+      <!-- shipped quiz sections rendered here by loadManifest() -->
+      <div id="shipped-root"></div>
+      <!-- Custom heading shown only when shipped sections are also present -->
+      <div class="custom-heading" id="custom-heading">Custom</div>
       <!-- folder sections + unfiled grid rendered here by JS -->
       <div id="library-root"></div>
       <div class="empty" id="library-empty" style="display:none">
@@ -1454,10 +1474,266 @@ function toggleDropdown(id){
   document.getElementById(id + '-menu').classList.toggle('open');
 }
 
+/* ── HTML sanitizer ─────────────────────────────────────────────────────────
+   sanitizeHtml(rawHtml, context)
+   context: 'shipped' - only quizzes/media/ img src allowed
+            'pasted'  - also data:image/(png|jpeg|gif|webp);base64, ≤2MB
+   Template-element walking. Allowed tags: strong, em, br, table, thead, tbody,
+   tr, th, td, img. img: only src (policy-gated) and alt. All on-event handlers,
+   style, class and other attrs stripped. REMOVE tags (script/iframe/object/embed/
+   svg) dropped with entire subtree. Other disallowed tags unwrapped (text kept). */
+function sanitizeHtml(rawHtml, context) {
+  var ALLOWED = {strong:1,em:1,br:1,table:1,thead:1,tbody:1,tr:1,th:1,td:1,img:1};
+  var REMOVE  = {script:1,iframe:1,object:1,embed:1,svg:1};
+  function allowedSrc(src) {
+    if (/^quizzes\/media\/[A-Za-z0-9._-]+$/.test(src)) return true;
+    if (context !== 'pasted') return false;
+    var m = src.match(/^data:image\/(png|jpeg|gif|webp);base64,([A-Za-z0-9+/]+=*)$/);
+    if (!m) return false;
+    return Math.floor(m[2].length * 3 / 4) <= 2097152; /* 2 MB */
+  }
+  function walk(node) {
+    var i = 0, child, tag, attrs, n, a;
+    while (i < node.childNodes.length) {
+      child = node.childNodes[i];
+      if (child.nodeType === 3) { i++; continue; }
+      if (child.nodeType !== 1) { node.removeChild(child); continue; }
+      tag = child.tagName.toLowerCase();
+      if (REMOVE[tag]) { node.removeChild(child); continue; }
+      if (!ALLOWED[tag]) {
+        while (child.firstChild) node.insertBefore(child.firstChild, child);
+        node.removeChild(child);
+        continue;
+      }
+      attrs = Array.prototype.slice.call(child.attributes);
+      for (n = 0; n < attrs.length; n++) {
+        a = attrs[n];
+        var aName = a.name.toLowerCase();
+        if (tag === 'img' && aName === 'alt') continue;
+        if (tag === 'img' && aName === 'src' && allowedSrc(a.value)) continue;
+        child.removeAttribute(a.name);
+      }
+      walk(child);
+      i++;
+    }
+  }
+  var tpl = document.createElement('template');
+  tpl.innerHTML = rawHtml || '';
+  walk(tpl.content);
+  var div = document.createElement('div');
+  div.appendChild(tpl.content.cloneNode(true));
+  return div.innerHTML;
+}
+
+/* ── Shipped-attempt storage ─────────────────────────────────────────────── */
+const SHIPPED_ATTEMPTS_KEY = 'qf_shipped_attempts';
+function getShippedAttempts(){
+  try{ const a = JSON.parse(store.get(SHIPPED_ATTEMPTS_KEY, '[]')); return Array.isArray(a) ? a : []; }catch(e){ return []; }
+}
+
+/* Build a single shipped quiz card (immutable - no drag, delete, or export). */
+function buildShippedCard(entry, allAttempts) {
+  const atts = allAttempts.filter(a => a && a.quizId === entry.id)
+    .sort((a, b) => String(a.ts).localeCompare(String(b.ts)));
+  const last = atts.length ? atts[atts.length - 1] : null;
+  let dot = 'none', dotT = 'No attempts yet';
+  if(last){
+    if(last.pct >= 70){ dot = 'good'; dotT = 'Last attempt ' + last.pct + '%'; }
+    else { dot = 'warn'; dotT = 'Last attempt ' + last.pct + '% - needs work'; }
+  }
+
+  const n = entry.question_count;
+
+  /* Score pills (safe: numeric attempt data only) */
+  let scoreHtml;
+  if(atts.length){
+    const shown = atts.slice(-8);
+    const lead = atts.length > 8 ? '... ' : '';
+    const pills = lead + shown.map((a, i) =>
+      '<span class="pill ' + (a.pct >= 70 ? 'p-good' : 'p-bad') +
+      (i === shown.length - 1 ? ' p-last' : '') + '">' + a.score + '/' + a.total + '</span>'
+    ).join('');
+    const best = Math.max.apply(null, atts.map(a => a.pct));
+    scoreHtml = '<div class="pills">' + pills + '</div><span class="best">best ' + best + '%</span>';
+  } else {
+    scoreHtml = '<span class="noatt">no attempts yet</span>';
+  }
+
+  const card = document.createElement('section');
+  card.className = 'lec';
+  card.dataset.shippedId = entry.id;
+  /* No draggable attr and no drag listeners - shipped cards are immutable */
+
+  /* Header */
+  const badge = document.createElement('span');
+  badge.className = 'badge';
+  badge.title = n + ' questions';
+  badge.setAttribute('aria-label', n + ' questions');
+  badge.textContent = n;
+
+  const titleDiv = document.createElement('div');
+  titleDiv.className = 'q-title';
+  titleDiv.textContent = dash(entry.title);   /* textContent - safe */
+
+  const lecTitle = document.createElement('div');
+  lecTitle.className = 'lec-title';
+  lecTitle.appendChild(titleDiv);
+
+  if(entry.subtitle){
+    const subDiv = document.createElement('div');
+    subDiv.className = 'q-sub';
+    subDiv.textContent = dash(entry.subtitle); /* textContent - safe */
+    lecTitle.appendChild(subDiv);
+  }
+
+  const dotEl = document.createElement('span');
+  dotEl.className = 'dot dot-' + dot;
+  dotEl.title = dotT;
+
+  const lecHead = document.createElement('div');
+  lecHead.className = 'lec-head';
+  lecHead.appendChild(badge);
+  lecHead.appendChild(lecTitle);
+  lecHead.appendChild(dotEl);
+
+  /* Score row */
+  const qscore = document.createElement('div');
+  qscore.className = 'qscore';
+  qscore.innerHTML = scoreHtml; /* safe: numeric attempt data */
+
+  if(typeof entry.revision === 'number'){
+    const revSpan = document.createElement('span');
+    revSpan.className = 'best';
+    revSpan.style.marginLeft = '8px';
+    revSpan.textContent = 'r' + entry.revision;
+    qscore.appendChild(revSpan);
+  }
+
+  const scoreRow = document.createElement('div');
+  scoreRow.className = 'row';
+  scoreRow.appendChild(qscore);
+
+  /* Take link - href built from validated manifest entry.file */
+  const takeLink = document.createElement('a');
+  takeLink.className = 'take';
+  takeLink.href = 'quiz.html?src=' + encodeURIComponent(entry.file);
+  /* innerHTML safe: all content is hardcoded, not manifest-derived */
+  takeLink.innerHTML = 'Take <svg viewBox="0 0 20 20"><path d="M8 5l5 5-5 5"/></svg>';
+
+  const actionsRow = document.createElement('div');
+  actionsRow.className = 'row actions-row';
+  actionsRow.appendChild(takeLink);
+
+  const rows = document.createElement('div');
+  rows.className = 'rows';
+  rows.appendChild(scoreRow);
+  rows.appendChild(actionsRow);
+
+  card.appendChild(lecHead);
+  card.appendChild(rows);
+  return card;
+}
+
+/* Render manifest sections into #shipped-root. */
+function renderShippedSections(sections) {
+  const root = document.getElementById('shipped-root');
+  const customHdr = document.getElementById('custom-heading');
+  if(!root) return;
+  root.innerHTML = '';
+
+  const allAttempts = getShippedAttempts();
+  let hadContent = false;
+
+  sections.forEach(sec => {
+    if(!sec || !sec.id || !Array.isArray(sec.quizzes) || !sec.quizzes.length) return;
+
+    const secEl = document.createElement('div');
+    secEl.className = 'folder-section';
+
+    /* Collapsible section header (reuses existing folder-hdr CSS) */
+    let collapsed = false;
+
+    const chevBtn = document.createElement('button');
+    chevBtn.className = 'folder-chevron open';
+    chevBtn.setAttribute('aria-label', 'Collapse section');
+    chevBtn.innerHTML = '<svg viewBox="0 0 20 20"><path d="M7 5l6 5-6 5"/></svg>';
+
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'folder-name';
+    nameSpan.textContent = sec.name || sec.id; /* textContent - safe */
+
+    const countSpan = document.createElement('span');
+    countSpan.className = 'folder-count';
+    countSpan.textContent = sec.quizzes.length;
+
+    const hdr = document.createElement('div');
+    hdr.className = 'folder-hdr';
+    hdr.appendChild(chevBtn);
+    hdr.appendChild(nameSpan);
+    hdr.appendChild(countSpan);
+
+    const gridWrap = document.createElement('div');
+    gridWrap.className = 'folder-grid-wrap';
+
+    const grid = document.createElement('div');
+    grid.className = 'lib-grid';
+
+    sec.quizzes.forEach(entry => {
+      if(!entry || !entry.id || !entry.file) return;
+      grid.appendChild(buildShippedCard(entry, allAttempts));
+    });
+
+    gridWrap.appendChild(grid);
+
+    chevBtn.addEventListener('click', () => {
+      collapsed = !collapsed;
+      chevBtn.classList.toggle('open', !collapsed);
+      chevBtn.setAttribute('aria-label', collapsed ? 'Expand section' : 'Collapse section');
+      gridWrap.classList.toggle('collapsed', collapsed);
+    });
+
+    secEl.appendChild(hdr);
+    secEl.appendChild(gridWrap);
+    root.appendChild(secEl);
+    hadContent = true;
+  });
+
+  if(hadContent && customHdr) customHdr.style.display = 'block';
+}
+
+/* Show a warning banner in the shipped area (text only - safe). */
+function showShippedBanner(msg) {
+  const el = document.getElementById('shipped-banner');
+  if(!el) return;
+  el.textContent = msg;
+  el.classList.add('visible');
+}
+
+/* Fetch and render the shipped quiz manifest.
+   Skips silently on file:// (CORS would fail anyway).
+   Shows a visible warning on any failure. */
+function loadManifest() {
+  if(location.protocol === 'file:') return;
+  fetch('quizzes/manifest.json?v=' + Date.now())
+    .then(r => {
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(data => {
+      if(!data || data.schema_version !== 1 || !Array.isArray(data.sections))
+        throw new Error('invalid manifest schema');
+      renderShippedSections(data.sections);
+    })
+    .catch(err => {
+      showShippedBanner('Shipped quizzes unavailable — ' + (err && err.message ? err.message : 'fetch failed'));
+    });
+}
+
 /* ── Init ── */
 seedIfNeeded();
 applySettings();
 renderLibrary();
+loadManifest();
 
 /* ── One-time load-in sequence ──
    .pre-anim is added here (before first paint) only when motion is allowed, and every

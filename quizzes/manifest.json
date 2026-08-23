@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "generated": "2026-08-23T00:00:00.000Z",
+  "sections": [
+    {
+      "id": "demo",
+      "name": "Demo",
+      "quizzes": [
+        {
+          "id": "qf-demo-sample",
+          "title": "Sample Quiz - Human Body Basics",
+          "subtitle": "Demo | How QuizForge works | 10 questions",
+          "file": "quizzes/Demo/qf-demo-sample.r1.json",
+          "revision": 1,
+          "question_count": 10
+        }
+      ]
+    }
+  ]
+}
