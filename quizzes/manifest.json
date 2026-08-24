@@ -10,8 +10,8 @@
           "id": "cardio-w01-lec01",
           "title": "Lec 01 \u2014 Anatomy of the Heart",
           "subtitle": "Week 01 \u00b7 Lec 01 \u00b7 Anatomy of the Heart | 20 questions",
-          "file": "quizzes/Week01/cardio-w01-lec01.r1.json",
-          "revision": 1,
+          "file": "quizzes/Week01/cardio-w01-lec01.r2.json",
+          "revision": 2,
           "question_count": 20
         }
       ]
@@ -24,8 +24,8 @@
           "id": "cardio-w02-lec08",
           "title": "Lec 08 \u2014 Cardiac Conduction",
           "subtitle": "Week 02 \u00b7 Lec 08 \u00b7 Cardiac Conduction | 21 questions",
-          "file": "quizzes/Week02/cardio-w02-lec08.r1.json",
-          "revision": 1,
+          "file": "quizzes/Week02/cardio-w02-lec08.r2.json",
+          "revision": 2,
           "question_count": 21
         }
       ]
