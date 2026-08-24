@@ -45,6 +45,14 @@
           "file": "quizzes/Week01/cardio-w01-lec05.r1.json",
           "revision": 1,
           "question_count": 19
+        },
+        {
+          "id": "cardio-w01-lec06",
+          "title": "Lec 06 \u2014 Aortic Valve Disease",
+          "subtitle": "Week 01 \u00b7 Lec 06 \u00b7 Aortic Valve Disease | 20 questions",
+          "file": "quizzes/Week01/cardio-w01-lec06.r1.json",
+          "revision": 1,
+          "question_count": 20
         }
       ]
     },
