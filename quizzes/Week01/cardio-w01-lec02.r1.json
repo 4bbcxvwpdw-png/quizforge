@@ -1,0 +1,375 @@
+{
+  "schema_version": 1,
+  "id": "cardio-w01-lec02",
+  "revision": 1,
+  "question_count": 20,
+  "title": "Lec 02 — Cardiac Contraction",
+  "subtitle": "Week 01 · Lec 02 · Cardiac Contraction | 20 questions",
+  "source_fingerprints": {
+    "Lec02_FactInventory.md": "fef422e637083f9a7a7cda77037e56a538b025ca3caae999ee364baa80e0790e",
+    "quiz_selection.tsv": "058c13bd064b4581cddb542f0e138e675a61d31af534558159891e349d905223",
+    "01_slides.txt": "b00f6d3f10eb54a6be5e928a44e24d8d078ce80cdb4f96a51d96b8def3ed67a6",
+    "transcript.vtt": "66edf8e40079f31e53122133976fea8df5554a24d68395b790b5cf4e4ed52f6f"
+  },
+  "questions": [
+    {
+      "qid": "lec02-q01",
+      "text": "A researcher isolates the protein subunits of myosin from a cardiomyocyte and separates them by mass. Which correctly describes the chain composition of a single myosin molecule?",
+      "options": [
+        "One heavy chain with an α-helical tail plus four light chains that regulate its ATPase activity",
+        "Two heavy chains each with an α-helical tail and globular head, plus four light chains total",
+        "Four heavy chains and two regulatory light chains arranged symmetrically around a central hinge",
+        "Two heavy chains each with globular tail domains and a single pair of light chains at the neck",
+        "Three heavy chains in a coiled-coil shaft with two light chains that bind actin near the Z line"
+      ],
+      "correct": 1,
+      "explanation": "<strong>The correct answer is two heavy chains plus four light chains (two per head).</strong> Myosin is a macromolecular complex of two heavy chains and four light chains. The two heavy chains form an α-helical coiled-coil tail that transitions through a flexible hinge into a globular head. Each globular head carries two associated light chains that regulate ATPase activity at that head.<br><strong>Option A</strong> is wrong because there is only one heavy chain described there, but myosin has two.<br><strong>Option C</strong> inverts the stoichiometry — there are two heavy chains, not four.<br><strong>Option D</strong> incorrectly assigns globular domains to the tails (the tails are α-helical; globular domains are on the heads).<br><strong>Option E</strong> introduces a third heavy chain and does not match the myosin complex structure taught.\n\nSlide 7 · Transcript 06:09\n<img src=\"quizzes/media/cardio-w01-lec02-slide7.jpg\" alt=\"Slide 7\">",
+      "citation": "Slide 7 · Transcript 06:09",
+      "facts": [
+        "Lec02-F013",
+        "Lec02-F014",
+        "Lec02-F016",
+        "Lec02-F018"
+      ]
+    },
+    {
+      "qid": "lec02-q02",
+      "text": "A pharmacologist applies an ATP analog that locks myosin heads in the actin-bound state by preventing product release after hydrolysis. One crossbridge cycle normally consumes one ATP and displaces actin by approximately how many nanometers — and why does product release matter for cycling?",
+      "options": [
+        "11 nm; Pi release drives the power stroke; subsequent ADP release then ATP binding enables head detachment and re-cocking for the next cycle",
+        "5 nm; product release triggers tropomyosin to re-block the myosin binding site on actin after each stroke",
+        "22 nm; each ATP drives two sequential power strokes before phosphate release is required for thin-filament detachment",
+        "11 nm; product release depolarizes the T-tubule membrane to trigger Ca2+ release for re-initiating the next excitation cycle",
+        "3 nm; the energy from ATP hydrolysis closes the myosin head cleft and generates filament sliding without requiring subsequent product release"
+      ],
+      "correct": 0,
+      "explanation": "<strong>One crossbridge cycle = one power stroke = one ATP consumed = 11 nm of actin displacement.</strong> After ATP binds the myosin head, it is hydrolyzed; the stored energy cocks the head. The head then binds actin and releases inorganic phosphate, driving the power stroke. ADP release completes the stroke. A new ATP molecule must then bind to allow the head to detach — without product release and ATP rebinding, the head stays attached in rigor.<br><strong>Option B</strong> is wrong because tropomyosin re-blocking is Ca2+-dependent, not driven by product release per se.<br><strong>Option C</strong> is wrong because each ATP drives a single power stroke (not two), and the 22 nm figure is incorrect.<br><strong>Option D</strong> incorrectly links ADP/Pi release to membrane depolarization — these are unrelated processes.<br><strong>Option E</strong> misrepresents the step that consumes ATP and understates the displacement distance.\n\nSlide 10 · Transcript 09:17\n<img src=\"quizzes/media/cardio-w01-lec02-slide10.jpg\" alt=\"Slide 10\">",
+      "citation": "Slide 10 · Transcript 09:17",
+      "facts": [
+        "Lec02-F026"
+      ]
+    },
+    {
+      "qid": "lec02-q03",
+      "text": "At rest, two troponin subunits cooperate to hold tropomyosin over the myosin binding sites on actin. Which pairing correctly identifies each subunit's role in the resting inhibitory state?",
+      "options": [
+        "TnC anchors the troponin complex to actin; TnI binds Ca2+ when the cell is activated",
+        "TnT binds Ca2+ to release the complex from actin; TnI tethers tropomyosin to the filament backbone",
+        "TnT anchors the entire complex to actin; TnC holds tropomyosin in the blocking position over myosin sites",
+        "TnT binds tropomyosin forming the complex; TnI holds tropomyosin in place covering the myosin binding sites",
+        "TnI releases tropomyosin from actin when cytoplasmic Ca2+ rises above threshold; TnT tethers thin filaments to the Z-line scaffold"
+      ],
+      "correct": 3,
+      "explanation": "<strong>At rest, TnT binds tropomyosin (forming the regulatory complex) and TnI holds tropomyosin in the blocking position over the myosin binding sites.</strong> The three-subunit troponin complex (TnT, TnI, TnC) regulates tropomyosin movement. When Ca2+ rises, it binds TnC — which then rolls the entire complex (including tropomyosin) off the binding sites, allowing crossbridge formation.<br><strong>Option A</strong> incorrectly attributes Ca2+-binding to TnI; TnC is the Ca2+-sensing subunit.<br><strong>Option B</strong> inverts TnT and TnC functions — TnT binds tropomyosin, not Ca2+.<br><strong>Option C</strong> assigns Ca2+-binding to TnC correctly but then gives TnC the blocking role (held by TnI).<br><strong>Option E</strong> confuses TnI (it holds tropomyosin in place rather than releasing it upon Ca2+ rise — that role belongs to TnC-triggered conformational change).\n\nSlide 8 · Slide 9 · Transcript 07:14\n<img src=\"quizzes/media/cardio-w01-lec02-slide8.jpg\" alt=\"Slide 8\">\n<img src=\"quizzes/media/cardio-w01-lec02-slide9.jpg\" alt=\"Slide 9\">",
+      "citation": "Slide 8 · Slide 9 · Transcript 07:14",
+      "facts": [
+        "Lec02-F022",
+        "Lec02-F024"
+      ]
+    },
+    {
+      "qid": "lec02-q04",
+      "text": "Which pairing correctly matches intercalated disc junction types with their primary functions in cardiac muscle?",
+      "options": [
+        "Gap junctions → mechanical force transmission between adjacent cardiac cells; desmosomes → electrical coupling; fasciae adherentes → Ca2+ buffering near the membrane junction",
+        "Gap junctions → electrical conduction between cells; desmosomes → mechanical anchoring to prevent cell separation; fasciae adherentes → thin filament attachment",
+        "Desmosomes → electrical coupling; fasciae adherentes → mechanical anchoring; gap junctions → Ca2+ storage at the disc",
+        "Fasciae adherentes conduct depolarization between cells; desmosomes anchor myosin thick filaments; gap junctions anchor the Z disc to the sarcolemma membrane",
+        "Gap junctions → anchoring actin to the sarcolemmal membrane; desmosomes → anchoring myosin to the Z disc; fasciae adherentes → sarcolemmal Ca2+ transport"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Gap junctions provide electrical (depolarization) coupling between cells; desmosomes prevent cells from pulling apart during contraction; fasciae adherentes anchor thin filaments at the intercalated disc.</strong> Intercalated discs contain all three junction types. Gap junctions form channels that allow depolarization to flow from one cardiac cell to the next — enabling the heart to act as a functional syncytium. Desmosomes are mechanical anchors; when cardiac muscle contracts, they prevent the cells from literally separating. Fasciae adherentes are the cardiac equivalent of the Z disc at the cell border.<br><strong>Option A</strong> reverses gap junction and desmosome functions.<br><strong>Option C</strong> assigns electrical coupling to desmosomes, which are purely structural. Options D and E introduce incorrect assignments not supported by lecture content.\n\nSlide 4 · Slide 5 · Transcript 04:36\n<img src=\"quizzes/media/cardio-w01-lec02-slide4.jpg\" alt=\"Slide 4\">\n<img src=\"quizzes/media/cardio-w01-lec02-slide5.jpg\" alt=\"Slide 5\">",
+      "citation": "Slide 4 · Slide 5 · Transcript 04:36",
+      "facts": [
+        "Lec02-F008",
+        "Lec02-F010"
+      ]
+    },
+    {
+      "qid": "lec02-q05",
+      "text": "During a single cardiac action potential, L-type Ca2+ channels open and Ca2+ enters the cytoplasm. This influx alone is insufficient to trigger contraction. Which correctly states the relative contributions of the two Ca2+ sources to the total rise in cytoplasmic Ca2+?",
+      "options": [
+        "L-type channel influx provides ~75% of cytoplasmic Ca2+; SR release via CICR provides the remaining ~25%",
+        "L-type channel influx and SR release each contribute approximately 50% of cytoplasmic Ca2+",
+        "L-type channels contribute ~25% of cytoplasmic Ca2+; CICR from the SR accounts for the remaining ~75%",
+        "SR release via ryanodine receptors is the sole source; L-type channels only depolarize the membrane without contributing Ca2+",
+        "L-type channel influx provides ~90% of cytoplasmic Ca2+; SERCA contributes ~10% by releasing SR stores"
+      ],
+      "correct": 2,
+      "explanation": "<strong>L-type channel influx contributes approximately 25% of the cytoplasmic Ca2+ rise, and Ca2+-induced Ca2+-release (CICR) from the SR contributes the remaining ~75%.</strong> Ca2+ entering through L-type channels binds RyR2 receptors on the SR membrane, triggering CICR — an explosive secondary release that amplifies the initial influx. This SR-derived Ca2+ is the principal driver of myocardial contraction.<br><strong>Option A</strong> reverses the proportions.<br><strong>Option B</strong> incorrectly implies equal contributions.<br><strong>Option D</strong> is wrong because L-type channel influx does enter the cytoplasm (contributing ~25%) and is required to trigger RyR2 opening.<br><strong>Option E</strong> dramatically overestimates L-type contribution and misidentifies SERCA as a Ca2+ source (SERCA sequesters, not releases, Ca2+ during contraction).\n\nSlide 19 · Transcript 20:52\n<img src=\"quizzes/media/cardio-w01-lec02-slide19.jpg\" alt=\"Slide 19\">",
+      "citation": "Slide 19 · Transcript 20:52",
+      "facts": [
+        "Lec02-F045",
+        "Lec02-F047"
+      ]
+    },
+    {
+      "qid": "lec02-q06",
+      "text": "A patient develops a life-threatening hyperthermic crisis during halothane anesthesia. Biopsy reveals a gain-of-function mutation in the ryanodine receptor causing uncontrolled Ca2+ release. The patient's cardiac function remains completely normal. Which best explains why this mutation affects skeletal muscle but not the heart?",
+      "options": [
+        "Cardiac muscle relies on L-type channels rather than ryanodine receptors for Ca2+ release, so a RyR mutation cannot affect myocardial contraction",
+        "The pericardium shields the heart from volatile anesthetic agents, preventing drug exposure to cardiac ryanodine receptors",
+        "Cardiac SERCA activity is high enough to rapidly sequester any aberrant Ca2+ release before crossbridge formation is triggered",
+        "Cardiac muscle T-tubules are organized as triads that isolate ryanodine receptors from the sarcolemma",
+        "Skeletal muscle expresses RyR1, while cardiac muscle expresses the RyR2 isoform; the mutation in RyR1 does not affect RyR2"
+      ],
+      "correct": 4,
+      "explanation": "<strong>Skeletal muscle expresses RyR1 and cardiac muscle expresses RyR2 — a mutation in RyR1 spares RyR2 and therefore leaves cardiac contraction intact.</strong> The professor explicitly taught this isoform split when discussing the malignant hyperthermia case: the ryanodine receptor mechanically coupled to the skeletal L-type channel is RyR1, whereas cardiac SR uses RyR2, triggered chemically by Ca2+ influx. A gain-of-function mutation targeting RyR1 does not alter RyR2 function.<br><strong>Option A</strong> is incorrect because cardiac muscle does use ryanodine receptors (RyR2) — they are simply a different isoform.<br><strong>Option B</strong> is physiologically false; volatile anesthetics reach the myocardium readily.<br><strong>Option C</strong> is wrong because the distinction is isoform identity, not SERCA buffering capacity.<br><strong>Option D</strong> inverts the anatomy — cardiac muscle uses diads (one T-tubule + one terminal cisternae), not triads.\n\nSlide 22 · Transcript 22:25\n<img src=\"quizzes/media/cardio-w01-lec02-slide22.jpg\" alt=\"Slide 22\">",
+      "citation": "Slide 22 · Transcript 22:25",
+      "facts": [
+        "Lec02-F074"
+      ]
+    },
+    {
+      "qid": "lec02-q07",
+      "text": "Skeletal muscle responds to a maximal nerve stimulus with a fixed, all-or-none contraction force, regardless of firing frequency (within a single twitch). Cardiac muscle, by contrast, generates graded force. Which best accounts for this fundamental difference?",
+      "options": [
+        "Skeletal muscle lacks ryanodine receptors entirely, so Ca2+ depends on L-type influx alone, limiting Ca2+ available and preventing any TnC saturation in skeletal fibers",
+        "Cardiac muscle contains more mitochondria and more efficient oxidative phosphorylation, allowing variable ATP production rates that directly modulate crossbridge cycling speed and contractile force",
+        "Skeletal action potentials have a shorter plateau phase than cardiac APs, releasing proportionally less Ca2+ per twitch and activating fewer TnC binding sites per contraction event",
+        "Skeletal L-type–RyR1 coupling saturates all TnC sites, producing all-or-none maximal force; cardiac SR Ca2+ does not saturate TnC, so cardiac force scales with Ca2+ concentration",
+        "Cardiac sarcomeres have a longer baseline resting length than skeletal muscle, providing greater reserve for actin-myosin overlap expansion and enabling proportional force modulation over a wider Ca2+ range"
+      ],
+      "correct": 3,
+      "explanation": "<strong>In skeletal muscle, direct mechanical coupling of L-type channels to RyR1 floods the cytoplasm with Ca2+ that saturates all TnC binding sites — producing all-or-none maximal activation. In cardiac muscle, SR Ca2+ release does not saturate TnC, so force scales with cytoplasmic Ca2+ concentration.</strong> This TnC saturation difference is the molecular basis of skeletal all-or-none vs. cardiac graded contraction.<br><strong>Option A</strong> is wrong: skeletal muscle has RyR1 receptors and uses them; the difference is in coupling mechanism and Ca2+ concentration, not receptor absence.<br><strong>Option B</strong> incorrectly attributes force grading to ATP availability — the regulatory mechanism is Ca2+-TnC interaction, not ATP supply.<br><strong>Option C</strong> relates AP duration to Ca2+ quantity in a way not supported by the lecture; the key mechanism is TnC saturation status.<br><strong>Option E</strong> is incorrect — sarcomere resting length differences are not the basis of the graded-vs-all-or-none distinction.\n\nSlide 23 · Transcript 25:04\n<img src=\"quizzes/media/cardio-w01-lec02-slide23.jpg\" alt=\"Slide 23\">",
+      "citation": "Slide 23 · Transcript 25:04",
+      "facts": [
+        "Lec02-F055"
+      ]
+    },
+    {
+      "qid": "lec02-q08",
+      "text": "Unlike skeletal muscle, cardiac muscle cannot produce a sustained (fused) tetanic contraction even at very high stimulation rates. Which best explains this property — and what happens to force instead when heart rate rises substantially?",
+      "options": [
+        "The cardiac AP plateau is absent at high stimulation rates, eliminating L-type Ca2+ influx and causing progressive contractile force reduction with each successive beat at elevated frequencies",
+        "Cardiac muscle's refractory period prevents tetanic summation; surplus Ca2+ that NCX cannot export is loaded into the SR by SERCA each beat, producing a stepwise Positive Staircase increase in force",
+        "The fibrous pericardium limits ventricular expansion at elevated heart rates, reducing preload mechanically and preventing the sarcomere stretch needed for Starling-dependent force enhancement",
+        "T-tubule diameter progressively narrows during tachycardia, reducing L-type channel opening probability and maintaining constant cytoplasmic Ca2+ and contraction amplitude across all stimulation rates",
+        "NCX transporter activity rises in proportion to heart rate, efficiently exporting surplus Ca2+ entering per beat and preventing SR loading, thereby maintaining constant contraction amplitude"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Cardiac muscle cannot tetanize because its prolonged refractory period prevents the summation of twitches; at high rates, the Ca2+ that NCX cannot export is taken up by SERCA and added to the SR load — producing a staircase increase in force rather than a fused contraction.</strong> This is the basis of the Bowditch/Positive Staircase effect. The long refractory period (due to the extended plateau phase) is a protective design feature ensuring the heart relaxes between beats to refill.<br><strong>Option A</strong> is wrong: the plateau phase persists at physiological high rates and is essential for L-type Ca2+ entry.<br><strong>Option C</strong> misidentifies the pericardial role; pericardial constraint affects passive filling at very high volumes, not beat-to-beat summation.<br><strong>Option D</strong> has no lecture support; T-tubule diameter doesn't narrow with rate.<br><strong>Option E</strong> is precisely the opposite of the mechanism — NCX cannot keep up at high rates, which is why SR loading occurs.\n\nSlide 26 · Transcript 28:42\n<img src=\"quizzes/media/cardio-w01-lec02-slide26.jpg\" alt=\"Slide 26\">",
+      "citation": "Slide 26 · Transcript 28:42",
+      "facts": [
+        "Lec02-F075",
+        "Lec02-F062"
+      ]
+    },
+    {
+      "qid": "lec02-q09",
+      "text": "In an isolated heart preparation, stimulation rate is abruptly doubled. Contractile force does not jump immediately to a new maximum; instead it climbs incrementally over approximately 8–10 beats before plateauing at a higher steady state. Which best explains why force rises progressively over multiple beats rather than reaching the new maximum within the first beat?",
+      "options": [
+        "SERCA expression is upregulated over 8–10 beats by increased Ca2+ demand, gradually expanding SR Ca2+ storage capacity and the Ca2+ available for each subsequent release",
+        "Plateau duration lengthens progressively at the faster rate, admitting incrementally more Ca2+ through L-type channels per beat until a new plateau-duration equilibrium is established",
+        "PKA progressively phosphorylates RyR2 over 8–10 beats at the faster rate, incrementally raising channel open probability and Ca2+ release magnitude until a saturation plateau is reached",
+        "Sarcomere lengths progressively increase at the faster stimulation rate, shifting filament overlap toward the steeper ascending limb beat by beat until end-diastolic filling volume reaches a new steady state",
+        "Surplus Ca2+ per beat is loaded into the SR by SERCA before NCX can export it; SR load grows beat by beat, enlarging each subsequent Ca2+ release until load and export reach steady state"
+      ],
+      "correct": 4,
+      "explanation": "<strong>The SR Ca2+ load builds incrementally because each beat deposits a small surplus into the SR — Ca2+ that NCX cannot fully export before the next action potential — and SERCA captures it; as the SR load grows beat by beat, each subsequent Ca2+ release is larger, producing the stepwise Positive Staircase.</strong> This SR Ca2+ loading mechanism explains why the staircase takes 6–10 beats to reach steady state rather than jumping instantly.<br><strong>Option A</strong> is wrong: SERCA protein expression is a genomic response requiring hours; the Bowditch staircase develops over seconds via acute Ca2+ handling, not new protein synthesis.<br><strong>Option B</strong> is wrong: plateau duration does not progressively lengthen at higher stimulation rates in normal cardiac physiology; the mechanism is SR Ca2+ loading, not increasing L-type channel open time.<br><strong>Option C</strong> is wrong: PKA phosphorylation of RyR2 is part of the sympathetic pathway (Slide 29), not the intrinsic rate-dependent staircase mechanism.<br><strong>Option D</strong> is wrong: reduced diastolic filling time at higher rates would shorten sarcomere stretch and reduce Frank-Starling force — it does not explain a progressive force increase.\n\nSlide 26 · Transcript 29:12\n<img src=\"quizzes/media/cardio-w01-lec02-slide26.jpg\" alt=\"Slide 26\">",
+      "citation": "Slide 26 · Transcript 29:12",
+      "facts": [
+        "Lec02-F063"
+      ]
+    },
+    {
+      "qid": "lec02-q10",
+      "text": "After systole ends, cytoplasmic Ca2+ must be rapidly lowered to allow the troponin complex to re-block the myosin binding sites and permit ventricular relaxation. Which transporter accounts for approximately 92% of this Ca2+ removal?",
+      "options": [
+        "SERCA (SR Ca2+ ATPase), which pumps Ca2+ from the cytoplasm back into the sarcoplasmic reticulum",
+        "NCX (Na+/Ca2+ exchanger), which uses the inward Na+ gradient to export Ca2+ across the sarcolemma",
+        "Plasma membrane Ca2+ ATPase, which directly pumps Ca2+ out of the cell using ATP",
+        "Ryanodine receptor 2, which closes and passively resequesters Ca2+ back into the SR lumen",
+        "Mitochondrial Ca2+ uniporter, which buffers cytoplasmic Ca2+ during peak systolic levels"
+      ],
+      "correct": 0,
+      "explanation": "<strong>SERCA accounts for approximately 92% of cytoplasmic Ca2+ removal during diastole, pumping Ca2+ back into the SR lumen and causing Ca2+ to dissociate from troponin, which allows tropomyosin to re-block myosin binding sites.</strong> This SERCA-dominant reuptake resets the sarcomere for the next contraction cycle.<br><strong>Option B</strong> is partially correct in function (NCX does export Ca2+) but accounts for only part of the remaining ~8%, not 92%.<br><strong>Option C</strong> — the plasma membrane Ca2+ ATPase — handles a small fraction of the remaining Ca2+ alongside NCX.<br><strong>Option D</strong> is wrong: RyR2 is a release channel; when it closes it stops Ca2+ release, but it does not resequester Ca2+ (SERCA does that).<br><strong>Option E</strong> has no lecture support for the mitochondrial uniporter as a dominant relaxation mechanism.\n\nSlide 27 · Transcript 29:48\n<img src=\"quizzes/media/cardio-w01-lec02-slide27.jpg\" alt=\"Slide 27\">",
+      "citation": "Slide 27 · Transcript 29:48",
+      "facts": [
+        "Lec02-F064"
+      ]
+    },
+    {
+      "qid": "lec02-q11",
+      "text": "SERCA handles the large majority of cytoplasmic Ca2+ during relaxation. Which transporters are responsible for the remaining approximately 8% of Ca2+ that must be removed from the cardiomyocyte cytoplasm?",
+      "options": [
+        "Ryanodine receptor 2 (RyR2) and L-type Ca2+ channels, which run in reverse during repolarization to resequester Ca2+ into the SR lumen",
+        "Mitochondrial Ca2+ uniporter and sodium-hydrogen exchanger (NHE), acting synergistically to buffer cytoplasmic Ca2+ during peak systolic Ca2+ concentrations",
+        "SERCA isoform 3 and the junctional SR membrane ATPase, which together handle residual Ca2+ in the subsarcolemmal space after SERCA completes primary reuptake",
+        "Sarcolemmal Ca2+ ATPase and NCX, which transport the remaining ~8% of Ca2+ out of the cardiomyocyte across the plasma membrane",
+        "Calreticulin and calsequestrin, which chelate residual Ca2+ within the SR lumen to prevent re-release during the subsequent diastolic interval"
+      ],
+      "correct": 3,
+      "explanation": "<strong>The sarcolemmal Ca2+ ATPase and the Na+/Ca2+ exchanger (NCX) together transport the remaining ~8% of Ca2+ out of the cardiomyocyte across the plasma membrane.</strong> This maintains net Ca2+ balance over successive beats — the same quantity of Ca2+ that enters through L-type channels during systole must be exported per beat.<br><strong>Option A</strong> is wrong because RyR2 and L-type channels are release and entry channels, respectively; they do not run in reverse to remove Ca2+.<br><strong>Option B</strong> has no lecture support for NHE as a Ca2+ transporter in this context.<br><strong>Option C</strong> invents SERCA isoform 3 and junctional ATPase distinctions not taught in this lecture.<br><strong>Option E</strong> confuses luminal Ca2+-binding proteins (calreticulin, calsequestrin) with active Ca2+ transporters — they bind Ca2+ within the SR but do not account for the 8% that is exported across the sarcolemma.\n\nSlide 27\n<img src=\"quizzes/media/cardio-w01-lec02-slide27.jpg\" alt=\"Slide 27\">",
+      "citation": "Slide 27",
+      "facts": [
+        "Lec02-F066"
+      ]
+    },
+    {
+      "qid": "lec02-q12",
+      "text": "Sympathetic stimulation activates the Gs → adenylate cyclase → cAMP → PKA cascade in cardiomyocytes. Which set correctly lists all five PKA phosphorylation targets in cardiac muscle and the immediate consequence of each?",
+      "options": [
+        "L-type channels (↑ Ca2+ influx), RyR2 (↑ SR Ca2+ release), phospholamban (disinhibits SERCA), troponin (↑ Ca2+ dissociation rate), NCX (↑ Ca2+ export)",
+        "L-type channels (↑ Ca2+ influx), RyR1 (↑ SR Ca2+ release in cardiac), myosin light chain kinase (↑ cross-bridge cycling), calsequestrin (↑ SR Ca2+ storage), NCX (↑ Ca2+ export)",
+        "Adenylate cyclase (produces more cAMP), RyR2 (↑ SR Ca2+ release), SERCA (directly activated), NCX (↑ Ca2+ export), troponin I (↓ Ca2+ sensitivity)",
+        "L-type channels (↑ Ca2+ influx), phospholamban (directly activates SERCA), troponin (↑ Ca2+ sensitivity), myosin ATPase (↑ power stroke speed), NCX (↑ Ca2+ export)",
+        "RyR2 (↑ SR Ca2+ release), SERCA (↑ reuptake), NCX (↑ Ca2+ export), Na+/K+ ATPase (↑ Na+ export to drive NCX), troponin C (↑ Ca2+ affinity)"
+      ],
+      "correct": 0,
+      "explanation": "<strong>PKA phosphorylates five targets: L-type Ca2+ channels (↑ influx), RyR2 (↑ SR release), phospholamban (disinhibiting SERCA to ↑ SR sequestration), troponin (↑ rate of Ca2+ dissociation from TnC, speeding relaxation), and NCX (↑ Ca2+ export).</strong> The first two increase systolic force; the last three accelerate diastolic relaxation and ventricular filling.<br><strong>Option B</strong> incorrectly names RyR1 (cardiac expresses RyR2) and inserts myosin light chain kinase and calsequestrin, which are not in the lecture's PKA target list.<br><strong>Option C</strong> incorrectly lists adenylate cyclase as a PKA target (it is upstream) and says SERCA is directly activated — in fact, PKA phosphorylates phospholamban, which disinhibits SERCA.<br><strong>Option D</strong> incorrectly says phospholamban directly activates SERCA and assigns myosin ATPase as a PKA target, neither of which is supported by the lecture.<br><strong>Option E</strong> incorrectly includes Na+/K+ ATPase as a PKA target and lists TnC Ca2+ affinity increase (it is the dissociation rate that rises).\n\nSlide 29 · Transcript 32:51\n<img src=\"quizzes/media/cardio-w01-lec02-slide29.jpg\" alt=\"Slide 29\">",
+      "citation": "Slide 29 · Transcript 32:51",
+      "facts": [
+        "Lec02-F069"
+      ]
+    },
+    {
+      "qid": "lec02-q13",
+      "text": "A student reads that sympathetic stimulation \"increases myocardial relaxation\" and concludes that the diastolic phase is prolonged, giving the heart more time to refill. Which statement best corrects this interpretation?",
+      "options": [
+        "Sympathetic stimulation prolongs the plateau phase to increase Ca2+ entry per beat, generating faster systolic force development while shortening the interval from depolarization to peak contractile force",
+        "Sympathetic stimulation has no measurable effect on relaxation kinetics; it exclusively increases crossbridge cycling rate and contractile force during the systolic ejection phase of each beat",
+        "Sympathetic stimulation shortens the plateau phase and speeds Ca2+ removal, increasing the RATE of relaxation — diastole becomes briefer so the next beat can occur sooner, not longer",
+        "Sympathetic stimulation prolongs diastole by withdrawing parasympathetic tone at the SA node, slowing intrinsic firing rate and extending the interval between beats at rest",
+        "Sympathetic stimulation accelerates relaxation only through long-term increases in SERCA protein expression over hours to days, without any immediate effect on plateau duration or Ca2+ removal kinetics"
+      ],
+      "correct": 2,
+      "explanation": "<strong>\"Increased relaxation\" from sympathetic stimulation means a faster rate of Ca2+ removal and re-polarization — a shorter plateau phase — not a longer diastolic period.</strong> The professor stopped during lecture to explicitly correct this common misconception: the diastolic phase is actually shorter (not longer), because quicker relaxation allows the next contraction to begin sooner at high heart rates. PKA phosphorylation of phospholamban accelerates SERCA, troponin phosphorylation speeds Ca2+ dissociation, and NCX phosphorylation increases Ca2+ export — all shortening the time from peak systole to full relaxation.<br><strong>Option A</strong> reverses the effect on the plateau (sympathetic stimulation shortens, not prolongs, the plateau).<br><strong>Option B</strong> is wrong: PKA phosphorylation of SERCA (via PLN) and troponin do measurably accelerate relaxation acutely.<br><strong>Option D</strong> conflates sympathetic and parasympathetic systems.<br><strong>Option E</strong> is wrong: the acute PKA-mediated effects on PLN, troponin, and NCX produce immediate changes in relaxation rate, not a genomic increase in SERCA expression.\n\nSlide 29 · Transcript 35:29\n<img src=\"quizzes/media/cardio-w01-lec02-slide29.jpg\" alt=\"Slide 29\">",
+      "citation": "Slide 29 · Transcript 35:29",
+      "facts": [
+        "Lec02-F073"
+      ]
+    },
+    {
+      "qid": "lec02-q14",
+      "text": "During normal ventricular filling, cardiomyocyte sarcomere length increases from ~1.9 µm at low preload to ~2.4 µm at high preload. Which statement correctly contrasts the active tension ranges of cardiac and skeletal muscle?",
+      "options": [
+        "Skeletal muscle generates active tension from 1.9 to 2.4 µm; cardiac muscle generates tension over the broader 1.4–2.9 µm range",
+        "Both cardiac and skeletal muscle generate peak active tension at sarcomere lengths of 2.0–2.2 µm with identical active tension curves",
+        "Cardiac muscle generates active tension from 1.4 to 2.9 µm with a flat plateau; skeletal muscle produces tension only between 2.0 and 2.4 µm",
+        "Cardiac muscle active tension peaks at 1.5 µm; skeletal muscle active tension peaks at 2.5 µm due to longer thin filament length",
+        "Cardiac muscle generates active tension over 1.9–2.4 µm; skeletal muscle generates active tension over the broader range of 1.4–2.9 µm"
+      ],
+      "correct": 4,
+      "explanation": "<strong>Cardiac muscle generates active tension over the narrow range of 1.9–2.4 µm, while skeletal muscle covers the broader range of 1.4–2.9 µm.</strong> This narrow cardiac range means the heart operates on a steep ascending limb — small changes in sarcomere length produce large changes in force. Skeletal muscle's wider range reflects greater thin filament flexibility and less stiff Titin.<br><strong>Option A</strong> inverts the two ranges — skeletal muscle has the wider range (1.4–2.9 µm), not the narrower one.<br><strong>Option B</strong> is incorrect: the curves are not identical, and the cardiac range is significantly narrower and steeper.<br><strong>Option C</strong> inverts the ranges and mischaracterizes the skeletal curve as having a flat plateau.<br><strong>Option D</strong> gives incorrect peak-tension lengths not supported by lecture data.\n\nSlide 12 · Transcript 10:50\n<img src=\"quizzes/media/cardio-w01-lec02-slide12.jpg\" alt=\"Slide 12\">",
+      "citation": "Slide 12 · Transcript 10:50",
+      "facts": [
+        "Lec02-F028",
+        "Lec02-F029"
+      ]
+    },
+    {
+      "qid": "lec02-q15",
+      "text": "Under resting physiologic conditions, cardiomyocytes operate at submaximal force production on the ascending limb of the length-tension curve. Which consequence follows directly from operating in this submaximal region rather than at the curve's peak?",
+      "options": [
+        "The heart is protected from generating excessive systolic pressure because sarcomeres at the curve peak have reached maximum crossbridge number and cannot increase force further regardless of preload",
+        "Greater preload stretches sarcomeres further up the ascending limb, increasing actin-myosin overlap and contractile force — the cellular basis of beat-to-beat Frank-Starling compensation",
+        "Operating at submaximal force minimizes cardiac oxygen consumption between beats by reducing actin-myosin crossbridge cycling rate, preserving ATP for high-demand situations",
+        "Submaximal operation allows the heart to decrease force during reduced preload but prevents any force increases above the current operating baseline regardless of additional filling",
+        "The ascending limb position ensures that all TnC binding sites are already maximally saturated at rest, preserving a full Ca2+ reserve for force augmentation when sympathetic drive is added"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Operating on the ascending limb at submaximal force means any increase in preload (end-diastolic volume) stretches sarcomeres further along the ascending limb, increasing actin-myosin overlap and contractile force — the cellular basis of the Frank-Starling law.</strong> This gives the heart the ability to respond to beat-to-beat changes in venous return without neural input.<br><strong>Option A</strong> is partially true in that sarcomeres cannot be stretched to the descending limb under normal conditions, but this is the role of Titin and the pericardium, not merely operating on the ascending limb.<br><strong>Option C</strong> is not the reason for the operating point; ATP minimization is not the teleological basis described in the lecture.<br><strong>Option D</strong> is wrong: operating on the ascending limb allows force increases in both directions — increased preload raises force, and reduced preload reduces it.<br><strong>Option E</strong> inverts the situation — operating on the ascending limb means TnC is NOT fully saturated, preserving a large reserve for Ca2+-dependent force increase.\n\nSlide 14 · Transcript 13:28\n<img src=\"quizzes/media/cardio-w01-lec02-slide14.jpg\" alt=\"Slide 14\">",
+      "citation": "Slide 14 · Transcript 13:28",
+      "facts": [
+        "Lec02-F035"
+      ]
+    },
+    {
+      "qid": "lec02-q16",
+      "text": "Passive tension in cardiac muscle rises more steeply at shorter sarcomere lengths compared to skeletal muscle, and this steep rise overlaps significantly with the active tension curve. Which most directly accounts for this steeper passive tension in cardiac muscle?",
+      "options": [
+        "Cardiac muscle has denser connective tissue septa between cells than skeletal muscle, producing greater intercellular resistance to passive stretch independent of sarcomere composition",
+        "Cardiac Titin is stiffer than skeletal Titin, generating stronger recoil forces at smaller sarcomere elongations and rapidly returning the sarcomere to resting length during relaxation",
+        "The cardiac action potential plateau mechanically deforms the T-tubule membrane under depolarization, adding a voltage-dependent stiffness component entirely absent from skeletal muscle fibers under comparable conditions",
+        "Cardiac intercalated discs transmit tensile forces longitudinally through the myocardium, adding to apparent passive stiffness at sarcomere lengths that exceed the normal physiologic range",
+        "Cardiac myocytes are shorter in length than skeletal fibers, so the same passive force is distributed across fewer sarcomeres in series, raising the per-sarcomere passive tension measurement"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Cardiac Titin is less compliant (stiffer) than skeletal Titin; this lower compliance produces stronger recoil forces at smaller sarcomere extensions, explaining the steep cardiac passive tension curve and the rapid return to resting length during relaxation.</strong> Titin is an elastic filament that tethers the Z line to myosin near the M line, acting like a spring. Because cardiac Titin snaps back hard with even small stretch, passive resistance begins rising early and steeply.<br><strong>Option A</strong> is wrong: while cardiac connective tissue content differs from skeletal, the lecture specifically attributes the steep passive tension curve to Titin compliance differences, not general connective tissue density.<br><strong>Option C</strong> is physiologically unfounded — membrane voltage does not directly stretch sarcomeres.<br><strong>Option D</strong> misattributes the passive stiffness to intercalated disc mechanics, which transmit contractile force but are not the source of the passive tension curve difference.<br><strong>Option E</strong> is incorrect: passive tension per sarcomere is determined by Titin compliance, not cell length per se.\n\nSlide 12 · Slide 13 · Transcript 11:23\n<img src=\"quizzes/media/cardio-w01-lec02-slide12.jpg\" alt=\"Slide 12\">\n<img src=\"quizzes/media/cardio-w01-lec02-slide13.jpg\" alt=\"Slide 13\">",
+      "citation": "Slide 12 · Slide 13 · Transcript 11:23",
+      "facts": [
+        "Lec02-F030",
+        "Lec02-F031",
+        "Lec02-F032",
+        "Lec02-F033"
+      ]
+    },
+    {
+      "qid": "lec02-q17",
+      "text": "A pathologist examines a heart from a patient who died of chronic dilated cardiomyopathy. The ventricles were massively enlarged at end-diastole. Which correctly describes the mechanical safeguards that normally prevent sarcomeres from reaching this pathologically overstretched state?",
+      "options": [
+        "High SERCA activity in the dilated ventricle pumps progressively more Ca2+ into the SR per beat, compensating mechanically for the reduced actin-myosin overlap occurring on the descending limb",
+        "The AV valves close more tightly at high diastolic volumes, limiting further ventricular filling before sarcomeres are overstretched beyond the critical 2.4 µm threshold",
+        "Cardiac Titin's stiffness and the low-compliance pericardium both oppose dilation, preventing sarcomeres from stretching above 2.4 µm onto the descending limb of the length-tension curve",
+        "Elevated passive tension on the descending limb triggers ventricular mechanoreceptors that drive reflex vasoconstriction, reducing venous return before additional sarcomere stretch can occur",
+        "The steep cardiac passive tension curve generates sufficient Titin recoil at 2.4 µm to completely reverse all chamber dilation regardless of the severity of volume overload or underlying cardiomyopathy"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Cardiac Titin's high stiffness and the fibrous pericardium's low compliance together oppose ventricular dilation, preventing sarcomeres from stretching onto the descending limb where actin-myosin overlap and force production decline.</strong> Titin acts as a molecular spring within each sarcomere; the pericardium constrains the whole chamber. In dilated cardiomyopathy these safeguards are overcome, sarcomeres reach lengths above 2.4 µm, and contractile force falls with each successive cycle.<br><strong>Option A</strong> is physiologically incorrect: SERCA responds to cytoplasmic Ca2+, not to sarcomere length directly, and cannot compensate for a mechanically compromised overlap geometry.<br><strong>Option B</strong> is incorrect: AV valve closure is driven by pressure gradients, not sarcomere length sensing.<br><strong>Option D</strong> invents a reflex arc (sarcomere stretch → baroreceptor) not supported by the lecture.<br><strong>Option E</strong> overstates Titin's capability — the steep passive tension curve resists mild to moderate stretch, but it is overcome in pathological volume overload (hence why DCM occurs).\n\nSlide 13 · Slide 15 · Transcript 13:28\n<img src=\"quizzes/media/cardio-w01-lec02-slide13.jpg\" alt=\"Slide 13\">\n<img src=\"quizzes/media/cardio-w01-lec02-slide15.jpg\" alt=\"Slide 15\">",
+      "citation": "Slide 13 · Slide 15 · Transcript 13:28",
+      "facts": [
+        "Lec02-F034",
+        "Lec02-F040"
+      ]
+    },
+    {
+      "qid": "lec02-q18",
+      "text": "Physiologists studying the Frank-Starling relationship notice that stretching the myocardium produces more contractile force than can be explained by increased actin-myosin overlap alone. Which additional mechanism accounts for this augmented force at equivalent cytoplasmic Ca2+ concentrations?",
+      "options": [
+        "Stretch narrows interfilament lattice spacing, raising TnC Ca2+ binding affinity and producing a leftward Ca2+-force curve shift so the same cytoplasmic Ca2+ yields greater contractile force",
+        "Stretch activates phospholipase C, generating IP3 that triggers Ca2+ release from a separate non-RyR SR compartment not reached by the initial L-type influx signal",
+        "Mechanical stretch opens additional mechanosensitive L-type channels in the T-tubule, increasing Ca2+ influx and raising peak cytoplasmic Ca2+ concentration above CICR-predicted levels",
+        "Stretch elongates actin monomers, uncovering additional cryptic myosin binding sites per thin filament and raising crossbridge number beyond what actin-myosin overlap geometry alone predicts",
+        "Stretch activates adenylate kinase within the sarcomere, raising the local ATP-to-ADP ratio near myosin heads and increasing the number of power strokes per second independent of Ca2+ changes"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Stretch narrows the interfilament lattice spacing between thick and thin filaments, increasing TnC's Ca2+ binding affinity — producing a leftward shift in the Ca2+-force curve so that any given cytoplasmic Ca2+ concentration generates more force than in an unstretched sarcomere.</strong> This length-dependent sensitization of TnC, combined with the increased actin-myosin overlap from the Frank-Starling mechanism, explains why the cardiac length-tension curve is steeper than skeletal.<br><strong>Option B</strong> inverts the lecture mechanism — IP3-mediated release from separate stores is not the mechanism described; cardiac CICR via RyR2 is the SR release pathway.<br><strong>Option C</strong> is not the mechanism for stretch-enhanced force; while L-type channels can be stretch-sensitive, the lecture's explanation centers on lattice spacing and TnC sensitivity, not on increased Ca2+ influx.<br><strong>Option D</strong> is not supported; actin monomers do not elongate to expose additional binding sites.<br><strong>Option E</strong> is wrong: ATP supply is not the limiting factor in stretch-dependent force potentiation.\n\nSlide 16 · Slide 17 · Transcript 17:43\n<img src=\"quizzes/media/cardio-w01-lec02-slide16.jpg\" alt=\"Slide 16\">\n<img src=\"quizzes/media/cardio-w01-lec02-slide17.jpg\" alt=\"Slide 17\">",
+      "citation": "Slide 16 · Slide 17 · Transcript 17:43",
+      "facts": [
+        "Lec02-F037",
+        "Lec02-F041",
+        "Lec02-F042",
+        "Lec02-F043",
+        "Lec02-F044"
+      ]
+    },
+    {
+      "qid": "lec02-q19",
+      "text": "A patient with end-stage dilated cardiomyopathy has echocardiographic evidence of severe left ventricular dilation. End-diastolic sarcomere lengths are estimated to exceed 2.4 µm. Which mechanism best explains the severely reduced stroke volume in this setting?",
+      "options": [
+        "Excessive sarcomere stretch activates ryanodine receptor 2 in reverse mode, causing Ca2+ to flow back into the SR before crossbridges can form",
+        "At sarcomere lengths above 2.4 µm, actin and myosin filaments are pulled so far apart that Titin becomes completely slack and can no longer generate passive recoil forces",
+        "Above 2.4 µm the ventricle operates on the descending limb, reducing actin-myosin overlap and crossbridge number, which progressively drops force and stroke volume",
+        "At lengths exceeding 2.4 µm, the T-tubule system becomes kinked, preventing action potentials from reaching the interior of the sarcomere and abolishing CICR",
+        "Sarcomere overstretching at 2.4 µm denatures tropomyosin, permanently blocking myosin binding sites and irreversibly eliminating crossbridge formation"
+      ],
+      "correct": 2,
+      "explanation": "<strong>At sarcomere lengths above 2.4 µm, the ventricle operates on the descending limb of the length-tension curve, where further stretch reduces actin-myosin overlap and the number of crossbridges, progressively decreasing force and stroke volume.</strong> Each successive cycle leaves more blood in the ventricle, stretching sarcomeres further and worsening contraction — a vicious cycle toward pump failure.<br><strong>Option A</strong> is wrong: RyR2 does not run in reverse in this context.<br><strong>Option B</strong> is incorrect: at lengths above 2.4 µm, Titin is being stretched (stressed), not slackened; Titin becomes slack below resting length, not above it.<br><strong>Option D</strong> has no lecture support — T-tubule architecture does not acutely kink during diastolic dilation.<br><strong>Option E</strong> is wrong: tropomyosin does not denature at physiologically encountered sarcomere lengths; force reduction is from overlap geometry, not protein denaturation.\n\nSlide 15 · Transcript 15:04\n<img src=\"quizzes/media/cardio-w01-lec02-slide15.jpg\" alt=\"Slide 15\">",
+      "citation": "Slide 15 · Transcript 15:04",
+      "facts": [
+        "Lec02-F038",
+        "Lec02-F039"
+      ]
+    },
+    {
+      "qid": "lec02-q20",
+      "text": "A histology slide shows cells with a single, centrally located nucleus, visible branching connections to adjacent cells, and distinct transverse bands at the cell borders. Which set of structural features best distinguishes these as cardiac myocytes rather than skeletal or smooth muscle cells?",
+      "options": [
+        "Multiple peripheral nuclei, unbranched parallel fiber arrangement, and prominent sarcomeres — the typical organization of a high-output contractile cell type found in voluntary movement",
+        "Single central nucleus, branched cell morphology, and intercalated discs containing gap junctions for electrical coupling and desmosomes for mechanical anchoring between adjacent cells",
+        "Single central nucleus, absence of sarcomeres and cross-striations, and abundant dense bodies distributed at the cell periphery along the plasma membrane",
+        "Multiple peripheral nuclei, well-developed T-tubule triads at each junction, and intercalated discs present at both tapered ends of each elongated cell type",
+        "Single central nucleus, unbranched cylindrical shape, and exclusively longitudinal gap junctions running along the fiber length rather than at transverse disc regions"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Cardiac myocytes are short, branched cells with a single central nucleus, and their intercalated discs contain gap junctions (for electrical coupling) and desmosomes (for mechanical anchoring) — features that distinguish them from skeletal muscle (multiple peripheral nuclei, unbranched, no intercalated discs) and smooth muscle (no sarcomeres, dense bodies).</strong> The branching morphology allows the physical continuity between cells that, combined with gap junction electrical conduction, creates the functional syncytium needed for coordinated contraction.<br><strong>Option A</strong> describes skeletal muscle (multiple peripheral nuclei, unbranched).<br><strong>Option C</strong> describes smooth muscle (single central nucleus, no sarcomeres, dense bodies).<br><strong>Option D</strong> incorrectly assigns multiple peripheral nuclei and triads to cardiac muscle — skeletal muscle has triads; cardiac muscle has diads.<br><strong>Option E</strong> incorrectly states cardiac myocytes are unbranched and cylindrical — branching is a defining morphological feature.\n\nSlide 4 · Transcript 03:33\n<img src=\"quizzes/media/cardio-w01-lec02-slide4.jpg\" alt=\"Slide 4\">",
+      "citation": "Slide 4 · Transcript 03:33",
+      "facts": [
+        "Lec02-F006",
+        "Lec02-F008",
+        "Lec02-F010"
+      ]
+    }
+  ]
+}

@@ -13,6 +13,14 @@
           "file": "quizzes/Week01/cardio-w01-lec01.r2.json",
           "revision": 2,
           "question_count": 20
+        },
+        {
+          "id": "cardio-w01-lec02",
+          "title": "Lec 02 \u2014 Cardiac Contraction",
+          "subtitle": "Week 01 \u00b7 Lec 02 \u00b7 Cardiac Contraction | 20 questions",
+          "file": "quizzes/Week01/cardio-w01-lec02.r1.json",
+          "revision": 1,
+          "question_count": 20
         }
       ]
     },
