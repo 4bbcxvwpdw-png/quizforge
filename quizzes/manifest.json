@@ -3,6 +3,20 @@
   "generated": "2026-08-23T00:00:00.000Z",
   "sections": [
     {
+      "id": "week-02",
+      "name": "Week 02",
+      "quizzes": [
+        {
+          "id": "cardio-w02-lec08",
+          "title": "Lec 08 \u2014 Cardiac Conduction",
+          "subtitle": "Week 02 \u00b7 Lec 08 \u00b7 Cardiac Conduction | 21 questions",
+          "file": "quizzes/Week02/cardio-w02-lec08.r1.json",
+          "revision": 1,
+          "question_count": 21
+        }
+      ]
+    },
+    {
       "id": "demo",
       "name": "Demo",
       "quizzes": [
