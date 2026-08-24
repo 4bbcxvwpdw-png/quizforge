@@ -37,6 +37,14 @@
           "file": "quizzes/Week01/cardio-w01-lec04.r1.json",
           "revision": 1,
           "question_count": 20
+        },
+        {
+          "id": "cardio-w01-lec05",
+          "title": "Lec 05 \u2014 Mitral Valve Disease",
+          "subtitle": "Week 01 \u00b7 Lec 05 \u00b7 Mitral Valve Disease | 19 questions",
+          "file": "quizzes/Week01/cardio-w01-lec05.r1.json",
+          "revision": 1,
+          "question_count": 19
         }
       ]
     },
