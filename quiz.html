@@ -355,6 +355,29 @@ svg{display:block}
 
 /* ══ MAIN CONTENT ══ */
 .main-content{flex:1;overflow-y:auto;background:var(--surface);padding:44px 56px 64px}
+.review-layout{min-height:100%}
+.question-pane{min-width:0}
+.review-divider{display:none}
+.review-layout.feedback-visible{
+  display:grid;grid-template-columns:minmax(320px,1fr) 15px minmax(280px,var(--review-pane-width,40%));
+  height:100%;min-height:0;
+}
+.main-content.feedback-visible{overflow:hidden}
+.review-layout.feedback-visible .question-pane{
+  min-height:0;overflow-y:auto;padding-right:22px;scrollbar-gutter:stable;
+}
+.review-layout.feedback-visible .review-divider{
+  display:block;position:relative;cursor:col-resize;touch-action:none;border-radius:7px;
+}
+.review-layout.feedback-visible .review-divider::after{
+  content:"";position:absolute;left:7px;top:0;bottom:0;width:1px;background:var(--line-strong);
+  transition:background-color .14s var(--ease),width .14s var(--ease),left .14s var(--ease);
+}
+.review-layout.feedback-visible .review-divider:hover::after,
+.review-layout.feedback-visible .review-divider:focus-visible::after,
+.review-layout.feedback-visible .review-divider.dragging::after{
+  left:6px;width:3px;background:var(--accent);
+}
 .currently-selected{
   font-size:.8rem;font-weight:500;letter-spacing:normal;
   color:var(--ink-2);margin-bottom:22px;
@@ -419,6 +442,9 @@ svg{display:block}
   border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:22px 26px 22px 25px;
 }
 .explanation-box.visible{display:block}
+.review-layout.feedback-visible .explanation-box{
+  margin-top:0;max-width:none;min-width:0;height:100%;overflow-y:auto;scrollbar-gutter:stable;
+}
 .exp-label{
   font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
   color:var(--accent);margin-bottom:11px;display:flex;align-items:center;gap:8px;
@@ -487,6 +513,13 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
   .q-circle{width:42px;height:42px}
   .brand-mark,.brand-sep{display:none}
   .kbd-hint{display:none}
+}
+@media(max-width:1000px){
+  .main-content.feedback-visible{overflow-y:auto}
+  .review-layout.feedback-visible{display:block;height:auto}
+  .review-layout.feedback-visible .question-pane{overflow:visible;padding-right:0}
+  .review-layout.feedback-visible .review-divider{display:none}
+  .review-layout.feedback-visible .explanation-box{height:auto;margin-top:34px;overflow:visible}
 }
 @media(max-width:720px){
   .topbar-title{display:none}
@@ -953,6 +986,18 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
           </div>
         </div>
         <div class="set-group">
+          <div class="set-label">Quiz behavior</div>
+          <div class="switch-row">
+            <div class="switch-label-group">
+              <span>Tutor Mode</span>
+              <span class="switch-sublabel" id="tutor-mode-description">Reveal each answer immediately</span>
+            </div>
+            <button class="ios-switch" id="tutor-switch" role="switch" aria-checked="false"
+                    aria-label="Tutor Mode" aria-describedby="tutor-mode-description"
+                    onclick="toggleTutorMode()"></button>
+          </div>
+        </div>
+        <div class="set-group">
           <div class="set-label">Appearance</div>
           <div class="seg" id="seg-theme">
             <button class="seg-btn" data-theme-val="light"  onclick="setTheme('light')">Light</button>
@@ -1013,17 +1058,24 @@ mark.hl{background:rgba(176,125,34,.22);border-radius:2px;padding:0 1px;color:in
 
   <!-- MAIN -->
   <div class="main-content" id="main-content">
-    <div class="currently-selected" id="currently-selected">No answer selected</div>
-    <div class="question-text" id="question-text" style="cursor:text;"></div>
-    <div id="answers-range" class="answers-range"></div>
-    <div class="choices" id="choices"></div>
-    <div class="explanation-box" id="explanation-box">
-      <div class="exp-label">
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 2.5a5 5 0 00-3 9v2h6v-2a5 5 0 00-3-9z"/><path d="M8 16h4M8.5 18h3"/></svg>
-        Explanation
+    <div class="review-layout" id="review-layout">
+      <section class="question-pane" id="question-pane" aria-label="Question and answer choices">
+        <div class="currently-selected" id="currently-selected">No answer selected</div>
+        <div class="question-text" id="question-text" style="cursor:text;"></div>
+        <div id="answers-range" class="answers-range"></div>
+        <div class="choices" id="choices" role="radiogroup" aria-label="Answer choices"></div>
+      </section>
+      <div class="review-divider" id="review-divider" role="separator" tabindex="0"
+           aria-label="Resize explanation pane" aria-orientation="vertical"
+           aria-controls="explanation-box" aria-valuemin="30" aria-valuemax="60" aria-valuenow="40"></div>
+      <aside class="explanation-box" id="explanation-box" aria-live="polite" aria-labelledby="explanation-label">
+        <div class="exp-label" id="explanation-label">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 2.5a5 5 0 00-3 9v2h6v-2a5 5 0 00-3-9z"/><path d="M8 16h4M8.5 18h3"/></svg>
+          Explanation
+        </div>
+        <div class="exp-text" id="exp-text"></div>
+      </aside>
       </div>
-      <div class="exp-text" id="exp-text"></div>
-    </div>
   </div>
 
 </div>
@@ -1230,6 +1282,7 @@ let current    = 0;
 let selected   = [];
 let eliminated = [];
 let flagged    = [];
+let revealed   = [];
 let submitted  = false;
 let highlightMode  = false;
 let seconds = 0;
@@ -1268,6 +1321,11 @@ function startTimer(){
 // ── RENDER ──────────────────────────────────────────────────────────────
 function render() {
   const q = questions[current];
+
+  // Enabling Tutor Mode during an attempt reveals any answer already selected
+  // on the question being viewed. Previously revealed questions stay revealed.
+  if (tutorModeOn() && selected[current] !== null) revealed[current] = true;
+  const showFeedback = submitted || revealed[current];
 
   // Toolbar
   document.getElementById('q-dropdown-label').innerHTML =
@@ -1326,8 +1384,8 @@ function render() {
     if (isSelected && !isEliminated) row.classList.add('selected');
     if (isEliminated)               row.classList.add('eliminated');
 
-    // Post-submit overrides
-    if (submitted) {
+    // Feedback reveal (after final submit, or per-question in Tutor Mode)
+    if (showFeedback) {
       row.classList.add('locked');
       row.classList.remove('selected', 'eliminated');
       if (oi === q.correct) {
@@ -1355,7 +1413,7 @@ function render() {
     const actionCol = document.createElement('div');
     actionCol.className = 'choice-action';
 
-    if (submitted) {
+    if (showFeedback) {
       if (oi === q.correct) {
         actionCol.innerHTML = ICON.check;
       } else if (oi === sel && oi !== q.correct) {
@@ -1380,11 +1438,21 @@ function render() {
     row.appendChild(actionCol);
 
     // Click to select or deselect
-    if (!submitted && !isEliminated) {
+    if (!showFeedback && !isEliminated) {
       row.addEventListener('click', () => {
-        selected[current] = (selected[current] === oi) ? null : oi;
-        render();
-        if (selected[current] !== null) popSelectionIcon();
+        chooseAnswer(oi);
+      });
+    }
+
+    row.setAttribute('role', 'radio');
+    row.setAttribute('aria-checked', String(isSelected));
+    row.setAttribute('aria-disabled', String(showFeedback || isEliminated));
+    row.tabIndex = showFeedback || isEliminated ? -1 : 0;
+    if (!showFeedback && !isEliminated) {
+      row.addEventListener('keydown', e => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        e.preventDefault();
+        chooseAnswer(oi);
       });
     }
 
@@ -1393,19 +1461,39 @@ function render() {
 
   // Explanation
   const expBox = document.getElementById('explanation-box');
-  if (submitted) {
+  if (showFeedback) {
     document.getElementById('exp-text').innerHTML = sanitizeHtml(q.explanation, _isShipped ? 'shipped' : 'pasted');
     expBox.classList.add('visible');
   } else {
     expBox.classList.remove('visible');
   }
 
+  const reviewLayout = document.getElementById('review-layout');
+  const mainContent = document.getElementById('main-content');
+  reviewLayout.classList.toggle('feedback-visible', showFeedback);
+  mainContent.classList.toggle('feedback-visible', showFeedback);
+
   // Scroll to top
-  document.getElementById('main-content').scrollTop = 0;
+  mainContent.scrollTop = 0;
+  document.getElementById('question-pane').scrollTop = 0;
+  expBox.scrollTop = 0;
 
   updateSidebar();
   buildQNavMenu();
   updateProgress();
+}
+
+function chooseAnswer(optionIndex) {
+  if (submitted || revealed[current] || eliminated[current][optionIndex]) return;
+  if (tutorModeOn()) {
+    selected[current] = optionIndex;
+    revealed[current] = true;
+  } else {
+    selected[current] = selected[current] === optionIndex ? null : optionIndex;
+  }
+  const picked = selected[current] !== null;
+  render();
+  if (picked && !revealed[current]) popSelectionIcon();
 }
 
 // ── ANSWERED-PROGRESS HAIRLINE ────────────────────────────────────────────
@@ -1449,7 +1537,7 @@ function updateSidebar() {
     c.style.display = hidden ? 'none' : '';
     // state classes - toggled (not rebuilt) so the change transitions
     c.classList.toggle('current', qi === current);
-    if (submitted) {
+    if (submitted || revealed[qi]) {
       const right = selected[qi] === questions[qi].correct;
       c.classList.toggle('got-correct', right);
       c.classList.toggle('got-wrong', !right);
@@ -1557,7 +1645,7 @@ function buildQNavMenu() {
     const item = document.createElement('button');
     item.className = 'dropdown-item';
     let dotClass = '';
-    if (submitted) {
+    if (submitted || revealed[qi]) {
       dotClass = (selected[qi] === questions[qi].correct) ? 'is-correct' : 'is-wrong';
     } else if (selected[qi] !== null) {
       dotClass = 'is-answered';
@@ -1794,24 +1882,42 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') { navigate(1); }
   else if (e.key === 'ArrowLeft') { navigate(-1); }
   else if (e.key.toLowerCase() === 'f' && !submitted) { toggleFlag(); }
-  else if (!submitted) {
+  else if (!submitted && !revealed[current]) {
     let i = -1;
     if (/^[1-9]$/.test(e.key)) i = +e.key - 1;
     else if (/^[a-eA-E]$/.test(e.key)) i = 'abcde'.indexOf(e.key.toLowerCase());
     if (i >= 0 && i < q.options.length && !eliminated[current][i]) {
-      selected[current] = (selected[current] === i) ? null : i;
-      render();
-      if (selected[current] !== null) popSelectionIcon();
+      chooseAnswer(i);
     }
   }
 });
 
 // ── SETTINGS (theme / accent / text size) ────────────────────────────────
 const THEME_KEY = 'quizTheme', ACCENT_KEY = 'quizAccent', SCALE_KEY = 'quizTextScale', SKIN_KEY = 'quizSkin';
+const TUTOR_KEY = 'quizTutorMode', REVIEW_PANE_KEY = 'quizReviewPanePercent';
+const REVIEW_PANE_MIN = 30, REVIEW_PANE_MAX = 60, REVIEW_PANE_DEFAULT = 40;
 const _ls = { get(k, d){ try { return localStorage.getItem(k) || d; } catch(e){ return d; } },
               set(k, v){ try { localStorage.setItem(k, v); } catch(e){} } };
 
 function skinOn(){ return _ls.get(SKIN_KEY, 'ledger') === 'examsoft'; }
+function tutorModeOn(){ return _ls.get(TUTOR_KEY, 'off') === 'on'; }
+function reviewPanePercent(){
+  const saved = parseFloat(_ls.get(REVIEW_PANE_KEY, String(REVIEW_PANE_DEFAULT)));
+  return Math.max(REVIEW_PANE_MIN, Math.min(REVIEW_PANE_MAX, Number.isFinite(saved) ? saved : REVIEW_PANE_DEFAULT));
+}
+
+function setReviewPanePercent(value, persist) {
+  const pct = Math.round(Math.max(REVIEW_PANE_MIN, Math.min(REVIEW_PANE_MAX, Number(value))) * 10) / 10;
+  const layout = document.getElementById('review-layout');
+  const divider = document.getElementById('review-divider');
+  if (layout) layout.style.setProperty('--review-pane-width', pct + '%');
+  if (divider) {
+    divider.setAttribute('aria-valuenow', String(pct));
+    divider.setAttribute('aria-valuetext', Math.round(pct) + '% of the review area');
+  }
+  if (persist !== false) _ls.set(REVIEW_PANE_KEY, String(pct));
+  return pct;
+}
 
 function applySettings() {
   const d = document.documentElement;
@@ -1823,6 +1929,7 @@ function applySettings() {
   let _sa=_ls.get(ACCENT_KEY,'examplify'); if(!_sa||_sa==='petrol') _sa='examplify'; d.setAttribute('data-accent', _sa);
   d.setAttribute('data-skin', skinOn() ? 'examsoft' : 'ledger');
   d.style.setProperty('--cscale', parseFloat(_ls.get(SCALE_KEY, '1')) || 1);
+  setReviewPanePercent(reviewPanePercent(), false);
   applySkinChrome();
   syncSettingsUI();
 }
@@ -1841,8 +1948,21 @@ function syncSettingsUI() {
     sw.classList.toggle('on', on);
     sw.setAttribute('aria-checked', String(on));
   }
+  const tutorSwitch = document.getElementById('tutor-switch');
+  if (tutorSwitch) {
+    const on = tutorModeOn();
+    tutorSwitch.classList.toggle('on', on);
+    tutorSwitch.setAttribute('aria-checked', String(on));
+  }
 }
 function toggleSkinSwitch() { setSkin(skinOn() ? 'ledger' : 'examsoft'); }
+function toggleTutorMode() {
+  const on = !tutorModeOn();
+  _ls.set(TUTOR_KEY, on ? 'on' : 'off');
+  if (on && questions.length && selected[current] !== null) revealed[current] = true;
+  syncSettingsUI();
+  if (questions.length) render();
+}
 // Relabel chrome text for the current skin. Every branch restores the Ledger string,
 // so switching back is a clean round-trip.
 function applySkinChrome() {
@@ -1869,6 +1989,45 @@ function setTheme(t)  { _ls.set(THEME_KEY, t);  applySettings(); }
 function setAccent(a) { _ls.set(ACCENT_KEY, a); applySettings(); }
 function setScale(v)  { _ls.set(SCALE_KEY, String(v)); applySettings(); }
 function setSkin(v)   { _ls.set(SKIN_KEY, v); applySettings(); if (questions.length) render(); }
+
+// Accessible horizontal resizing for the desktop explanation pane.
+(function initReviewDivider(){
+  const divider = document.getElementById('review-divider');
+  const layout = document.getElementById('review-layout');
+  if (!divider || !layout) return;
+
+  let dragging = false;
+  function resizeFromPointer(e) {
+    if (!dragging) return;
+    const rect = layout.getBoundingClientRect();
+    if (!rect.width) return;
+    setReviewPanePercent((rect.right - e.clientX) / rect.width * 100);
+  }
+  function stopDragging() {
+    if (!dragging) return;
+    dragging = false;
+    divider.classList.remove('dragging');
+  }
+  divider.addEventListener('pointerdown', e => {
+    dragging = true;
+    divider.classList.add('dragging');
+    if (divider.setPointerCapture) divider.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+  window.addEventListener('pointermove', resizeFromPointer);
+  window.addEventListener('pointerup', stopDragging);
+  window.addEventListener('pointercancel', stopDragging);
+  divider.addEventListener('keydown', e => {
+    let next = reviewPanePercent();
+    if (e.key === 'ArrowLeft') next += 2;
+    else if (e.key === 'ArrowRight') next -= 2;
+    else if (e.key === 'Home') next = REVIEW_PANE_MIN;
+    else if (e.key === 'End') next = REVIEW_PANE_MAX;
+    else return;
+    e.preventDefault();
+    setReviewPanePercent(next);
+  });
+})();
 matchMedia('(prefers-color-scheme:dark)').addEventListener('change', () => {
   if (_ls.get(THEME_KEY, 'system') === 'system') applySettings();
 });
@@ -1900,6 +2059,7 @@ function initUI() {
     selected   = new Array(questions.length).fill(null);
     eliminated = questions.map(q => new Array(q.options.length).fill(false));
     flagged    = new Array(questions.length).fill(false);
+    revealed   = new Array(questions.length).fill(false);
     qTiles     = null; /* force sidebar tile rebuild for the loaded question set */
     document.title = _dash(_quizTitle) + ' · QuizForge';
     document.getElementById('topbar-title').textContent = _dash(_quizSubtitle);

@@ -100,6 +100,43 @@ await (async () => {
     assertContains(ef.textContent, '1 OF 10', 'progress should read "1 OF 10"');
   });
 
+  test('normal mode keeps feedback hidden after selecting an answer', () => {
+    doc.querySelector('#choices .choice-row').click();
+    assert(!doc.getElementById('explanation-box').classList.contains('visible'),
+      'normal mode must keep the explanation hidden until submit');
+    assert(!doc.querySelector('#choices .choice-row').classList.contains('locked'),
+      'normal mode must still allow answer changes before submit');
+  });
+
+  test('Tutor Mode setting reveals and locks the answered question immediately', () => {
+    const tutorSwitch = doc.getElementById('tutor-switch');
+    assert(tutorSwitch, 'Tutor Mode switch must exist');
+    tutorSwitch.click();
+    assert(tutorSwitch.getAttribute('aria-checked') === 'true', 'Tutor Mode switch must announce on');
+
+    // Move to a fresh question so the selection above does not affect this assertion.
+    dom.window.navigate(1);
+    doc.querySelector('#choices .choice-row').click();
+
+    assert(doc.getElementById('explanation-box').classList.contains('visible'),
+      'Tutor Mode must reveal the explanation after the first answer');
+    assert(doc.querySelector('#choices .choice-row').classList.contains('locked'),
+      'Tutor Mode must lock choices after feedback is revealed');
+    assert(doc.getElementById('review-layout').classList.contains('feedback-visible'),
+      'revealed feedback must activate the review layout');
+  });
+
+  test('review divider is keyboard adjustable and persists its width', () => {
+    const divider = doc.getElementById('review-divider');
+    assert(divider, 'review divider must exist');
+    const before = Number(divider.getAttribute('aria-valuenow'));
+    divider.dispatchEvent(new dom.window.KeyboardEvent('keydown', { key: 'ArrowLeft', bubbles: true }));
+    const after = Number(divider.getAttribute('aria-valuenow'));
+    assert(after > before, 'ArrowLeft must grow the right explanation pane');
+    assert(Number(dom.window.localStorage.getItem('quizReviewPanePercent')) === after,
+      'adjusted explanation width must persist');
+  });
+
   dom.window.close(); // release setInterval timer so Node can exit
 })();
 
