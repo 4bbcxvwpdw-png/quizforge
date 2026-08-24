@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "id": "cardio-w01-labembryo",
+  "revision": 1,
+  "question_count": 20,
+  "title": "LAB — Embryology of the Cardiovascular System",
+  "subtitle": "Week 01 · LAB · Embryology | 20 questions",
+  "source_fingerprints": {
+    "LecLABEmbryo_FactInventory.md": "ef043a25384b3175a1eb013f95c9a743e1f0abd2d5feba812aefac59d82f1869",
+    "quiz_selection.tsv": "89fbea6d11d20ddba2a27dbb9022fd18c7fde462902e768ba41ad5ad915ba92d",
+    "01_slides.txt": "bf6f862640abef271fc91ada40e0b81da4be14f667e5f843219b0dbcfefa4a7f",
+    "transcript.vtt": "e72d72efa0ce31c4d3aa61e71c52d955f94925213729825366fd07454cbc4271",
+    "02_lecture-notes.txt": "b826be7af703a3df89bb955409cf5be7ff0f3e85238efc00071800f98ef40893"
+  },
+  "questions": [
+    {
+      "qid": "labembryo-q01",
+      "facts": [
+        "LecLABEmbryo-F005",
+        "LecLABEmbryo-F014",
+        "LecLABEmbryo-F015"
+      ],
+      "text": "Which assignment correctly pairs each embryonic heart field with its primary cardiac derivatives?",
+      "options": [
+        "Primary heart field (PHF) → left ventricle and portions of both atria; secondary heart field (SHF) → right ventricle, outflow tract, and epicardium",
+        "Primary heart field (PHF) → right ventricle and portions of both atria; secondary heart field (SHF) → left ventricle, outflow tract, and epicardium",
+        "Primary heart field (PHF) → left ventricle and right atrium; secondary heart field (SHF) → left atrium, right ventricle, and ventricular outflow tract only",
+        "Primary heart field (PHF) → right and left atria alone; secondary heart field (SHF) → right ventricle, left ventricle, and all outflow structures"
+      ],
+      "correct": 0,
+      "explanation": "<strong>The primary heart field (PHF) contributes the left ventricle and portions of both atria; the secondary heart field (SHF) adds the right ventricle, outflow tract, and epicardium.</strong> This was established by chick-quail chimera experiments labeling cells from each field separately and tracing their fates to distinct cardiac compartments.<br><strong>Option B</strong> is incorrect: PHF cells give rise to the left ventricle, not the right; SHF cells generate the right ventricle, not the left — this option reverses the ventricular assignments.<br><strong>Option C</strong> is incorrect: PHF contributes to both atria, not only the right atrium; the right ventricle comes from SHF, not PHF.<br><strong>Option D</strong> is incorrect: PHF is not limited to the atria; the left ventricle is its dominant myocardial derivative, and both ventricles are not SHF products.<br>Slide 8<br><img src=\"quizzes/media/cardio-w01-labembryo-slide8.jpg\" alt=\"Slide 8\">",
+      "citation": "Slide 8"
+    },
+    {
+      "qid": "labembryo-q02",
+      "facts": [
+        "LecLABEmbryo-F020",
+        "LecLABEmbryo-F023"
+      ],
+      "text": "A mouse model eliminates expression of flectin — an extracellular matrix protein normally restricted to the left side of the developing heart tube. Which phenotype best describes the expected outcome?",
+      "options": [
+        "Situs inversus totalis develops, with the heart, liver, and all abdominal viscera transposed to the opposite body side",
+        "Cardiac looping fails or reverses, producing dextrocardia as the heart fails to loop or loops leftward (L-loop) instead of the normal rightward D-loop",
+        "The embryo dies before the first heartbeat because flectin anchors sarcomeres within nascent cardiomyocytes of the primitive myocardium",
+        "Atrial septation is disrupted, producing a secundum ASD because flectin guides septum primum growth toward the endocardial cushion"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Flectin is an ECM protein expressed on the left side of the developing heart tube that drives the normal rightward D-loop of the heart tube. Its absence causes looping failure or L-loop (leftward bending), producing dextrocardia.</strong> Flectin’s role is specific to cardiac tube morphogenesis; it does not affect the broader body-plan axis or cardiac contractile apparatus.<br><strong>Option A</strong> is incorrect: situs inversus totalis requires disruption of the global left-right axis organizer (e.g., nodal cilia), not isolated loss of flectin; flectin loss produces dextrocardia without necessarily inverting all viscera.<br><strong>Option C</strong> is incorrect: flectin is extracellular matrix, not a sarcomeric protein; its loss has no effect on myocardial contraction or the first heartbeat.<br><strong>Option D</strong> is incorrect: flectin operates during the heart-looping stage (weeks 3–4), well before atrial septation; it has no described role in septum primum guidance.<br>Slide 17<br><img src=\"quizzes/media/cardio-w01-labembryo-slide17.jpg\" alt=\"Slide 17\">",
+      "citation": "Slide 17"
+    },
+    {
+      "qid": "labembryo-q03",
+      "facts": [
+        "LecLABEmbryo-F010",
+        "LecLABEmbryo-F013"
+      ],
+      "text": "At day 21–22, the primitive heart tube consists of three concentric layers. Which option correctly identifies all three layers from innermost to outermost?",
+      "options": [
+        "Myocardium innermost lining the lumen, cardiac jelly (ECM) in the middle layer, endocardium as the outermost layer",
+        "Endocardium innermost, myocardium in the middle, pericardium as the outermost layer lining the pericardial cavity",
+        "Endocardium innermost, cardiac jelly (acellular ECM) in the middle, myocardium as the outermost contractile layer",
+        "Cardiac jelly innermost lining the lumen, myocardium in the middle, endocardium as the outermost layer facing the pericardial fluid"
+      ],
+      "correct": 2,
+      "explanation": "<strong>The heart tube is organized from inside out as endocardium (inner endothelial lining) → cardiac jelly (acellular ECM matrix) → myocardium (outer contractile layer), all derived from splanchnic mesoderm.</strong> The cardiac jelly is a proteoglycan-rich space that later becomes populated by mesenchymal cells during cushion formation.<br><strong>Option A</strong> is incorrect: myocardium is the outermost contractile layer, not the innermost; the innermost layer facing the blood is the endocardium.<br><strong>Option B</strong> is incorrect: myocardium is outermost, not in the middle; the middle layer is the cardiac jelly (ECM), not myocardium; pericardium is an external sac, not a layer of the heart tube itself.<br><strong>Option D</strong> is incorrect: cardiac jelly does not line the lumen; the endocardium is the luminal layer; cardiac jelly is sandwiched between endocardium and myocardium.<br>Slide 13<br><img src=\"quizzes/media/cardio-w01-labembryo-slide13.jpg\" alt=\"Slide 13\">",
+      "citation": "Slide 13"
+    },
+    {
+      "qid": "labembryo-q04",
+      "facts": [
+        "LecLABEmbryo-F014",
+        "LecLABEmbryo-F015"
+      ],
+      "text": "Two adjacent segments of the primitive heart tube — the primitive ventricle and the bulbus cordis — each give rise to distinct definitive cardiac chambers. Which correctly matches each segment to its adult derivative?",
+      "options": [
+        "Primitive ventricle → both trabeculated ventricles and the muscular ventricular septum; bulbus cordis → semilunar valves and outflow",
+        "Primitive ventricle → right ventricle and conus cordis of the outflow; bulbus cordis → left ventricle and the ventricular septum",
+        "Primitive ventricle → left ventricle and the right atrium posteriorly; bulbus cordis → right ventricle and the left atrium",
+        "Primitive ventricle → trabeculated left ventricular apex; bulbus cordis → smooth right ventricular outflow portion and the ventricular outflow tract"
+      ],
+      "correct": 3,
+      "explanation": "<strong>The primitive ventricle gives rise to the trabeculated portion of the left ventricle, while the bulbus cordis contributes the smooth outflow portion of the right ventricle (the infundibulum/conus cordis) and the smooth outflow tract (conus cordis).</strong> This compartmentalization reflects the heart tube’s craniocaudal arrangement before looping and septation rearrange the chambers.<br><strong>Option A</strong> is incorrect: the primitive ventricle does not generate both ventricles; it gives rise predominantly to the left ventricle, not the right.<br><strong>Option B</strong> is incorrect: it reverses the key assignments — the primitive ventricle produces left ventricular myocardium, not the right ventricle, and the bulbus cordis generates right ventricular myocardium, not the left.<br><strong>Option C</strong> is incorrect: the primitive ventricle does not contribute to any atrial tissue; atria derive from the sinus venosus and the atrial region of the heart tube, not from the primitive ventricle.<br>Slide 14<br><img src=\"quizzes/media/cardio-w01-labembryo-slide14.jpg\" alt=\"Slide 14\">",
+      "citation": "Slide 14"
+    },
+    {
+      "qid": "labembryo-q05",
+      "facts": [
+        "LecLABEmbryo-F024",
+        "LecLABEmbryo-F025",
+        "LecLABEmbryo-F026"
+      ],
+      "text": "During cardiac valve development, endocardial cells in the AV canal region undergo a critical transformation to invade the cardiac jelly and form valve precursors. Which statement correctly describes this process and its product?",
+      "options": [
+        "Endocardial cells undergo apoptosis, and mesenchymal stem cells migrating from the neural crest repopulate the cardiac jelly to form tricuspid and mitral valve leaflets",
+        "Endocardial cells undergo epithelial-to-mesenchymal transition (EMT) and invade the cardiac jelly; the resulting mesenchymal cushions remodel into the mitral and tricuspid valves",
+        "Myocardial cells undergo dedifferentiation and migrate inward to form a layer of endocardial cushion cells lining both the mitral and the tricuspid valve orifices",
+        "Endocardial cells undergo mesenchymal-to-epithelial transition (MET) and deposit collagen into the cardiac jelly, stiffening it into mature atrioventricular valve leaflets"
+      ],
+      "correct": 1,
+      "explanation": "<strong>AV canal endocardial cells undergo epithelial-to-mesenchymal transition (EMT): they lose cell-cell junctions, acquire migratory capacity, and invade the cardiac jelly. The resulting mesenchymal endocardial cushions remodel into the mitral (left) and tricuspid (right) valves.</strong> EMT is triggered by BMP and TGF-β signals from the adjacent myocardium.<br><strong>Option A</strong> is incorrect: endocardial cushion formation does not involve apoptosis of endocardial cells followed by neural-crest replacement; the endocardial cells themselves transform via EMT.<br><strong>Option C</strong> is incorrect: myocardial cells do not dedifferentiate to form cushion cells; the transformation is endocardial-to-mesenchymal, not myocardial.<br><strong>Option D</strong> is incorrect: the direction is EMT (epithelial → mesenchymal), not MET (mesenchymal → epithelial); MET describes the reverse process and is not the mechanism for valve leaflet formation.<br>Slide 20<br><img src=\"quizzes/media/cardio-w01-labembryo-slide20.jpg\" alt=\"Slide 20\">",
+      "citation": "Slide 20"
+    },
+    {
+      "qid": "labembryo-q06",
+      "facts": [
+        "LecLABEmbryo-F027",
+        "LecLABEmbryo-F039"
+      ],
+      "text": "In addition to endocardial cells, a second cell population migrates into the developing outflow tract. Which statement correctly identifies this population and its function?",
+      "options": [
+        "Neural crest cells migrate into the outflow tract to form the aorticopulmonary septum and contribute to semilunar valve development",
+        "Epicardial cells from the proepicardial organ migrate into the outflow tract to generate smooth muscle of the proximal great vessel walls",
+        "Secondary heart field cells migrate from the pharyngeal mesoderm into the outflow tract to form the muscular ventricular outflow tract",
+        "Hepatic progenitor cells from the lateral plate mesoderm migrate into the cardiac outflow tract, supplying endothelial precursors for the great vessels"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Neural crest cells migrate from the dorsal neural tube into the outflow tract, where they are essential for forming the aorticopulmonary septum and contribute to semilunar (aortic and pulmonary) valve development.</strong> Loss of these neural crest cells causes conotruncal defects such as persistent truncus arteriosus.<br><strong>Option B</strong> is incorrect: epicardial (proepicardial organ) cells do migrate to the heart and contribute coronary smooth muscle and fibroblasts, but they are not the population responsible for outflow tract septation or semilunar valve formation.<br><strong>Option C</strong> is incorrect: secondary heart field cells contribute myocardium and smooth muscle to the outflow tract earlier, but they do not form the aorticopulmonary septum; that is the neural crest’s specific job.<br><strong>Option D</strong> is incorrect: hepatic progenitor cells have no described role in outflow tract development; this option is anatomically nonsensical in the context of cardiac morphogenesis.<br>Slide 20<br><img src=\"quizzes/media/cardio-w01-labembryo-slide20.jpg\" alt=\"Slide 20\">",
+      "citation": "Slide 20"
+    },
+    {
+      "qid": "labembryo-q07",
+      "facts": [
+        "LecLABEmbryo-F028",
+        "LecLABEmbryo-F030"
+      ],
+      "text": "The septum primum grows toward the endocardial cushion, progressively narrowing the foramen primum. Before foramen primum closes, how does right-to-left atrial blood flow continue in the embryo?",
+      "options": [
+        "The foramen primum never fully closes in the embryo — it remains patent until birth, allowing continuous right-to-left atrial shunting throughout fetal life",
+        "The septum secundum dissolves after foramen primum closes, creating a temporary opening that allows right-to-left blood flow until the septum hardens at week 10",
+        "Apoptosis in the upper portion of septum primum creates the foramen secundum before foramen primum closes, maintaining continuous atrial communication",
+        "Endocardial cushion cells proliferate to push the septum primum back toward the atrial roof, temporarily reopening the foramen primum from below"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Just before the foramen primum closes (as septum primum reaches the endocardial cushion), programmed cell death (apoptosis) in the upper part of septum primum opens a new hole — the foramen secundum — that preserves right-to-left atrial shunting.</strong> This sequence ensures uninterrupted fetal bypass of the pulmonary circulation: foramen primum closes, but foramen secundum is already open before it does.<br><strong>Option A</strong> is incorrect: foramen primum does close completely when septum primum fuses with the endocardial cushion; it is the foramen secundum (later covered by septum secundum) that persists as the foramen ovale.<br><strong>Option B</strong> is incorrect: septum secundum does not dissolve; it grows as a muscular flap overlapping foramen secundum to create the valve of the foramen ovale; it does not temporarily disappear.<br><strong>Option D</strong> is incorrect: endocardial cushions fuse with septum primum to close foramen primum from below, not to reopen it; no mechanism exists for the cushions to push the septum back.<br>Slide 22<br><img src=\"quizzes/media/cardio-w01-labembryo-slide22.jpg\" alt=\"Slide 22\">",
+      "citation": "Slide 22"
+    },
+    {
+      "qid": "labembryo-q08",
+      "facts": [
+        "LecLABEmbryo-F032",
+        "LecLABEmbryo-F031"
+      ],
+      "text": "This lecture labels the foramen ovale as the ‘first embryonic shunt.’ In the fetal circulation, what direction does blood flow through this opening, and what does it bypass?",
+      "options": [
+        "Blood flows left to right across the foramen ovale, bypassing the fetal pulmonary vessels and returning directly to the right ventricle for systemic recirculation",
+        "Blood flows right to left across the foramen ovale, bypassing the fetal liver and entering the inferior vena cava directly",
+        "Blood flows right to left across the foramen ovale, bypassing the ductus arteriosus and entering the left ventricle via the pulmonary veins",
+        "Blood flows right to left across the foramen ovale, bypassing the fluid-filled fetal lungs and entering the left atrium to join systemic circulation"
+      ],
+      "correct": 3,
+      "explanation": "<strong>The foramen ovale allows blood to flow right-to-left (RA → LA), bypassing the non-functional, fluid-filled fetal lungs. Oxygenated blood from the IVC preferentially streams through the foramen ovale into the left atrium, then the left ventricle and systemic circulation.</strong> This shunt is the first of three embryonic shunts and is driven by higher right atrial pressure relative to left in the fetus.<br><strong>Option A</strong> is incorrect: flow is right-to-left, not left-to-right; postnatal left-to-right flow across an ASD only occurs after birth when left atrial pressure rises.<br><strong>Option B</strong> is incorrect: the foramen ovale bypasses the lungs, not the liver; the liver is bypassed by the ductus venosus (the third embryonic shunt).<br><strong>Option C</strong> is incorrect: the foramen ovale bypasses the lungs; it does not bypass the ductus arteriosus, and blood enters the left atrium directly, not via the pulmonary veins.<br>Slide 23<br><img src=\"quizzes/media/cardio-w01-labembryo-slide23.jpg\" alt=\"Slide 23\">",
+      "citation": "Slide 23"
+    },
+    {
+      "qid": "labembryo-q09",
+      "facts": [
+        "LecLABEmbryo-F033",
+        "LecLABEmbryo-F083"
+      ],
+      "text": "When the neonate takes its first breath, a cascade of hemodynamic changes closes the foramen ovale. What is the correct mechanism and the adult remnant?",
+      "options": [
+        "Pulmonary resistance falls and left atrial pressure rises above right atrial pressure, pressing septum secundum against the foramen ovale, which fuses to become the fossa ovalis",
+        "Pulmonary resistance rises after the first breath, and right atrial pressure exceeds left, sealing the foramen ovale valve and leaving the crista terminalis as the adult remnant",
+        "Systemic vascular resistance falls after the first breath, equalizing atrial pressures so that the foramen ovale seals by fibrous ingrowth to become the fossa ovalis",
+        "Umbilical vein ligation raises right atrial pressure above left, compressing the septum primum flap against septum secundum to form the fossa ovalis"
+      ],
+      "correct": 0,
+      "explanation": "<strong>The first breath expands the lungs, dramatically lowering pulmonary vascular resistance. This raises left atrial pressure above right atrial pressure, pressing the septum primum flap against the overlying septum secundum, functionally closing the foramen ovale. Over weeks to months, fibrous fusion produces the permanent fossa ovalis.</strong><br><strong>Option B</strong> is incorrect: pulmonary resistance falls (not rises) with the first breath; and the sequence requires left atrial pressure to exceed right, not the reverse; the crista terminalis is a muscle ridge in the right atrium unrelated to foramen ovale closure.<br><strong>Option C</strong> is incorrect: systemic vascular resistance actually rises after birth (loss of the low-resistance placenta), which contributes to higher left-heart pressures; the foramen ovale closes because left atrial pressure rises, not because pressures equalize.<br><strong>Option D</strong> is incorrect: umbilical vein ligation would reduce preload to the left heart, potentially lowering (not raising) left atrial pressure; the mechanism for foramen ovale closure is increased left atrial pressure from decreased pulmonary resistance, not umbilical events.<br>Slide 24<br><img src=\"quizzes/media/cardio-w01-labembryo-slide24.jpg\" alt=\"Slide 24\">",
+      "citation": "Slide 24"
+    },
+    {
+      "qid": "labembryo-q10",
+      "facts": [
+        "LecLABEmbryo-F034",
+        "LecLABEmbryo-F035",
+        "LecLABEmbryo-F036"
+      ],
+      "text": "The muscular portion of the interventricular septum forms by week 5, but a small gap — the interventricular foramen — remains at the base. Which option correctly describes how this gap closes and where most VSDs occur?",
+      "options": [
+        "The interventricular foramen is sealed by proliferation of the muscular ventricular septum alone, completing closure by week 12; most VSDs involve the muscular septum",
+        "The membranous interventricular septum, derived from endocardial cushion tissue and the conus septum, closes the interventricular foramen by week 7; most VSDs are membranous",
+        "The atrioventricular endocardial cushions extend inferiorly to seal the interventricular foramen from the atrial side; all VSDs are therefore classified as inlet defects",
+        "The interventricular foramen closes spontaneously by muscular trabeculation of the ventricular apex; most VSDs are located in the apical muscular septum"
+      ],
+      "correct": 1,
+      "explanation": "<strong>The interventricular foramen is closed by the membranous interventricular septum, a thin fibrous structure derived from fusion of AV endocardial cushion tissue and the conus septum; closure is complete by week 7. Most VSDs (ventricular septal defects) occur in this membranous portion.</strong><br><strong>Option A</strong> is incorrect: the muscular septum alone cannot close the foramen; the membranous septum (not muscle) is required for final closure; muscular VSDs do exist but are not the most common type.<br><strong>Option C</strong> is incorrect: AV cushions contribute to the membranous septum, but they do not extend inferiorly to close the foramen from the atrial side; calling all VSDs ‘inlet defects’ is incorrect — most are perimembranous (outlet/membranous).<br><strong>Option D</strong> is incorrect: trabeculation of the ventricular apex forms the muscular septum but cannot seal the basal interventricular foramen; most VSDs are not apical but rather involve the membranous septum near the AV valves.<br>Slide 25<br><img src=\"quizzes/media/cardio-w01-labembryo-slide25.jpg\" alt=\"Slide 25\">",
+      "citation": "Slide 25"
+    },
+    {
+      "qid": "labembryo-q11",
+      "facts": [
+        "LecLABEmbryo-F037",
+        "LecLABEmbryo-F038",
+        "LecLABEmbryo-F055"
+      ],
+      "text": "The aorticopulmonary septum grows in a spiral configuration as it divides the common outflow tract. What is the functional importance of the spiral, and what cardiac defect results if the septum grows straight rather than spiraling?",
+      "options": [
+        "The spiral ensures both semilunar valves have three cusps; failure to spiral creates a bicuspid pulmonary valve and a unicuspid aortic valve",
+        "The spiral prevents turbulent flow at the great vessel bifurcation; failure to spiral creates persistent truncus arteriosus by leaving both great vessels in a single channel",
+        "The spiral ensures the right ventricle connects to the pulmonary artery and the left ventricle connects to the aorta; failure to spiral causes transposition of the great arteries",
+        "The spiral creates distinct lumens for the aorta and pulmonary artery; failure to spiral leaves both great vessels connected only to the right ventricle, causing double-outlet right ventricle"
+      ],
+      "correct": 2,
+      "explanation": "<strong>The aorticopulmonary septum’s spiral course is essential for crossing the two outflow streams: the right ventricle’s stream connects to the pulmonary artery, and the left ventricle’s stream connects to the aorta. If the septum grows straight (fails to rotate), the aorta ends up over the right ventricle and the pulmonary artery over the left — transposition of the great arteries (TGA).</strong><br><strong>Option A</strong> is incorrect: the spiral of the AP septum determines ventricle-to-great-vessel connections, not the number of semilunar valve cusps; cusp number is determined by separate events in semilunar valve development.<br><strong>Option B</strong> is incorrect: persistent truncus arteriosus results from failure of the AP septum to form at all, not from failure to spiral; a straight (non-rotating) septum that does form produces TGA, not PTA.<br><strong>Option D</strong> is incorrect: double-outlet right ventricle results from a different alignment defect (both great vessels arising from the RV); failure to spiral specifically produces TGA, not DORV.<br>Slide 26 · Slide 33<br><img src=\"quizzes/media/cardio-w01-labembryo-slide26.jpg\" alt=\"Slide 26\"><img src=\"quizzes/media/cardio-w01-labembryo-slide33.jpg\" alt=\"Slide 33\">",
+      "citation": "Slide 26 · Slide 33"
+    },
+    {
+      "qid": "labembryo-q12",
+      "facts": [
+        "LecLABEmbryo-F042",
+        "LecLABEmbryo-F043",
+        "LecLABEmbryo-F041"
+      ],
+      "text": "A 28-week pregnant woman is prescribed a medication for musculoskeletal pain. Her pharmacist warns that the drug can prematurely close the ductus arteriosus. Which drug class is this, and what is the mechanism?",
+      "options": [
+        "Beta-blockers reduce prostaglandin synthesis in the placenta, causing reflex constriction of the ductus arteriosus through catecholamine-mediated vascular smooth muscle contraction",
+        "Calcium channel blockers block L-type channels in ductal smooth muscle, collapsing the prostaglandin-dependent dilation that keeps the ductus arteriosus patent during fetal life",
+        "Corticosteroids suppress surfactant production and increase thromboxane A₂, constricting the ductus arteriosus via thromboxane receptor activation on ductal smooth muscle",
+        "NSAIDs inhibit cyclooxygenase and reduce prostaglandin synthesis; prostaglandins normally maintain ductal patency, so inhibition causes premature constriction or closure"
+      ],
+      "correct": 3,
+      "explanation": "<strong>NSAIDs (e.g., indomethacin, ibuprofen) inhibit cyclooxygenase (COX), blocking prostaglandin synthesis. Prostaglandins — particularly PGE₂ — are vasodilators that keep the ductus arteriosus open throughout fetal life. Reducing prostaglandins removes this dilation signal, causing ductal smooth muscle to constrict and the DA to close prematurely.</strong> Indomethacin is actually used therapeutically after birth to close a symptomatic PDA in premature infants.<br><strong>Option A</strong> is incorrect: beta-blockers do not reduce prostaglandin synthesis; they block adrenergic receptors; their primary cardiac effects are rate and contractility changes, not ductal vasoconstriction.<br><strong>Option B</strong> is incorrect: calcium channel blockers are not the drug class responsible for ductal closure; they are used as tocolytics and do not target prostaglandin synthesis.<br><strong>Option C</strong> is incorrect: corticosteroids promote surfactant maturation rather than suppressing it; thromboxane A₂ elevation is not their mechanism of action, and they are not the classic agent causing ductal closure.<br>Slide 27<br><img src=\"quizzes/media/cardio-w01-labembryo-slide27.jpg\" alt=\"Slide 27\">",
+      "citation": "Slide 27"
+    },
+    {
+      "qid": "labembryo-q13",
+      "facts": [
+        "LecLABEmbryo-F044",
+        "LecLABEmbryo-F046"
+      ],
+      "text": "A 40-year-old woman is found to have an unrepaired atrial septal defect diagnosed during a workup for dyspnea. Postnatally, which direction does blood shunt through an ASD, and what long-term consequences develop?",
+      "options": [
+        "Left-to-right shunting occurs because postnatal left atrial pressure exceeds right; chronic right-side volume overload leads to pulmonary hypertension, arrhythmia, and right heart failure",
+        "Right-to-left shunting occurs because the right atrium receives systemic venous return; paradoxical emboli and cyanosis develop as deoxygenated blood enters the left atrium",
+        "Bidirectional shunting occurs with each heartbeat — left to right during systole and right to left during diastole — producing cyclic desaturation and polycythemia",
+        "Left-to-right shunting initially equalizes atrial pressures; when equilibrium is reached, flow reverses permanently, causing Eisenmenger physiology within the first year of life"
+      ],
+      "correct": 0,
+      "explanation": "<strong>After birth, left atrial pressure exceeds right atrial pressure (lungs are now ventilated, pulmonary resistance is low). Across an ASD, blood therefore shunts left-to-right. Chronically increased right-heart volume leads to right ventricular dilation, pulmonary hypertension, cardiac arrhythmias (especially atrial fibrillation), and eventually right heart failure.</strong><br><strong>Option B</strong> is incorrect: right-to-left shunting across an ASD does not occur under normal postnatal conditions; postnatal left atrial pressure is higher, driving left-to-right flow; R→L shunting only occurs if pulmonary hypertension later elevates right-side pressures (Eisenmenger syndrome, which takes years to develop).<br><strong>Option C</strong> is incorrect: shunting across an ASD is not bidirectional with each heartbeat in the usual postnatal state; it is predominantly unidirectional (L→R) driven by the chronic pressure gradient.<br><strong>Option D</strong> is incorrect: Eisenmenger physiology does not develop within the first year; it requires years to decades of pulmonary vascular remodeling; initial left-to-right shunting does not quickly equalize and reverse.<br>Slide 29<br><img src=\"quizzes/media/cardio-w01-labembryo-slide29.jpg\" alt=\"Slide 29\">",
+      "citation": "Slide 29"
+    },
+    {
+      "qid": "labembryo-q14",
+      "facts": [
+        "LecLABEmbryo-F051",
+        "LecLABEmbryo-F052"
+      ],
+      "text": "Failure of the superior and inferior endocardial cushions to fuse leads to an atrioventricular septal defect (AVSD). Which option correctly describes the anatomy of AVSD and its strongest chromosomal association?",
+      "options": [
+        "AVSD creates two separate but abnormally small AV valve orifices and a tiny VSD in the muscular septum; it is most common in Turner syndrome (45,X)",
+        "AVSD produces an overriding AV valve and separate atrial and ventricular defects; it is most common in 22q11.2 deletion syndrome and presents with conotruncal anomalies",
+        "AVSD creates a large ASD but no VSD, because the ventricular septum develops independently of the endocardial cushion; it is most common in trisomy 18 (Edwards syndrome)",
+        "AVSD produces a common AV valve and a large central opening connecting all four cardiac chambers; it is the most common CHD in trisomy 21 (Down syndrome)"
+      ],
+      "correct": 3,
+      "explanation": "<strong>AVSD (complete form) results from failure to fuse the superior and inferior AV endocardial cushions. This leaves a single common AV valve (instead of separate mitral and tricuspid valves) and a large central defect connecting all four cardiac chambers. AVSD is the most common congenital heart defect in trisomy 21 (Down syndrome), occurring in approximately 40% of Down syndrome patients with CHD.</strong><br><strong>Option A</strong> is incorrect: AVSD does not produce two small separate AV valves; it produces one common AV valve; Turner syndrome (45,X) is strongly associated with coarctation of the aorta, not AVSD.<br><strong>Option C</strong> is incorrect: AVSD involves both an atrial and a ventricular component; the ventricular septum membranous portion is formed partly by endocardial cushion tissue, so cushion failure causes both defects; trisomy 18 is associated with VSDs and other heart defects, not specifically AVSD.<br><strong>Option B</strong> is incorrect: 22q11.2 deletion syndrome (DiGeorge) is associated with conotruncal defects (tetralogy of Fallot, truncus arteriosus, interrupted aortic arch), not AVSD; AVSD is not a conotruncal defect.<br>Slide 31<br><img src=\"quizzes/media/cardio-w01-labembryo-slide31.jpg\" alt=\"Slide 31\">",
+      "citation": "Slide 31"
+    },
+    {
+      "qid": "labembryo-q15",
+      "facts": [
+        "LecLABEmbryo-F053",
+        "LecLABEmbryo-F055"
+      ],
+      "text": "Two outflow tract defects both involve the aorticopulmonary septum: persistent truncus arteriosus (PTA) and transposition of the great arteries (TGA). Which statement correctly distinguishes their embryologic mechanisms?",
+      "options": [
+        "PTA = AP septum fails to form at all, leaving one undivided arterial trunk; TGA = AP septum forms but does not spiral, placing the aorta over the right ventricle",
+        "PTA results from abnormal neural crest migration into the outflow tract; TGA results from failure of the AP septum to form from endocardial cushion tissue in the conus region",
+        "PTA results from the AP septum rotating too far so both great vessels remain in the right ventricle; TGA results from failure to divide the outflow tract, leaving a single trunk",
+        "PTA results from excessive AP septum growth compressing the aortic root; TGA results from failure to septate the common ventricle underlying the great vessel origins"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Persistent truncus arteriosus results from failure of the aorticopulmonary septum to form: the outflow tract is never divided, leaving a single arterial trunk exiting both ventricles. Transposition of the great arteries results from failure of the AP septum to rotate (spiral): the septum forms and divides the outflow tract, but without the spiral, the aorta ends up anterior and rightward over the right ventricle, and the pulmonary artery over the left ventricle.</strong><br><strong>Option C</strong> is incorrect: it reverses the defect-mechanism assignments; PTA is caused by failure to form the AP septum (not over-rotation), and TGA is caused by failure to spiral (not failure to divide).<br><strong>Option B</strong> is incorrect: neural crest migration is required for outflow tract septation, but PTA is specifically a failure to form the AP septum, not simply ‘abnormal migration’; endocardial cushion tissue contributes to the outflow septum but this description incorrectly places the formation failure for TGA.<br><strong>Option D</strong> is incorrect: PTA is not caused by AP septum overgrowth; TGA is not caused by failure to septate a common ventricle — ventricular septation and outflow tract rotation are separate developmental events.<br>Slide 32 · Slide 33<br><img src=\"quizzes/media/cardio-w01-labembryo-slide32.jpg\" alt=\"Slide 32\"><img src=\"quizzes/media/cardio-w01-labembryo-slide33.jpg\" alt=\"Slide 33\">",
+      "citation": "Slide 32 · Slide 33"
+    },
+    {
+      "qid": "labembryo-q16",
+      "facts": [
+        "LecLABEmbryo-F057",
+        "LecLABEmbryo-F058",
+        "LecLABEmbryo-F059"
+      ],
+      "text": "A 2-year-old boy is brought in for episodic cyanosis and becomes visibly blue when crying. Chest X-ray reveals a boot-shaped cardiac silhouette. Which cluster of findings is consistent with this presentation?",
+      "options": [
+        "Pulmonary hypertension, large ASD, right ventricular dilation, and elevated right atrial pressure producing left-to-right shunting at the atrial level",
+        "Complete transposition of the great arteries, intact ventricular septum, right-to-left atrial shunting via patent foramen ovale, and polycythemia at birth",
+        "Patent ductus arteriosus, ventricular septal defect, pulmonary hypertension, and elevated left ventricular pressure with a continuous machine-like murmur",
+        "Right ventricular hypertrophy, overriding aorta, pulmonary stenosis, and ventricular septal defect — all four producing right-to-left shunting and episodic cyanosis"
+      ],
+      "correct": 3,
+      "explanation": "<strong>The boot-shaped (coeur en sabot) cardiac silhouette, episodic cyanosis, and exacerbation with crying all point to Tetralogy of Fallot. The four components are: (1) pulmonary stenosis, (2) ventricular septal defect, (3) overriding aorta, and (4) right ventricular hypertrophy. Pulmonary stenosis forces deoxygenated blood right-to-left across the VSD into the overriding aorta — producing cyanotic ‘tet spells.’</strong><br><strong>Option A</strong> is incorrect: an ASD with right-to-left shunting and pulmonary hypertension does not produce a boot-shaped heart; this pattern describes Eisenmenger syndrome, not ToF; ASD shunts are L→R under normal conditions.<br><strong>Option B</strong> is incorrect: TGA with an intact ventricular septum presents with cyanosis from birth (not episodic), not with the boot-shaped silhouette; TGA produces an ‘egg on a string’ X-ray appearance, not the boot shape of ToF.<br><strong>Option C</strong> is incorrect: a PDA+VSD combination produces a left-to-right shunt with a machine-like murmur — not episodic cyanosis or a boot-shaped silhouette; this is an acyanotic presentation, opposite to ToF.<br>Slide 34<br><img src=\"quizzes/media/cardio-w01-labembryo-slide34.jpg\" alt=\"Slide 34\">",
+      "citation": "Slide 34"
+    },
+    {
+      "qid": "labembryo-q17",
+      "facts": [
+        "LecLABEmbryo-F064",
+        "LecLABEmbryo-F065",
+        "LecLABEmbryo-F094"
+      ],
+      "text": "A 16-year-old male presents with hypertension in the upper extremities and weak or absent femoral pulses. Which cardiovascular malformation and chromosomal syndrome are most strongly associated with this condition?",
+      "options": [
+        "Bicuspid aortic valve and Turner syndrome (45,X) are the classic associations with coarctation of the aorta",
+        "Bicuspid pulmonary valve and Noonan syndrome (PTPN11 mutations) are the classic associations with coarctation of the aorta",
+        "Patent ductus arteriosus and Marfan syndrome (FBN1 mutations) are the classic associations with coarctation of the aorta",
+        "Aortic stenosis and DiGeorge syndrome (22q11.2 deletion) are the classic associations with coarctation of the aorta"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Coarctation of the aorta is a narrowing of the descending aorta (classically at the ligamentum arteriosum). Upper-extremity hypertension and absent femoral pulses reflect the obstruction. The two classic associations taught in this lecture are bicuspid aortic valve and Turner syndrome (45,X), which has coarctation as one of its defining cardiovascular findings.</strong><br><strong>Option B</strong> is incorrect: the associated valve defect is a bicuspid aortic valve, not bicuspid pulmonary valve; Noonan syndrome is associated with pulmonary stenosis and hypertrophic cardiomyopathy, not coarctation.<br><strong>Option C</strong> is incorrect: PDA and Marfan syndrome are not the classic coarctation associations; Marfan syndrome is associated with aortic root dilation and mitral valve prolapse, not coarctation.<br><strong>Option D</strong> is incorrect: DiGeorge syndrome (22q11.2 deletion) is associated with conotruncal defects (tetralogy of Fallot, truncus arteriosus); aortic stenosis is a distinct lesion from coarctation.<br>Slide 36 · Transcript 67:26<br><img src=\"quizzes/media/cardio-w01-labembryo-slide36.jpg\" alt=\"Slide 36\">",
+      "citation": "Slide 36 · Transcript 67:26"
+    },
+    {
+      "qid": "labembryo-q18",
+      "facts": [
+        "LecLABEmbryo-F076",
+        "LecLABEmbryo-F079",
+        "LecLABEmbryo-F074"
+      ],
+      "text": "The six paired aortic arches develop sequentially between weeks 4 and 6 and most regress, leaving specific adult vascular derivatives. Which option correctly pairs arch 3 and arch 6 with their adult derivatives?",
+      "options": [
+        "Arch 3 → right subclavian artery; arch 6 → both common carotid arteries and the ascending aortic arch",
+        "Arch 3 → common carotid arteries; arch 6 → pulmonary arteries and, on the left, the ductus arteriosus",
+        "Arch 3 → stapedial and hyoid arteries; arch 6 → both subclavian arteries and the proximal coronary arteries",
+        "Arch 3 → maxillary arteries; arch 6 → both aortic arches and the pulmonary trunk, ductus arteriosus included"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Aortic arch 3 gives rise to the common carotid arteries (and proximal internal carotids). Aortic arch 6 (the pulmonary arch) gives rise to the pulmonary arteries bilaterally; on the left, the distal portion persists as the ductus arteriosus (the second embryonic shunt), which later becomes the ligamentum arteriosum.</strong><br><strong>Option A</strong> is incorrect: arch 3 does not form the right subclavian artery; that comes from the right 4th arch and right dorsal aorta; arch 6 does not form the carotid arteries or ascending aortic arch.<br><strong>Option C</strong> is incorrect: arches 1 and 2 give rise to stapedial and hyoid arteries (and mostly regress); arch 6 produces the pulmonary arteries and ductus arteriosus, not subclavian arteries or coronary arteries.<br><strong>Option D</strong> is incorrect: arches 1 and 2 form the maxillary arteries; arch 6 does not form the aortic arches; the aortic arch (adult) comes from the left 4th aortic arch and dorsal aorta.<br>Slide 47<br><img src=\"quizzes/media/cardio-w01-labembryo-slide47.jpg\" alt=\"Slide 47\">",
+      "citation": "Slide 47"
+    },
+    {
+      "qid": "labembryo-q19",
+      "facts": [
+        "LecLABEmbryo-F067",
+        "LecLABEmbryo-F068",
+        "LecLABEmbryo-F069"
+      ],
+      "text": "Three pairs of veins drain into the sinus venosus during early embryonic development. Which option correctly identifies the sinus venosus inflow vessels and the adult fate of one pair?",
+      "options": [
+        "The three pairs are cardinal, vitelline, and pulmonary veins; the right common cardinal vein becomes the superior vena cava",
+        "The three pairs are cardinal, hepatic, and umbilical veins; the left common cardinal vein persists as the azygos vein in the adult",
+        "The three pairs are cardinal, vitelline, and renal veins; the right vitelline vein becomes the inferior vena cava hepatic segment",
+        "The three pairs are cardinal, vitelline, and umbilical veins; the right anterior cardinal vein becomes the superior vena cava"
+      ],
+      "correct": 3,
+      "explanation": "<strong>The sinus venosus receives three pairs of veins: cardinal veins (systemic drainage), vitelline veins (from yolk sac/gut), and umbilical veins (from placenta). The right anterior cardinal vein (paired with the right common cardinal vein) gives rise to the superior vena cava; the left anterior cardinal vein largely regresses but contributes to the left brachiocephalic vein.</strong><br><strong>Option A</strong> is incorrect: pulmonary veins are not one of the three sinus venosus inflow pairs; pulmonary veins drain into the left atrium separately; and it is the right anterior cardinal vein, not the common cardinal, that most directly gives the SVC.<br><strong>Option B</strong> is incorrect: hepatic veins are not a primary sinus venosus inflow pair in the same sense; the correct third pair is umbilical veins; the left common cardinal vein becomes the coronary sinus and oblique vein of Marshall, not the azygos vein.<br><strong>Option C</strong> is incorrect: renal veins are not one of the three embryonic inflow pairs to the sinus venosus; the correct trio is cardinal, vitelline, and umbilical; while the right vitelline vein does contribute to parts of the IVC, the correct pairing here is the anterior cardinal vein with the SVC.<br>Slide 42<br><img src=\"quizzes/media/cardio-w01-labembryo-slide42.jpg\" alt=\"Slide 42\">",
+      "citation": "Slide 42"
+    },
+    {
+      "qid": "labembryo-q20",
+      "facts": [
+        "LecLABEmbryo-F072",
+        "LecLABEmbryo-F073",
+        "LecLABEmbryo-F085"
+      ],
+      "text": "The ductus venosus is labeled the ‘third embryonic shunt’ in this lecture. Which option correctly describes what it bypasses, what it connects, and what structure it becomes in the adult?",
+      "options": [
+        "Ductus venosus bypasses the fetal liver; it connects the umbilical vein to the inferior vena cava; it becomes the ligamentum venosum after birth",
+        "Ductus venosus bypasses the fetal lungs; it connects the umbilical vein to the right atrium directly; it becomes the ligamentum teres hepatis after birth",
+        "Ductus venosus bypasses the pulmonary circulation; it connects the pulmonary artery to the descending aorta; it becomes the ligamentum arteriosum after birth",
+        "Ductus venosus bypasses the fetal liver; it connects the portal vein to the right hepatic vein; it becomes the round ligament of the liver after birth"
+      ],
+      "correct": 0,
+      "explanation": "<strong>The ductus venosus is a vascular shunt that bypasses the fetal liver (which is not yet functioning as the primary detoxification organ). It connects the umbilical vein (carrying oxygenated blood from the placenta) directly to the inferior vena cava, allowing oxygen-rich blood to bypass the liver sinusoids and reach the heart quickly. After birth, as the umbilical vein flow ceases, the ductus venosus closes and becomes the ligamentum venosum (a fibrous remnant in the liver fissure).</strong><br><strong>Option B</strong> is incorrect: the ductus venosus bypasses the liver, not the lungs; it does not connect to the right atrium directly; the ligamentum teres hepatis is the adult remnant of the umbilical vein, not the ductus venosus.<br><strong>Option C</strong> is incorrect: the ductus venosus does not connect the pulmonary artery to the aorta; that is the ductus arteriosus (the second embryonic shunt); the ligamentum arteriosum is the remnant of the ductus arteriosus.<br><strong>Option D</strong> is incorrect: the ductus venosus does not connect the portal vein to the hepatic vein; it connects the umbilical vein to the IVC; the round ligament of the liver (ligamentum teres hepatis) is the adult remnant of the left umbilical vein, not the ductus venosus.<br>Slide 42<br><img src=\"quizzes/media/cardio-w01-labembryo-slide42.jpg\" alt=\"Slide 42\">",
+      "citation": "Slide 42"
+    }
+  ]
+}
