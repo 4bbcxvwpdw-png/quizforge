@@ -3,6 +3,20 @@
   "generated": "2026-08-23T00:00:00.000Z",
   "sections": [
     {
+      "id": "week-01",
+      "name": "Week 01",
+      "quizzes": [
+        {
+          "id": "cardio-w01-lec01",
+          "title": "Lec 01 \u2014 Anatomy of the Heart",
+          "subtitle": "Week 01 \u00b7 Lec 01 \u00b7 Anatomy of the Heart | 20 questions",
+          "file": "quizzes/Week01/cardio-w01-lec01.r1.json",
+          "revision": 1,
+          "question_count": 20
+        }
+      ]
+    },
+    {
       "id": "week-02",
       "name": "Week 02",
       "quizzes": [
