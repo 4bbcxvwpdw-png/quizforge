@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "id": "cardio-w01-lec03",
+  "revision": 1,
+  "question_count": 20,
+  "title": "Lec 03 — Cardiac Function",
+  "subtitle": "Week 01 · Lec 03 · Cardiac Function | 20 questions",
+  "source_fingerprints": {
+    "Lec03_FactInventory.md": "0773887dd557c0476d14ce8eb4c42d8549a744b5595925ddc50028b2d1d1407d",
+    "quiz_selection.tsv": "274efcb67495239b01dce73af4e50f00273ca39c48e137b0dcca9e51e7253079",
+    "01_slides.txt": "451acd7af0da056e14d58077de31164badd6600ffe5bea57bc96db7bedf6699b",
+    "transcript.vtt": "5a45b11f87f75f9d965fd98cf6ac75f36438594b9181963b9e1e27372b898c35"
+  },
+  "questions": [
+    {
+      "qid": "lec03-q01",
+      "facts": [
+        "Lec03-F010"
+      ],
+      "text": "During isovolumetric contraction of the left ventricle, which valve state is correct?",
+      "options": [
+        "The mitral valve is open and the aortic valve is closed",
+        "The aortic valve is open and the mitral valve is closed",
+        "Both the mitral valve and the aortic valve are closed",
+        "Both the mitral valve and the aortic valve are open"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Both the mitral valve and the aortic valve are closed during isovolumetric contraction.</strong> During early systole the ventricle begins to generate force, but LV pressure has not yet exceeded aortic diastolic pressure, so the aortic valve stays shut; the mitral valve has already closed to prevent backflow into the atrium. Pressure rises steeply while volume stays fixed — that is what makes the phase isovolumetric. The phase ends when LV pressure surpasses aortic diastolic pressure and the aortic valve swings open, beginning isotonic ejection.<br><strong>Option A</strong> is incorrect: an open mitral valve during ventricular contraction would allow blood to regurgitate into the atrium; the mitral valve closes (S1) at the very onset of systole, before any isovolumetric pressure rise.<br><strong>Option B</strong> is incorrect: the aortic valve does not open until LV pressure exceeds aortic diastolic pressure, which does not occur until the end of the isovolumetric phase.<br><strong>Option D</strong> is incorrect: both valves are never simultaneously open in normal physiology; that state would short-circuit the pump entirely.<br>Slide 5 · Transcript 0:03:37<br><img src=\"quizzes/media/cardio-w01-lec03-slide5.jpg\" alt=\"Slide 5\">",
+      "citation": "Slide 5 · Transcript 0:03:37"
+    },
+    {
+      "qid": "lec03-q02",
+      "facts": [
+        "Lec03-F022"
+      ],
+      "text": "A 55-year-old woman with known paroxysmal atrial fibrillation reports fatigue and shortness of breath when climbing two flights of stairs but has no symptoms at rest. Her heart rate today is 90/min with an irregularly irregular rhythm. Which mechanism most directly explains her exertional symptoms?",
+      "options": [
+        "Loss of the atrial kick, reducing preload and stroke volume during exertion",
+        "Impaired aortic valve opening due to rapid ventricular rates in atrial fibrillation",
+        "Increased afterload from catecholamine release during the irregular rhythm",
+        "Reduced venous return from an impaired skeletal muscle pump in atrial fibrillation"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Loss of the atrial kick accounts for approximately 20% of end-diastolic volume, and its absence reduces stroke volume enough to cause dyspnea on exertion in atrial fibrillation.</strong> During normal sinus rhythm, atrial contraction just before systole injects a bolus totaling roughly 20% of the EDV into the ventricle. In atrial fibrillation, coordinated atrial contraction is absent, so this contribution disappears. At rest, passive ventricular filling is sufficient to maintain adequate stroke volume. During exercise the heart must substantially increase cardiac output; without the atrial kick, EDV and stroke volume cannot meet that demand, producing the dyspnea and fatigue at modest activity levels that are characteristic of AF.<br><strong>Option B</strong> is incorrect: aortic valve opening depends on LV pressure exceeding aortic pressure, a mechanism unaffected by atrial rhythm or ventricular rate alone; rate does not mechanically block AVO.<br><strong>Option C</strong> is incorrect: while catecholamines may raise afterload, this is not the mechanism the lecture identifies for exertional intolerance in AF; the specific teaching point is the lost atrial kick.<br><strong>Option D</strong> is incorrect: the skeletal muscle pump operates through rhythmic muscle contraction combined with unidirectional venous valves in the lower extremities; it functions independently of cardiac rhythm and is not impaired by atrial fibrillation.<br>Slide 8 · Transcript 0:09:16<br><img src=\"quizzes/media/cardio-w01-lec03-slide8.jpg\" alt=\"Slide 8\">",
+      "citation": "Slide 8 · Transcript 0:09:16"
+    },
+    {
+      "qid": "lec03-q03",
+      "facts": [
+        "Lec03-F029",
+        "Lec03-F030"
+      ],
+      "text": "A patient’s echocardiogram shows an end-diastolic volume of 120 mL and an end-systolic volume of 48 mL. What is the ejection fraction, and how does it compare to the normal range?",
+      "options": [
+        "40%, which falls below the normal range of 55–65%",
+        "72%, which is above the normal range of 55–65%",
+        "48%, which is below the normal range of 55–65%",
+        "60%, which is within the normal range of 55–65%"
+      ],
+      "correct": 3,
+      "explanation": "<strong>The ejection fraction is 60%, which is within the normal range of 55–65%.</strong> Stroke volume equals EDV minus ESV: 120 − 48 = 72 mL. Ejection fraction is stroke volume expressed as a percentage of EDV: (72 ÷ 120) × 100 = 60%. This falls within the normal benchmark of 55–65% that the lecture identifies as the commonly used metric for assessing left ventricular function.<br><strong>Option A</strong> is incorrect: 40% arises from incorrectly using ESV (48 mL) divided by EDV (120 mL) as the ejection fraction, i.e., 48/120 × 100; the correct numerator is stroke volume (EDV − ESV), not ESV alone.<br><strong>Option B</strong> is incorrect: 72% arises from mistaking the stroke volume in milliliters (72 mL) for a percentage; ejection fraction requires dividing SV by EDV, giving 72/120 × 100 = 60%, not 72%.<br><strong>Option C</strong> is incorrect: 48% arises from using the ESV value (48 mL) directly as a percentage without performing any calculation; this is not a valid step in the EF formula.<br>Slide 10<br><img src=\"quizzes/media/cardio-w01-lec03-slide10.jpg\" alt=\"Slide 10\">",
+      "citation": "Slide 10"
+    },
+    {
+      "qid": "lec03-q04",
+      "facts": [
+        "Lec03-F077"
+      ],
+      "text": "A patient with systolic heart failure is given dobutamine, which increases myocardial contractility without changing preload or afterload. Which of the following best describes the expected change on the left ventricular pressure-volume loop?",
+      "options": [
+        "End-diastolic volume increases as the ESPVR shifts rightward, raising stroke volume",
+        "End-systolic volume decreases, stroke volume increases, and the ESPVR shifts leftward",
+        "End-systolic volume increases and the ESPVR shifts rightward, reducing stroke volume",
+        "Peak ventricular pressure falls and the ESPVR shifts downward, leaving stroke volume unchanged"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Increased contractility lowers end-systolic volume, increases stroke volume, and shifts the end-systolic pressure-volume relationship (ESPVR) leftward.</strong> Contractility determines how forcefully the ventricle ejects at any given loading condition. When it rises — through dobutamine, sympathetic activation, or cardiac glycosides — the ventricle squeezes more completely at the same EDV and afterload. On the PV loop this appears as the end-systolic point moving to a lower volume, widening the loop and increasing stroke volume. The ESPVR, the line connecting end-systolic points across different loading conditions, rotates leftward (steeper slope), meaning the heart reaches the same systolic pressure at a smaller residual volume.<br><strong>Option A</strong> is incorrect: dobutamine does not alter preload or EDV in this scenario; the change is entirely at the end-systolic point, and the ESPVR shifts leftward, not rightward.<br><strong>Option C</strong> is incorrect: a rightward ESPVR shift and rising ESV describe reduced contractility (as in heart failure or negative inotropes), the exact opposite of dobutamine’s effect.<br><strong>Option D</strong> is incorrect: increased contractility raises the ESPVR slope and lowers ESV; peak ventricular pressure is maintained or increases, not falls, and stroke volume widens rather than staying unchanged.<br>Slide 17 · Transcript 0:33:38<br><img src=\"quizzes/media/cardio-w01-lec03-slide17.jpg\" alt=\"Slide 17\">",
+      "citation": "Slide 17 · Transcript 0:33:38"
+    },
+    {
+      "qid": "lec03-q05",
+      "facts": [
+        "Lec03-F033"
+      ],
+      "text": "In a classic muscle mechanics model, a weight attached before contraction sets the resting muscle length (preload), while a weight the muscle must lift during contraction sets the resistance (afterload). Which statement correctly describes the role of preload in this model?",
+      "options": [
+        "Preload determines the resting length of the muscle before contraction begins",
+        "Preload determines the speed of isotonic shortening during active contraction",
+        "Preload determines the amount of work the muscle must perform against resistance",
+        "Preload determines the peak pressure generated during the ejection phase"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Preload determines the resting length of the muscle before contraction begins.</strong> In the classic mechanics model, the preload weight stretches the muscle to a new resting length before any contraction occurs. In the heart, end-diastolic volume is the physiological equivalent of preload: as the ventricle fills, the myocardium is passively stretched, setting the initial sarcomere length. This resting length controls the degree of actin-myosin overlap and, through the Frank-Starling relationship, the force of the subsequent contraction. Afterload, by contrast, is applied only once the muscle begins to shorten — it is the resistance the ventricle must overcome to eject blood.<br><strong>Option C</strong> is incorrect: the amount of work performed against resistance is the domain of afterload, not preload; afterload is the load the muscle encounters only during the contraction itself.<br><strong>Option B</strong> is incorrect: the speed of isotonic shortening is governed by the force-velocity relationship and decreases as afterload increases; it is not a function of preload.<br><strong>Option D</strong> is incorrect: peak ventricular pressure depends on contractility and afterload; preload sets the initial filling volume, not the peak systolic pressure.<br>Slide 11<br><img src=\"quizzes/media/cardio-w01-lec03-slide11.jpg\" alt=\"Slide 11\">",
+      "citation": "Slide 11"
+    },
+    {
+      "qid": "lec03-q06",
+      "facts": [
+        "Lec03-F035",
+        "Lec03-F036"
+      ],
+      "text": "A 58-year-old man with a 10-year history of untreated systemic hypertension presents for a routine visit. His blood pressure is 168/98 mm Hg and his echocardiogram shows a mildly reduced ejection fraction. Which of the following best explains how his elevated blood pressure reduces stroke volume?",
+      "options": [
+        "Elevated venous pressure reduces preload, lowering end-diastolic volume",
+        "Hypertension inhibits the SA node, reducing heart rate and cardiac output",
+        "Elevated arterial pressure increases afterload, raising ESV and reducing SV",
+        "Increased blood pressure stretches myocardium beyond optimal actin-myosin overlap"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Elevated arterial pressure increases afterload, raises end-systolic volume, and thereby reduces stroke volume.</strong> Afterload is the force the ventricle must generate to open the aortic valve and eject blood. In systemic hypertension, elevated arterial pressure directly raises this afterload. On the pressure-volume loop, higher afterload requires greater isovolumetric pressure before AVO; once ejection begins, the higher opposing aortic pressure limits how far the ventricle empties, leaving a larger end-systolic volume. Since SV = EDV − ESV, a rise in ESV with an unchanged EDV shrinks stroke volume. Over time, the chronically increased workload drives left ventricular hypertrophy.<br><strong>Option A</strong> is incorrect: elevated arterial pressure does not directly reduce venous return or preload; preload is set by venous return and EDV, which are independent of aortic pressure in this context.<br><strong>Option B</strong> is incorrect: hypertension does not directly inhibit the SA node; heart rate is regulated by the autonomic nervous system through separate mechanisms unrelated to arterial blood pressure per se.<br><strong>Option D</strong> is incorrect: cardiac muscle normally operates on the ascending limb of the active length-tension curve, so pathological overstretching is not the mechanism limiting ejection in hypertension; the problem is increased afterload opposing outflow, not sarcomere over-extension.<br>Slide 12<br><img src=\"quizzes/media/cardio-w01-lec03-slide12.jpg\" alt=\"Slide 12\">",
+      "citation": "Slide 12"
+    },
+    {
+      "qid": "lec03-q07",
+      "facts": [
+        "Lec03-F040"
+      ],
+      "text": "A patient with hypertension is prescribed an arteriolar vasodilator. Which chain of hemodynamic events best explains why this drug lowers blood pressure and increases cardiac output simultaneously?",
+      "options": [
+        "Reduced SVR → decreased venous return → decreased preload → decreased EDV",
+        "Reduced SVR → decreased afterload → increased stroke volume → increased CO",
+        "Increased SVR → elevated arterial pressure → reduced ventricular ejection velocity",
+        "Reduced preload → lower EDV → less myocardial stretch → lower stroke volume"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Arteriolar vasodilators lower blood pressure and increase cardiac output by reducing systemic vascular resistance, which decreases afterload and allows the ventricle to eject more completely.</strong> Arterial pressure equals CO × SVR. When a vasodilator relaxes arteriolar smooth muscle, SVR falls. Lower SVR means the aortic valve opens at a lower threshold pressure and less resistance opposes ejection throughout systole. The ventricle empties more completely: ESV falls, stroke volume rises, and cardiac output increases. The fall in arterial pressure is the therapeutic goal in hypertension; the simultaneous rise in CO is particularly beneficial in patients with reduced ventricular function.<br><strong>Option A</strong> is incorrect: arteriolar vasodilators act on resistance (arterial) vessels, not capacitance (venous) vessels; venous return and preload are not directly reduced by arteriolar dilation.<br><strong>Option C</strong> is incorrect: this describes the hemodynamics of a vasoconstrictor, not a vasodilator; vasodilators lower, not raise, SVR and arterial pressure.<br><strong>Option D</strong> is incorrect: vasodilators do not reduce preload or EDV; they act downstream on the resistance side, leaving venous return and diastolic filling largely unchanged.<br>Slide 13 · Transcript 0:18:25<br><img src=\"quizzes/media/cardio-w01-lec03-slide13.jpg\" alt=\"Slide 13\">",
+      "citation": "Slide 13 · Transcript 0:18:25"
+    },
+    {
+      "qid": "lec03-q08",
+      "facts": [
+        "Lec03-F042",
+        "Lec03-F043"
+      ],
+      "text": "Which of the following accurately describes the effect of parasympathetic stimulation (acetylcholine) on the heart?",
+      "options": [
+        "Increases heart rate and ventricular contractility through SR Ca2+ release",
+        "Increases ventricular contractility without changing heart rate or SA node activity",
+        "Decreases heart rate and reduces ventricular SR Ca2+ release simultaneously",
+        "Decreases heart rate but does not affect ventricular contractility at all"
+      ],
+      "correct": 3,
+      "explanation": "<strong>Parasympathetic stimulation via acetylcholine slows the SA node (negative chronotropy) but does not alter SR Ca2+ release or ventricular contractility.</strong> Acetylcholine binds muscarinic receptors on the SA node, hyperpolarizing pacemaker cells and reducing automaticity, which slows heart rate. Unlike norepinephrine and epinephrine — which increase SR Ca2+ release and boost contractility and heart rate through parallel inotropic and chronotropic pathways — acetylcholine has no significant inotropic effect on the ventricular myocardium. The heart beats more slowly but each contraction remains equally forceful. This distinction is tested clinically: vagal maneuvers slow heart rate without weakening the ventricular squeeze.<br><strong>Option A</strong> is incorrect: increasing heart rate and contractility via SR Ca2+ release is the sympathetic (catecholamine) effect; this describes norepinephrine and epinephrine acting on the inotropic and chronotropic pathways, not parasympathetic action.<br><strong>Option C</strong> is incorrect: the lecture explicitly states that acetylcholine does not alter SR Ca2+ release or ventricular contractility; reducing ventricular SR Ca2+ is not part of parasympathetic cardiac action.<br><strong>Option B</strong> is incorrect: acetylcholine does not increase ventricular contractility, and its primary cardiac target is the SA node, so it directly changes heart rate.<br>Slide 14<br><img src=\"quizzes/media/cardio-w01-lec03-slide14.jpg\" alt=\"Slide 14\">",
+      "citation": "Slide 14"
+    },
+    {
+      "qid": "lec03-q09",
+      "facts": [
+        "Lec03-F054"
+      ],
+      "text": "On a left ventricular pressure-volume loop, which valve event generates the first heart sound (S1)?",
+      "options": [
+        "Aortic valve opening at the end of isovolumetric contraction",
+        "Aortic valve closure at the beginning of isovolumetric relaxation",
+        "Mitral valve opening at the end of isovolumetric relaxation",
+        "Mitral valve closure at the onset of isovolumetric contraction"
+      ],
+      "correct": 3,
+      "explanation": "<strong>S1 corresponds to mitral valve closure, which occurs at the onset of isovolumetric contraction.</strong> As LV pressure begins to rise at the start of systole, it rapidly exceeds left atrial pressure, forcing the mitral leaflets shut. This closure generates the first heart sound. On the PV loop, the mitral valve closing event marks the lower-left corner transition from diastolic filling into the steep isovolumetric pressure-rise segment. The second heart sound (S2) corresponds to aortic valve closure, which initiates isovolumetric relaxation at the upper-right corner of the loop.<br><strong>Option A</strong> is incorrect: aortic valve opening (AVO) marks the transition from isovolumetric contraction to isotonic ejection and does not produce a standard heart sound.<br><strong>Option B</strong> is incorrect: aortic valve closure produces S2, not S1; it marks the beginning of isovolumetric relaxation, not the beginning of systole.<br><strong>Option C</strong> is incorrect: mitral valve opening marks the transition from isovolumetric relaxation to diastolic filling; it may contribute to an S3 gallop in pathological rapid filling but does not generate S1.<br>Slide 17<br><img src=\"quizzes/media/cardio-w01-lec03-slide17.jpg\" alt=\"Slide 17\">",
+      "citation": "Slide 17"
+    },
+    {
+      "qid": "lec03-q10",
+      "facts": [
+        "Lec03-F057"
+      ],
+      "text": "A patient receives an intravenous fluid challenge that raises end-diastolic volume from 130 mL to 165 mL. Aortic diastolic pressure remains unchanged. Which of the following best describes the expected change in the left ventricular pressure-volume loop?",
+      "options": [
+        "The AVO pressure point falls and stroke volume decreases",
+        "Peak ventricular pressure rises, stroke volume increases, and ESV rises slightly",
+        "The loop width narrows and ESV falls because the added volume is incompletely ejected",
+        "The EDV shifts leftward without any change in peak ventricular pressure"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Increased preload raises EDV, producing a more forceful contraction with higher peak ventricular pressure, increased stroke volume, and a slight rise in ESV.</strong> The larger EDV stretches the myocardium, enhancing actin-myosin overlap and Ca2+ binding to troponin. On the PV loop the right boundary shifts rightward to the new EDV; the top of the loop rises because the stronger contraction generates greater peak pressure; and the loop widens, reflecting the increased stroke volume. Because aortic diastolic pressure (which governs the AVO threshold) has not changed, the AVO point stays at the same pressure regardless of the higher EDV. The aortic valve closes at a slightly higher pressure (AVC shifts up), and since not all of the extra preload volume is expelled against the higher aortic pressure, ESV increases slightly.<br><strong>Option A</strong> is incorrect: the AVO point is determined by aortic diastolic pressure, not by preload; since aortic diastolic pressure is unchanged, the AVO pressure level does not fall, and the increased preload actually raises stroke volume rather than reducing it.<br><strong>Option D</strong> is incorrect: a fluid challenge increases EDV, shifting the right boundary of the loop rightward to a larger volume, not leftward; and peak pressure rises with the stronger contraction.<br><strong>Option C</strong> is incorrect: increased EDV produces a stronger contraction that expels most of the extra volume; the loop widens (increased stroke volume) rather than narrowing; ESV rises slightly, not falls.<br>Slide 18 · Transcript 0:27:29<br><img src=\"quizzes/media/cardio-w01-lec03-slide18.jpg\" alt=\"Slide 18\">",
+      "citation": "Slide 18 · Transcript 0:27:29"
+    },
+    {
+      "qid": "lec03-q11",
+      "facts": [
+        "Lec03-F058"
+      ],
+      "text": "A patient with uncontrolled hypertension has significantly elevated systemic vascular resistance. Which change on the left ventricular pressure-volume loop best reflects the increased afterload?",
+      "options": [
+        "The EDV increases while peak ventricular pressure and ESV remain unchanged",
+        "The AVO pressure point falls, ESV decreases, and stroke volume increases",
+        "The AVO pressure point rises, ESV increases, and stroke volume decreases",
+        "Peak ventricular pressure falls and the loop width narrows without changing ESV"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Increased afterload shifts the AVO pressure point upward, raises end-systolic volume, and reduces stroke volume.</strong> Afterload determines how much isovolumetric pressure the ventricle must generate before the aortic valve opens. When SVR is elevated, aortic diastolic pressure rises, so the ventricle must climb to a higher LV pressure before AVO. Once ejection begins, the persistently elevated aortic pressure throughout systole limits how far the ventricle can empty, leaving a larger end-systolic residual volume. Since SV = EDV − ESV, a higher ESV with a fixed EDV directly reduces stroke volume. The PV loop becomes narrower and taller.<br><strong>Option B</strong> is incorrect: a falling AVO point, decreased ESV, and increased SV describe the hemodynamics of decreased afterload (for example, with vasodilation); this is the opposite of what elevated SVR produces.<br><strong>Option A</strong> is incorrect: increased afterload does not expand EDV; preload is a separate determinant set by venous return, and ESV rises rather than stays unchanged when afterload climbs.<br><strong>Option D</strong> is incorrect: elevated afterload raises — not lowers — peak ventricular pressure, because the ventricle must generate greater force to overcome the higher arterial resistance before AVO occurs.<br>Slide 19 · Transcript 0:31:27<br><img src=\"quizzes/media/cardio-w01-lec03-slide19.jpg\" alt=\"Slide 19\">",
+      "citation": "Slide 19 · Transcript 0:31:27"
+    },
+    {
+      "qid": "lec03-q12",
+      "facts": [
+        "Lec03-F060",
+        "Lec03-F061"
+      ],
+      "text": "Right atrial pressure (RAP) rises from 2 mmHg to 5 mmHg. Which of the following describes the resulting effects on cardiac output and venous return?",
+      "options": [
+        "Cardiac output increases and venous return decreases",
+        "Cardiac output decreases and venous return increases",
+        "Both cardiac output and venous return increase proportionally",
+        "Both cardiac output and venous return decrease proportionally"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Rising RAP increases cardiac output via enhanced ventricular filling while simultaneously decreasing venous return by reducing the pressure gradient that drives blood toward the right heart.</strong> The cardiac function curve has a positive slope: higher RAP stretches the ventricular wall, boosts preload, and through the Frank-Starling mechanism produces a stronger contraction and greater cardiac output. The venous function curve has a negative slope: RAP is the downstream pressure for blood returning from the periphery; as RAP rises, the gradient ΔP = CVP − RAP shrinks, so venous return falls. These opposing effects are why the two curves intersect at a single steady-state operating point where CO = VR.<br><strong>Option B</strong> is incorrect: this reverses the actual slopes; the cardiac function curve rises with RAP (higher RAP → more ventricular filling → more CO), while the venous function curve falls.<br><strong>Option C</strong> is incorrect: because the two curves have opposite slopes, RAP cannot increase both CO and VR simultaneously; a rising RAP always boosts CO and dampens VR.<br><strong>Option D</strong> is incorrect: the cardiac function curve has a positive slope; falling CO with rising RAP would imply the ventricle is operating on a descending limb, which does not apply under normal physiological conditions.<br>Slide 20 · Transcript 0:35:20<br><img src=\"quizzes/media/cardio-w01-lec03-slide20.jpg\" alt=\"Slide 20\">",
+      "citation": "Slide 20 · Transcript 0:35:20"
+    },
+    {
+      "qid": "lec03-q13",
+      "facts": [
+        "Lec03-F062"
+      ],
+      "text": "On the venous function curve, venous return falls to zero when right atrial pressure reaches approximately 7 mmHg. What is the physiological explanation for this?",
+      "options": [
+        "Ventricular contraction becomes purely isovolumetric, generating pressure without ejecting blood",
+        "RAP equals mean circulatory pressure, removing the pressure gradient for venous return",
+        "Sympathetic vasoconstriction collapses venous compliance when RAP reaches 7 mmHg",
+        "The mitral valve closes passively as RAP surpasses 7 mmHg, preventing further ventricular filling"
+      ],
+      "correct": 1,
+      "explanation": "<strong>When RAP rises to equal mean circulatory pressure (approximately 7 mmHg), the pressure gradient ΔP = CVP − RAP reaches zero, eliminating the driving force for venous return and causing blood flow to stagnate.</strong> Mean circulatory pressure is the equilibrium pressure throughout the entire cardiovascular system when the heart is stopped — the pressure at which blood would be static if there were no pump. Under resting conditions it is approximately 7 mmHg. Venous return is driven by the gradient between central venous pressure (in large peripheral veins, roughly 7 mmHg) and RAP. As RAP approaches this value, the gradient shrinks to zero and venous flow ceases entirely, which is where the venous function curve crosses the x-axis.<br><strong>Option A</strong> is incorrect: isovolumetric contraction is a phase within the cardiac cycle determined by valve mechanics and LV pressure, not by venous pressure equilibrium; it has no direct connection to why venous return reaches zero at 7 mmHg.<br><strong>Option C</strong> is incorrect: sympathetic venoconstriction mobilizes stored venous blood, which actually increases venous return; it does not collapse venous compliance or arrest venous return at 7 mmHg.<br><strong>Option D</strong> is incorrect: mitral valve dynamics are governed by the left atrial-to-LV pressure gradient; the mitral valve does not respond to RAP levels, and its closure cannot explain why venous return stops at this pressure.<br>Slide 20 · Transcript 0:37:00<br><img src=\"quizzes/media/cardio-w01-lec03-slide20.jpg\" alt=\"Slide 20\">",
+      "citation": "Slide 20 · Transcript 0:37:00"
+    },
+    {
+      "qid": "lec03-q14",
+      "facts": [
+        "Lec03-F065"
+      ],
+      "text": "The driving pressure that propels blood from the peripheral venous system toward the right atrium is expressed by which formula?",
+      "options": [
+        "ΔP = Mean arterial pressure − Central venous pressure",
+        "ΔP = Right atrial pressure − Central venous pressure",
+        "ΔP = Cardiac output × Systemic vascular resistance",
+        "ΔP = Central venous pressure − Right atrial pressure"
+      ],
+      "correct": 3,
+      "explanation": "<strong>The driving force for venous return is ΔP = CVP − RAP (central venous pressure minus right atrial pressure).</strong> Blood flows from higher pressure to lower pressure. In the venous circulation, central venous pressure in the large peripheral veins is the upstream pressure and right atrial pressure is the downstream pressure. The difference CVP − RAP is the net gradient moving blood toward the right heart. At rest, CVP is approximately 7 mmHg and RAP approximately 2 mmHg, giving a gradient of about 5 mmHg. When RAP rises toward CVP, this gradient shrinks and venous return falls; when RAP equals CVP (at mean circulatory pressure), the gradient is zero and venous return stops.<br><strong>Option A</strong> is incorrect: mean arterial pressure minus CVP would describe the arteriovenous pressure gradient driving blood from arteries through capillaries into veins, not the gradient propelling venous blood to the right atrium.<br><strong>Option B</strong> is incorrect: this formula is inverted; RAP is the downstream (low-pressure) end of the venous circuit, not the upstream end; subtracting CVP from RAP yields a negative gradient pointing away from the heart.<br><strong>Option C</strong> is incorrect: CO × SVR equals mean arterial pressure by the hemodynamic Ohm’s law analog for the systemic circulation; it does not describe the driving pressure for venous return.<br>Slide 22<br><img src=\"quizzes/media/cardio-w01-lec03-slide22.jpg\" alt=\"Slide 22\">",
+      "citation": "Slide 22"
+    },
+    {
+      "qid": "lec03-q15",
+      "facts": [
+        "Lec03-F066"
+      ],
+      "text": "In a healthy person at rest, cardiac output transiently rises above venous return. Through which sequence of events does the heart restore steady-state equilibrium?",
+      "options": [
+        "RAP falls, CO decreases, and VR increases until CO = VR is restored",
+        "RAP rises, CO increases further, and VR decreases until equilibrium",
+        "Sympathetic tone raises contractility until venous return catches up to cardiac output",
+        "Vagal slowing reduces heart rate until cardiac output falls back to venous return"
+      ],
+      "correct": 0,
+      "explanation": "<strong>When CO transiently exceeds VR, blood net-transfers from the venous to the arterial side, RAP falls, and this fall in RAP then decreases CO while increasing VR until CO = VR is reestablished.</strong> When CO is greater than VR, more blood leaves the right side of the heart than returns to it, depleting the venous reservoir. RAP therefore falls. Falling RAP moves the operating point down the cardiac function curve (less ventricular filling → less SV → less CO) and simultaneously up the venous function curve (lower RAP → larger CVP − RAP gradient → more VR). This beat-by-beat auto-correction continues until CO = VR at a new steady-state intersection. No external neural input is required; this is the Frank-Starling mechanism acting as an intrinsic balancer.<br><strong>Option B</strong> is incorrect: when CO > VR, blood leaves the venous system, so RAP falls rather than rises; a rising RAP would be the response to VR exceeding CO, the opposite situation.<br><strong>Option C</strong> is incorrect: adding sympathetic contractility would push CO even higher, worsening the CO > VR imbalance rather than correcting it; the intrinsic correction acts through RAP changes, not through increased inotropy.<br><strong>Option D</strong> is incorrect: vagal heart-rate slowing is a distinct autonomic mechanism, not the intrinsic Frank-Starling-based correction; the auto-correction described on Slide 22 operates through venous loading changes, not through chronotropic adjustments.<br>Slide 22<br><img src=\"quizzes/media/cardio-w01-lec03-slide22.jpg\" alt=\"Slide 22\">",
+      "citation": "Slide 22"
+    },
+    {
+      "qid": "lec03-q16",
+      "facts": [
+        "Lec03-F069",
+        "Lec03-F070"
+      ],
+      "text": "A patient with systolic heart failure and a reduced ejection fraction is started on digoxin. The drug inhibits Na/K-ATPase, raising intracellular Na+ and enhancing SR Ca2+ release during systole. Which of the following correctly describes its effect on the cardiac and venous function curves?",
+      "options": [
+        "Both curves shift upward, increasing CO and venous return at every RAP level",
+        "Only the venous return curve shifts upward; the cardiac function curve is unchanged",
+        "Only the cardiac function curve shifts upward; the venous return curve is unchanged",
+        "Both curves shift downward, reflecting back-pressure from digoxin-induced volume expansion"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Digoxin increases myocardial contractility and shifts the cardiac function curve upward, while the venous return curve is not altered because digoxin does not act on venous smooth muscle or blood volume.</strong> By inhibiting the Na/K-ATPase, digoxin raises intracellular Na+, which reduces the Na+/Ca2+ exchanger’s ability to extrude calcium; intracellular Ca2+ rises, SR Ca2+ load grows, and each contraction becomes more forceful. On the function-curve diagram the cardiac function curve moves upward: at any given RAP, the heart now delivers greater CO. The venous return curve’s position is set by blood volume and venous tone, neither of which digoxin directly alters, so it stays in place. The new steady state forms at a higher CO and a lower RAP as the operating point tracks along the unchanged venous return curve.<br><strong>Option A</strong> is incorrect: only the cardiac function curve shifts; the venous return curve is unchanged because digoxin does not alter blood volume or venous compliance, which determine that curve’s position.<br><strong>Option B</strong> is incorrect: digoxin’s primary target is ventricular myocardium (increasing contractility), not venous vasculature; the venous return curve is governed by capacitance and blood volume, not by inotropic state.<br><strong>Option D</strong> is incorrect: digoxin does not cause downward curve shifts or volume expansion; it is a positive inotrope that shifts the cardiac function curve upward, raising cardiac output in the heart failure patient.<br>Slide 24 · Transcript 0:42:51<br><img src=\"quizzes/media/cardio-w01-lec03-slide24.jpg\" alt=\"Slide 24\">",
+      "citation": "Slide 24 · Transcript 0:42:51"
+    },
+    {
+      "qid": "lec03-q17",
+      "facts": [
+        "Lec03-F072"
+      ],
+      "text": "A 63-year-old woman with peripheral arterial disease has significantly elevated systemic vascular resistance. Compared to a patient with normal SVR, how are her cardiac output and venous return function curves affected?",
+      "options": [
+        "Only the cardiac function curve shifts downward; the venous return curve is unaffected",
+        "Only the venous return curve shifts downward; the cardiac function curve is unaffected",
+        "Both the cardiac function curve and the venous return curve shift downward in parallel",
+        "The cardiac function curve shifts upward while the venous return curve shifts downward"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Elevated SVR shifts both the cardiac function curve and the venous return curve downward, reducing both cardiac output and venous return at every level of RAP.</strong> High SVR raises afterload on the left ventricle: it takes more isovolumetric pressure to open the aortic valve, and ejection faces greater resistance throughout systole, so stroke volume and CO fall at any given RAP — the cardiac function curve moves down. Simultaneously, high arterial resistance impedes blood flow from the arterial to the venous compartment; blood accumulates on the arterial side rather than returning to the veins, so venous return also falls — the venous return curve also moves down. This bilateral downward shift is the key distinction from contractility changes, which move only the cardiac function curve.<br><strong>Option A</strong> is incorrect: elevated SVR reduces both CO and venous return; the venous return curve shifts downward because high resistance slows the passage of blood from the arterial to the venous system, reducing the volume available to return to the right heart.<br><strong>Option B</strong> is incorrect: SVR is a major determinant of afterload on the left ventricle; rising afterload reduces stroke volume and CO, shifting the cardiac function curve downward, not leaving it fixed.<br><strong>Option D</strong> is incorrect: elevated afterload impairs LV ejection and moves the cardiac function curve downward, not upward; an upward shift of the cardiac function curve reflects increased contractility, not higher SVR.<br>Slide 25 · Transcript 0:45:22<br><img src=\"quizzes/media/cardio-w01-lec03-slide25.jpg\" alt=\"Slide 25\">",
+      "citation": "Slide 25 · Transcript 0:45:22"
+    },
+    {
+      "qid": "lec03-q18",
+      "facts": [
+        "Lec03-F073"
+      ],
+      "text": "A surgical patient receives 2 units of packed red blood cells intraoperatively for estimated blood loss. Which of the following best describes the primary hemodynamic effect of the transfusion on the cardiac function curves?",
+      "options": [
+        "The venous return curve shifts rightward, raising mean systemic filling pressure and RAP",
+        "Both function curves shift downward due to the elevated afterload from volume expansion",
+        "The venous return curve shifts leftward, lowering mean systemic filling pressure and RAP",
+        "Only the cardiac function curve shifts upward due to increased myocardial contractility"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Blood transfusion raises intravascular volume, which increases mean systemic filling pressure (MSFP) and shifts the venous return curve rightward, raising RAP and cardiac output to a new steady state.</strong> Adding volume to the circulation raises MSFP because more blood fills the same compliant vasculature at rest. The venous return curve’s x-intercept (the RAP at which VR = 0) shifts rightward to a higher value. At any given RAP there is now a larger driving gradient (MSFP − RAP), so the entire venous return curve moves to the right. The cardiac function curve stays in place. The new operating point settles at a higher RAP and higher CO along the unchanged cardiac function curve.<br><strong>Option D</strong> is incorrect: blood transfusion is a volume intervention, not an inotropic one; it does not alter myocardial contractility, so the cardiac function curve stays fixed and shifts are seen only in the venous return curve.<br><strong>Option B</strong> is incorrect: a 2-unit transfusion does not meaningfully raise afterload or shift curves downward; the dominant effect of volume loading is a rightward shift in the venous return curve through increased MSFP.<br><strong>Option C</strong> is incorrect: adding blood volume raises MSFP and shifts the venous return curve rightward; a leftward shift represents the loss of blood volume, as in hemorrhage — the physiological opposite of transfusion.<br>Slide 26 · Transcript 0:46:05<br><img src=\"quizzes/media/cardio-w01-lec03-slide26.jpg\" alt=\"Slide 26\">",
+      "citation": "Slide 26 · Transcript 0:46:05"
+    },
+    {
+      "qid": "lec03-q19",
+      "facts": [
+        "Lec03-F048"
+      ],
+      "text": "During sustained walking on a treadmill, which mechanism most directly promotes venous return from the lower extremities?",
+      "options": [
+        "Arteriovenous pressure gradient from systolic cardiac output passively propelling venous return",
+        "Inspiratory fall in intrathoracic pressure drawing blood from peripheral veins to the right atrium",
+        "Sympathetic venoconstriction mobilizing the venous blood reservoir from large capacitance vessels",
+        "Skeletal muscle contraction combined with venous valves forming a muscle pump"
+      ],
+      "correct": 3,
+      "explanation": "<strong>The skeletal muscle pump — rhythmic contraction of lower-extremity muscles compressing veins, with unidirectional venous valves preventing backflow — is the mechanism most directly responsible for venous return from the legs during active walking.</strong> When calf and thigh muscles contract, they squeeze the thin-walled veins running through them, propelling blood proximally toward the heart. Between contractions, venous valves prevent that blood from falling back. This cooperative action of muscle contraction plus venous valves functions as an intermittent pump that supplements the small resting arteriovenous pressure gradient. Prolonged immobility eliminates this pump and leads to venous stasis, explaining the DVT risk on long flights.<br><strong>Option B</strong> is incorrect: the respiratory pump (inspiration lowering intrathoracic pressure and RAP) does assist venous return, but it acts on the central thoracic veins rather than directly on lower-extremity venous propulsion; the question specifically asks about the mechanism most directly tied to walking.<br><strong>Option C</strong> is incorrect: sympathetic venoconstriction mobilizes blood stored in large capacitance veins and is an important autonomic response during exercise, but it is a centrally mediated vascular adjustment, not the direct propulsive mechanism in the lower extremities during muscular activity.<br><strong>Option A</strong> is incorrect: the basic arteriovenous gradient contributes to venous flow but is insufficient on its own to overcome gravity in the legs; the lecture specifically identifies additional mechanisms — including the muscle pump — as required to maintain adequate venous return.<br>Slide 16 · Transcript 0:22:48<br><img src=\"quizzes/media/cardio-w01-lec03-slide16.jpg\" alt=\"Slide 16\">",
+      "citation": "Slide 16 · Transcript 0:22:48"
+    },
+    {
+      "qid": "lec03-q20",
+      "facts": [
+        "Lec03-F076"
+      ],
+      "text": "Analogous to how left ventricular afterload depends on aortic pressure and aortic valve pathology, right ventricular afterload is primarily determined by which factors?",
+      "options": [
+        "Tricuspid valve regurgitation and left atrial pressure",
+        "Pulmonary artery pressure and pulmonary valve pathology",
+        "Systemic vascular resistance and mitral valve pathology",
+        "Pulmonary capillary wedge pressure and cardiac contractility"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Right ventricular afterload is determined by pulmonary artery pressure and pulmonary valve pathology, directly mirroring the way aortic pressure and aortic valve disease set left ventricular afterload.</strong> Whatever mechanism applies to the left heart applies symmetrically to the right: the pressure the RV must generate to open its outflow valve and eject blood is set by pulmonary artery diastolic pressure (the RV’s equivalent of aortic diastolic pressure) and by the resistance of the pulmonary valve itself. Pulmonary hypertension raises RV afterload exactly as systemic hypertension raises LV afterload; pulmonary valve stenosis obstructs RV outflow exactly as aortic stenosis obstructs LV outflow.<br><strong>Option A</strong> is incorrect: tricuspid valve regurgitation affects RV preload by allowing backflow into the right atrium; left atrial pressure governs the left side of the heart; neither primarily determines what the right ventricle pumps against.<br><strong>Option C</strong> is incorrect: systemic vascular resistance and the mitral valve are left-sided determinants; they do not govern right ventricular outflow resistance.<br><strong>Option D</strong> is incorrect: pulmonary capillary wedge pressure is a surrogate for left atrial filling pressure used to assess the left heart; and cardiac contractility is a determinant of stroke volume, not a component of afterload.<br>Transcript 0:15:15",
+      "citation": "Transcript 0:15:15"
+    }
+  ]
+}

@@ -21,6 +21,14 @@
           "file": "quizzes/Week01/cardio-w01-lec02.r1.json",
           "revision": 1,
           "question_count": 20
+        },
+        {
+          "id": "cardio-w01-lec03",
+          "title": "Lec 03 \u2014 Cardiac Function",
+          "subtitle": "Week 01 \u00b7 Lec 03 \u00b7 Cardiac Function | 20 questions",
+          "file": "quizzes/Week01/cardio-w01-lec03.r1.json",
+          "revision": 1,
+          "question_count": 20
         }
       ]
     },
