@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "id": "cardio-w01-lec04",
+  "revision": 1,
+  "question_count": 20,
+  "title": "Lec 04 — Hemodynamics",
+  "subtitle": "Week 01 · Lec 04 · Hemodynamics | 20 questions",
+  "source_fingerprints": {
+    "Lec04_FactInventory.md": "6f13115d8ebd0b78e8b8a634c8dd7067a7174e87f43f79f8e1b282ef623cf032",
+    "quiz_selection.tsv": "77475bc984be12df89a7095ecea12fea75d2d9d71764c67d7d7dfcf1395ff12a",
+    "01_slides.txt": "d97ed2672b3127085f2f8f745a87f0dfdae99db45c05b140d23696d0f09bb3e4",
+    "transcript.vtt": "09b68cee22917bd94b04dbb2832d844dbaa1db6b1c3fa0ef43e6631dc50ef264"
+  },
+  "questions": [
+    {
+      "qid": "lec04-q01",
+      "facts": [
+        "Lec04-F004"
+      ],
+      "text": "The total cross-sectional area of the capillary bed is roughly 1,000 times larger than the aorta. A physiology student predicts that red blood cells must travel far more slowly through capillaries than through the aorta. Which physiological relationship directly supports this prediction?",
+      "options": [
+        "Cardiac output falls progressively from the aorta into the capillary bed, slowing red cells",
+        "Blood viscosity rises in narrow capillaries, reducing individual red cell transit speed",
+        "Velocity is inversely proportional to the total cross-sectional area of the vessel segment",
+        "Pulsatile aortic flow converts to turbulent flow at arteriolar-capillary junctions"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Velocity is inversely proportional to cross-sectional area (V = F/A), so the enormous total cross-sectional area of the capillary bed forces velocity down even though flow rate is constant.</strong> Blood flow rate (F, in mL/min) is conserved across every vascular segment — cardiac output equals venous return. Because V = F/A, and the capillary bed's total area dwarfs the aorta's, red cells must slow proportionally. Slide 4 states: \"Velocity of blood flow is inversely proportional to blood vessel cross-sectional area — V = F/A.\"<br><strong>Option A</strong> is incorrect: cardiac output is the same through every segment in series; it does not fall as blood enters the capillaries.<br><strong>Option B</strong> is incorrect: viscosity does not increase appreciably in capillaries; this is not the mechanism governing the velocity difference between aorta and capillary bed.<br><strong>Option D</strong> is incorrect: turbulent flow occurs at high velocities in large vessels; arteriolar resistance dampens pulsatility without generating turbulence at capillary junctions.<br>Slide 4<br><img src=\"quizzes/media/cardio-w01-lec04-slide4.jpg\" alt=\"Slide 4\">",
+      "citation": "Slide 4"
+    },
+    {
+      "qid": "lec04-q02",
+      "facts": [
+        "Lec04-F019"
+      ],
+      "text": "During local inflammation, newly recruited capillary beds open in an injured tissue. These new vessels are arranged in parallel with the existing vascular channels. How does this recruitment change total vascular resistance in that tissue?",
+      "options": [
+        "Total resistance falls as each additional parallel vessel adds a new reciprocal term",
+        "Total resistance rises because each newly recruited vessel contributes its resistance to the network",
+        "Total resistance stays the same because flow rate is conserved across all vascular segments",
+        "Total resistance is determined solely by the diameter of the newly recruited vessels"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Adding parallel vessels decreases total resistance because total resistance in a parallel arrangement equals the sum of reciprocals (1/R_total = 1/R1 + 1/R2 + ...), so each new vessel increases the sum and drives R_total down.</strong> Slide 9 summarizes: \"More parallel, less resistance, more flow.\" Recruiting an additional channel increases the number of available pathways without raising the pressure gradient, so flow increases and total resistance falls.<br><strong>Option B</strong> is incorrect: adding resistances in series raises total resistance; parallel arrangements work in the opposite direction.<br><strong>Option C</strong> is incorrect: flow constancy across segments is a property of vessels in series with the heart; it does not prevent local resistance changes in a parallel capillary bed.<br><strong>Option D</strong> is incorrect: both the number and the diameter of newly recruited vessels affect total resistance; number alone is sufficient to lower resistance in a parallel network.<br>Slide 9<br><img src=\"quizzes/media/cardio-w01-lec04-slide9.jpg\" alt=\"Slide 9\">",
+      "citation": "Slide 9"
+    },
+    {
+      "qid": "lec04-q03",
+      "facts": [
+        "Lec04-F006",
+        "Lec04-F007"
+      ],
+      "text": "A vasoconstrictive drug doubles a patient's systemic vascular resistance from 1,000 to 2,000 dyn·s/cm⁵. Cardiac output remains at 5 L/min throughout. Applying the cardiovascular form of Ohm's law, what happens to mean arterial pressure?",
+      "options": [
+        "MAP falls by half because pressure and resistance are inversely related at fixed flow",
+        "MAP doubles because the pressure difference equals flow multiplied by resistance",
+        "MAP is unchanged because the heart increases contractility to compensate for the higher resistance",
+        "MAP rises modestly, but the relationship between MAP and SVR is non-linear"
+      ],
+      "correct": 1,
+      "explanation": "<strong>MAP doubles because ΔP = F × R: with flow fixed at 5 L/min and resistance doubling, the pressure difference must also double.</strong> Slide 5 gives both rearrangements of Ohm's law: ΔP = F × R and R = ΔP/F. If R goes from 1,000 to 2,000 and F is held constant, ΔP doubles. This is why unchecked vasoconstriction raises blood pressure.<br><strong>Option A</strong> is incorrect: an inverse pressure-resistance relationship holds when flow adjusts; here flow is fixed, so pressure must rise, not fall.<br><strong>Option C</strong> is incorrect: the question specifies cardiac output is unchanged; MAP must respond to the resistance change per ΔP = F × R.<br><strong>Option D</strong> is incorrect: ΔP = F × R is a linear relationship when F is held constant; if R doubles, ΔP doubles exactly.<br>Slide 5<br><img src=\"quizzes/media/cardio-w01-lec04-slide5.jpg\" alt=\"Slide 5\">",
+      "citation": "Slide 5"
+    },
+    {
+      "qid": "lec04-q04",
+      "facts": [
+        "Lec04-F047"
+      ],
+      "text": "Peripheral blood flow continues during diastole — when the left ventricle is relaxed and the aortic valve is closed. A physiologist attributes this to a property of the aorta itself. Which property and mechanism account for diastolic blood flow?",
+      "options": [
+        "High aortic compliance allows the aorta to expand widely and store kinetic energy during systole",
+        "Elevated sympathetic tone sustains the arterial pressure gradient across the full diastolic interval",
+        "Aortic smooth muscle actively contracts and propels blood forward when the ventricle relaxes",
+        "Low compliance builds aortic wall tension in systole; recoil sustains peripheral flow in diastole"
+      ],
+      "correct": 3,
+      "explanation": "<strong>The aorta's low compliance causes its walls to build significant tension during systolic ejection; that stored energy is released as elastic recoil during diastole, driving blood forward even with no ventricular input.</strong> Slide 19 states: \"The low compliance of the aorta enables it to store energy as wall tension during systole and dissipate this energy as the walls recoil during diastole.\" Slide 21 confirms: \"Diastolic blood flow results from the recoil of the aorta.\" Note the key word is <em>low</em> compliance — the stiff aortic wall cannot accommodate large volume changes without high pressure, which is what creates the wall tension in the first place.<br><strong>Option A</strong> is incorrect: the aorta has LOW compliance, not high; a high-compliance vessel would absorb volume with little wall tension and would not store or release much energy.<br><strong>Option B</strong> is incorrect: sympathetic tone sets vascular resistance and venous return tone but does not directly produce the diastolic pressure head that drives flow — elastic recoil does.<br><strong>Option C</strong> is incorrect: the aorta contains elastic and collagen fibers in its tunica intima and media, not a contractile muscular pump; the recoil is passive, not active.<br>Slide 19 · Slide 21<br><img src=\"quizzes/media/cardio-w01-lec04-slide19.jpg\" alt=\"Slide 19\"><img src=\"quizzes/media/cardio-w01-lec04-slide21.jpg\" alt=\"Slide 21\">",
+      "citation": "Slide 19 · Slide 21"
+    },
+    {
+      "qid": "lec04-q05",
+      "facts": [
+        "Lec04-F048",
+        "Lec04-F003"
+      ],
+      "text": "A 70 kg patient receives a 500 mL intravenous fluid bolus over 20 minutes. His central venous pressure rises by only 2 mmHg. Which vascular property best explains why a large volume infusion produces such a small pressure change?",
+      "options": [
+        "Low venous compliance drives the transfused volume directly into the arterial circulation",
+        "High venous compliance lets large volumes accumulate with minimal change in luminal pressure",
+        "Arteriolar constriction redirects the transfused volume away from the central venous compartment",
+        "Renal excretion of the extra fluid volume prevents any significant rise in central venous pressure"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Veins have high compliance, meaning a large increase in luminal volume produces only a small rise in pressure — C = ΔV/ΔP — so the venous compartment absorbs extra volume without a proportional pressure spike.</strong> Slide 19 states: \"High compliance veins are capable of absorbing large volumes of blood with little change in luminal pressure enabling them to serve as blood reservoirs.\" This reservoir function is why roughly 64% of circulating blood resides in the venous system at rest (Slide 3), and why the venous bed can accommodate transfused volume without a dramatic CVP rise.<br><strong>Option A</strong> is incorrect: veins have HIGH compliance; a low-compliance vessel would show a large pressure rise from a small volume addition — the opposite of what is observed.<br><strong>Option C</strong> is incorrect: arteriolar constriction alters downstream resistance and capillary Pc but does not determine how the venous compartment responds to an added volume load.<br><strong>Option D</strong> is incorrect: renal fluid regulation acts over hours; it cannot blunt the immediate pressure response during a 20-minute infusion.<br>Slide 19 · Slide 3<br><img src=\"quizzes/media/cardio-w01-lec04-slide19.jpg\" alt=\"Slide 19\"><img src=\"quizzes/media/cardio-w01-lec04-slide3.jpg\" alt=\"Slide 3\">",
+      "citation": "Slide 19 · Slide 3"
+    },
+    {
+      "qid": "lec04-q06",
+      "facts": [
+        "Lec04-F064"
+      ],
+      "text": "Aortic blood pressure oscillates between 120 mmHg in systole and 80 mmHg in diastole. By the time blood reaches the capillary bed, pressure is nearly constant at about 35 mmHg with no detectable pulsation. What converts the pulsatile arterial waveform into smooth continuous capillary flow?",
+      "options": [
+        "Turbulent flow at arteriolar branch points dissipates the kinetic energy of the pressure pulse",
+        "High capillary compliance absorbs pressure oscillations, smoothing out the waveform in the capillary bed",
+        "Sympathetic reflexes actively attenuate pulsatile waveforms before blood reaches the capillary level",
+        "Low arteriolar compliance dampens the pulsatile pressure wave, producing continuous capillary flow"
+      ],
+      "correct": 3,
+      "explanation": "<strong>Arteriolar smooth muscle has low compliance — the thick tunica media resists stretch — so the arteriolar wall absorbs and dissipates the pulsatile energy before it propagates into capillaries.</strong> Slide 25 states: \"The low compliance of arteriole smooth muscle dampens pulsatile blood flow resulting in smooth continuous flow through capillaries.\" This is a prerequisite for efficient capillary exchange: pulsatile pressure surges in capillaries would disrupt the delicate osmotic and hydrostatic equilibrium governing filtration and reabsorption.<br><strong>Option B</strong> is incorrect: capillaries are downstream of the dampening site; their walls are thin and not the structural basis of pulsatility conversion. High-compliance vessels (like veins) also do not dampen pulsatility — they expand rather than resist.<br><strong>Option C</strong> is incorrect: sympathetic reflexes regulate arteriolar resistance and venous tone but do not actively filter pulsatile waveforms moment to moment.<br><strong>Option A</strong> is incorrect: arteriolar flow is laminar, not turbulent, due to the small radius and relatively low velocity; turbulence is a feature of pathological high-velocity flow in large vessels.<br>Slide 25<br><img src=\"quizzes/media/cardio-w01-lec04-slide25.jpg\" alt=\"Slide 25\">",
+      "citation": "Slide 25"
+    },
+    {
+      "qid": "lec04-q07",
+      "facts": [
+        "Lec04-F058"
+      ],
+      "text": "A patient's stroke volume increases from 70 mL to 120 mL after starting dobutamine therapy. Aortic compliance is unchanged. Based on the relationship between pulse pressure, stroke volume, and compliance taught in this lecture, what would you predict about his pulse pressure?",
+      "options": [
+        "Pulse pressure widens because this value scales with stroke volume divided by aortic compliance",
+        "Pulse pressure decreases because greater stroke volume raises diastolic pressure more than systolic",
+        "Pulse pressure stays the same because the aortic wall adjusts compliance to buffer volume changes",
+        "Pulse pressure cannot be determined from stroke volume alone without also knowing heart rate"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Pulse pressure is proportional to stroke volume (SV) divided by aortic compliance (C): PP ∝ SV/C. With compliance fixed and SV rising from 70 to 120 mL, pulse pressure must widen proportionally.</strong> Slide 23 states: \"The amplitude of the pulse pressure is proportional to the stroke volume (SV) and inversely proportional to aortic compliance (C).\" More volume ejected into the same stiffness of aorta drives systolic pressure higher without a matching rise in diastolic pressure, widening the gap.<br><strong>Option B</strong> is incorrect: a larger SV stretches the stiff aortic wall more during systole, raising systolic pressure more than diastolic — the gap widens, not narrows.<br><strong>Option C</strong> is incorrect: aortic compliance is a structural property of the vessel wall; it does not dynamically adjust in response to changes in stroke volume over seconds to minutes.<br><strong>Option D</strong> is incorrect: heart rate affects cardiac output (CO = HR × SV) but does not directly determine the pulse pressure at a given stroke volume and compliance.<br>Slide 23<br><img src=\"quizzes/media/cardio-w01-lec04-slide23.jpg\" alt=\"Slide 23\">",
+      "citation": "Slide 23"
+    },
+    {
+      "qid": "lec04-q08",
+      "facts": [
+        "Lec04-F060"
+      ],
+      "text": "A 78-year-old man has a blood pressure of 162/68 mmHg (pulse pressure 94 mmHg). His younger twin brother, matched for weight and height, has a blood pressure of 122/80 mmHg (pulse pressure 42 mmHg). Which mechanism most directly accounts for the older man's much wider pulse pressure?",
+      "options": [
+        "The older twin has a higher stroke volume from age-related ventricular hypertrophy",
+        "The older twin has elevated cardiac output from decreased peripheral vascular resistance",
+        "The older twin's arteries were stiffened by arteriosclerosis, reducing compliance and widening pulse pressure",
+        "The older twin has higher blood viscosity from polycythemia that elevates systolic pressure"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Arteriosclerosis reduces aortic compliance (C), and because PP ∝ SV/C, a fall in C widens pulse pressure even without any change in stroke volume.</strong> Slide 24 states: \"Arteriosclerosis causes a stiffening of elastic arteries that reduces aortic compliance (C) and increases the difference between the systolic and diastolic aortic pressures (wide PP).\" The stiffer wall cannot buffer each systolic ejection, so systolic pressure overshoots while diastolic pressure drops — widening the gap.<br><strong>Option A</strong> is incorrect: aging more often reduces SV through diastolic dysfunction; isolated SV increase is not the primary mechanism of widened PP in the elderly.<br><strong>Option B</strong> is incorrect: reduced peripheral resistance would lower MAP, not selectively widen pulse pressure; cardiac output typically does not increase with advanced age.<br><strong>Option D</strong> is incorrect: blood viscosity affects vascular resistance and flow per Poiseuille's law, but the lecture does not link hematocrit to pulse pressure amplitude.<br>Slide 24<br><img src=\"quizzes/media/cardio-w01-lec04-slide24.jpg\" alt=\"Slide 24\">",
+      "citation": "Slide 24"
+    },
+    {
+      "qid": "lec04-q09",
+      "facts": [
+        "Lec04-F062",
+        "Lec04-F061"
+      ],
+      "text": "A 55-year-old woman with severe uncontrolled hypertension (BP 190/148 mmHg, pulse pressure 42 mmHg) is compared with a patient of the same age with severe aortic stenosis who also has a pulse pressure of approximately 40 mmHg. Which mechanism is shared between these two conditions that produces a similarly narrow pulse pressure?",
+      "options": [
+        "Both decrease aortic compliance, reducing the amplitude of the systolic-to-diastolic pressure wave",
+        "Both elevate diastolic pressure by increasing downstream peripheral vascular resistance",
+        "Both reduce stroke volume — one via increased afterload, the other via outflow obstruction",
+        "Both cause ventricular hypertrophy over time, reducing chamber compliance and limiting end-diastolic filling volume"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Both conditions narrow pulse pressure by reducing stroke volume: aortic stenosis restricts outflow through a narrowed valve orifice, and systemic hypertension imposes a high afterload that limits systolic ejection — both effects reduce SV, and PP ∝ SV/C.</strong> Slide 24 states: \"Aortic stenosis (AS) decreases the diameter of the aortic valve that reduces the systolic ejection of blood. The resulting decrease in stroke volume (SV) reduces the pulse pressure.\" For hypertension: \"Systemic Hypertension produces a similar reduction in stroke volume and pulse pressure as AS\" because increased afterload means less blood is ejected per beat.<br><strong>Option A</strong> is incorrect: aortic stenosis does not primarily reduce compliance; it obstructs the outflow tract. Hypertension can stiffen vessels chronically, but the immediate shared mechanism reducing PP is the fall in SV, not changes in C.<br><strong>Option B</strong> is incorrect: hypertension does elevate diastolic pressure via peripheral resistance, but AS does not necessarily raise diastolic pressure; this is not the shared mechanism for similar PP values.<br><strong>Option D</strong> is incorrect: ventricular hypertrophy is a long-term consequence of both conditions, but the reduction in pulse pressure reflects the drop in SV per beat, not hypertrophy limiting filling.<br>Slide 24<br><img src=\"quizzes/media/cardio-w01-lec04-slide24.jpg\" alt=\"Slide 24\">",
+      "citation": "Slide 24"
+    },
+    {
+      "qid": "lec04-q10",
+      "facts": [
+        "Lec04-F021",
+        "Lec04-F022"
+      ],
+      "text": "During a bout of maximal aerobic exercise, how does the distribution of cardiac output across organ systems change from resting conditions?",
+      "options": [
+        "Skeletal muscle receives a smaller CO share as local arteriolar resistance rises during intense aerobic exertion",
+        "The heart receives a progressively larger CO percentage to match the rise in myocardial oxygen demand",
+        "The kidneys receive a larger CO percentage to accelerate clearance of the lactic acid produced by exercising muscle",
+        "The brain receives a larger CO percentage to sustain the elevated firing demands of active motor circuits",
+        "Skeletal muscle gains a larger CO share while the cardiac percentage stays constant but absolute coronary flow rises"
+      ],
+      "correct": 4,
+      "explanation": "<strong>During heavy exercise, local metabolite vasodilation dramatically increases skeletal muscle's share of cardiac output while the heart's percentage remains constant; however, because total CO rises, the absolute volume of coronary flow increases.</strong> Slide 10 states: \"The percentage going to skeletal muscle dramatically increases during exercise due to a decrease in vascular resistance supplying the muscle.\" For the heart: \"While the percentage of CO going to the heart remains constant the total amount of blood flowing to the heart increases due to exercise-induced increases in heart rate and stroke volume.\" Simultaneously, \"Percent of CO going to brain, gastrointestinal tract, kidney, and skin decreases during heavy exercise.\"<br><strong>Option A</strong> is incorrect: skeletal muscle vascular resistance falls during exercise because local metabolites (CO₂, adenosine, K⁺, H⁺) vasodilate arterioles — muscle's CO share rises, not falls.<br><strong>Option B</strong> is incorrect: the heart's percentage of CO stays constant during exercise; only the absolute coronary flow increases because the total CO pie grows larger.<br><strong>Option C</strong> is incorrect: Slide 10 explicitly states that renal CO percentage decreases during heavy exercise; sympathetic vasoconstriction shunts flow away from the kidneys.<br><strong>Option D</strong> is incorrect: cerebral blood flow percentage falls during heavy exercise per Slide 10, even though autoregulation maintains adequate absolute cerebral flow.<br>Slide 10<br><img src=\"quizzes/media/cardio-w01-lec04-slide10.jpg\" alt=\"Slide 10\">",
+      "citation": "Slide 10"
+    },
+    {
+      "qid": "lec04-q11",
+      "facts": [
+        "Lec04-F028"
+      ],
+      "text": "A pharmacologist wants to develop a drug that selectively relaxes vascular smooth muscle without affecting cardiac muscle contraction. Which molecular feature of smooth muscle contraction is absent from cardiac muscle and would make the most selective drug target?",
+      "options": [
+        "Calmodulin-dependent MLCK phosphorylates myosin, replacing the troponin system absent from smooth muscle",
+        "Troponin C binds cytoplasmic Ca²⁺ and releases tropomyosin's inhibition of actin filaments",
+        "Ryanodine-receptor-gated SR Ca²⁺ release couples membrane excitation to smooth muscle crossbridge formation",
+        "Titin filaments maintain sarcomere spacing and mediate passive force transmission between adjacent cells"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Smooth muscle lacks troponins entirely and instead uses calmodulin-MLCK to phosphorylate the myosin light chain — this Ca²⁺-calmodulin-MLCK axis is the selective molecular target absent in cardiac muscle.</strong> Slide 13 states: \"Smooth muscle lacks troponins; activated by Ca²⁺-dependent phosphorylation mechanism mediated by calmodulin & MLCK.\" Blocking MLCK or calmodulin in smooth muscle would relax vascular tone without interfering with the troponin C-based switching mechanism that cardiac muscle uses.<br><strong>Option B</strong> is incorrect: troponin C is the Ca²⁺ sensor in cardiac (and skeletal) muscle, not smooth muscle; smooth muscle lacks troponins entirely, so this pathway is not a valid smooth-muscle-selective target.<br><strong>Option C</strong> is incorrect: ryanodine receptors are present in smooth muscle and contribute to SR Ca²⁺ release, though the primary trigger is IP3-mediated; they are not absent from smooth muscle and do not distinguish smooth from cardiac.<br><strong>Option D</strong> is incorrect: titin is a sarcomeric protein present in striated (cardiac and skeletal) muscle, not smooth muscle; it is not a contraction initiator and not the distinguishing target.<br>Slide 13<br><img src=\"quizzes/media/cardio-w01-lec04-slide13.jpg\" alt=\"Slide 13\">",
+      "citation": "Slide 13"
+    },
+    {
+      "qid": "lec04-q12",
+      "facts": [
+        "Lec04-F033"
+      ],
+      "text": "A vasoconstrictor binds a Gq-coupled receptor on vascular smooth muscle. Cytoplasmic Ca²⁺ begins to fall shortly after peak contraction, yet the vessel remains constricted. Which intracellular mechanism sustains contraction even as Ca²⁺ levels drop?",
+      "options": [
+        "L-type Ca²⁺ channels remain open through voltage-gated feedback, sustaining Ca²⁺ influx after depolarization",
+        "Rho kinase inhibits MLCP, maintaining myosin phosphorylation even as cytoplasmic Ca²⁺ falls",
+        "cAMP produced by Gs-coupled receptors prevents calmodulin from releasing the activated MLCK",
+        "IP3 receptors continue releasing SR Ca²⁺ independently of ongoing Gq receptor activation"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Gq receptors activate Rho kinase, which inhibits myosin light chain phosphatase (MLCP); with MLCP blocked, the myosin light chain remains phosphorylated and crossbridges persist even as Ca²⁺ falls — this is Ca²⁺ sensitization.</strong> Slide 14 states: \"Gq linked receptors also activate Rho kinase that inhibits myosin light chain phosphatase (MLCP), thereby stabilizing MLC phosphorylation and prolonging contraction.\" MLCP normally dephosphorylates the myosin head to cause relaxation; when blocked, the phosphorylated (active) state outlasts the Ca²⁺ transient.<br><strong>Option A</strong> is incorrect: L-type channels close when membrane potential repolarizes; there is no voltage-gated positive feedback that holds them open after depolarization ends.<br><strong>Option C</strong> is incorrect: cAMP/PKA signaling inhibits MLCK and promotes relaxation — the opposite of what is happening here; cAMP does not prevent calmodulin dissociation to sustain contraction.<br><strong>Option D</strong> is incorrect: IP3-mediated SR Ca²⁺ release requires ongoing IP3 production by active Gq-PLC signaling; it decays as IP3 is degraded and cannot continue independently of receptor activation.<br>Slide 14<br><img src=\"quizzes/media/cardio-w01-lec04-slide14.jpg\" alt=\"Slide 14\">",
+      "citation": "Slide 14"
+    },
+    {
+      "qid": "lec04-q13",
+      "facts": [
+        "Lec04-F041"
+      ],
+      "text": "Epinephrine causes vasodilation in skeletal muscle vascular beds through β2-adrenergic receptors. Within the smooth muscle cell, which intracellular step directly inhibits the contractile machinery to produce relaxation?",
+      "options": [
+        "β2 receptors couple to Gq, generating IP3 that drives Ca²⁺ back into the sarcoplasmic reticulum",
+        "β2 receptor activation opens K⁺ channels, hyperpolarizing the membrane and blocking L-type Ca²⁺ channels",
+        "Guanylyl cyclase generates cGMP that activates MLCP to dephosphorylate the myosin regulatory light chain",
+        "Adenylate cyclase raises cAMP, which activates PKA and thereby inhibits myosin light chain kinase"
+      ],
+      "correct": 3,
+      "explanation": "<strong>β2-adrenergic receptors couple to Gs, which activates adenylate cyclase to raise cAMP; cAMP activates PKA, which phosphorylates and inhibits MLCK — with MLCK blocked, myosin cannot be phosphorylated and smooth muscle relaxes.</strong> Slide 16 states: \"Gs-coupled receptors activate adenylate cyclase, increases cAMP, and upregulates protein kinase A (PKA) inhibiting MLCK.\" Slide 17 lists epinephrine as coupling through the β2-adrenergic receptor to produce cAMP.<br><strong>Option A</strong> is incorrect: β2-adrenergic receptors couple to Gs, not Gq; Gq generates IP3 for vasoconstriction, not relaxation, and IP3 releases rather than sequesters Ca²⁺.<br><strong>Option B</strong> is incorrect: while K⁺ channel opening with membrane hyperpolarization does occur with some vasodilators, it is not the primary Gs-cAMP-PKA-MLCK mechanism described in this lecture for β2-adrenergic relaxation.<br><strong>Option C</strong> is incorrect: the cGMP/MLCP route is the nitric oxide relaxation pathway (Slide 16 lists it separately); β2-adrenergic relaxation works through the cAMP/PKA/MLCK arm, not cGMP.<br>Slide 16 · Slide 17<br><img src=\"quizzes/media/cardio-w01-lec04-slide16.jpg\" alt=\"Slide 16\"><img src=\"quizzes/media/cardio-w01-lec04-slide17.jpg\" alt=\"Slide 17\">",
+      "citation": "Slide 16 · Slide 17"
+    },
+    {
+      "qid": "lec04-q14",
+      "facts": [
+        "Lec04-F071",
+        "Lec04-F074"
+      ],
+      "text": "At the arterial end of a tissue capillary, the following pressures are measured: capillary hydrostatic pressure (Pc) = 35 mmHg, interstitial fluid pressure (Pi) = −2 mmHg, plasma oncotic pressure (πc) = 28 mmHg, and interstitial oncotic pressure (πi) = 3 mmHg. Using NFP = (Pc − Pi) − (πc − πi), what is the net filtration pressure and net fluid direction?",
+      "options": [
+        "NFP = +8 mmHg; net fluid moves outward into the interstitium",
+        "NFP = +9 mmHg; net fluid moves outward into the interstitium",
+        "NFP = −12 mmHg; net fluid moves inward as capillary reabsorption",
+        "NFP = +12 mmHg; net fluid moves outward into the interstitium"
+      ],
+      "correct": 3,
+      "explanation": "<strong>NFP = (35 − (−2)) − (28 − 3) = 37 − 25 = +12 mmHg; positive NFP favors filtration, so fluid moves out of the capillary into the interstitium.</strong> The Starling equation is NFP = (Pc − Pi) − (πc − πi) (Slide 29). The key step is treating Pi as negative (−2 mmHg is sub-atmospheric interstitial pressure), so Pc − Pi = 35 − (−2) = 37, not 33. A positive NFP drives fluid outward.<br><strong>Option A</strong> is incorrect: +8 results from using Pi = +2 instead of −2 (wrong sign): (35 − 2) − (28 − 3) = 33 − 25 = 8. Sub-atmospheric Pi is a pro-filtration force and must subtract as a negative value.<br><strong>Option B</strong> is incorrect: +9 results from treating πi as zero: (35 − (−2)) − (28 − 0) = 37 − 28 = 9. Interstitial oncotic pressure adds to the filtration force and must be included.<br><strong>Option C</strong> is incorrect: a negative NFP would indicate net reabsorption; with all values substituted correctly, the result is +12 mmHg (filtration), not −12 mmHg.<br>Slide 29<br><img src=\"quizzes/media/cardio-w01-lec04-slide29.jpg\" alt=\"Slide 29\">",
+      "citation": "Slide 29"
+    },
+    {
+      "qid": "lec04-q15",
+      "facts": [
+        "Lec04-F074",
+        "Lec04-F076"
+      ],
+      "text": "Of the four Starling forces — Pc, Pi, πc, and πi — which one most directly regulates the rate of capillary filtration under normal physiological conditions, and why?",
+      "options": [
+        "Interstitial hydrostatic pressure (Pi), because sub-atmospheric Pi actively draws fluid out of the capillary",
+        "Plasma oncotic pressure (πc), because it is the largest single force opposing filtration under all conditions",
+        "Capillary hydrostatic pressure (Pc), because the other three Starling forces stay relatively constant",
+        "Interstitial oncotic pressure (πi), because it varies substantially between organ types and metabolic states"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Capillary hydrostatic pressure (Pc) is the primary regulator of filtration because the other three Starling forces remain relatively constant, leaving Pc as the variable lever controlled by pre-capillary sphincter tone.</strong> Slide 29 states: \"Because most parameters (πc, Pi, πi) remain unchanged, capillary filtration is largely determined by the capillary hydrostatic pressure (Pc).\" Slide 30 shows that dilation of pre-capillary sphincters raises Pc and increases filtration, while constriction lowers Pc and shifts the balance toward reabsorption — sphincter tone is how the body modulates Pc moment to moment.<br><strong>Option B</strong> is incorrect: πc is large (~28 mmHg) and opposes filtration powerfully, but it remains relatively constant under normal conditions and does not serve as the dynamic regulatory lever.<br><strong>Option A</strong> is incorrect: Pi is typically sub-atmospheric (−2 to −3 mmHg), which does promote filtration, but it stays constant and is not the variable the body adjusts to regulate filtration rate.<br><strong>Option D</strong> is incorrect: πi is normally near zero and changes slowly; it is not the primary regulatory variable identified in this lecture.<br>Slide 29 · Slide 30<br><img src=\"quizzes/media/cardio-w01-lec04-slide29.jpg\" alt=\"Slide 29\"><img src=\"quizzes/media/cardio-w01-lec04-slide30.jpg\" alt=\"Slide 30\">",
+      "citation": "Slide 29 · Slide 30"
+    },
+    {
+      "qid": "lec04-q16",
+      "facts": [
+        "Lec04-F077"
+      ],
+      "text": "In a patient with early hemorrhagic shock, the sympathetic nervous system triggers constriction of pre-capillary sphincters in peripheral tissue beds. What is the direct consequence of this sphincter constriction on Starling forces and net fluid movement in those capillaries?",
+      "options": [
+        "Capillary hydrostatic pressure falls, shifting net fluid movement toward reabsorption from the interstitium",
+        "Capillary hydrostatic pressure rises, shifting the net Starling balance toward increased filtration into tissues",
+        "Plasma oncotic pressure decreases as sphincter constriction traps protein within the capillary lumen",
+        "Interstitial oncotic pressure rises as reduced filtration concentrates protein within the interstitial space"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Constriction of pre-capillary sphincters restricts blood flow into the capillary, lowering Pc; when Pc falls below the net oncotic force opposing filtration, the balance shifts toward reabsorption of fluid from the interstitium back into the capillary.</strong> Slide 30 states: \"Constriction of pre-capillary sphincters: PC decreases causing net fluid reabsorption.\" This is one of the body's acute responses to hemorrhage — capillary reabsorption partially refills the vascular compartment from interstitial fluid.<br><strong>Option B</strong> is incorrect: sphincter constriction reduces blood entering the capillary, which lowers (not raises) Pc; increased filtration would require dilation, not constriction.<br><strong>Option C</strong> is incorrect: plasma oncotic pressure is set by plasma protein concentration, not by sphincter tone; constriction does not trap protein in capillaries.<br><strong>Option D</strong> is incorrect: reduced filtration means less fluid is pushed into the interstitium, so interstitial oncotic pressure would not rise by this mechanism; if anything, reabsorption draws interstitial protein back proportionally.<br>Slide 30<br><img src=\"quizzes/media/cardio-w01-lec04-slide30.jpg\" alt=\"Slide 30\">",
+      "citation": "Slide 30"
+    },
+    {
+      "qid": "lec04-q17",
+      "facts": [
+        "Lec04-F083"
+      ],
+      "text": "The kidneys filter roughly 180 L of plasma per day while skeletal muscle capillaries produce comparatively little filtrate. Which quantitative difference in capillary filtration coefficients (Kf) is the structural basis of this disparity?",
+      "options": [
+        "Fenestrated capillaries (kidneys) have Kf = 0.01 mL/min/mmHg, making them 400-fold less permeable than continuous muscle capillaries",
+        "Fenestrated capillaries (kidneys) have Kf = 4 mL/min/mmHg — 400-fold higher than continuous capillaries at 0.01 mL/min/mmHg",
+        "Both capillary types share similar Kf values; the filtration difference reflects only higher glomerular hydrostatic pressure",
+        "Continuous capillaries (muscle) have Kf = 4 mL/min/mmHg, the same hydraulic conductivity as renal fenestrated capillaries"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Fenestrated capillaries have a Kf of 4 mL/min/mmHg — 400-fold higher than continuous capillaries at 0.01 mL/min/mmHg — reflecting far greater hydraulic conductivity from their larger (80–100 nm) pores.</strong> Slide 32 states: \"Continuous Capillaries: Kf = 0.01 ml/min/mmHg; Fenestrated Capillaries: Kf = 4 ml/min/mmHg. The 400-fold larger Kf of fenestrated capillaries represents a significant increase in the rate of plasma fluid filtration.\" Note: at Transcript 39:05 the professor spoke \"0.001\" for continuous capillaries; the slide value of 0.01 is authoritative and is the only value consistent with the stated 400-fold ratio (4 ÷ 0.01 = 400).<br><strong>Option A</strong> is incorrect: this swaps the two values; it is fenestrated capillaries that have Kf = 4 (higher), not continuous muscle capillaries.<br><strong>Option D</strong> is incorrect: skeletal muscle continuous capillaries have Kf = 0.01, not 4; equal Kf values would eliminate the structural basis of the filtration rate difference.<br><strong>Option C</strong> is incorrect: the 400-fold Kf difference is real and structural; while glomerular Pc is also elevated, Kf is the hydraulic conductivity term that scales filtration rate per unit NFP.<br>Slide 32 · Transcript 39:05<br><img src=\"quizzes/media/cardio-w01-lec04-slide32.jpg\" alt=\"Slide 32\">",
+      "citation": "Slide 32 · Transcript 39:05"
+    },
+    {
+      "qid": "lec04-q18",
+      "facts": [
+        "Lec04-F084"
+      ],
+      "text": "Under resting conditions, net filtration pressure at the arterial end of the capillary is approximately +13 mmHg and at the venous end approximately −7 mmHg. Overall, filtration slightly exceeds reabsorption across the entire capillary. Why does this net excess of filtered fluid not cause edema in a healthy person?",
+      "options": [
+        "Arteriolar vasoconstriction reduces Pc until filtration and reabsorption reach a perfect balance",
+        "Rising plasma oncotic pressure at the venous capillary end reverses net filtration, reabsorbing all filtered fluid",
+        "Lymphatics drain the small excess of filtered interstitial fluid and return it to venous circulation",
+        "Interstitial oncotic pressure rises gradually, drawing excess filtered fluid back into capillaries"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Filtration physiologically exceeds reabsorption, and the small residual volume of filtered interstitial fluid is collected by lymphatics and returned to the venous circulation — this imbalance is normal, not pathologic.</strong> Transcript 35:16: \"So even though it's not perfectly balanced, it is normal. The lymphatics will just take it and put it back into the venous system.\" The slide 29 values (+13 at arterial, −7 at venous) confirm net outward movement. Edema only develops when the lymphatic return is overwhelmed or blocked, or when Starling forces shift dramatically.<br><strong>Option A</strong> is incorrect: arteriolar tone regulates mean capillary pressure but the lecture explicitly states the imbalance is normal and expected; there is no corrective vasoconstriction that achieves perfect balance.<br><strong>Option B</strong> is incorrect: the slide 29 numbers show that net NFP at the venous end is −7 mmHg, meaning some reabsorption does occur, but not enough to balance the +13 mmHg at the arterial end; the total net movement is still outward, requiring lymphatic return.<br><strong>Option D</strong> is incorrect: interstitial oncotic pressure is normally near zero and does not rise significantly under normal filtration; this is not the mechanism preventing edema in healthy tissue.<br>Transcript 35:16",
+      "citation": "Transcript 35:16"
+    },
+    {
+      "qid": "lec04-q19",
+      "facts": [
+        "Lec04-F079",
+        "Lec04-F080",
+        "Lec04-F081"
+      ],
+      "text": "A researcher injects radiolabeled albumin (a large plasma protein, ~7 nm diameter) intravenously and measures its appearance in the parenchyma of five organs. In which organ would albumin most readily cross the capillary wall and enter the surrounding tissue?",
+      "options": [
+        "Skeletal muscle, where continuous capillaries have 4–5 nm pores permitting only small molecules",
+        "Lung parenchyma, where continuous capillaries form tight junctions that block protein passage",
+        "Small intestine, where fenestrated pores allow rapid exchange but a charged basement membrane excludes plasma proteins",
+        "CNS (blood-brain barrier), where continuous capillaries form especially restrictive tight junctions",
+        "Liver, where sinusoidal capillaries have large discontinuous pores and an incomplete basement membrane"
+      ],
+      "correct": 4,
+      "explanation": "<strong>The liver (and spleen and bone marrow) contains discontinuous sinusoidal capillaries with large intercellular pores and an incomplete basement membrane, allowing albumin and even cells to cross freely.</strong> Slide 31 describes the three types:<br><table><tr><th>Type</th><th>Pore size</th><th>Basement membrane</th><th>Locations</th><th>Protein permeability</th></tr><tr><td>Continuous</td><td>4–5 nm</td><td>Continuous</td><td>Muscle, lung, adipose, CNS (BBB)</td><td>Impermeable to proteins</td></tr><tr><td>Fenestrated</td><td>80–100 nm</td><td>Continuous, negatively charged</td><td>Kidneys, endocrine, intestines</td><td>Charge barrier blocks plasma proteins</td></tr><tr><td>Sinusoidal (discontinuous)</td><td>Very large</td><td>Incomplete / absent</td><td>Bone marrow, liver, spleen</td><td>Permeable to proteins and cells</td></tr></table><br><strong>Option A</strong> is incorrect: continuous capillary pores (4–5 nm) are smaller than albumin (≈7 nm); proteins cannot cross.<br><strong>Option B</strong> is incorrect: lung capillaries are continuous with tight junctions; protein exclusion prevents pulmonary edema proteins from accumulating in early heart failure.<br><strong>Option C</strong> is incorrect: intestinal fenestrated capillaries have 80–100 nm pores but the negatively charged basement membrane prevents plasma protein permeation — size alone is not sufficient.<br><strong>Option D</strong> is incorrect: the BBB is the most restrictive continuous capillary in the body; proteins and most large molecules are excluded by its especially tight junctions.<br>Slide 31<br><img src=\"quizzes/media/cardio-w01-lec04-slide31.jpg\" alt=\"Slide 31\">",
+      "citation": "Slide 31"
+    },
+    {
+      "qid": "lec04-q20",
+      "facts": [
+        "Lec04-F055",
+        "Lec04-F056"
+      ],
+      "text": "A 68 kg patient arrives in the emergency department with an arterial laceration that caused a 1.1 L blood loss (approximately 20% of estimated blood volume). Her blood pressure is 106/70 mmHg and she is alert. Despite the significant hemorrhage, her cardiac output is near-normal. Which compensatory mechanism is most directly responsible for maintaining venous return and cardiac output?",
+      "options": [
+        "Osmotic fluid shifts from the intracellular compartment into the vascular space restore intravascular volume within minutes",
+        "Sympathetic venoconstriction returns roughly 1 liter of venous reserve blood to circulation as preload",
+        "Reflex tachycardia fully offsets the reduced stroke volume, maintaining cardiac output at its baseline value",
+        "Aldosterone-driven renal sodium and water retention rapidly restores the lost plasma volume"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Sympathetic-mediated contraction of venous smooth muscle mobilizes approximately 1 liter of reserve blood from the venous reservoir back into the circulating volume as preload, directly sustaining venous return and cardiac output.</strong> Slide 22 states: \"Sympathetic-mediated contraction of venous smooth muscle returns ≈1 liter of this 'reserve blood' back into the venous circulation as preload.\" And: \"After blood loss, venous reserve blood can compensate for a 20% loss in vascular blood volume.\" This patient's 1.1 L loss in a 5.5 L blood volume is exactly at the 20% threshold where venoconstriction provides compensation. The mechanism is fast (seconds to minutes) because venoconstriction reduces unstressed vascular volume and converts it to stressed volume that drives preload.<br><strong>Option A</strong> is incorrect: transcapillary refill from the interstitium takes 30–120 minutes and depends on osmotic gradients; true intracellular-to-vascular shifts take even longer and are not the primary acute compensatory mechanism for acute arterial blood loss.<br><strong>Option C</strong> is incorrect: tachycardia partially compensates, but heart rate alone cannot sustain cardiac output without adequate preload; the question asks for the mechanism that directly sustains venous return (preload) to enable each stroke.<br><strong>Option D</strong> is incorrect: aldosterone acts over hours to days; it cannot restore blood volume within the first minutes after acute hemorrhage.<br>Slide 22<br><img src=\"quizzes/media/cardio-w01-lec04-slide22.jpg\" alt=\"Slide 22\">",
+      "citation": "Slide 22"
+    }
+  ]
+}

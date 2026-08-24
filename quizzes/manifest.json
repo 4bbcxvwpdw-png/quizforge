@@ -29,6 +29,14 @@
           "file": "quizzes/Week01/cardio-w01-lec03.r1.json",
           "revision": 1,
           "question_count": 20
+        },
+        {
+          "id": "cardio-w01-lec04",
+          "title": "Lec 04 \u2014 Hemodynamics",
+          "subtitle": "Week 01 \u00b7 Lec 04 \u00b7 Hemodynamics | 20 questions",
+          "file": "quizzes/Week01/cardio-w01-lec04.r1.json",
+          "revision": 1,
+          "question_count": 20
         }
       ]
     },
