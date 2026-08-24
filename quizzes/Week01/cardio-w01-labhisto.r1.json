@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "id": "cardio-w01-labhisto",
+  "revision": 1,
+  "question_count": 20,
+  "title": "LAB — Histology of the Cardiovascular System",
+  "subtitle": "Week 01 · LAB · Histology | 20 questions",
+  "source_fingerprints": {
+    "LecLABHisto_FactInventory.md": "954466e5512c63c53a15832d339682fad24deac0219e3fdb2a84080b6c20e372",
+    "quiz_selection.tsv": "60e70d8a36a70490b36a9454461b6c70b28265f309259ee834a1b36a300d9ce6",
+    "01_slides.txt": "b7b26396ee59ac50ba0d1d52945b370c2b2188abdf5976cbbf6a5c6664a208aa",
+    "transcript.vtt": "5d75157020cf21ba5b7599b7cdb929f53a8a45dc125c42369a2f3dd942c948b5"
+  },
+  "questions": [
+    {
+      "qid": "labhisto-q01",
+      "text": "An instructor points to the outermost surface of the human heart in a histological section and notes a single layer of flattened cells resting directly on fibroelastic connective tissue containing adipose tissue, nerves, and coronary vessels. What cell type forms this surface layer of the epicardium?",
+      "options": [
+        "Cuboidal epithelial cells on a thick basement membrane",
+        "Fibroblasts embedded within the superficial collagen matrix",
+        "Squamous mesothelial cells",
+        "Stratified squamous keratinocytes"
+      ],
+      "correct": 2,
+      "citation": "Slide 23",
+      "facts": [
+        "LecLABHisto-F003"
+      ],
+      "explanation": "<strong>The outer surface of the epicardium is lined by a single layer of squamous mesothelial cells (C).</strong> The epicardium — also called the visceral layer of serous pericardium — consists of a single layer of squamous mesothelial cells overlying fibroelastic connective tissue that contains adipose tissue, nerves, intrinsic cardiac ganglia, and coronary blood vessels. The mesothelium is a simple squamous epithelium of mesodermal origin; its flat cells appear as a continuous sheet at the outer heart surface and are visible as the outermost cellular layer on a standard H&amp;E section of the left ventricle (Slide 190).<br><strong>Option A</strong> is incorrect: cuboidal cells line tubular structures such as kidney tubules and thyroid follicles; the epicardial surface layer is squamous (flat), not cuboidal.<br><strong>Option B</strong> is incorrect: fibroblasts are spindle-shaped cells found within the connective tissue beneath the mesothelial surface — they do not form the epithelial layer at the outer surface.<br><strong>Option D</strong> is incorrect: stratified squamous (keratinized) epithelium lines the skin and oral mucosa; the epicardial surface is a simple (single-layered), non-keratinized epithelium called mesothelium.<br>Slide 23<br><img src=\"quizzes/media/cardio-w01-labhisto-slide23.jpg\" alt=\"Slide 23\">"
+    },
+    {
+      "qid": "labhisto-q02",
+      "text": "Which of the following correctly lists the three layers of the endocardium in order from the ventricular lumen outward?",
+      "options": [
+        "Endothelium → subendothelial dense connective tissue (with smooth muscle cells) → subendocardial layer",
+        "Endothelium → subendocardial loose connective tissue containing Purkinje fibers → subendothelial dense connective tissue",
+        "Subendothelial dense connective tissue → endothelium → subendocardial Purkinje layer",
+        "Smooth muscle cells → endothelium → subendocardial layer"
+      ],
+      "correct": 0,
+      "citation": "Slide 26",
+      "facts": [
+        "LecLABHisto-F011"
+      ],
+      "explanation": "<strong>The endocardium is organized from lumen outward as: (A) endothelium → subendothelial dense connective tissue with smooth muscle cells → subendocardial layer.</strong> The innermost single layer of squamous endothelial cells is continuous with the endothelium of all cardiac blood vessels. Deep to it lies the middle subendothelial layer of dense connective tissue containing scattered smooth muscle cells. The deepest subendocardial layer is looser connective tissue housing branches of the cardiac conduction system (Purkinje fibers) and is continuous with the perimysial connective tissue of the myocardium. Identifying these three layers is a required lab task on the left ventricle section (Slide 190).<br><strong>Option B</strong> is incorrect: the subendocardial layer is the deepest, not the middle one; the subendothelial dense connective tissue occupies the middle position.<br><strong>Option C</strong> is incorrect: the endothelium is the innermost (luminal) layer, not the second layer; smooth muscle cells are within the subendothelial layer, not a separate innermost stratum.<br><strong>Option D</strong> is incorrect: smooth muscle cells are dispersed within the middle subendothelial layer and do not form the innermost surface; the endothelium is always the luminal-facing layer.<br>Slide 26<br><img src=\"quizzes/media/cardio-w01-labhisto-slide26.jpg\" alt=\"Slide 26\">"
+    },
+    {
+      "qid": "labhisto-q03",
+      "text": "Clusters of unusually large, pale-staining cells are observed in the subendocardial region of the heart on H&E. Compared to adjacent contractile cardiomyocytes, they are larger and lighter, with myofibrils pushed to the cell periphery and centrally placed nuclei. Which mechanism directly causes the pale cytoplasm of these cells?",
+      "options": [
+        "Abundant rough endoplasmic reticulum filling the cytoplasm and pushing myofibrils outward to the cell periphery",
+        "High lipid droplet content producing cytoplasmic clearing during processing",
+        "Reduced mitochondrial density relative to contractile cardiomyocytes",
+        "High glycogen content extracted during histological processing, displacing myofibrils to the cell periphery"
+      ],
+      "correct": 3,
+      "citation": "Slide 27",
+      "facts": [
+        "LecLABHisto-F014"
+      ],
+      "explanation": "<strong>The pale staining of Purkinje cells on H&E is caused by high glycogen content (D): glycogen fills the cytoplasm and pushes myofibrils to the periphery, and glycogen is then extracted during routine processing, leaving a clear halo.</strong> Purkinje cells are modified cardiac muscle cells forming the final limb of the cardiac conduction system. They are larger than contractile cardiomyocytes and appear lightly stained because abundant glycogen packs the cytoplasm. During fixation and embedding in aqueous solutions, glycogen is dissolved away, creating the characteristic pale, nearly empty-looking cytoplasm seen on H&E. Myofibrils — which stain pink (eosinophilic) — are confined to a thin rim at the cell periphery because they were displaced outward by the glycogen mass during life. This appearance is a required identification feature on the Purkinje cells slide (Slide 189).<br><strong>Option A</strong> is incorrect: abundant rough ER is characteristic of protein-secreting cells such as pancreatic acinar cells; it is not the histological basis of Purkinje cell pallor.<br><strong>Option B</strong> is incorrect: lipid droplets cause cytoplasmic clearing in hepatocytes and some pathological conditions (lipidosis), but Purkinje cell pallor is specifically due to glycogen extraction, not lipid.<br><strong>Option C</strong> is incorrect: Purkinje cells have substantial mitochondria to support their metabolic needs; reduced mitochondrial density does not account for the pale staining.<br>Slide 27<br><img src=\"quizzes/media/cardio-w01-labhisto-slide27.jpg\" alt=\"Slide 27\">"
+    },
+    {
+      "qid": "labhisto-q04",
+      "text": "A patient suffers a brief episode of global cardiac ischemia that is reversed by prompt reperfusion. Subsequent endomyocardial biopsy shows areas of contractile myocyte necrosis, yet ECG monitoring reveals preserved conduction intervals. Which property of cardiac conduction cells best explains why electrical function is maintained despite contractile cell loss?",
+      "options": [
+        "Conduction cells have a higher density of voltage-gated sodium channels than contractile myocytes",
+        "Purkinje cells are more resistant to hypoxia than contractile cardiac myocytes",
+        "Purkinje cells generate ATP exclusively through aerobic oxidative phosphorylation",
+        "Purkinje cells lack intercalated discs, preventing propagation of ischemic injury between cells"
+      ],
+      "correct": 1,
+      "citation": "Slide 27 · Transcript 1:27:55",
+      "facts": [
+        "LecLABHisto-F018"
+      ],
+      "explanation": "<strong>Purkinje cells are more resistant to hypoxia than contractile cardiac myocytes (B), which allows the conduction system to survive transient ischemia that kills contractile cells.</strong> The high glycogen content of Purkinje cells provides substrate for anaerobic glycolysis, enabling ATP production when oxygen delivery is interrupted. Contractile cardiomyocytes rely more heavily on aerobic oxidative metabolism and have lower glycogen reserves, making them more vulnerable to ischemic necrosis during the same insult. The professor built this argument explicitly: conduction cells surviving transient ischemia while contractile cells scar predisposes the myocardium to re-entrant arrhythmias — alive conduction tissue surrounded by dead contractile tissue creates the substrate for arrhythmia and sudden death.<br><strong>Option A</strong> is incorrect: sodium channel density determines action potential velocity, not hypoxia tolerance; the survival advantage of Purkinje cells under hypoxia is metabolic (glycogen-fueled anaerobic ATP), not electrophysiological.<br><strong>Option C</strong> is incorrect: this is the opposite of the mechanism — Purkinje cells survive hypoxia precisely because they can generate ATP via anaerobic glycolysis when aerobic metabolism is unavailable.<br><strong>Option D</strong> is incorrect: Purkinje cells are joined end-to-end by intercalated discs and deliver electrical impulses to cardiomyocytes via gap junctions; the absence of intercalated discs is false.<br>Slide 27 · Transcript 1:27:55<br><img src=\"quizzes/media/cardio-w01-labhisto-slide27.jpg\" alt=\"Slide 27\">"
+    },
+    {
+      "qid": "labhisto-q05",
+      "text": "Which of the following best describes the cardiac fibrous skeleton?",
+      "options": [
+        "A thin elastic layer separating the subendocardial layer from the myocardium",
+        "Dense connective tissue forming fibrous rings around all cardiac valves that electrically insulates atria from ventricles",
+        "A network of smooth muscle cell bundles distributed through the interventricular septum that coordinates the timing of atrial and ventricular systole",
+        "A reticular fiber scaffold within the myocardium that anchors cardiomyocyte bundles in alignment"
+      ],
+      "correct": 1,
+      "citation": "Transcript 1:31:57",
+      "facts": [
+        "LecLABHisto-F023"
+      ],
+      "explanation": "<strong>The cardiac fibrous skeleton (B) is dense connective tissue that forms fibrous rings (annuli fibrosi) encircling all four cardiac valves and extends into portions of the interventricular and interatrial septa.</strong> It serves three main functions: (1) providing firm attachment points for cardiac muscle fibers, (2) supporting the valve leaflets at their bases, and (3) acting as electrical insulation between the atria and ventricles — forcing impulse conduction through the AV node and bundle of His rather than spreading directly across the atrioventricular junction. The professor named the fibrous rings as “annulus fibrosus” when identifying them on a live heart section and returned to the insulation function on the practice image set.<br><strong>Option A</strong> is incorrect: the cardiac skeleton is not a thin elastic layer at the endo-myocardial junction; it is dense fibrous connective tissue surrounding the valve orifices.<br><strong>Option C</strong> is incorrect: the cardiac skeleton is composed of dense connective tissue (collagen), not smooth muscle; smooth muscle is found in vascular walls, not the fibrous cardiac scaffold.<br><strong>Option D</strong> is incorrect: reticular fibers form a delicate supporting mesh for parenchymal cells in many organs; the cardiac skeleton is a discrete dense structure at the valvular level, not a myocardial reticular framework.<br>Transcript 1:31:57"
+    },
+    {
+      "qid": "labhisto-q06",
+      "text": "A histological section through a mitral valve leaflet reveals three distinct zones. Moving from the ventricular surface inward: a dense collagen-rich layer that continues into the chordae tendineae, a pale middle zone of loose connective tissue infiltrated by proteoglycan-rich ground substance, and an outer layer on the atrial surface with abundant elastic fibers. Which zone occupies the middle position?",
+      "options": [
+        "Atrialis",
+        "Fibrosa",
+        "Subendocardial layer",
+        "Spongiosa"
+      ],
+      "correct": 3,
+      "citation": "Slide 28",
+      "facts": [
+        "LecLABHisto-F026"
+      ],
+      "explanation": "<strong>The spongiosa (D) is the middle layer of cardiac valve leaflets.</strong> All cardiac valves are covered by endothelium on both surfaces and contain three internal layers: the fibrosa (dense collagen derived from the cardiac skeleton, situated on the ventricular surface of AV valves and the arterial surface of semilunar valves), the spongiosa (the middle layer throughout, composed of loose connective tissue infiltrated by proteoglycan-rich ground substance that functions as a shock absorber), and the ventricularis or atrialis (dense connective tissue with abundant elastic fibers, on the ventricular surface of semilunar valves or the atrial surface of AV valves respectively). In AV valves the fibrosa continues directly into the chordae tendineae. The professor noted the spongiosa’s shock-absorbing function — it dissipates force from valve closure, with the force traveling from below on systole.<br><strong>Option A</strong> is incorrect: the atrialis is the outermost layer on the atrial side of AV valves — it is not the middle layer.<br><strong>Option B</strong> is incorrect: the fibrosa is situated on one surface of the leaflet (ventricular for AV valves, arterial for semilunar) and is not the central layer; claiming fibrosa is central is a recognized semantic error.<br><strong>Option C</strong> is incorrect: the subendocardial layer is a component of the endocardium of the heart wall — it is not a layer within a valve leaflet.<br>Slide 28<br><img src=\"quizzes/media/cardio-w01-labhisto-slide28.jpg\" alt=\"Slide 28\">"
+    },
+    {
+      "qid": "labhisto-q07",
+      "text": "A student asks why bacterial endocarditis established on a cardiac valve can be so difficult to eradicate with antibiotics alone, even with prolonged high-dose therapy. Which histological property of valve leaflets is most directly relevant to this challenge?",
+      "options": [
+        "Valve leaflets are avascular and receive nutrients entirely by diffusion, not by blood flow",
+        "Valve leaflets are composed of dense fibrous collagen that physically blocks antibiotic penetration",
+        "Valve leaflets contain sequestered macrophages that protect internalized bacteria from antibiotics",
+        "Valve leaflets are lined by stratified squamous epithelium that resists immune cell infiltration"
+      ],
+      "correct": 0,
+      "citation": "Slide 28 · Transcript 1:33:38",
+      "facts": [
+        "LecLABHisto-F030"
+      ],
+      "explanation": "<strong>Valve leaflets are avascular (A) — they contain no blood vessels and receive oxygen and nutrients by diffusion alone, which means systemic antibiotics cannot be delivered directly into the leaflet tissue by blood flow.</strong> Bacteria embedded in a vegetation on the valve surface are therefore protected from adequate antibiotic concentrations, since the drug must diffuse into an avascular matrix from a surface bathed only by blood. This explains the requirement for prolonged high-dose antibiotic regimens and, frequently, surgical debridement of the infected valve. The lecturer stated plainly: “There are no vessels in the valve.”<br><strong>Option B</strong> is incorrect: while dense fibrous collagen may limit diffusion to some degree, the primary reason for poor drug penetration is the total absence of a vascular supply — without blood vessels, there is no carrier system to deliver antibiotics into the leaflet at all.<br><strong>Option C</strong> is incorrect: cardiac valve leaflets are avascular and do not harbor a resident macrophage population within their core; monocyte-macrophage cells require a blood supply to access tissue, which the leaflet lacks.<br><strong>Option D</strong> is incorrect: valve leaflets are lined by endothelium (a simple squamous epithelium continuous with the endocardium), not stratified squamous epithelium.<br>Slide 28 · Transcript 1:33:38<br><img src=\"quizzes/media/cardio-w01-labhisto-slide28.jpg\" alt=\"Slide 28\">"
+    },
+    {
+      "qid": "labhisto-q08",
+      "text": "In a cross-section of a peripheral artery, the innermost layer facing the lumen is formed by a single layer of flattened cells on a thin subendothelial layer of loose connective tissue. Between this inner layer and the next outer layer, a prominent wavy refractile band is visible on H&E. What is this band, and which boundary does it mark?",
+      "options": [
+        "External elastic lamina — separating the tunica media from the tunica adventitia",
+        "Internal elastic lamina — separating the tunica intima from the tunica media",
+        "Basal lamina — separating endothelial cells from the subendothelial connective tissue",
+        "Reticular fiber condensation — separating the endothelium from adjacent smooth muscle"
+      ],
+      "correct": 1,
+      "citation": "Slide 6",
+      "facts": [
+        "LecLABHisto-F034",
+        "LecLABHisto-F035"
+      ],
+      "explanation": "<strong>The prominent wavy refractile band is the internal elastic lamina (IEL) (B), marking the boundary between the tunica intima and the tunica media.</strong> The tunica intima — the innermost layer — consists of a single layer of squamous endothelial cells resting on a basal lamina, plus a subendothelial zone of loose connective tissue. In arteries, the IEL lies at the intima-media border; on H&E it appears as a distinct wavy (undulating) pink band because elastic material is more refractile than surrounding collagen and muscle, and the section plane creates the undulating profile. The IEL is a key landmark for identifying muscular arteries and for distinguishing arteries from veins, which lack prominent elastic laminae.<br><strong>Option A</strong> is incorrect: the external elastic lamina (EEL) lies at the media-adventitia border (the outer boundary of the media), not at the inner surface; and the EEL is present only in muscular arteries, not all arteries.<br><strong>Option C</strong> is incorrect: the basal lamina (basement membrane) underlies the endothelial cells and is not visible as a prominent wavy band on routine H&E; it requires PAS or silver staining to visualize.<br><strong>Option D</strong> is incorrect: reticular fibers form a delicate mesh throughout connective tissue stroma and do not produce a discrete wavy band at the intima-media border.<br>Slide 6<br><img src=\"quizzes/media/cardio-w01-labhisto-slide6.jpg\" alt=\"Slide 6\">"
+    },
+    {
+      "qid": "labhisto-q09",
+      "text": "Which of the following best describes the structural composition of the tunica media in blood vessel walls?",
+      "options": [
+        "Single layer of squamous endothelial cells on a basal lamina with a subendothelial loose connective tissue layer",
+        "Paired semilunar folds of connective tissue rich in elastic fibers, lined by endothelium on both surfaces",
+        "Longitudinal bundles of collagen and elastic fibers with vasa vasorum and autonomic nerve fibers",
+        "Concentric layers of spirally arranged smooth muscle cells with variable amounts of elastic fibers or laminae"
+      ],
+      "correct": 3,
+      "citation": "Slide 6",
+      "facts": [
+        "LecLABHisto-F036"
+      ],
+      "explanation": "<strong>The tunica media (D) consists of concentric layers of spirally arranged smooth muscle cells with variable amounts of elastic fibers or elastic laminae.</strong> The proportion of elastic versus muscular elements shifts with vessel type: elastic (conducting) arteries have a media dominated by thick fenestrated elastic lamellae alternating with smooth muscle layers, while muscular (distributing) arteries have predominantly smooth muscle layers delineated by distinct internal and external elastic laminae. Arterioles have only one or two smooth muscle layers. This graduated composition allows vessels to contract and dilate — regulating blood flow and pressure — and to store and release elastic energy during the cardiac cycle.<br><strong>Option A</strong> is incorrect: a single endothelial layer on a basal lamina plus subendothelial loose connective tissue describes the tunica intima, the innermost layer.<br><strong>Option B</strong> is incorrect: paired semilunar folds of connective tissue rich in elastic fibers lined by endothelium on both surfaces describes venous valves, not a tunica of the vessel wall.<br><strong>Option C</strong> is incorrect: longitudinal collagen and elastic fiber bundles with vasa vasorum and autonomic nerves describe the tunica adventitia, the outermost layer.<br>Slide 6<br><img src=\"quizzes/media/cardio-w01-labhisto-slide6.jpg\" alt=\"Slide 6\">"
+    },
+    {
+      "qid": "labhisto-q10",
+      "text": "A histologist examining a large artery identifies an outer layer containing longitudinally oriented collagen and elastic fiber bundles, small blood vessel profiles within the layer itself, and bundles of unmyelinated nerve fibers. Which layer of the vessel wall does this describe?",
+      "options": [
+        "Subendocardial layer",
+        "Tunica intima",
+        "Tunica adventitia",
+        "Tunica media"
+      ],
+      "correct": 2,
+      "citation": "Slide 6",
+      "facts": [
+        "LecLABHisto-F037"
+      ],
+      "explanation": "<strong>The tunica adventitia (C) is the outermost layer of the vessel wall; it is composed of longitudinally oriented collagen and elastic fibers and contains vasa vasorum (small vessels nourishing the outer wall) and autonomic nerve fibers.</strong> The collagen of the adventitia runs longitudinally, contrasting with the circumferentially oriented smooth muscle of the media. In arteries, the adventitia is separated from the media by an external elastic lamina. The vasa vasorum supply nutrients and oxygen to the outer portions of thick-walled vessels that cannot be reached by diffusion from the lumen alone. Autonomic nerve fibers in the adventitia regulate smooth muscle tone in the media via vasoconstriction and vasodilation signals.<br><strong>Option A</strong> is incorrect: the subendocardial layer is a component of the heart wall (endocardium) containing Purkinje fibers and loose connective tissue — it is not a layer of a blood vessel wall.<br><strong>Option B</strong> is incorrect: the tunica intima is the innermost luminal layer consisting of endothelium and subendothelial connective tissue — not the outer layer with vasa vasorum and nerves.<br><strong>Option D</strong> is incorrect: the tunica media is the middle layer, containing circumferentially arranged smooth muscle and elastic fibers; the longitudinal collagen bundles and vasa vasorum are hallmarks of the adventitia, not the media.<br>Slide 6<br><img src=\"quizzes/media/cardio-w01-labhisto-slide6.jpg\" alt=\"Slide 6\">"
+    },
+    {
+      "qid": "labhisto-q11",
+      "text": "Which of the following vessels is classified as an elastic (conducting) artery?",
+      "options": [
+        "Aorta",
+        "Femoral artery",
+        "Radial artery",
+        "Splenic artery"
+      ],
+      "correct": 0,
+      "citation": "Slide 8",
+      "facts": [
+        "LecLABHisto-F041"
+      ],
+      "explanation": "<strong>The aorta (A) is the principal elastic (conducting) artery; this class also includes the pulmonary artery and their major branches.</strong> Elastic arteries are the largest-caliber vessels, positioned immediately downstream of the ventricles. Their defining histological feature is a thick tunica media in which numerous parallel fenestrated elastic lamellae regularly alternate with circularly oriented layers of smooth muscle cells. This architecture allows elastic arteries to expand during systole (storing pressure energy as elastic recoil) and spring back during diastole (smoothing pulsatile flow), acting as a “windkessel” buffer for the cardiac output.<br><strong>Option B</strong> is incorrect: the femoral artery is a large muscular (distributing) artery; its media contains predominantly smooth muscle layers bounded by internal and external elastic laminae, rather than the alternating lamellae pattern of elastic arteries.<br><strong>Option C</strong> is incorrect: the radial artery is a medium-sized muscular artery; it has the characteristic prominent IEL and multiple smooth muscle layers of distributing arteries, not the lamellae-dominated media of elastic arteries.<br><strong>Option D</strong> is incorrect: the splenic artery is explicitly cited as an example of a medium-sized muscular artery in the course slides; it is distributing, not conducting.<br>Slide 8<br><img src=\"quizzes/media/cardio-w01-labhisto-slide8.jpg\" alt=\"Slide 8\">"
+    },
+    {
+      "qid": "labhisto-q12",
+      "text": "A histologist sections an artery from the mesentery and describes: a prominent wavy refractile band at the intima-media border, multiple concentric layers of circularly oriented smooth muscle cells in the media, and an adventitia with longitudinal collagen. The external elastic lamina is faintly visible at the media-adventitia border. Which vessel type does this best identify?",
+      "options": [
+        "Aorta (large-caliber elastic conducting artery)",
+        "Muscular (distributing) artery",
+        "Medium-sized vein",
+        "Postcapillary venule"
+      ],
+      "correct": 1,
+      "citation": "Slide 9",
+      "facts": [
+        "LecLABHisto-F045"
+      ],
+      "explanation": "<strong>The prominent internal elastic lamina at the intima-media border and multiple concentric layers of circularly oriented smooth muscle in the media are the defining histological features of muscular (distributing) arteries (B).</strong> Muscular arteries distribute blood to organs and regulate regional flow through vasoconstriction and vasodilation. An external elastic lamina may also be visible at the media-adventitia border in larger muscular arteries, though it is absent in smaller ones. Examples include the radial, femoral, and splenic arteries. Their medium thickness and wavy IEL distinguish them from both the lamellae-rich aorta and the thin-walled veins.<br><strong>Option A</strong> is incorrect: the aorta (an elastic artery) has a media dominated by alternating fenestrated elastic lamellae and smooth muscle — not multiple discrete smooth muscle layers bounded by a single prominent IEL. Its most prominent media feature is the elastic lamellae, not the IEL.<br><strong>Option C</strong> is incorrect: medium-sized veins have thin walls with poorly developed elastic laminae; the tunica media is composed of small, scattered smooth muscle bundles, and the lumen is relatively large compared to wall thickness — the opposite of this description.<br><strong>Option D</strong> is incorrect: postcapillary venules are 15–20 µm in diameter with thin walls and no distinct smooth muscle layers; they are far smaller and structurally simpler than what is described here.<br>Slide 9<br><img src=\"quizzes/media/cardio-w01-labhisto-slide9.jpg\" alt=\"Slide 9\">"
+    },
+    {
+      "qid": "labhisto-q13",
+      "text": "Which of the following correctly identifies the defining criteria for an arteriole?",
+      "options": [
+        "Diameter less than 1 mm; wall composed of one smooth muscle layer alternating with elastic lamellae",
+        "Diameter of 15–20 µm; wall composed of pericytes and a discontinuous basal lamina, with no distinct smooth muscle cell layer in the wall",
+        "Diameter of 8–10 µm; wall formed by a single endothelial cell encircling the lumen on a basal lamina",
+        "Diameter less than 0.1 mm; tunica media containing one or two circularly arranged smooth muscle cell layers"
+      ],
+      "correct": 3,
+      "citation": "Slide 10",
+      "facts": [
+        "LecLABHisto-F049"
+      ],
+      "explanation": "<strong>Arterioles (D) are terminal arterial vessels with a diameter less than 0.1 mm whose tunica media contains only one or two circularly arranged smooth muscle layers.</strong> The arteriole lumen is approximately as wide as the wall is thick — a ratio that helps distinguish arterioles from capillaries (much smaller, wall = one endothelial cell) and from postcapillary venules (larger lumen relative to thinner wall). As the primary resistance vessels, arterioles receive dense sympathetic innervation and respond to humoral signals, allowing them to regulate local vascular resistance and distribute blood flow to capillary beds.<br><strong>Option A</strong> is incorrect: alternating smooth muscle and elastic lamellae describes an elastic artery’s media; arterioles lack true elastic lamellae and have only 1–2 smooth muscle layers in their thin media.<br><strong>Option B</strong> is incorrect: a 15–20 µm diameter vessel with pericytes and a discontinuous basal lamina and no smooth muscle describes a postcapillary venule, not an arteriole.<br><strong>Option C</strong> is incorrect: 8–10 µm diameter with a single endothelial cell forming the wall describes a capillary; capillaries lack smooth muscle in their walls.<br>Slide 10<br><img src=\"quizzes/media/cardio-w01-labhisto-slide10.jpg\" alt=\"Slide 10\">"
+    },
+    {
+      "qid": "labhisto-q14",
+      "text": "Which of the following correctly identifies the diameter and structural components of a capillary?",
+      "options": [
+        "Diameter 8–10 µm; wall composed of endothelium on a basal lamina, with occasional pericytes",
+        "Diameter 15–20 µm; wall composed of one smooth muscle layer with pericytes on the outside of the basal lamina",
+        "Diameter 0.1–1 mm; wall containing endothelium, a prominent internal elastic lamina, and multiple smooth muscle layers",
+        "Diameter 8–10 µm; wall composed of alternating endothelial and smooth muscle cells with tight junctions throughout"
+      ],
+      "correct": 0,
+      "citation": "Slide 11",
+      "facts": [
+        "LecLABHisto-F053"
+      ],
+      "explanation": "<strong>Capillaries (A) are 8–10 µm in diameter and consist of a single layer of endothelial cells on a basal lamina, with occasional pericytes.</strong> (Slides govern: the lecture slides state 8–10 µm; the lecture notes give 7–9 µm; slide values are authoritative for lab identification.) The narrow lumen permits only individual blood cells to pass in single file. Pericytes are mesenchymal-derived contractile cells that lie within (inside) the capillary basal lamina — not outside it — and contribute to structural support and microvascular regulation. The thin wall without a media or adventitia allows maximal exchange of gases, nutrients, and metabolites between blood and tissue.<br><strong>Option B</strong> is incorrect: a 15–20 µm vessel with scattered pericytes describes a postcapillary venule; that vessel also has pericytes (not smooth muscle cells), and pericytes are inside the basal lamina, not outside it.<br><strong>Option C</strong> is incorrect: a 0.1–1 mm diameter vessel with an IEL and multiple smooth muscle layers describes an arteriole or small muscular artery — far larger and structurally more complex than a capillary.<br><strong>Option D</strong> is incorrect: capillaries do not contain smooth muscle cells; tight junctions are found only in continuous (somatic) capillaries, not universally in all capillary subtypes.<br>Slide 11<br><img src=\"quizzes/media/cardio-w01-labhisto-slide11.jpg\" alt=\"Slide 11\">"
+    },
+    {
+      "qid": "labhisto-q15",
+      "text": "Venous valves prevent retrograde blood flow in peripheral veins. Which of the following correctly describes their histological structure?",
+      "options": [
+        "Thin paired folds of the tunica intima, rich in elastic fibers, covered by endothelium on both surfaces",
+        "Bicuspid leaflets derived from the tunica media, reinforced by collagen bundles and lined by mesothelium",
+        "Dense collagenous flaps arising from the fibrous cardiac skeleton and covered by a single layer of cuboidal cells",
+        "Semilunar flaps of the tunica adventitia containing smooth muscle cells, covered by endothelium on the luminal side only"
+      ],
+      "correct": 0,
+      "citation": "Slide 16",
+      "facts": [
+        "LecLABHisto-F063"
+      ],
+      "explanation": "<strong>Venous valves (A) are thin, paired folds of the tunica intima that project across the lumen; they are rich in elastic fibers and covered by endothelium on both their luminal and abluminal surfaces.</strong> They are especially numerous in the veins of the lower limbs, where they must counteract gravitational hydrostatic pressure to maintain unidirectional flow toward the heart. When venous valves become incompetent — due to vascular wall weakness, prolonged standing, or thrombotic damage — blood pools in dependent veins, producing varicose veins and peripheral edema.<br><strong>Option B</strong> is incorrect: venous valves are derived from the tunica intima, not the media; they are lined by endothelium, not mesothelium; and “bicuspid” refers to the mitral cardiac valve, not peripheral venous valves.<br><strong>Option C</strong> is incorrect: the cardiac fibrous skeleton is a feature of the heart at the valve ring level; peripheral venous valves arise from the intima and are not dense collagenous flaps derived from that structure.<br><strong>Option D</strong> is incorrect: venous valves are derived from the intima, not the adventitia; and they are covered by endothelium on both surfaces, not only on the luminal side.<br>Slide 16<br><img src=\"quizzes/media/cardio-w01-labhisto-slide16.jpg\" alt=\"Slide 16\">"
+    },
+    {
+      "qid": "labhisto-q16",
+      "text": "Lymphatic capillaries differ from blood capillaries in several key structural ways. Which of the following best identifies the defining features of lymphatic capillaries?",
+      "options": [
+        "Numerous pericytes situated within a continuous basal lamina, with complete tight junctions between all adjacent endothelial cells",
+        "Cuboidal endothelium surrounded by a continuous basal lamina and a single smooth muscle layer",
+        "Open-ended loops of endothelium with complete tight junctions and a full basal lamina",
+        "Blind-ended tubes of thin endothelial cells lacking tight junctions, covered by a discontinuous basal lamina"
+      ],
+      "correct": 3,
+      "citation": "Slide 18",
+      "facts": [
+        "LecLABHisto-F065"
+      ],
+      "explanation": "<strong>Lymphatic capillaries (D) originate as blind-ended tubes formed by very thin endothelial cells that lack tight junctions between them and are covered by a discontinuous (not continuous) basal lamina.</strong> The absence of tight junctions and the discontinuous basal lamina create highly permeable intercellular clefts that allow interstitial fluid, large protein molecules, and immune cells to enter the lymphatic lumen easily. Fine anchoring filaments of collagen extend from the discontinuous basal lamina to surrounding connective tissue, preventing vessel collapse under the negative pressure that drives lymph absorption. Unlike blood capillaries, lymphatic capillaries have no pericytes. The professor flagged this structure as “very important” because the lymphatic system absorbs excess interstitial fluid that the venous end of blood capillaries cannot reclaim.<br><strong>Option A</strong> is incorrect: pericytes plus a continuous basal lamina and tight junctions describe blood capillaries (specifically somatic/continuous capillaries); lymphatic capillaries have none of these features.<br><strong>Option B</strong> is incorrect: lymphatic capillaries are not cuboidal; their endothelial cells are very thin, and they have no smooth muscle layer.<br><strong>Option C</strong> is incorrect: lymphatic capillaries originate as blind-ended structures, not open-ended loops; and their endothelial cells specifically lack tight junctions, which is the key feature permitting macromolecule entry.<br>Slide 18<br><img src=\"quizzes/media/cardio-w01-labhisto-slide18.jpg\" alt=\"Slide 18\">"
+    },
+    {
+      "qid": "labhisto-q17",
+      "text": "A histologist examining a section of the small intestinal mesentery identifies two types of thin-walled vessels with pale luminal fluid. One occasionally contains a few erythrocytes; the other has no erythrocytes but displays periodic paired leaflet-like projections into its lumen. The vessel with no erythrocytes and intraluminal leaflet structures is best identified as which of the following?",
+      "options": [
+        "Collecting venule",
+        "Medium-sized lymphatic vessel",
+        "Postcapillary venule",
+        "Sinusoidal (discontinuous) capillary"
+      ],
+      "correct": 1,
+      "citation": "Slide 19",
+      "facts": [
+        "LecLABHisto-F067"
+      ],
+      "explanation": "<strong>The vessel with no erythrocytes and closely spaced intraluminal valve leaflets is a medium-sized lymphatic vessel (B).</strong> Medium- and large-sized lymphatic vessels resemble small veins in overall appearance but have several distinguishing features: larger and more irregular lumina, thinner walls, closely spaced valves that prevent lymph backflow, and — critically — no red blood cells in the lumen (though lymphocytes and other white blood cells can be present). The absence of erythrocytes is the single most reliable discriminator between a lymphatic vessel and a blood vessel in histological sections. The intraluminal valves further confirm the lymphatic identity.<br><strong>Option A</strong> is incorrect: collecting venules are postcapillary blood vessels that do contain erythrocytes in their lumen; they also lack the prominent intraluminal valves characteristic of lymphatics.<br><strong>Option C</strong> is incorrect: postcapillary venules are small blood vessels (15–20 µm) that carry erythrocytes; their walls consist of pericytes rather than smooth muscle, and they lack valves.<br><strong>Option D</strong> is incorrect: sinusoidal capillaries are discontinuous blood capillaries of the liver, spleen, and bone marrow; they have irregular lumina and contain erythrocytes — they are blood vessels, not lymphatics.<br>Slide 19<br><img src=\"quizzes/media/cardio-w01-labhisto-slide19.jpg\" alt=\"Slide 19\">"
+    },
+    {
+      "qid": "labhisto-q18",
+      "text": "Which of the following correctly lists the order of vessels in the microcirculatory pathway from arterial to venous?",
+      "options": [
+        "Arteriole → capillary bed → metarteriole → postcapillary venule",
+        "Arteriole → postcapillary venule → metarteriole → capillary bed",
+        "Arteriole → metarteriole → capillary bed → postcapillary venule",
+        "Metarteriole → arteriole → capillary bed → postcapillary venule"
+      ],
+      "correct": 2,
+      "citation": "Slide 20",
+      "facts": [
+        "LecLABHisto-F069"
+      ],
+      "explanation": "<strong>Blood flows through the microcirculation in the sequence (C): arteriole → metarteriole → capillary bed → postcapillary venule.</strong> Metarterioles are smaller branches of arterioles that distribute blood into the capillary network. At the origin of each capillary from a metarteriole, a precapillary sphincter — a ring of smooth muscle — regulates flow into that capillary segment. When precapillary sphincters close, blood may be shunted directly from arteriole to venule through arteriovenous anastomoses, bypassing the capillary exchange network. Postcapillary venules collect blood exiting capillary beds and are also a primary site for leukocyte extravasation and fluid exchange.<br><strong>Option A</strong> is incorrect: metarterioles branch off arterioles and lead into the capillary bed; they are upstream of the capillary bed, not downstream.<br><strong>Option B</strong> is incorrect: postcapillary venules are at the venous end of the circuit, after the capillary bed — not between the arteriole and metarteriole.<br><strong>Option D</strong> is incorrect: arterioles are upstream of metarterioles; the sequence in this option is reversed — metarterioles cannot precede the arterioles that give rise to them.<br>Slide 20<br><img src=\"quizzes/media/cardio-w01-labhisto-slide20.jpg\" alt=\"Slide 20\">"
+    },
+    {
+      "qid": "labhisto-q19",
+      "text": "A pathologist examining histological sections from a cadaver finds that small thin-walled vessels adjacent to thicker-walled vessels are filled with clumps of erythrocytes, while the thicker-walled vessels are largely devoid of blood cells. What best explains why erythrocytes are found predominantly in the thin-walled vessels?",
+      "options": [
+        "After death, blood accumulates in the venous portion of the circulation, leaving arterioles empty while venules retain erythrocytes",
+        "Venous endothelial cells express surface receptors that bind and sequester circulating erythrocytes perimortem, concentrating them in venular lumina",
+        "Venous endothelium degrades erythrocytes perimortem, so only cell ghosts remain in venular walls",
+        "The thin-walled vessels are hepatic sinusoids, which contain erythrocytes regardless of perfusion state"
+      ],
+      "correct": 0,
+      "citation": "Transcript 49:41",
+      "facts": [
+        "LecLABHisto-F072"
+      ],
+      "explanation": "<strong>After death, blood accumulates in the venous portion of the vascular system (A): as arterial pressure falls, arterioles empty while venules and veins remain filled with erythrocytes.</strong> This postmortem redistribution means that in any histological section from a cadaver, the presence of erythrocyte clumps inside a vessel’s lumen strongly suggests venous identity, and their absence points to an arterial vessel. The professor emphasized this discriminator as the practical way to tell venous from arterial vessels on cadaveric sections. Combined with wall thickness and lumen-to-wall ratio, erythrocyte content provides a rapid and reliable identification tool when reading postmortem histological slides.<br><strong>Option B</strong> is incorrect: the lecture attributes the finding to postmortem accumulation of blood on the venous side and describes no receptor-mediated binding of erythrocytes by venous endothelium. <br><strong>Option C</strong> is incorrect: venous endothelium does not degrade erythrocytes perimortem; erythrocytes persist intact in venules precisely because blood accumulates there, not because arterial vessels selectively destroy cells.<br><strong>Option D</strong> is incorrect: the scenario describes general cadaveric tissue sections, not the liver specifically; sinusoidal capillaries of the liver do contain erythrocytes, but this does not explain the broad pattern of venular erythrocyte retention across all tissues.<br>Transcript 49:41"
+    },
+    {
+      "qid": "labhisto-q20",
+      "text": "When examining myocardium on a standard H&E section, intercalated discs have which of the following appearances?",
+      "options": [
+        "Pale, unstained transverse lines at the nuclear poles of cardiomyocytes",
+        "Dark, intensely eosinophilic transverse bands spanning the junctions between adjacent cardiomyocytes",
+        "Longitudinal wavy eosinophilic bands running parallel to the long axis of muscle fibers, corresponding to myofibrillar striations",
+        "Round basophilic granules aligned in a row at the Z-disc level within sarcomeres"
+      ],
+      "correct": 1,
+      "citation": "Slide 24",
+      "facts": [
+        "LecLABHisto-F009"
+      ],
+      "explanation": "<strong>Intercalated discs (B) appear on H&E as dark, intensely eosinophilic (strongly pink) transverse bands at the end-to-end junctions between adjacent cardiomyocytes.</strong> Intercalated discs are specialized junctional complexes containing three components: desmosomes (which anchor intermediate filaments and provide mechanical cohesion between cells), fascia adherentes (which anchor actin filaments of the sarcomere), and gap junctions (which electrically couple cells and propagate the depolarization wave). Because the disc region is densely packed with protein complexes, it takes up eosin more intensely than the surrounding myofibrillar cytoplasm. Their transverse orientation at cell boundaries and the step-ladder pattern visible at higher magnification are the defining H&E identification features that distinguish intercalated discs from ordinary myofibrillar cross-striations.<br><strong>Option A</strong> is incorrect: intercalated discs stain darkly (intensely eosinophilic), not palely; and their location is at the cell-to-cell boundary, not specifically at nuclear poles.<br><strong>Option C</strong> is incorrect: cross-striations (A-bands and I-bands of sarcomeres) run transversely and reflect myofibril ultrastructure; intercalated discs also run transversely but are at cell junctions, not longitudinally along the fiber axis.<br><strong>Option D</strong> is incorrect: basophilic granules describe ribosomes or secretory granules in other cell types; intercalated discs are transverse bands composed of junctional proteins, not granules, and are eosinophilic not basophilic.<br>Slide 24<br><img src=\"quizzes/media/cardio-w01-labhisto-slide24.jpg\" alt=\"Slide 24\">"
+    }
+  ]
+}
