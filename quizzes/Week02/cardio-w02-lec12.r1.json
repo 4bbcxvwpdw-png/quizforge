@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "id": "cardio-w02-lec12",
+  "revision": 1,
+  "question_count": 16,
+  "title": "ECG Review",
+  "subtitle": "Week 02 · Lec 12 · ECG Review (Tzeng) | 16 questions",
+  "source_fingerprints": {
+    "Lec12_FactInventory.md": "0e74a971b35b74d25f09e1e1783a1865c92e16ad447ab84184a7d32b7e423dc2",
+    "quiz_selection.tsv": "c83dad4a6da31386096b0ceee791997aaa3050bf1f200993c539bc8102d88636",
+    "01_slides.txt": "4dcc14778463e9788e6eb119c9e4c770dc39319372c1d1a24619432fac032106",
+    "transcript.vtt": "6f5794b9498baf82752533e0c227bb796b7d75d618147b45f031733ef8a27172"
+  },
+  "questions": [
+    {
+      "qid": "lec12-q01",
+      "facts": ["Lec12-F001"],
+      "text": "A first-year resident is reviewing ECG fundamentals. In a patient with sinus rhythm, each QRS complex is preceded by a brief low-amplitude deflection. Which of the following most accurately identifies what this deflection represents?",
+      "options": [
+        "Atrial depolarization",
+        "Sinus node depolarization",
+        "Atrial repolarization",
+        "Ventricular depolarization"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Option A is correct: the P wave represents atrial depolarization.</strong> The SA node fires first but its electrical mass is too small to generate a detectable surface deflection. The wavefront then spreads through the atrial muscle mass, producing the P wave. The professor states at 02:52: \"the correct answer is B, atrial depolarization...the point is that, the P wave represents atrial depolarization.\"<br><strong>Option B</strong> is incorrect: sinus node depolarization is not visible on the surface ECG because the SA node's mass is too small to generate a detectable body-surface signal.<br><strong>Option C</strong> is incorrect: atrial repolarization does occur but is largely buried within the QRS complex and does not produce the P wave deflection.<br><strong>Option D</strong> is incorrect: ventricular depolarization generates the QRS complex, not the P wave.<br>Slide 5 · Transcript 02:41<br><img src=\"quizzes/media/cardio-w02-lec12-slide5.jpg\" alt=\"Slide 5\">",
+      "citation": "Slide 5 · Transcript 02:41",
+      "source_fingerprints": ["01_slides.pdf:p5", "transcript.vtt:t02:41"]
+    },
+    {
+      "qid": "lec12-q02",
+      "facts": ["Lec12-F002"],
+      "text": "A 24-year-old woman has an ECG taken during a routine physical. The tracing shows a P wave before every QRS, but the P wave morphology in lead II is inverted compared to a normal sinus P wave. Which of the following best describes what the P wave in this ECG represents?",
+      "options": [
+        "Sinus node depolarization, because the inverted morphology indicates SA node dysfunction",
+        "Ventricular depolarization spreading retrogradely into the atria via an accessory pathway",
+        "Atrial depolarization originating from an ectopic atrial focus rather than the sinus node",
+        "Atrial repolarization, which becomes visible when the P wave axis is abnormal"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Option C is correct: the P wave still represents atrial depolarization, now originating from an ectopic atrial focus.</strong> In an ectopic atrial rhythm, a site outside the SA node fires first and depolarizes the atrial muscle in an abnormal direction, producing an inverted P wave morphology. What changes is the morphology and axis, not the meaning: the P wave represents atrial muscle depolarization regardless of where the impulse originates. The professor explains: \"ectopic atrial rhythm, the P wave is still the atrial depolarization...it doesn't represent anything different just because it's ectopic.\"<br><strong>Option A</strong> is incorrect: the sinus node never produces a visible ECG deflection; its electrical mass is too small in all rhythm types, and the inverted morphology reflects an abnormal atrial depolarization direction, not SA node activity.<br><strong>Option B</strong> is incorrect: ventricular retrograde spread would produce a QRS-associated event, not a discrete P wave preceding the QRS; this is a different and separate phenomenon.<br><strong>Option D</strong> is incorrect: atrial repolarization is not visible as a P wave in any rhythm; it remains hidden within the QRS complex.<br>Slide 6 · Transcript 04:52<br><img src=\"quizzes/media/cardio-w02-lec12-slide6.jpg\" alt=\"Slide 6\">",
+      "citation": "Slide 6 · Transcript 04:52",
+      "source_fingerprints": ["01_slides.pdf:p6", "transcript.vtt:t04:52"]
+    },
+    {
+      "qid": "lec12-q03",
+      "facts": ["Lec12-F003"],
+      "text": "A cardiology attending describes the fundamental principle governing ECG deflections. Which of the following best states the relationship between the direction of a depolarization wavefront and the appearance of the deflection in that ECG lead?",
+      "options": [
+        "A depolarization wave moving toward a lead produces a predominantly negative deflection in that lead",
+        "A depolarization wave moving toward a lead produces a predominantly positive deflection in that lead",
+        "A depolarization wave moving parallel to a lead produces the largest positive deflection",
+        "A depolarization wave moving away from a lead produces a predominantly positive deflection"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Option B is correct: a depolarization wave moving toward a lead produces a predominantly positive deflection.</strong> This is the foundational principle of ECG interpretation. An advancing depolarization front creates current flowing toward the lead it approaches, which the lead records as a positive (upward) deflection. The professor calls this \"the fundamental of EKG\" and teaches the corollary: a wavefront moving away from a lead produces a negative deflection. Slide 7 illustrates this directly: a depolarization wave moving toward lead aVF produces a predominantly positive QRS in aVF.<br><strong>Option A</strong> is incorrect: this reverses the rule; toward a lead = positive, not negative.<br><strong>Option C</strong> is incorrect: a wavefront moving parallel to a lead (perpendicular to its axis) produces an isoelectric, near-zero deflection, not the largest positive deflection.<br><strong>Option D</strong> is incorrect: movement away from a lead produces a predominantly negative deflection, the opposite of what option D states.<br>Slide 7 · Transcript 08:33<br><img src=\"quizzes/media/cardio-w02-lec12-slide7.jpg\" alt=\"Slide 7\">",
+      "citation": "Slide 7 · Transcript 08:33",
+      "source_fingerprints": ["01_slides.pdf:p7", "transcript.vtt:t08:33"]
+    },
+    {
+      "qid": "lec12-q04",
+      "facts": ["Lec12-F004"],
+      "text": "On a standard 12-lead ECG recorded at 25 mm/second, the R waves of consecutive QRS complexes are exactly 3 large boxes apart. Using the large-box counting method, what is the approximate heart rate?",
+      "options": [
+        "50 bpm",
+        "60 bpm",
+        "75 bpm",
+        "100 bpm"
+      ],
+      "correct": 3,
+      "explanation": "<strong>Option D is correct: at 3 large boxes between R waves the heart rate is approximately 100 bpm.</strong> The large-box method runs the sequence 300–150–100–75–60–50 bpm for 1 through 6 large boxes respectively. With 3 boxes: the third value in the sequence is 100 bpm. Equivalently, each large box equals 200 ms, so 3 boxes = 600 ms cycle length; 60,000 ms/min ÷ 600 ms = 100 bpm. The professor teaches both the memorized sequence and the arithmetic as two consistent methods.<br><strong>Option A</strong> is incorrect: 50 bpm corresponds to 6 large boxes (cycle length 1,200 ms), not 3.<br><strong>Option B</strong> is incorrect: 60 bpm corresponds to 5 large boxes (cycle length 1,000 ms), not 3.<br><strong>Option C</strong> is incorrect: 75 bpm corresponds to 4 large boxes (cycle length 800 ms), not 3.<br>Slide 8 · Transcript 11:05<br><img src=\"quizzes/media/cardio-w02-lec12-slide8.jpg\" alt=\"Slide 8\">",
+      "citation": "Slide 8 · Transcript 11:05",
+      "source_fingerprints": ["01_slides.pdf:p8", "transcript.vtt:t11:05"]
+    },
+    {
+      "qid": "lec12-q05",
+      "facts": ["Lec12-F004"],
+      "text": "Using the large-box counting method on a standard ECG, consecutive R waves are exactly 5 large boxes apart. What is the patient's approximate heart rate?",
+      "options": [
+        "75 bpm",
+        "60 bpm",
+        "100 bpm",
+        "150 bpm"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Option B is correct: at 5 large boxes between R waves the heart rate is approximately 60 bpm.</strong> Counting along the sequence 300–150–100–75–60–50 for 1–6 large boxes, the fifth value is 60 bpm. Equivalently, 5 boxes × 200 ms = 1,000 ms cycle length; 60,000 ms/min ÷ 1,000 ms = 60 bpm. The professor explicitly teaches this memorized sequence and notes that 300 divided by the number of large boxes gives the same result.<br><strong>Option A</strong> is incorrect: 75 bpm corresponds to 4 large boxes (cycle length 800 ms), not 5.<br><strong>Option C</strong> is incorrect: 100 bpm corresponds to 3 large boxes (cycle length 600 ms), not 5.<br><strong>Option D</strong> is incorrect: 150 bpm corresponds to 2 large boxes (cycle length 400 ms), not 5.<br>Slide 8 · Transcript 11:05<br><img src=\"quizzes/media/cardio-w02-lec12-slide8.jpg\" alt=\"Slide 8\">",
+      "citation": "Slide 8 · Transcript 11:05",
+      "source_fingerprints": ["01_slides.pdf:p8", "transcript.vtt:t11:05"]
+    },
+    {
+      "qid": "lec12-q06",
+      "facts": ["Lec12-F005"],
+      "text": "A patient's heart rate increases from 64 to 98 bpm when startled by a loud noise, activating the sympathetic nervous system. Which change in the SA node action potential best explains this increase in heart rate?",
+      "options": [
+        "Phase 0 upstroke velocity increases in SA node cells",
+        "Phase 2 plateau duration shortens as calcium channels close earlier",
+        "Phase 4 spontaneous diastolic depolarization slope steepens, reaching threshold sooner",
+        "Phase 3 repolarization accelerates, reducing the refractory period"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Option C is correct: sympathetic activation steepens the slope of phase 4 spontaneous diastolic depolarization in SA node cells, causing them to reach threshold faster and fire more frequently.</strong> SA node pacemaker cells undergo spontaneous, gradual membrane depolarization during phase 4 rather than maintaining a stable resting potential. Sympathetic activation (via β1 receptors and cAMP) increases the steepness of this slope. The professor explains: \"sympathetic activity affects phase 4 of our pacemaker cells here...it changes the slope of phase 4, so that it reaches the threshold faster.\" The net result is more beats per minute with no change in which phase is targeted.<br><strong>Option A</strong> is incorrect: the lecture identifies phase 4 as the phase altered by sympathetic stimulation; phase 0 is not the rate-determining step in SA node automaticity, and the professor does not identify it as the target of sympathetic rate control.<br><strong>Option B</strong> is incorrect: phase 2 plateau changes were not identified in this lecture as the mechanism of sympathetic rate increase; the professor specifically names phase 4 slope as the key change.<br><strong>Option D</strong> is incorrect: phase 3 repolarization governs how quickly the cell finishes each action potential, but the lecture teaches that the rate-determining step is the slope of phase 4, not the speed of phase 3.<br>Slide 9 · Transcript 16:09<br><img src=\"quizzes/media/cardio-w02-lec12-slide9.jpg\" alt=\"Slide 9\">",
+      "citation": "Slide 9 · Transcript 16:09",
+      "source_fingerprints": ["01_slides.pdf:p9", "transcript.vtt:t16:09"]
+    },
+    {
+      "qid": "lec12-q07",
+      "facts": ["Lec12-F007"],
+      "text": "An ECG shows a pattern of mostly normal narrow QRS complexes interspersed with occasional early beats. The early beats have a wide, bizarre QRS morphology and are not preceded by a P wave. What is the most likely identity of these early wide beats?",
+      "options": [
+        "Premature ventricular contractions (PVCs)",
+        "Premature atrial contractions (PACs)",
+        "Junctional escape beats",
+        "Atrial flutter waves with variable AV conduction"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Option A is correct: these are premature ventricular contractions (PVCs).</strong> PVCs originate within the ventricular myocardium, so no atrial depolarization precedes them and no P wave is visible before the beat. Because the impulse bypasses the fast His-Purkinje conduction system and spreads slowly cell-to-cell through ventricular muscle, the QRS complex is wide and morphologically abnormal. The surrounding sinus beats are narrow because they use the normal conduction system.<br><strong>Option B</strong> is incorrect: PACs originate in the atria and are conducted normally through the AV node and His-Purkinje system, producing a narrow (not wide) QRS complex, often with a slightly different P wave morphology preceding each beat.<br><strong>Option C</strong> is incorrect: junctional escape beats arise when sinus rate falls and the AV junction takes over; they occur late in the cycle (not early) and are slower than the sinus rate, the opposite of a premature beat.<br><strong>Option D</strong> is incorrect: the lecture teaches atrial flutter as a macroscopic re-entrant circuit propagating around the atrium (slide 17); isolated early wide beats on an otherwise normal rhythm are not consistent with that organized re-entrant pattern.<br>Slide 11 · Transcript 21:18<br><img src=\"quizzes/media/cardio-w02-lec12-slide11.jpg\" alt=\"Slide 11\">",
+      "citation": "Slide 11 · Transcript 21:18",
+      "source_fingerprints": ["01_slides.pdf:p11", "transcript.vtt:t21:18"]
+    },
+    {
+      "qid": "lec12-q08",
+      "facts": ["Lec12-F007"],
+      "text": "A 55-year-old man is found to have premature ventricular contractions on a Holter monitor. His cardiologist notes that the QRS complexes during PVC beats are significantly wider than his normal sinus beats. What best accounts for the wider QRS duration during a PVC?",
+      "options": [
+        "Premature AV node firing sends an accelerated impulse through the His-Purkinje network",
+        "Retrograde ventricular-to-atrial conduction delays inscription of the next normal QRS",
+        "A reentrant circuit within the AV node prolongs overall ventricular depolarization time",
+        "The impulse spreads cell-to-cell through ventricular myocardium rather than via the His-Purkinje system"
+      ],
+      "correct": 3,
+      "explanation": "<strong>Option D is correct: PVC depolarization spreads slowly cell-to-cell through ventricular myocardium rather than via the specialized conduction system, producing a wide QRS.</strong> In a normal sinus beat the impulse travels rapidly through the His-Purkinje network, activating both ventricles almost simultaneously in roughly 80–100 ms. A PVC originates in ventricular muscle and must conduct through gap junctions between individual myocytes — far slower than Purkinje fibers — so total ventricular activation time is prolonged, yielding a wide QRS of typically more than 120 ms. The professor explains this directly: \"PVCs are wide because they do not get to utilize the conduction system in order to propagate across the ventricles.\"<br><strong>Option A</strong> is incorrect: the AV node does not fire to initiate a PVC; the ectopic focus is within the ventricle itself, entirely bypassing the AV node.<br><strong>Option B</strong> is incorrect: retrograde conduction from ventricles to atria can occur with PVCs and produces a retrograde P wave, but this retrograde atrial spread does not widen the QRS — the QRS width reflects ventricular activation time, not atrial retrograde conduction.<br><strong>Option C</strong> is incorrect: reentrant circuits within the AV node produce narrow-complex supraventricular tachycardias (AVNRT); they are not the source of isolated wide premature beats originating in the ventricle.<br>Slide 11 · Transcript 21:18<br><img src=\"quizzes/media/cardio-w02-lec12-slide11.jpg\" alt=\"Slide 11\">",
+      "citation": "Slide 11 · Transcript 21:18",
+      "source_fingerprints": ["01_slides.pdf:p11", "transcript.vtt:t21:18"]
+    },
+    {
+      "qid": "lec12-q09",
+      "facts": ["Lec12-F009"],
+      "text": "On a 12-lead ECG, the QRS axis is calculated to be +130 degrees. Which of the following correctly classifies this finding?",
+      "options": [
+        "Normal axis, within the 0 to +90 degree physiologic range",
+        "Left axis deviation, because the axis has deviated too far in the leftward direction",
+        "Right axis deviation, because +130 degrees exceeds the upper limit of the normal range",
+        "Normal superior axis, a variant found in tall, slender individuals"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Option C is correct: a QRS axis of +130 degrees represents right axis deviation.</strong> The normal QRS axis range is −30 to +105 degrees. An axis of +130 degrees exceeds the upper boundary of normal, placing it in the right axis deviation territory. Slide 13 explicitly labels +130 degrees as \"(right axis deviation)\" in its four-example table. The professor teaches this classification system with four examples: 0° and +90° are both normal; +130° is right axis deviation; −60° is left axis deviation.<br><strong>Option A</strong> is incorrect: the correct normal range is −30 to +105 degrees, not 0 to +90; +130 degrees exceeds the upper boundary of even a wider estimate of normal.<br><strong>Option B</strong> is incorrect: left axis deviation is defined by an axis more negative than −30 degrees; +130 degrees moves in the opposite direction, toward the right.<br><strong>Option D</strong> is incorrect: \"normal superior axis\" is not a classification taught in this lecture; the categories presented are normal axis, left axis deviation, and right axis deviation, with specific degree thresholds provided.<br>Slide 13 · Transcript 28:42<br><img src=\"quizzes/media/cardio-w02-lec12-slide13.jpg\" alt=\"Slide 13\">",
+      "citation": "Slide 13 · Transcript 28:42",
+      "source_fingerprints": ["01_slides.pdf:p13", "transcript.vtt:t28:42"]
+    },
+    {
+      "qid": "lec12-q10",
+      "facts": ["Lec12-F009"],
+      "text": "A 45-year-old woman with hypertension has an ECG obtained at a cardiology visit. Her physician states that the normal QRS axis range for adults is −30 to +105 degrees, and her measured axis is −60 degrees. Her axis is best described as which of the following?",
+      "options": [
+        "Left axis deviation, as −60 degrees lies 30 degrees past the lower limit of normal",
+        "Normal, since the value is negative and therefore falls left of center in the physiologic range",
+        "Right axis deviation, as the axis is directed away from the +90-degree reference point",
+        "Normal, since the unsigned magnitude of 60 degrees is physiologically acceptable"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Option A is correct: a measured axis of −60 degrees is left axis deviation.</strong> The professor specifies the normal range as −30 to +105 degrees. At −60 degrees, the axis sits 30 degrees below the lower boundary of normal, placing it in left axis deviation territory. Slide 13 labels −60 degrees explicitly as \"(left axis deviation)\" in its four-example table.<br><strong>Option B</strong> is incorrect: being a negative number does not make an axis normal; the lower boundary of normal is −30 degrees, not zero; −60 degrees falls outside that boundary even though it is a negative value.<br><strong>Option C</strong> is incorrect: left and right axis deviation are determined by position relative to the −30 to +105 range, not by proximity to +90 degrees; −60 degrees is leftward of normal, placing it in left — not right — deviation.<br><strong>Option D</strong> is incorrect: the classification system uses the signed degree value; +60 degrees would be within normal limits, but −60 degrees is a distinct axis position representing leftward deviation beyond the −30-degree boundary.<br>Slide 13 · Transcript 28:42<br><img src=\"quizzes/media/cardio-w02-lec12-slide13.jpg\" alt=\"Slide 13\">",
+      "citation": "Slide 13 · Transcript 28:42",
+      "source_fingerprints": ["01_slides.pdf:p13", "transcript.vtt:t28:42"]
+    },
+    {
+      "qid": "lec12-q11",
+      "facts": ["Lec12-F010"],
+      "text": "Sotalol, a class III antiarrhythmic agent, exerts its primary electrophysiologic effect by blocking cardiac potassium channels. Which description best explains how this mechanism prolongs the action potential in ventricular myocytes?",
+      "options": [
+        "Reduced potassium influx during phase 0 slows the initial depolarization upstroke",
+        "Blocked potassium channels during phase 2 suppress the inward calcium plateau current",
+        "Enhanced sodium entry during phase 1 counters early repolarization of the action potential",
+        "Reduced outward potassium efflux during phase 3 delays final membrane repolarization"
+      ],
+      "correct": 3,
+      "explanation": "<strong>Option D is correct: sotalol blocks potassium channels and reduces the outward K+ efflux that drives phase 3, thereby delaying final repolarization and prolonging the action potential.</strong> Phase 3 is the phase of rapid, final repolarization, driven primarily by delayed rectifier potassium channels that allow K+ to flow outward and restore the negative resting potential. By blocking these channels, sotalol reduces the outward K+ current and slows the repolarization rate. The professor confirms this directly: \"phase three is part of the repolarization...amiodarone and sotalol kind of prolong this phase here.\"<br><strong>Option A</strong> is incorrect: phase 0 upstroke is driven by fast sodium influx, not potassium; blocking potassium channels does not affect phase 0, which is governed by sodium channel kinetics.<br><strong>Option B</strong> is incorrect: potassium channel blockade does not suppress inward calcium current; the phase 2 plateau is maintained by calcium influx through L-type channels, a separate current unaffected by K+ channel blockade.<br><strong>Option C</strong> is incorrect: enhanced sodium entry is not a mechanism of sotalol; sotalol's action is K+ channel blockade, and the lecture identifies phase 3 — not phase 1 — as the prolonged phase.<br>Slide 14 · Transcript 30:43<br><img src=\"quizzes/media/cardio-w02-lec12-slide14.jpg\" alt=\"Slide 14\">",
+      "citation": "Slide 14 · Transcript 30:43",
+      "source_fingerprints": ["01_slides.pdf:p14", "transcript.vtt:t30:43"]
+    },
+    {
+      "qid": "lec12-q12",
+      "facts": ["Lec12-F011"],
+      "text": "A 65-year-old man with recurrent ventricular tachycardia is started on sotalol. A baseline ECG is obtained, and a repeat ECG is recorded 4 hours after drug initiation. Which of the following changes most directly reflects sotalol's class III mechanism?",
+      "options": [
+        "PR interval increases from 160 ms to 215 ms (normal 120–200 ms)",
+        "QT interval lengthens from 400 ms to 520 ms (normal 350–450 ms)",
+        "QRS duration widens from 90 ms to 140 ms (normal <120 ms)",
+        "PP interval shortens from 900 ms to 680 ms"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Option B is correct: sotalol's class III potassium channel blockade prolongs phase 3 repolarization, which manifests on the surface ECG as lengthening of the QT interval.</strong> The QT interval measures the time from the onset of ventricular depolarization to the end of ventricular repolarization. By slowing phase 3, sotalol extends the time the ventricles take to fully repolarize, directly stretching the QT. The professor states: \"class 3 medications, they prolong phase 3 and they lead to a delayed repolarization, which prolongs the QT.\" Slide 15 confirms the QT interval as the correct answer.<br><strong>Option A</strong> is incorrect: class III drugs act on phase 3 ventricular repolarization, as taught on slides 14–15; the PR interval reflects AV conduction, which is not what K+ channel blockade changes as taught in this lecture.<br><strong>Option C</strong> is incorrect: QRS duration reflects ventricular depolarization speed; sotalol's K+ channel blockade targets repolarization (phase 3), not depolarization — the lecture teaches K+ blockade → delayed phase 3 → prolonged QT, not QRS widening.<br><strong>Option D</strong> is incorrect: the class III mechanism taught in this lecture produces QT prolongation from delayed repolarization (slide 15); the lecture does not teach K+ channel blockade as causing a PP-interval change.<br>Slide 15 · Transcript 32:24<br><img src=\"quizzes/media/cardio-w02-lec12-slide15.jpg\" alt=\"Slide 15\">",
+      "citation": "Slide 15 · Transcript 32:24",
+      "source_fingerprints": ["01_slides.pdf:p15", "transcript.vtt:t32:24"]
+    },
+    {
+      "qid": "lec12-q13",
+      "facts": ["Lec12-F012"],
+      "text": "A patient who has been on sotalol for 6 weeks is found to have a QT interval of 530 ms (normal <450 ms). Her cardiologist explains she is now at elevated risk for a specific arrhythmia mechanism. Which mechanism is most directly responsible for this risk?",
+      "options": [
+        "Triggered activity via early afterdepolarizations during the prolonged phase 3 repolarization",
+        "Enhanced automaticity of SA node pacemaker cells from unopposed sympathetic drive",
+        "Triggered activity via delayed afterdepolarizations occurring after complete repolarization",
+        "Macroscopic re-entry through a second accessory pathway between atria and ventricles"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Option A is correct: QT prolongation from class III antiarrhythmic drugs creates the highest risk of triggered activity via early afterdepolarizations (EADs).</strong> When phase 3 repolarization is delayed, the prolonged action potential creates a vulnerable window during which partially recovered inward currents can re-depolarize the cell before it fully repolarizes. These premature oscillations during phase 3 are EADs. If an EAD reaches threshold it triggers an action potential independent of pacemaker automaticity — the definition of triggered activity. The professor confirms: \"the answer is B, early after depolarization...increases the chance of arrhythmias caused by early after depolarization.\" Slide 16 identifies EADs as the correct mechanism from its four choices.<br><strong>Option B</strong> is incorrect: this describes enhanced SA-node automaticity; sotalol's mechanism as taught here is K+ channel blockade causing delayed ventricular repolarization — the risk on slide 16 arises from the prolonged phase-3 window in ventricular myocytes, not from SA-node activity.<br><strong>Option C</strong> is incorrect: delayed afterdepolarizations (DADs) occur after complete repolarization; the mechanism here is EADs arising during the prolonged phase 3, which is a distinct and earlier event in the action potential than DADs.<br><strong>Option D</strong> is incorrect: macroscopic re-entry requires two conduction pathways with differential refractoriness; QT prolongation from K+ channel blockade does not create an accessory pathway and does not directly enable macroscopic re-entry circuits.<br>Slide 16 · Transcript 34:09<br><img src=\"quizzes/media/cardio-w02-lec12-slide16.jpg\" alt=\"Slide 16\">",
+      "citation": "Slide 16 · Transcript 34:09",
+      "source_fingerprints": ["01_slides.pdf:p16", "transcript.vtt:t34:09"]
+    },
+    {
+      "qid": "lec12-q14",
+      "facts": ["Lec12-F012"],
+      "text": "A 70-year-old man on long-term sotalol therapy arrives in the emergency department with repeated syncopal episodes. His ECG shows a polymorphic ventricular tachycardia with a twisting QRS axis around the isoelectric line. Which of the following best accounts for this arrhythmia?",
+      "options": [
+        "Accelerated junctional rhythm from enhanced AV nodal automaticity",
+        "Monomorphic ventricular tachycardia from a re-entrant circuit in post-infarct scar",
+        "Atrial fibrillation conducting rapidly via an accessory atrioventricular pathway",
+        "Torsades de pointes, a polymorphic ventricular tachycardia arising from early afterdepolarizations during QT prolongation"
+      ],
+      "correct": 3,
+      "explanation": "<strong>Option D is correct: this presentation is torsades de pointes (TdP), a polymorphic ventricular tachycardia triggered by early afterdepolarizations in the setting of sotalol-induced QT prolongation.</strong> The causal chain is: sotalol K+ channel blockade → prolonged phase 3 → prolonged QT → EADs arise during the vulnerable window → EADs reach threshold and trigger aberrant depolarizations → self-sustaining polymorphic VT with the characteristic twisting QRS axis around the isoelectric baseline. Slide 16 shows a torsades tracing as the direct downstream consequence of this mechanism.<br><strong>Option A</strong> is incorrect: junctional rhythm arises from the AV junction as a subsidiary pacemaker, producing a narrow-complex regular rhythm — incompatible with the wide-complex polymorphic tachycardia in the stem; the lecture does not attribute the spinning-QRS pattern shown on slide 16 to junctional pacemakers.<br><strong>Option B</strong> is incorrect: monomorphic ventricular tachycardia has a fixed, repeating QRS morphology each beat; the twisting polymorphic axis is the hallmark of torsades, distinguishing it from typical monomorphic VT.<br><strong>Option C</strong> is incorrect: the history here is sotalol-induced QT prolongation leading to EADs, not a bypass-tract-mediated arrhythmia; the regular twisting-axis pattern is characteristic of torsades arising from the EAD mechanism taught on slide 16.<br>Slide 16 · Transcript 34:09<br><img src=\"quizzes/media/cardio-w02-lec12-slide16.jpg\" alt=\"Slide 16\">",
+      "citation": "Slide 16 · Transcript 34:09",
+      "source_fingerprints": ["01_slides.pdf:p16", "transcript.vtt:t34:09"]
+    },
+    {
+      "qid": "lec12-q15",
+      "facts": ["Lec12-F013"],
+      "text": "A student reviews the mechanisms of common arrhythmias. Which of the following arrhythmias arises by a mechanism other than a macroscopic re-entrant circuit?",
+      "options": [
+        "Atrioventricular nodal re-entrant tachycardia (AVNRT)",
+        "Atrial flutter",
+        "Atrial fibrillation",
+        "Ventricular tachycardia (VT)"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Option C is correct: atrial fibrillation does not arise from a macroscopic re-entrant circuit.</strong> Slide 17 presents AVNRT, AVRT, atrial flutter, and VT as arrhythmias that result from macroscopic re-entry, and explicitly excludes atrial fibrillation and accelerated idioventricular rhythm from that list. The professor states directly: \"AFib is not a re-entrance circuit.\" Atrial fibrillation involves chaotic, rapidly shifting activation patterns throughout the atria that are fundamentally different from a single organized macroscopic re-entrant loop.<br><strong>Option A</strong> is incorrect: AVNRT is a classic macroscopic re-entrant circuit using the slow and fast pathways within or adjacent to the AV node as its two circuit limbs; slide 17 includes it among the re-entrant arrhythmias.<br><strong>Option B</strong> is incorrect: atrial flutter is driven by a macroscopic re-entrant circuit in the right atrium (typically circling the tricuspid annulus), generating the characteristic regular sawtooth flutter waves; slide 17 includes it among the re-entrant arrhythmias.<br><strong>Option D</strong> is incorrect: ventricular tachycardia commonly results from a macroscopic re-entrant circuit, often within or bordering scar tissue in the ventricular myocardium; slide 17 includes VT among the re-entrant arrhythmias.<br>Slide 17 · Transcript 37:54<br><img src=\"quizzes/media/cardio-w02-lec12-slide17.jpg\" alt=\"Slide 17\">",
+      "citation": "Slide 17 · Transcript 37:54",
+      "source_fingerprints": ["01_slides.pdf:p17", "transcript.vtt:t37:54"]
+    },
+    {
+      "qid": "lec12-q16",
+      "facts": ["Lec12-F013", "Lec12-F014"],
+      "text": "In a structurally normal heart, exactly one electrically conducting pathway connects the atria to the ventricles. A 28-year-old man is found to have an additional accessory conduction pathway between his left atrium and left ventricle. What arrhythmia mechanism does this additional pathway most directly enable?",
+      "options": [
+        "Enhanced automaticity of non-pacemaker ventricular cells, producing frequent PVCs",
+        "Macroscopic re-entrant tachycardia using the accessory pathway and AV node as the two circuit limbs",
+        "Triggered activity via early afterdepolarizations from prolonged phase 3 repolarization",
+        "Abnormal automaticity of atrial myocytes, producing an ectopic atrial rhythm"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Option B is correct: an accessory pathway creates the second conduction limb needed for a macroscopic re-entrant circuit, enabling atrioventricular reciprocating tachycardia (AVRT).</strong> The normal heart has exactly one AV conduction pathway — the AV node and His bundle. A re-entrant circuit requires two pathways with different conduction velocities or refractory periods. When an accessory pathway (bypass tract) is present, it and the AV node-His axis form the two limbs of a macroscopic loop. An impulse can travel antegrade down one path and retrograde up the other, sustaining a circulating tachycardia. The professor explains: \"usually there's 1 area of connection that's the AV node, and if there's more than one that predisposes you to a bypass...a re-entrance circuit.\" Slide 17 lists AVRT among the macroscopic re-entrant arrhythmias.<br><strong>Option A</strong> is incorrect: an accessory AV pathway does not produce enhanced ventricular automaticity; PVCs arise from abnormal automaticity of non-pacemaker ventricular myocytes, an independent mechanism unrelated to the number of AV conduction routes.<br><strong>Option C</strong> is incorrect: EADs result from prolonged phase 3 repolarization due to potassium channel blockade (as with class III drugs); the presence of an extra AV conduction pathway does not cause phase 3 prolongation or EADs.<br><strong>Option D</strong> is incorrect: ectopic atrial rhythms arise from abnormal atrial myocyte automaticity, not from the number of AV conduction pathways; an accessory pathway affects AV conduction and re-entry potential, not atrial pacemaker activity.<br>Slide 17 · Slide 18 · Transcript 44:22<br><img src=\"quizzes/media/cardio-w02-lec12-slide17.jpg\" alt=\"Slide 17\"><img src=\"quizzes/media/cardio-w02-lec12-slide18.jpg\" alt=\"Slide 18\">",
+      "citation": "Slide 17 · Slide 18 · Transcript 44:22",
+      "source_fingerprints": ["01_slides.pdf:p17", "01_slides.pdf:p18", "transcript.vtt:t44:22"]
+    }
+  ]
+}

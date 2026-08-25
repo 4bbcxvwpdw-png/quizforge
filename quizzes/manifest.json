@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-08-25T02:33:45.000Z",
+ "generated": "2026-08-25T11:30:32.000Z",
  "sections": [
   {
    "id": "week-01",
@@ -8,64 +8,64 @@
    "quizzes": [
     {
      "id": "cardio-w01-labembryo",
-     "title": "LAB \u2014 Embryology of the Cardiovascular System",
-     "subtitle": "Week 01 \u00b7 LAB \u00b7 Embryology | 20 questions",
+     "title": "LAB — Embryology of the Cardiovascular System",
+     "subtitle": "Week 01 · LAB · Embryology | 20 questions",
      "file": "quizzes/Week01/cardio-w01-labembryo.r1.json",
      "revision": 1,
      "question_count": 20
     },
     {
      "id": "cardio-w01-labhisto",
-     "title": "LAB \u2014 Histology of the Cardiovascular System",
-     "subtitle": "Week 01 \u00b7 LAB \u00b7 Histology | 20 questions",
+     "title": "LAB — Histology of the Cardiovascular System",
+     "subtitle": "Week 01 · LAB · Histology | 20 questions",
      "file": "quizzes/Week01/cardio-w01-labhisto.r1.json",
      "revision": 1,
      "question_count": 20
     },
     {
      "id": "cardio-w01-lec01",
-     "title": "Lec 01 \u2014 Anatomy of the Heart",
-     "subtitle": "Week 01 \u00b7 Lec 01 \u00b7 Anatomy of the Heart | 20 questions",
+     "title": "Lec 01 — Anatomy of the Heart",
+     "subtitle": "Week 01 · Lec 01 · Anatomy of the Heart | 20 questions",
      "file": "quizzes/Week01/cardio-w01-lec01.r2.json",
      "revision": 2,
      "question_count": 20
     },
     {
      "id": "cardio-w01-lec02",
-     "title": "Lec 02 \u2014 Cardiac Contraction",
-     "subtitle": "Week 01 \u00b7 Lec 02 \u00b7 Cardiac Contraction | 20 questions",
+     "title": "Lec 02 — Cardiac Contraction",
+     "subtitle": "Week 01 · Lec 02 · Cardiac Contraction | 20 questions",
      "file": "quizzes/Week01/cardio-w01-lec02.r1.json",
      "revision": 1,
      "question_count": 20
     },
     {
      "id": "cardio-w01-lec03",
-     "title": "Lec 03 \u2014 Cardiac Function",
-     "subtitle": "Week 01 \u00b7 Lec 03 \u00b7 Cardiac Function | 20 questions",
+     "title": "Lec 03 — Cardiac Function",
+     "subtitle": "Week 01 · Lec 03 · Cardiac Function | 20 questions",
      "file": "quizzes/Week01/cardio-w01-lec03.r1.json",
      "revision": 1,
      "question_count": 20
     },
     {
      "id": "cardio-w01-lec04",
-     "title": "Lec 04 \u2014 Hemodynamics",
-     "subtitle": "Week 01 \u00b7 Lec 04 \u00b7 Hemodynamics | 20 questions",
+     "title": "Lec 04 — Hemodynamics",
+     "subtitle": "Week 01 · Lec 04 · Hemodynamics | 20 questions",
      "file": "quizzes/Week01/cardio-w01-lec04.r1.json",
      "revision": 1,
      "question_count": 20
     },
     {
      "id": "cardio-w01-lec05",
-     "title": "Lec 05 \u2014 Mitral Valve Disease",
-     "subtitle": "Week 01 \u00b7 Lec 05 \u00b7 Mitral Valve Disease | 19 questions",
+     "title": "Lec 05 — Mitral Valve Disease",
+     "subtitle": "Week 01 · Lec 05 · Mitral Valve Disease | 19 questions",
      "file": "quizzes/Week01/cardio-w01-lec05.r1.json",
      "revision": 1,
      "question_count": 19
     },
     {
      "id": "cardio-w01-lec06",
-     "title": "Lec 06 \u2014 Aortic Valve Disease",
-     "subtitle": "Week 01 \u00b7 Lec 06 \u00b7 Aortic Valve Disease | 20 questions",
+     "title": "Lec 06 — Aortic Valve Disease",
+     "subtitle": "Week 01 · Lec 06 · Aortic Valve Disease | 20 questions",
      "file": "quizzes/Week01/cardio-w01-lec06.r1.json",
      "revision": 1,
      "question_count": 20
@@ -78,35 +78,43 @@
    "quizzes": [
     {
      "id": "cardio-w02-labecg",
-     "title": "LAB \u2014 ECG Interactive Session",
-     "subtitle": "Week 02 \u00b7 LAB \u00b7 ECG Interactive Session | 18 questions",
+     "title": "LAB — ECG Interactive Session",
+     "subtitle": "Week 02 · LAB · ECG Interactive Session | 18 questions",
      "file": "quizzes/Week02/cardio-w02-labecg.r1.json",
      "revision": 1,
      "question_count": 18
     },
     {
      "id": "cardio-w02-lec07",
-     "title": "Lec 07 \u2014 Cardiac Cellular Electrophysiology",
-     "subtitle": "Week 02 \u00b7 Lec 07 \u00b7 Cardiac Cellular Electrophysiology | 18 questions",
+     "title": "Lec 07 — Cardiac Cellular Electrophysiology",
+     "subtitle": "Week 02 · Lec 07 · Cardiac Cellular Electrophysiology | 18 questions",
      "file": "quizzes/Week02/cardio-w02-lec07.r1.json",
      "revision": 1,
      "question_count": 18
     },
     {
      "id": "cardio-w02-lec08",
-     "title": "Lec 08 \u2014 Cardiac Conduction",
-     "subtitle": "Week 02 \u00b7 Lec 08 \u00b7 Cardiac Conduction | 21 questions",
+     "title": "Lec 08 — Cardiac Conduction",
+     "subtitle": "Week 02 · Lec 08 · Cardiac Conduction | 21 questions",
      "file": "quizzes/Week02/cardio-w02-lec08.r2.json",
      "revision": 2,
      "question_count": 21
     },
     {
      "id": "cardio-w02-lec11",
-     "title": "Lec 11 \u2014 Pharmacology of Cardiac Rhythm",
-     "subtitle": "Week 02 \u00b7 Lec 11 \u00b7 Pharmacology of Cardiac Rhythm | 20 questions",
+     "title": "Lec 11 — Pharmacology of Cardiac Rhythm",
+     "subtitle": "Week 02 · Lec 11 · Pharmacology of Cardiac Rhythm | 20 questions",
      "file": "quizzes/Week02/cardio-w02-lec11.r1.json",
      "revision": 1,
      "question_count": 20
+    },
+    {
+     "id": "cardio-w02-lec12",
+     "title": "Lec 12 — ECG Review",
+     "subtitle": "Week 02 · Lec 12 · ECG Review | 16 questions",
+     "file": "quizzes/Week02/cardio-w02-lec12.r1.json",
+     "revision": 1,
+     "question_count": 16
     }
    ]
   },
