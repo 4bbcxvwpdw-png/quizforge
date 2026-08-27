@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-08-27T17:55:00.000Z",
+ "generated": "2026-08-27T20:01:56.000Z",
  "sections": [
   {
    "id": "week-01",
@@ -122,6 +122,14 @@
    "id": "week-03",
    "name": "Week 03",
    "quizzes": [
+    {
+     "id": "cardio-w03-lec13",
+     "title": "Lec 13 — Epidemiology and Risk Factors for Coronary Disease",
+     "subtitle": "Week 03 · Lec 13 · Epidemiology & Risk Factors | 20 questions",
+     "file": "quizzes/Week03/cardio-w03-lec13.r1.json",
+     "revision": 1,
+     "question_count": 20
+    },
     {
      "id": "cardio-w03-lec14",
      "title": "Lec 14 — Atherosclerosis",

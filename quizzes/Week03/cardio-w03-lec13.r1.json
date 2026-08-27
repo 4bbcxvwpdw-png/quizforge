@@ -1,0 +1,356 @@
+{
+ "schema_version": 1,
+ "id": "cardio-w03-lec13",
+ "revision": 1,
+ "question_count": 20,
+ "title": "Lec 13 — Epidemiology and Risk Factors for Coronary Disease",
+ "subtitle": "Week 03 · Lec 13 · Epidemiology and Risk Factors for Coronary Disease | 20 questions",
+ "source_fingerprints": {
+  "Lec13_FactInventory.md": "ccc3661e654d21ac71797a958a90396d532600baf297aef1873842290e967e26",
+  "quiz_selection.tsv": "13e1106fa1d18ba661725f6953e319f5b46bdeb98954b692b23e200e238f4bd1",
+  "01_slides.txt": "7d4e598041eac13a08236c33176960ac78464d0ac2f3ab410d61179b4fbab7d7",
+  "transcript.vtt": "9be7eda0583941039ca2b3ecdb63b48cae0ab1d9728079ad05be3fb59ea56f2e"
+ },
+ "questions": [
+  {
+   "qid": "lec13-q01",
+   "text": "Which of the following disease categories is the leading cause of death in adults in the United States and worldwide?",
+   "options": [
+    "Cardiovascular disease",
+    "Infectious and parasitic disease",
+    "Malignant neoplasms",
+    "Chronic lower respiratory disease",
+    "Diabetes mellitus and its complications"
+   ],
+   "correct": 0,
+   "explanation": "<strong>Cardiovascular disease is the leading killer of adults in the United States and worldwide.</strong> Despite advances in revascularization (CABG since 1969, balloon angioplasty and stenting thereafter) and risk-factor-based prevention, heart disease accounts for more deaths than any other chronic disease category. When stroke is included, atherosclerotic cardiovascular disease rises even higher as a cause of mortality. Cardiovascular conditions are also the leading cause of hospital stays — heart failure, acute MI, and arrhythmias collectively dominate inpatient burden.<br><strong>Option B</strong> is incorrect: infectious disease was the predominant cause of death historically and in lower-income settings, but cardiovascular disease has overtaken it as the leading cause of chronic-disease mortality globally.<br><strong>Option C</strong> is incorrect: malignant neoplasms are a major cause of death but rank below cardiovascular disease overall in adults in the United States and worldwide.<br><strong>Option D</strong> is incorrect: chronic lower respiratory disease is a significant cause of mortality but does not surpass cardiovascular disease.<br><strong>Option E</strong> is incorrect: diabetes is a major cardiovascular risk factor and cause of morbidity, but it is not the leading cause of death independently.<br>Slide 52<br><img src=\"quizzes/media/cardio-w03-lec13-slide52.jpg\" alt=\"Slide 52\">",
+   "citation": "Slide 52",
+   "facts": [
+    "Lec13-F001"
+   ]
+  },
+  {
+   "qid": "lec13-q02",
+   "text": "Which of the following best describes the primary contribution of the Framingham Heart Study, initiated in 1948?",
+   "options": [
+    "It was the first randomized controlled trial demonstrating that statin therapy reduces myocardial infarction risk",
+    "It established that surgical coronary revascularization could prevent cardiovascular death in high-risk patients",
+    "It was a landmark longitudinal cohort study that identified and established the concept of cardiovascular risk factors",
+    "It demonstrated that hypertension responds better to beta-blocker therapy than to thiazide diuretics",
+    "It proved that raising HDL-cholesterol with pharmacotherapy reduces coronary events"
+   ],
+   "correct": 2,
+   "explanation": "<strong>The Framingham Heart Study, begun in 1948, was a landmark longitudinal cohort study that established the modern concept of cardiovascular risk factors.</strong> Before this study, the causes of coronary artery disease were poorly understood — smoking was socially acceptable, and no systematic framework existed for identifying who was at risk. By following thousands of patients over time, investigators identified a core set of risk factors: age, sex, hypertension, hyperlipidemia, smoking, diabetes, family history, and obesity. This risk-factor framework has since expanded and now guides all contemporary cardiovascular prevention guidelines.<br><strong>Option A</strong> is incorrect: statin randomized trials came decades later; the Framingham study was observational, not an RCT, and predates statins.<br><strong>Option B</strong> is incorrect: CABG was first performed in 1969 by Dr. Favaloro, well after the Framingham study's inception, and was not what the Framingham study established.<br><strong>Option D</strong> is incorrect: comparative drug-class trials for hypertension were a separate line of research; the Framingham study identified risk factors, not optimal drug therapy.<br><strong>Option E</strong> is incorrect: the Framingham study did find an association between HDL and lower heart disease risk, but subsequent trials showed that pharmacologically raising HDL did not reduce cardiovascular events — a correlation, not causation. This is the opposite of what the Framingham study claimed to prove.<br>Slide 10<br><img src=\"quizzes/media/cardio-w03-lec13-slide10.jpg\" alt=\"Slide 10\">",
+   "citation": "Slide 10",
+   "facts": [
+    "Lec13-F002"
+   ]
+  },
+  {
+   "qid": "lec13-q03",
+   "text": "A second-year medical student is reviewing the list of major cardiovascular risk factors from current guidelines. Which of the following is correctly identified as an established major independent cardiovascular risk factor?",
+   "options": [
+    "HDL cholesterol of 72 mg/dL",
+    "Body mass index of 23 kg/m²",
+    "Fasting glucose of 85 mg/dL",
+    "Physical inactivity",
+    "Resting heart rate of 62 beats/min"
+   ],
+   "correct": 3,
+   "explanation": "<strong>Physical inactivity is an established major cardiovascular risk factor listed on the ACC/AHA risk factor slide reviewed in this lecture.</strong> The risk factor framework, developed from the Framingham Heart Study and refined over decades, includes hypertension, diabetes mellitus, elevated LDL (or total) cholesterol, low HDL cholesterol, obesity (BMI ≥30 kg/m²), tobacco use (particularly cigarettes), and physical inactivity. Reducing any of these risk factors directly reduces cardiovascular event rates.<br><strong>Option A</strong> is incorrect: an HDL of 72 mg/dL is elevated, which is associated with protection against cardiovascular disease. The risk factor is <em>low</em> HDL cholesterol, not high HDL.<br><strong>Option B</strong> is incorrect: a BMI of 23 kg/m² is within the normal range. Obesity is defined as BMI ≥30 kg/m² and is the risk factor listed; a BMI of 23 is not one.<br><strong>Option C</strong> is incorrect: a fasting glucose of 85 mg/dL is normal. Diabetes mellitus — not a normal fasting glucose — is a major cardiovascular risk factor.<br><strong>Option E</strong> is incorrect: resting heart rate is not listed as an independent major cardiovascular risk factor in this lecture; it is not part of the established risk-factor framework reviewed.<br>Slide 11<br><img src=\"quizzes/media/cardio-w03-lec13-slide11.jpg\" alt=\"Slide 11\">",
+   "citation": "Slide 11",
+   "facts": [
+    "Lec13-F003"
+   ]
+  },
+  {
+   "qid": "lec13-q04",
+   "text": "A 52-year-old man has a blood pressure of 155/95 mm Hg on repeated measurements. Based on the dose–response relationship between blood pressure and cardiovascular mortality risk established in the epidemiologic data reviewed in this lecture, how does his relative risk of cardiovascular mortality compare to that of someone with a blood pressure of 115/75 mm Hg?",
+   "options": [
+    "Approximately 1.5-fold higher",
+    "Approximately 4-fold higher",
+    "Approximately 2-fold higher",
+    "Approximately 8-fold higher",
+    "Approximately equal, since the risk-doubling relationship applies only above Stage 2 hypertension thresholds"
+   ],
+   "correct": 1,
+   "explanation": "<strong>At 155/95 mm Hg, this patient's relative cardiovascular mortality risk is approximately 4-fold higher than someone at 115/75 mm Hg.</strong> The epidemiologic relationship is straightforward: cardiovascular mortality risk doubles with each 20/10 mm Hg stepwise increase in blood pressure. From 115/75 to 155/95 represents exactly two increments of 20 mmHg systolic / 10 mmHg diastolic. Doubling twice yields a 4-fold (×4) increase in relative risk. This log-linear relationship was established in a study of approximately one million individuals aged 40–69 years and forms the scientific basis for aggressive blood-pressure control even at intermediate levels.<br><strong>Option A</strong> is incorrect: a 1.5-fold increase does not match the doubling-per-increment rule; no fractional increment is described in the dose–response relationship from this slide.<br><strong>Option C</strong> is incorrect: a 2-fold increase corresponds to a single increment (e.g., 115/75 to 135/85), not two increments.<br><strong>Option D</strong> is incorrect: an 8-fold increase corresponds to three increments (e.g., from 115/75 to 175/105 mm Hg), which would place this patient at 175/105 — not 155/95.<br><strong>Option E</strong> is incorrect: the log-linear relationship begins at physiologically normal blood pressures; the slide explicitly shows the dose–response curve starting at 115/75 mm Hg, well below Stage 1 thresholds.<br>Slide 12<br><img src=\"quizzes/media/cardio-w03-lec13-slide12.jpg\" alt=\"Slide 12\">",
+   "citation": "Slide 12",
+   "facts": [
+    "Lec13-F004"
+   ]
+  },
+  {
+   "qid": "lec13-q05",
+   "text": "According to 2025 AHA/ACC hypertension guidelines, a blood pressure of 134/86 mm Hg measured on two separate clinic visits is classified as which of the following?",
+   "options": [
+    "Normal blood pressure",
+    "Elevated blood pressure",
+    "Stage 1 hypertension",
+    "Stage 2 hypertension",
+    "Hypertensive crisis"
+   ],
+   "correct": 2,
+   "explanation": "<strong>A blood pressure of 134/86 mm Hg falls within Stage 1 hypertension, defined by 2025 AHA/ACC guidelines as 130–139 mm Hg systolic or 80–89 mm Hg diastolic.</strong> The 2025 guidelines define four BP categories: Normal (&lt;120/80 mm Hg), Elevated (120–129/80 mm Hg), Stage 1 hypertension (130–139/80–89 mm Hg), and Stage 2 hypertension (&gt;140/90 mm Hg). A reading of 134/86 meets the systolic criterion for Stage 1 and the diastolic criterion for Stage 1, placing it squarely in that category. Risk increases in a linear fashion across these stages.<br><strong>Option A</strong> is incorrect: normal blood pressure is defined as &lt;120/80 mm Hg; 134/86 mm Hg exceeds both thresholds.<br><strong>Option B</strong> is incorrect: elevated blood pressure is defined as systolic 120–129 mm Hg with diastolic &lt;80 mm Hg; this patient's diastolic of 86 mm Hg places him beyond the elevated category.<br><strong>Option D</strong> is incorrect: Stage 2 hypertension requires systolic ≥140 mm Hg or diastolic ≥90 mm Hg; 134/86 does not reach either threshold.<br><strong>Option E</strong> is incorrect: hypertensive crisis is not one of the four 2025 AHA/ACC BP categories, and a reading of 134/86 mm Hg does not approach crisis-level values by any standard. The 2025 guidelines also dropped &quot;hypertensive urgency&quot; as a formal category; the four recognized categories are Normal, Elevated, Stage 1, and Stage 2 hypertension.<br>Slide 16<br><img src=\"quizzes/media/cardio-w03-lec13-slide16.jpg\" alt=\"Slide 16\">",
+   "citation": "Slide 16",
+   "facts": [
+    "Lec13-F005"
+   ]
+  },
+  {
+   "qid": "lec13-q06",
+   "text": "A 75-year-old woman with newly diagnosed Stage 1 hypertension is started on antihypertensive pharmacotherapy. According to 2025 AHA/ACC guidelines reviewed in this lecture, what is the recommended blood pressure treatment target for all patients on antihypertensive therapy?",
+   "options": [
+    "Less than 130/80 mm Hg",
+    "Less than 140/90 mm Hg",
+    "Less than 120/80 mm Hg, to be achieved with pharmacotherapy",
+    "Less than 150/90 mm Hg in patients older than 65 years",
+    "Less than 160/100 mm Hg, to minimize fall risk in elderly patients"
+   ],
+   "correct": 0,
+   "explanation": "<strong>The 2025 AHA/ACC guidelines set a blood pressure treatment target of less than 130/80 mm Hg for all patients on antihypertensive therapy, including elderly patients.</strong> A previous exception — in which older patients were allowed higher blood pressure targets on the assumption that high pressure was needed to perfuse the brain — is no longer accepted. Evidence confirms that treating to &lt;130/80 mm Hg reduces stroke and myocardial infarction even in elderly patients. When a patient presents with a blood pressure already near 130/80 mm Hg, the additional goal of reaching 120/80 mm Hg should be pursued with lifestyle modification, not by pushing medications further and risking hypotension.<br><strong>Option B</strong> is incorrect: 140/90 mm Hg was the controlled blood pressure threshold before 2017, but the 2017 and 2025 guidelines revised the target downward to 130/80 mm Hg for all patients.<br><strong>Option C</strong> is incorrect: while 120/80 mm Hg is an aspirational lifestyle goal for patients near Stage 1 thresholds, pharmacotherapy targets 130/80 mm Hg — pushing medications to achieve 120/80 mm Hg risks hypotension, particularly in elderly patients.<br><strong>Option D</strong> is incorrect: the 2025 guidelines explicitly removed the elderly exception; 130/80 mm Hg is the target regardless of age.<br><strong>Option E</strong> is incorrect: 160/100 mm Hg falls within Stage 2 hypertension and is well above the recommended target; this permissive goal is not supported by the guidelines reviewed in this lecture.<br>Slide 17<br><img src=\"quizzes/media/cardio-w03-lec13-slide17.jpg\" alt=\"Slide 17\">",
+   "citation": "Slide 17",
+   "facts": [
+    "Lec13-F006"
+   ]
+  },
+  {
+   "qid": "lec13-q07",
+   "text": "A 48-year-old man presents with a blood pressure of 156/98 mm Hg confirmed on three clinic visits over six weeks. He has no prior cardiac diagnoses and a 10-year ASCVD risk of 9.5% by the PREVENT calculator. According to 2025 AHA/ACC guidelines reviewed in this lecture, what is the preferred initial pharmacologic strategy for his blood pressure category?",
+   "options": [
+    "Monotherapy with a thiazide diuretic, re-evaluated after 8 weeks before adding a second agent",
+    "Monotherapy with a beta-blocker, as it is effective for Stage 2 hypertension",
+    "Lifestyle modification alone for 12 weeks before initiating pharmacotherapy",
+    "Simultaneous two-drug combination antihypertensive therapy",
+    "Emergency referral for intravenous antihypertensive therapy, since this blood pressure is a hypertensive emergency"
+   ],
+   "correct": 3,
+   "explanation": "<strong>For Stage 2 hypertension (blood pressure &gt;140/90 mm Hg), 2025 AHA/ACC guidelines recommend starting two antihypertensive drugs in combination simultaneously.</strong> The rationale is mechanistic: when a single drug is used, the body has compensatory pathways that can raise blood pressure through an alternative mechanism. Targeting two mechanisms at once is more efficient and achieves goal BP more reliably than sequential up-titration. At 156/98 mm Hg, this patient's blood pressure exceeds the Stage 2 threshold (≥140/90 mm Hg), qualifying him for dual initiation along with nonpharmacologic therapy. The target remains &lt;130/80 mm Hg for all patients.<br><strong>Option A</strong> is incorrect: monotherapy-then-add is appropriate for Stage 1, not Stage 2; the guidelines specifically call for two-drug combination initiation in Stage 2.<br><strong>Option B</strong> is incorrect: beta-blockers are not first-line antihypertensives unless the patient has a specific comorbidity — coronary artery disease or systolic heart failure — which this patient lacks.<br><strong>Option C</strong> is incorrect: lifestyle modification alone is reserved for Stage 1 with low ASCVD risk (&lt;7.5%); this patient has Stage 2 blood pressure AND an ASCVD risk above 7.5%, both of which indicate pharmacotherapy is required immediately alongside lifestyle changes.<br><strong>Option E</strong> is incorrect: a hypertensive emergency involves acutely elevated blood pressure with end-organ damage (encephalopathy, aortic dissection, hypertensive nephropathy). At 156/98 mm Hg without end-organ damage, this patient has Stage 2 hypertension requiring outpatient combination therapy, not intravenous intervention.<br>Slide 17 · Transcript 13:48<br><img src=\"quizzes/media/cardio-w03-lec13-slide17.jpg\" alt=\"Slide 17\">",
+   "citation": "Slide 17 · Transcript 13:48",
+   "facts": [
+    "Lec13-F007"
+   ]
+  },
+  {
+   "qid": "lec13-q08",
+   "text": "An epidemiologist presents data showing a log-linear relationship between LDL-cholesterol and coronary heart disease risk. According to this relationship, a patient whose LDL-C decreases from 160 mg/dL to 100 mg/dL would be expected to experience which of the following changes in relative CHD risk?",
+   "options": [
+    "Approximately 20% reduction",
+    "Approximately 40% reduction",
+    "Approximately 60% reduction",
+    "Approximately 90% reduction",
+    "No significant change, because the relationship only applies to LDL values above 190 mg/dL"
+   ],
+   "correct": 1,
+   "explanation": "<strong>A reduction in LDL-C from 160 to 100 mg/dL produces approximately a 40% reduction in relative CHD risk, as read directly from the log-linear graph on slide 20.</strong> The slide's graph shows RR ≈ 2.9 at LDL-C 160 mg/dL and RR ≈ 1.7 at LDL-C 100 mg/dL; (2.9 − 1.7) / 2.9 ≈ 41%, which rounds to ~40%. The underlying math is multiplicative, not additive: a log-linear relationship means each 30 mg/dL drop multiplies the remaining risk by roughly 1/1.30 (≈ ×0.77). Two such steps yield 0.77 × 0.77 ≈ 0.59 — a ~41% reduction in relative risk. The slide's own quoted rule (&quot;every 30 mg/dL change changes relative risk by about 30%&quot;) describes a proportional change on a log scale, not a simple additive subtraction of 30% per increment.<br><strong>Option A</strong> is incorrect: ~20% would correspond to approximately one multiplicative step of 0.77 applied to a starting risk near 1.0, which fits a ~30 mg/dL drop, not a 60 mg/dL one.<br><strong>Option C</strong> is incorrect: ~60% arises from the additive error of summing two 30%-per-increment steps linearly (30 + 30 = 60). Because the relationship is log-linear and multiplicative, each successive step reduces a smaller residual risk, so the total reduction is ~40%, not 60%. A ~90% reduction would require roughly nine multiplicative steps (0.77^9 ≈ 0.10) — an LDL-C drop of about 270 mg/dL — far beyond the 60 mg/dL change described, making this option implausible.77³ ≈ 0.46, or a ~54% reduction) or an even larger LDL drop well beyond 60 mg/dL.<br><strong>Option E</strong> is incorrect: the log-linear relationship presented on slide 20 begins at LDL-C 40 mg/dL and is continuous across the full physiologic range; no lower-bound threshold of 190 mg/dL is stated.<br>Slide 20<br><img src=\"quizzes/media/cardio-w03-lec13-slide20.jpg\" alt=\"Slide 20\">",
+   "citation": "Slide 20",
+   "facts": [
+    "Lec13-F008"
+   ]
+  },
+  {
+   "qid": "lec13-q09",
+   "text": "Which of the following correctly describes the structural organization of a lipoprotein particle?",
+   "options": [
+    "Apolipoproteins form the hydrophobic core, surrounded by an outer shell of triglycerides and free cholesterol",
+    "A core of free cholesterol and triglycerides, with phospholipids and cholesterol esters concentrated on the outer surface",
+    "The particle contains only free cholesterol and apolipoproteins, with no ester-bound or triglyceride lipids",
+    "A nonpolar lipid core of cholesterol esters and triglycerides, surrounded by a polar surface coat of phospholipids, free cholesterol, and apolipoproteins",
+    "Phospholipids fill the hydrophobic interior, with apolipoproteins and free cholesterol forming a polar shell"
+   ],
+   "correct": 3,
+   "explanation": "<strong>Lipoprotein particles have a nonpolar lipid core composed of cholesterol esters and triglycerides, surrounded by a polar surface coat of phospholipids, free cholesterol, and apolipoproteins.</strong> This architecture solves the problem of transporting hydrophobic lipids through the aqueous bloodstream — oil and water do not mix, so lipids must be packaged with an amphipathic shell. The phospholipid monolayer presents its hydrophilic heads outward toward plasma and its fatty acid tails inward toward the lipid core. Free cholesterol intercalates in this outer monolayer. Apolipoproteins sit on the surface and serve as structural scaffolds and signaling ligands for cellular receptors (e.g., ApoB-100 binds the LDL receptor).<br><strong>Option A</strong> is incorrect: apolipoproteins are surface proteins — they reside in the polar coat, not the hydrophobic core. Triglycerides are in the core, not the shell.<br><strong>Option B</strong> is incorrect: free cholesterol is a surface component (polar coat), not a core lipid. Cholesterol esters, not free cholesterol, reside in the nonpolar core.<br><strong>Option C</strong> is incorrect: ester-bound cholesterol (cholesterol esters) and triglycerides are the principal core lipids; free cholesterol is present as a surface component, not exclusively.<br><strong>Option E</strong> is incorrect: phospholipids are a surface-coat component, not core components; they form the outer monolayer. The hydrophobic interior contains cholesterol esters and triglycerides.<br>Slide 25<br><img src=\"quizzes/media/cardio-w03-lec13-slide25.jpg\" alt=\"Slide 25\">",
+   "citation": "Slide 25",
+   "facts": [
+    "Lec13-F009"
+   ]
+  },
+  {
+   "qid": "lec13-q10",
+   "text": "Which apolipoprotein is found on VLDL, IDL, and LDL but is absent from chylomicrons?",
+   "options": [
+    "ApoB-48",
+    "ApoC-II",
+    "ApoE",
+    "ApoB-100",
+    "ApoA-I"
+   ],
+   "correct": 3,
+   "explanation": "<strong>ApoB-100 is the apolipoprotein found on VLDL, IDL, and LDL — all particles of the endogenous pathway — but it is absent from chylomicrons, which instead carry ApoB-48.</strong> The distinction reflects the particle's origin: chylomicrons are assembled in intestinal enterocytes and carry a truncated ApoB isoform (ApoB-48), while the liver assembles VLDL using the full-length ApoB-100. As VLDL is progressively hydrolyzed by lipoprotein lipase and hepatic lipase, it passes through IDL and ultimately becomes LDL — all retaining ApoB-100. ApoB-100 is also the ligand that binds the hepatic LDL receptor for clearance.<br><strong>Option A</strong> is incorrect: ApoB-48 is the apolipoprotein of chylomicrons, not of VLDL, IDL, or LDL; it is the one specifically absent from those endogenous-pathway particles.<br><strong>Option B</strong> is incorrect: ApoC-II is found on both chylomicrons and VLDL — it activates lipoprotein lipase on capillary endothelium — so it is not absent from chylomicrons.<br><strong>Option C</strong> is incorrect: ApoE is found on VLDL and HDL; its distribution is broader than ApoB-100 but it is also not the particle exclusively on VLDL, IDL, and LDL while absent from chylomicrons.<br><strong>Option E</strong> is incorrect: ApoA-I is the principal apolipoprotein of HDL; it is not carried on VLDL, IDL, or LDL.<br>Slide 26<br><img src=\"quizzes/media/cardio-w03-lec13-slide26.jpg\" alt=\"Slide 26\">",
+   "citation": "Slide 26",
+   "facts": [
+    "Lec13-F010"
+   ]
+  },
+  {
+   "qid": "lec13-q11",
+   "text": "An investigator studying coronary atherosclerosis evaluates the atherogenic potential of several lipoprotein particle classes. According to the classification emphasized in this lecture, which molecular feature identifies all lipoprotein particles that are directly atherogenic?",
+   "options": [
+    "The presence of ApoB on the particle surface",
+    "A triglyceride-enriched core, since triglycerides promote endothelial injury",
+    "Activation of lipoprotein lipase on capillary endothelium, releasing free fatty acids",
+    "The ability to bind ApoA-I and facilitate reverse cholesterol transport",
+    "A large particle diameter that physically obstructs small coronary arteries"
+   ],
+   "correct": 0,
+   "explanation": "<strong>The presence of ApoB on the particle surface is the unifying feature that classifies lipoprotein particles as directly atherogenic.</strong> Chylomicrons carry ApoB-48, and VLDL, IDL, and LDL carry ApoB-100 — and all of these ApoB-containing particles are atherogenic. The professor explicitly called this out as important: these particles can penetrate the arterial intima and accumulate, initiating the atherosclerotic process. Clinically, non-HDL cholesterol and ApoB measurements capture the combined atherogenic burden of all these particles — which is why some guidelines prefer ApoB to LDL-C alone for cardiovascular risk assessment.<br><strong>Option B</strong> is incorrect: triglyceride content identifies the size and type of particles but is not the mechanistic feature used to classify particles as atherogenic in this lecture's framework. HDL particles have minimal triglyceride and are not atherogenic, but the distinguishing principle is ApoB, not triglyceride content.<br><strong>Option C</strong> is incorrect: activation of lipoprotein lipase is a function of ApoC-II and is part of the exogenous pathway processing of chylomicrons and VLDL; it is not the feature that classifies particles as atherogenic.<br><strong>Option D</strong> is incorrect: ApoA-I binding and reverse cholesterol transport are functions of HDL. HDL is anti-atherogenic (removes cholesterol from the arterial wall); it does not carry ApoB and is not atherogenic.<br><strong>Option E</strong> is incorrect: particle size does not determine atherogenicity by the mechanism described in this lecture. Small, dense LDL is more atherogenic than large LDL — the opposite of a size-driven mechanism — and the classification rests on ApoB content, not diameter.<br>Slide 27 · Transcript 19:32<br><img src=\"quizzes/media/cardio-w03-lec13-slide27.jpg\" alt=\"Slide 27\">",
+   "citation": "Slide 27 · Transcript 19:32",
+   "facts": [
+    "Lec13-F013"
+   ]
+  },
+  {
+   "qid": "lec13-q12",
+   "text": "A 10-year-old boy presents to the emergency department with chest pain and is found to be having a myocardial infarction. Multiple family members have had premature cardiac events. Genetic testing confirms homozygous familial hypercholesterolemia. Compared to a heterozygous sibling with the same condition, which of the following best characterizes the homozygous phenotype according to data presented in this lecture?",
+   "options": [
+    "A 2-fold increase in LDL compared to normal and first MI expected at age 30–40 years",
+    "Prevalence of approximately 1 in 250 in the general population",
+    "Autosomal recessive inheritance, unlike the heterozygous form which is dominant",
+    "A 4-fold increase in LDL with myocardial infarction occurring in early adulthood",
+    "A 6–10-fold increase in LDL with myocardial infarction occurring in childhood"
+   ],
+   "correct": 4,
+   "explanation": "<strong>Homozygous familial hypercholesterolemia is characterized by a 6–10-fold increase in LDL-cholesterol compared to normal, with myocardial infarction occurring in childhood.</strong> FH exhibits dominant inheritance with a dose effect: the more severely defective the LDL receptor pathway, the earlier and more dramatically cholesterol accumulates. Heterozygotes (approximately 1 in 250 in the population) carry one defective allele and experience a 2-fold LDL increase, with MI typically occurring at age 30–40 years. Homozygotes (approximately 1 in 1,000,000) carry two defective alleles, resulting in near-complete loss of receptor-mediated LDL clearance — hence the 6–10-fold LDL elevation and childhood MI presentation seen in this patient.<br><strong>Option A</strong> is incorrect: a 2-fold LDL increase with MI at age 30–40 years describes the heterozygous phenotype, not the homozygous phenotype.<br><strong>Option B</strong> is incorrect: a prevalence of 1 in 250 describes heterozygotes; the homozygous form occurs in approximately 1 in one million individuals.<br><strong>Option C</strong> is incorrect: both heterozygous and homozygous FH result from autosomal dominant inheritance with a dose effect — the homozygous form is not a separate recessive condition; it simply carries two copies of the dominant-effect allele.<br><strong>Option D</strong> is incorrect: a 4-fold LDL increase is not one of the defined phenotypes in this lecture's data; the lecture specifies 2-fold for heterozygotes and 6–10-fold for homozygotes, with MI in childhood (not early adulthood) for the homozygous form.<br>Slide 29 · Transcript 35:10<br><img src=\"quizzes/media/cardio-w03-lec13-slide29.jpg\" alt=\"Slide 29\">",
+   "citation": "Slide 29 · Transcript 35:10",
+   "facts": [
+    "Lec13-F015"
+   ]
+  },
+  {
+   "qid": "lec13-q13",
+   "text": "A 52-year-old woman with established coronary artery disease continues to smoke one pack of cigarettes per day. According to epidemiologic data reviewed in this lecture, current cigarette smoking confers what magnitude of risk for dying from coronary heart disease compared to a non-smoker?",
+   "options": [
+    "A 2–3-fold higher risk of dying from CHD",
+    "A 1.2–1.5-fold higher risk of dying from CHD",
+    "Negligible additional CHD mortality risk once coronary artery disease is already established",
+    "A 5–7-fold higher risk of dying from CHD",
+    "Smoking increases CHD morbidity but does not independently increase CHD mortality risk"
+   ],
+   "correct": 0,
+   "explanation": "<strong>Current cigarette smoking results in a 2–3-fold higher risk of dying from coronary heart disease compared to non-smokers.</strong> Smoking is also a powerful independent predictor of sudden cardiac death in patients with established CHD — making this patient's continued smoking particularly high-risk. The cardiovascular burden of smoking is substantial: 33.5% of all smoking-related deaths among Americans are cardiovascular in nature. Male smokers die an average of 13.2 years earlier than male non-smokers, and female smokers die 14.5 years earlier than female non-smokers.<br><strong>Option B</strong> is incorrect: a 1.2–1.5-fold higher risk substantially underestimates the effect; the data show a 2–3-fold elevation in CHD death risk.<br><strong>Option C</strong> is incorrect: the lecture explicitly states smoking is a powerful independent predictor of sudden cardiac death even in patients who already have CHD — cessation benefit remains real in established disease.<br><strong>Option D</strong> is incorrect: a 5–7-fold increase overstates the quantified risk; the stated figure is 2–3-fold.<br><strong>Option E</strong> is incorrect: smoking independently increases CHD mortality — not just morbidity — as stated directly on slide 41 and in the epidemiologic references cited there.<br>Slide 41<br><img src=\"quizzes/media/cardio-w03-lec13-slide41.jpg\" alt=\"Slide 41\">",
+   "citation": "Slide 41",
+   "facts": [
+    "Lec13-F024"
+   ]
+  },
+  {
+   "qid": "lec13-q14",
+   "text": "A 55-year-old man with a 30-pack-year smoking history and no prior cardiac diagnoses quits smoking today. According to the cessation-benefit timeline presented in this lecture, within how long after quitting does his excess risk of coronary heart disease fall to half that of a person who currently smokes?",
+   "options": [
+    "Within 20 minutes",
+    "Within 24 hours",
+    "Within 1 year",
+    "Within 5 years",
+    "Within 15 years"
+   ],
+   "correct": 2,
+   "explanation": "<strong>Within 1 year of quitting smoking, the excess risk of coronary heart disease falls to half that of a person who continues to smoke.</strong> The cessation benefit timeline unfolds in stages: within 20 minutes, blood pressure decreases and pulse normalizes; within 24 hours, MI risk begins to decrease; within 1 year, excess CHD risk is halved; at 5 years, stroke risk falls to that of a never-smoker; and by 15 years, CHD risk reaches the level of someone who has never smoked. This graduated recovery illustrates that meaningful cardiovascular benefit begins within the first year — a useful motivational point for counseling patients.<br><strong>Option A</strong> is incorrect: within 20 minutes, blood pressure and body temperature normalize — rapid hemodynamic changes occur, but the CHD risk reduction to half an active smoker's excess takes a full year.<br><strong>Option B</strong> is incorrect: within 24 hours, MI risk begins to decline, but the specific milestone of halving the excess CHD risk requires 1 year of cessation, not 24 hours.<br><strong>Option D</strong> is incorrect: the 5-year milestone is for stroke risk returning to that of a never-smoker, not for halving CHD excess risk — that occurs at 1 year.<br><strong>Option E</strong> is incorrect: the 15-year milestone is when overall CHD risk equals that of a person who has never smoked — a later, more complete normalization; the halving of excess risk happens far earlier, at 1 year.<br>Slide 42<br><img src=\"quizzes/media/cardio-w03-lec13-slide42.jpg\" alt=\"Slide 42\">",
+   "citation": "Slide 42",
+   "facts": [
+    "Lec13-F025"
+   ]
+  },
+  {
+   "qid": "lec13-q15",
+   "text": "According to ACC guidelines reviewed in this lecture, what is the recommended minimum weekly physical activity for adults to support cardiovascular health?",
+   "options": [
+    "75 minutes of moderate or 150 minutes of vigorous physical activity weekly",
+    "60 minutes of moderate physical activity every day",
+    "90 minutes of moderate or 45 minutes of vigorous activity weekly",
+    "150 minutes of moderate or 75 minutes of vigorous physical activity every week",
+    "30 minutes of moderate activity on at least 3 days per week"
+   ],
+   "correct": 3,
+   "explanation": "<strong>The ACC recommends 150 minutes of moderate or 75 minutes of vigorous physical activity every week for adults.</strong> Moderate activity is roughly defined as exertion that elevates heart rate and breathing but still allows conversation; vigorous activity is intense enough that sustained conversation is not possible. Children have a separate recommendation of 60 minutes of physical activity daily. Physical inactivity is a major cardiovascular risk factor, and adherence to these thresholds is associated with meaningful reductions in cardiovascular morbidity and mortality.<br><strong>Option A</strong> is incorrect: this inverts the guideline thresholds — 75 minutes is the vigorous-activity recommendation and 150 minutes is the moderate-activity recommendation, not vice versa.<br><strong>Option B</strong> is incorrect: 60 minutes of daily physical activity is the recommendation for children (kids), not for adults; the adult standard is weekly, not daily.<br><strong>Option C</strong> is incorrect: 90 minutes moderate / 45 minutes vigorous is not a guideline threshold specified in this lecture; the correct figures are 150 minutes moderate or 75 minutes vigorous.<br><strong>Option E</strong> is incorrect: 30 minutes on 3 days per week yields only 90 minutes total — below the 150-minute moderate threshold stated in the guidelines, though it is a common lay recommendation. The ACC guideline threshold reviewed in this lecture is 150 minutes of moderate or 75 minutes of vigorous activity weekly.<br>Slide 49<br><img src=\"quizzes/media/cardio-w03-lec13-slide49.jpg\" alt=\"Slide 49\">",
+   "citation": "Slide 49",
+   "facts": [
+    "Lec13-F027"
+   ]
+  },
+  {
+   "qid": "lec13-q16",
+   "text": "A 67-year-old man with elevated LDL-cholesterol has a documented intolerance to statins. His physician prescribes cholestyramine. By what mechanism does this drug reduce serum cholesterol?",
+   "options": [
+    "It inhibits HMG-CoA reductase in hepatocytes, blocking the rate-limiting step of cholesterol synthesis",
+    "It binds bile acids in the gastrointestinal tract and prevents their reabsorption, interrupting the enterohepatic circulation",
+    "It blocks the NPC1L1 transporter on intestinal enterocytes to reduce micellar cholesterol absorption",
+    "It inhibits hepatic VLDL secretion, reducing circulating LDL precursors",
+    "It prevents PCSK9 from degrading hepatic LDL receptors, increasing LDL clearance"
+   ],
+   "correct": 1,
+   "explanation": "<strong>Cholestyramine (and bile acid sequestrants as a class) lowers serum cholesterol by binding bile acids in the gastrointestinal tract and preventing their reabsorption, thereby interrupting enterohepatic circulation.</strong> Normally, bile acids secreted into the duodenum are reabsorbed in the terminal ileum and recycled to the liver (enterohepatic circulation). Cholestyramine binds bile acids in the gut lumen, and the complex is excreted in the stool. The liver compensates by converting more hepatic cholesterol into bile acids, which depletes the hepatic cholesterol pool and upregulates LDL receptor expression — increasing LDL clearance from the bloodstream. The other bile acid sequestrants in this class are colesevelam (Welchol) and colestipol (Colestid).<br><strong>Option A</strong> is incorrect: inhibiting HMG-CoA reductase is the mechanism of statins, not bile acid sequestrants. These are distinct drug classes with completely different sites of action.<br><strong>Option C</strong> is incorrect: blocking NPC1L1 to reduce cholesterol absorption is the mechanism of ezetimibe (Zetia), not cholestyramine.<br><strong>Option D</strong> is incorrect: inhibiting hepatic VLDL synthesis is the mechanism attributed to niacin (nicotinic acid) in this lecture, not bile acid sequestrants.<br><strong>Option E</strong> is incorrect: preventing PCSK9-mediated LDL-receptor degradation is the mechanism of PCSK9 inhibitors (alirocumab, evolocumab), not cholestyramine.<br>Slide 33<br><img src=\"quizzes/media/cardio-w03-lec13-slide33.jpg\" alt=\"Slide 33\">",
+   "citation": "Slide 33",
+   "facts": [
+    "Lec13-F020"
+   ]
+  },
+  {
+   "qid": "lec13-q17",
+   "text": "A 61-year-old man with heterozygous familial hypercholesterolemia is on maximum-dose rosuvastatin but has an LDL-C of 148 mg/dL. His cardiologist adds alirocumab (Praluent). Which of the following best explains how this drug produces further LDL reduction beyond what the statin provides?",
+   "options": [
+    "It competes with HMG-CoA at the reductase enzyme active site, further suppressing hepatic cholesterol synthesis",
+    "It directly binds circulating LDL particles and targets them for phagocytic clearance by Kupffer cells",
+    "It inhibits NPC1L1 at the intestinal brush border, blocking dietary cholesterol from entering the enterohepatic pool",
+    "It sequesters bile acids in the gastrointestinal lumen, driving additional hepatic bile acid synthesis and LDL receptor upregulation",
+    "It prevents PCSK9 from binding to and degrading hepatic LDL receptors, resulting in higher receptor surface density and increased LDL clearance from plasma"
+   ],
+   "correct": 4,
+   "explanation": "<strong>Alirocumab prevents PCSK9 from degrading hepatic LDL receptors, which increases receptor density on the hepatocyte surface and substantially enhances LDL clearance from plasma.</strong> PCSK9 (proprotein convertase subtilisin/kexin type 9) is a protein that binds to the LDL receptor at the hepatocyte surface and causes it to be internalized and degraded rather than recycled. When PCSK9 is inhibited, LDL receptors are recycled back to the cell surface more efficiently, increasing the density of functional receptors available to remove LDL from the bloodstream. This mechanism is additive to statin therapy, which works by reducing cholesterol synthesis and secondarily upregulating LDL receptors — PCSK9 inhibition prevents the degradation of those upregulated receptors. This drug class is particularly valuable in FH, where receptor-level defects already limit clearance.<br><strong>Option A</strong> is incorrect: competing at HMG-CoA reductase describes the mechanism of statins. Alirocumab is a monoclonal antibody targeting PCSK9, an entirely different molecule and pathway.<br><strong>Option B</strong> is incorrect: alirocumab does not bind LDL particles directly; it targets PCSK9. LDL clearance occurs via increased hepatic LDL receptor uptake, not phagocytosis.<br><strong>Option C</strong> is incorrect: NPC1L1 inhibition is the mechanism of ezetimibe, not alirocumab. Alirocumab does not interact with intestinal cholesterol absorption.<br><strong>Option D</strong> is incorrect: bile acid sequestration is the mechanism of cholestyramine and related drugs. Alirocumab acts in the systemic circulation and at the hepatocyte surface, not in the gastrointestinal lumen.<br>Slide 33 · Slide 35<br><img src=\"quizzes/media/cardio-w03-lec13-slide33.jpg\" alt=\"Slide 33\"><img src=\"quizzes/media/cardio-w03-lec13-slide35.jpg\" alt=\"Slide 35\">",
+   "citation": "Slide 33 · Slide 35",
+   "facts": [
+    "Lec13-F023"
+   ]
+  },
+  {
+   "qid": "lec13-q18",
+   "text": "A 70-year-old woman with hypercholesterolemia is unable to tolerate statins and is started on ezetimibe (Zetia). At which molecular target does ezetimibe act to lower plasma LDL-cholesterol?",
+   "options": [
+    "HMG-CoA reductase in hepatocytes",
+    "PCSK9, blocking its interaction with the LDL receptor",
+    "NPC1L1, a transporter on intestinal enterocytes responsible for cholesterol absorption",
+    "Bile acid reuptake transporters in the terminal ileum",
+    "Hepatic LDL receptors, stabilizing them against PCSK9-mediated degradation"
+   ],
+   "correct": 2,
+   "explanation": "<strong>Ezetimibe targets NPC1L1 (Niemann-Pick C1 Like 1), a transporter on intestinal enterocytes that absorbs micellar cholesterol at the brush border and facilitates its incorporation into chylomicrons.</strong> By blocking NPC1L1, ezetimibe reduces the uptake of both dietary and biliary cholesterol from the intestinal lumen into enterocytes, thereby decreasing the substrate available for chylomicron assembly and reducing the cholesterol delivered to the liver via the exogenous pathway. The resulting hepatic cholesterol deficit causes the liver to upregulate LDL receptor expression, increasing LDL clearance from plasma. Ezetimibe is commonly used as a second-line agent for patients who cannot tolerate statins or to further reduce LDL in high-risk patients already on statin therapy.<br><strong>Option A</strong> is incorrect: HMG-CoA reductase inhibition is the mechanism of statins. Ezetimibe acts at the intestinal brush border, not in hepatocyte cholesterol synthesis.<br><strong>Option B</strong> is incorrect: blocking PCSK9 is the mechanism of alirocumab and evolocumab. Ezetimibe is a small molecule that targets the NPC1L1 transport protein in the gut, not PCSK9.<br><strong>Option D</strong> is incorrect: inhibiting bile acid reuptake transporters in the terminal ileum is the mechanism of bile acid sequestrants (cholestyramine, colesevelam, colestipol), not ezetimibe.<br><strong>Option E</strong> is incorrect: ezetimibe does not directly interact with LDL receptors or PCSK9. Any upregulation of LDL receptor expression that occurs is a secondary hepatic response to reduced cholesterol delivery from the gut — not the drug's primary molecular target.<br>Slide 33<br><img src=\"quizzes/media/cardio-w03-lec13-slide33.jpg\" alt=\"Slide 33\">",
+   "citation": "Slide 33",
+   "facts": [
+    "Lec13-F021"
+   ]
+  },
+  {
+   "qid": "lec13-q19",
+   "text": "According to the pharmacologic mechanisms reviewed in this lecture, niacin (nicotinic acid) lowers plasma LDL-cholesterol primarily by which of the following mechanisms?",
+   "options": [
+    "Inhibiting hepatic VLDL synthesis",
+    "Blocking NPC1L1 in intestinal enterocytes to reduce cholesterol absorption",
+    "Inhibiting HMG-CoA reductase, reducing hepatic cholesterol synthesis",
+    "Sequestering bile acids in the gastrointestinal lumen to interrupt enterohepatic circulation",
+    "Upregulating hepatic LDL receptor expression by blocking PCSK9 degradation"
+   ],
+   "correct": 0,
+   "explanation": "<strong>Niacin (nicotinic acid) lowers plasma LDL by inhibiting hepatic VLDL synthesis.</strong> Because LDL is the downstream product of VLDL catabolism (VLDL → IDL → LDL), reducing VLDL secretion by the liver limits the amount of circulating LDL precursors and ultimately lowers LDL levels. Niacin also raises HDL. However, clinical evidence for cardiovascular benefit from niacin is limited — niacin has not demonstrated reduced cardiovascular events in trials and carries significant side effects including flushing, making it a rarely used drug in contemporary practice.<br><strong>Option B</strong> is incorrect: blocking NPC1L1 is the mechanism of ezetimibe. Niacin acts on hepatic VLDL synthesis, not intestinal cholesterol absorption.<br><strong>Option C</strong> is incorrect: HMG-CoA reductase inhibition is the mechanism of statins — the most widely used lipid-lowering drug class — not niacin.<br><strong>Option D</strong> is incorrect: bile acid sequestration in the gut is the mechanism of cholestyramine, colesevelam, and colestipol. Niacin acts on the liver to suppress VLDL production.<br><strong>Option E</strong> is incorrect: preventing PCSK9-mediated LDL receptor degradation is the mechanism of the PCSK9 inhibitor drug class (alirocumab, evolocumab). Niacin's action is entirely distinct and acts at the level of hepatic lipoprotein synthesis.<br>Slide 33<br><img src=\"quizzes/media/cardio-w03-lec13-slide33.jpg\" alt=\"Slide 33\">",
+   "citation": "Slide 33",
+   "facts": [
+    "Lec13-F022"
+   ]
+  },
+  {
+   "qid": "lec13-q20",
+   "text": "A student is studying cardiovascular risk factor stratification and notes that several conditions marked on the risk factor slide are specifically identified as components of the metabolic syndrome. Which of the following groupings contains only conditions that are explicitly identified as components of the metabolic syndrome in this lecture?",
+   "options": [
+    "Hypertension, elevated LDL-cholesterol, abdominal obesity, diabetes mellitus, and low triglycerides",
+    "Hypertension, elevated LDL-cholesterol, reduced HDL, elevated triglycerides, and abdominal obesity",
+    "Hypertension, diabetes mellitus, elevated LDL-cholesterol, sleep deprivation, and abdominal obesity",
+    "Hypertension, diabetes mellitus, reduced HDL, elevated triglycerides, and abdominal obesity",
+    "Hypertension, elevated triglycerides, reduced HDL, coronary artery disease, and abdominal obesity"
+   ],
+   "correct": 3,
+   "explanation": "<strong>The metabolic syndrome components identified in this lecture are hypertension, diabetes mellitus, reduced HDL, elevated triglycerides, and abdominal obesity — the five classical criteria.</strong> The risk factor slide explicitly marks these with an asterisk (*) as metabolic syndrome components, and the slide's footnote states that reduced HDL and elevated triglycerides are components of the metabolic syndrome, with abdominal obesity also listed. This cluster reflects shared pathophysiologic roots in insulin resistance, visceral adiposity, and systemic inflammation, all of which amplify cardiovascular risk beyond the sum of their individual contributions.<br><strong>Option A</strong> is incorrect: elevated LDL-cholesterol is a listed cardiovascular risk factor but is not a component of the metabolic syndrome — and this option includes <em>low</em> triglycerides, which is wrong; the metabolic syndrome component is <em>elevated</em> triglycerides.<br><strong>Option B</strong> is incorrect: elevated LDL-cholesterol is not a metabolic syndrome component. The lipid components of metabolic syndrome are elevated <em>triglycerides</em> and <em>reduced HDL</em>, not elevated LDL.<br><strong>Option C</strong> is incorrect: sleep deprivation appears on the cardiovascular risk factor slide as a separate risk factor but is not identified as a component of the metabolic syndrome in this lecture.<br><strong>Option E</strong> is incorrect: coronary artery disease is a consequence of metabolic syndrome, not one of its defining components; including it confuses outcome with criteria.<br>Slide 11<br><img src=\"quizzes/media/cardio-w03-lec13-slide11.jpg\" alt=\"Slide 11\">",
+   "citation": "Slide 11",
+   "facts": [
+    "Lec13-F028"
+   ]
+  }
+ ]
+}
