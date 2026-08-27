@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-08-25T11:30:32.000Z",
+ "generated": "2026-08-27T17:55:00.000Z",
  "sections": [
   {
    "id": "week-01",
@@ -115,6 +115,20 @@
      "file": "quizzes/Week02/cardio-w02-lec12.r1.json",
      "revision": 1,
      "question_count": 16
+    }
+   ]
+  },
+  {
+   "id": "week-03",
+   "name": "Week 03",
+   "quizzes": [
+    {
+     "id": "cardio-w03-lec14",
+     "title": "Lec 14 — Atherosclerosis",
+     "subtitle": "Week 03 · Lec 14 · Atherosclerosis | 20 questions",
+     "file": "quizzes/Week03/cardio-w03-lec14.r1.json",
+     "revision": 1,
+     "question_count": 20
     }
    ]
   },
