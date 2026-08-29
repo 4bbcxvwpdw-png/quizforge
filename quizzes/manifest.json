@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-08-27T20:01:56.000Z",
+ "generated": "2026-08-29T04:00:00.000Z",
  "sections": [
   {
    "id": "week-01",
@@ -26,8 +26,8 @@
      "id": "cardio-w01-lec01",
      "title": "Lec 01 — Anatomy of the Heart",
      "subtitle": "Week 01 · Lec 01 · Anatomy of the Heart | 20 questions",
-     "file": "quizzes/Week01/cardio-w01-lec01.r2.json",
-     "revision": 2,
+     "file": "quizzes/Week01/cardio-w01-lec01.r3.json",
+     "revision": 3,
      "question_count": 20
     },
     {

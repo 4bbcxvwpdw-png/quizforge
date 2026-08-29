@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "id": "cardio-w01-lec01",
+  "revision": 3,
+  "question_count": 20,
+  "title": "Lec 01 — Anatomy of the Heart",
+  "subtitle": "Week 01 · Lec 01 · Anatomy of the Heart | 20 questions",
+  "source_fingerprints": {
+    "Lec01_FactInventory.md": "0db8fac37cbab5b7e9b432bf048a6a8cb45abc0b29f3ffaf4510741b790c4c49",
+    "quiz_selection.tsv": "b2e901c2152774ae58b81200fe32ad512fd17e03d6f010ff74a147dfe8bbc5e5",
+    "01_slides.txt": "e5662ede43dfed71e3f21c23b6830ae73e6b8dbe8f2d5076eae944e33e81751a",
+    "transcript.vtt": "0ea504f25cb3700666768e986d6ad65103ea9e3cd05e3a5baa809c039d3dcb06"
+  },
+  "questions": [
+    {
+      "qid": "lec01-q01",
+      "text": "A chest CT performed for an unrelated reason reveals a soft-tissue mass in the same mediastinal compartment as the heart. Which term correctly identifies that compartment?",
+      "options": [
+        "Anterior mediastinum",
+        "Middle mediastinum",
+        "Posterior mediastinum",
+        "Superior mediastinum"
+      ],
+      "correct": 1,
+      "citation": "Slide 8 · Transcript 03:04",
+      "facts": [
+        "Lec01-F003"
+      ],
+      "explanation": "<strong>The middle mediastinum (B) contains the heart — it is one of three compartments of the inferior mediastinum (anterior, middle, posterior) and houses the pericardial sac, heart, and proximal great vessel roots.</strong><br><br>The thoracic mediastinum is first divided by the transverse thoracic plane (passing through the sternal angle anteriorly and the T4–T5 intervertebral disc posteriorly) into the superior mediastinum above and the inferior mediastinum below. The inferior mediastinum is further subdivided: the anterior mediastinum lies between the sternum and pericardium, the middle mediastinum contains the pericardial sac and its contents, and the posterior mediastinum lies behind the pericardium anterior to the vertebral column. Any mass in the same compartment as the heart is in the middle mediastinum.<br><br><strong>Option A</strong> is incorrect: the anterior mediastinum lies between the sternum and the fibrous pericardium; it contains thymus remnants, adipose tissue, and lymph nodes — not the heart.<br><strong>Option C</strong> is incorrect: the posterior mediastinum lies posterior to the pericardium and contains the esophagus, descending thoracic aorta, azygos vein, thoracic duct, and sympathetic trunks.<br><strong>Option D</strong> is incorrect: the superior mediastinum lies above the transverse thoracic plane and contains the great vessels (aortic arch, brachiocephalic vessels), trachea, esophagus, and thymus — not the heart itself.<br><br>Slide 8 · Transcript 03:04<br><img src=\"quizzes/media/cardio-w01-lec01-slide8.jpg\" alt=\"Slide 8\">"
+    },
+    {
+      "qid": "lec01-q02",
+      "text": "A physician palpates the sternal angle to locate the second rib before counting intercostal spaces. Which of the following correctly pairs the rib that articulates at the sternal angle with the vertebral level it corresponds to posteriorly?",
+      "options": [
+        "Second rib; T4–T5 intervertebral disc",
+        "First rib; T3–T4 intervertebral disc",
+        "Second rib; T3–T4 intervertebral disc",
+        "Third rib; T4–T5 intervertebral disc"
+      ],
+      "correct": 0,
+      "citation": "Slide 57 · Transcript 02:34",
+      "facts": [
+        "Lec01-F004",
+        "Lec01-F005"
+      ],
+      "explanation": "<strong>The second rib articulates at the sternal angle (angle of Louis), which corresponds to the disc between T4 and T5 posteriorly (A) — a dual landmark taught as high-yield for both rib counting and mediastinal boundary identification.</strong><br><br>The sternal angle is the palpable horizontal ridge at the junction of the manubrium and body of the sternum. Posteriorly it aligns with the intervertebral disc between T4 and T5; anteriorly the second costal cartilage articulates here. This plane also marks the boundary between the superior and inferior mediastinum. Clinically, the second ICS (found just below the second rib's inferior edge) is used to locate the aortic and pulmonary valve auscultation sites.<br><br><strong>Option B</strong> is incorrect: the first rib articulates with the manubrium at its superior border (the sternal notch level), not at the sternal angle; T3–T4 is one level too high.<br><strong>Option C</strong> is incorrect: the rib is correct (second rib), but T3–T4 is one level too high — the sternal angle corresponds to the T4–T5 disc, not T3–T4.<br><strong>Option D</strong> is incorrect: the third rib is below the sternal angle; the second rib is the landmark that articulates directly at the sternal angle.<br><br>Slide 57 · Transcript 02:34<br><img src=\"quizzes/media/cardio-w01-lec01-slide57.jpg\" alt=\"Slide 57\">"
+    },
+    {
+      "qid": "lec01-q03",
+      "text": "A clinician palpates a patient’s chest to locate the apical impulse. Where is the cardiac apex normally found?",
+      "options": [
+        "Left 5th intercostal space at the midclavicular line",
+        "Left 4th intercostal space along the sternal border",
+        "Left 5th intercostal space at the midaxillary line",
+        "Right 2nd intercostal space along the sternal border"
+      ],
+      "correct": 0,
+      "citation": "Slide 9 · Transcript 04:07",
+      "facts": [
+        "Lec01-F006"
+      ],
+      "explanation": "<strong>The cardiac apex — the tip of the left ventricle — projects to the left 5th intercostal space at the midclavicular line (A), the same location used for mitral auscultation and the point of maximal impulse (PMI).</strong><br><br>The heart sits posterior to the sternum and rests on the central tendon of the diaphragm. Its apex is formed entirely by the left ventricle and points inferiorly, anteriorly, and to the left. The location — left 5th ICS, midclavicular line — is the standard landmark for the PMI (palpable apical impulse). Lateral displacement of the PMI (e.g., to the anterior axillary line) suggests left ventricular enlargement.<br><br><strong>Option B</strong> is incorrect: the left 4th ICS at the sternal border is the auscultation site for the tricuspid valve, not the location of the cardiac apex.<br><strong>Option C</strong> is incorrect: the midaxillary line is lateral to the normal cardiac apex; an apex found there implies cardiomegaly.<br><strong>Option D</strong> is incorrect: the right 2nd ICS is the auscultation site for the aortic valve, not the cardiac apex.<br><br>Slide 9 · Transcript 04:07<br><img src=\"quizzes/media/cardio-w01-lec01-slide9.jpg\" alt=\"Slide 9\">"
+    },
+    {
+      "qid": "lec01-q04",
+      "text": "A surgical resident is assisting with an anterior pericardiotomy through a sternotomy. Which cardiac chamber is most likely to be encountered immediately upon opening the pericardial sac anteriorly?",
+      "options": [
+        "Left atrium",
+        "Left ventricle",
+        "Right atrium",
+        "Right ventricle"
+      ],
+      "correct": 3,
+      "citation": "Slide 10 · Transcript 05:42",
+      "facts": [
+        "Lec01-F009"
+      ],
+      "explanation": "<strong>The right ventricle (D) forms the majority of the anterior (sternocostal) surface of the heart and is the chamber closest to the anterior chest wall — making it the most vulnerable in anterior penetrating trauma and the first chamber encountered in a sternotomy.</strong><br><br>The heart has five named surfaces. The anterior (sternocostal) surface, which faces the sternum and costal cartilages, is formed mainly by the right ventricle. The left ventricle contributes to the diaphragmatic surface (facing the diaphragm) and the left border. The left atrium forms the base (posterior surface). The right atrium contributes to the right border and pulmonary surface. Because the right ventricle is anterior, anterior stab wounds, blunt trauma, and central venous catheter perforations most often involve the right ventricle.<br><br><strong>Option A</strong> is incorrect: the left atrium forms the base (posterior surface) of the heart, facing posteriorly toward the esophagus — it is the least accessible from an anterior approach.<br><strong>Option B</strong> is incorrect: the left ventricle forms the diaphragmatic surface and left cardiac border; it lies more posterolateral than the right ventricle.<br><strong>Option C</strong> is incorrect: the right atrium contributes mainly to the right pulmonary surface and the right cardiac border, not the anterior surface.<br><br>Slide 10 · Transcript 05:42<br><img src=\"quizzes/media/cardio-w01-lec01-slide10.jpg\" alt=\"Slide 10\">"
+    },
+    {
+      "qid": "lec01-q05",
+      "text": "Which of the following correctly lists the three named layers of the pericardium from outermost to innermost?",
+      "options": [
+        "Fibrous pericardium → parietal serous pericardium → visceral serous pericardium",
+        "Fibrous pericardium → visceral serous pericardium → parietal serous pericardium",
+        "Parietal serous pericardium → fibrous pericardium → visceral serous pericardium",
+        "Visceral serous pericardium → parietal serous pericardium → fibrous pericardium"
+      ],
+      "correct": 0,
+      "citation": "Slide 57 · Transcript 08:45",
+      "facts": [
+        "Lec01-F018"
+      ],
+      "explanation": "<strong>The correct outermost-to-innermost sequence is fibrous pericardium → parietal serous pericardium → visceral serous pericardium (A); the pericardial cavity is the potential space between the parietal and visceral serous layers and normally contains a thin film of serous fluid.</strong><br><br>The pericardium is built in two distinct tissue layers. The outer fibrous pericardium is a tough connective tissue sac; it anchors to the central tendon of the diaphragm, the great vessel roots, and the sternum, preventing overfilling and fixing the heart in position. Inside it lies the serous pericardium, which has two continuous surfaces: the parietal layer lines the inner surface of the fibrous pericardium, and the visceral layer (also called the epicardium) adheres directly to the surface of the myocardium. Between parietal and visceral serous layers is the pericardial cavity — a potential space containing 15–50 mL of lubricating serous fluid under normal conditions.<br><br><strong>Option B</strong> is incorrect: placing visceral serous before parietal serous reverses the two serous layers; the parietal layer is always between the fibrous pericardium and the pericardial cavity, with the visceral layer innermost.<br><strong>Option C</strong> is incorrect: the parietal serous layer cannot be the outermost — it is enclosed within the fibrous pericardium.<br><strong>Option D</strong> is incorrect: this is the sequence reversed; the visceral serous (epicardium) is the innermost layer, in direct contact with the myocardium, not the outermost.<br><br>Slide 57 · Transcript 08:45<br><img src=\"quizzes/media/cardio-w01-lec01-slide57.jpg\" alt=\"Slide 57\">"
+    },
+    {
+      "qid": "lec01-q06",
+      "text": "A 44-year-old presents with sharp chest pain that worsens with inspiration and radiation to the left lateral neck. A pericardial friction rub is audible. Which nerve is responsible for carrying the pain signals from the inflamed pericardium that produce this referral pattern?",
+      "options": [
+        "Greater splanchnic nerve",
+        "Intercostal nerves",
+        "Phrenic nerve",
+        "Vagus nerve"
+      ],
+      "correct": 2,
+      "citation": "Slide 16 · Transcript 11:23",
+      "facts": [
+        "Lec01-F024",
+        "Lec01-F025"
+      ],
+      "explanation": "<strong>The phrenic nerve (C) innervates the fibrous pericardium and the parietal layer of the serous pericardium; because the phrenic nerve originates from C3–C5, pericardial pain is referred to the C3–C5 dermatomes — the lateral neck and supraclavicular region.</strong><br><br>The phrenic nerve (C3, C4, C5) descends through the thorax and innervates both the fibrous pericardium and the parietal serous pericardium. When pericarditis inflames these layers, pain afferents travel via the phrenic nerve to C3–C5 spinal cord levels. The brain interprets this visceral input as originating in the corresponding somatic dermatomes of the shoulder, lateral neck, and supraclavicular region — a classic referred-pain pattern. The visceral serous pericardium (epicardium) receives a different innervation (autonomic fibers via the vagus and sympathetic chains) and does not produce this referral pattern.<br><br><strong>Option A</strong> is incorrect: the greater splanchnic nerve (T5–T9) transmits pain from abdominal viscera; it does not innervate the pericardium and does not produce lateral-neck referral.<br><strong>Option B</strong> is incorrect: the intercostal nerves innervate the thoracic wall and parietal pleura; they are responsible for chest wall pain that worsens with movement, not pericardial pain with supraclavicular referral.<br><strong>Option D</strong> is incorrect: the vagus nerve carries cardiac sensory afferents for reflex arcs, not somatic pain from the pericardium; vagal referral does not produce the lateral neck pattern seen here.<br><br>Slide 16 · Transcript 11:23<br><img src=\"quizzes/media/cardio-w01-lec01-slide16.jpg\" alt=\"Slide 16\">"
+    },
+    {
+      "qid": "lec01-q07",
+      "text": "A 32-year-old man is brought to the emergency department with a stab wound to the left chest. Blood pressure is 74/50 mm Hg, pulse is 130/min. His neck veins are distended and heart sounds are muffled. Bedside echocardiography shows the right ventricle collapsing during diastole. Which mechanism best explains his hemodynamic deterioration?",
+      "options": [
+        "Rapid fluid accumulation in the pericardial space compresses the heart and prevents the chambers from filling",
+        "Air entered the pericardial sac during the stabbing, compressing the pulmonary veins and reducing left-sided venous return",
+        "Direct laceration of the left ventricular wall has impaired contractility, causing cardiogenic shock",
+        "Sympathetic discharge triggered by pain causes paradoxical vasodilation and distributive shock"
+      ],
+      "correct": 0,
+      "citation": "Slide 19 · Transcript 13:30",
+      "facts": [
+        "Lec01-F026"
+      ],
+      "explanation": "<strong>Cardiac tamponade (A): rapid accumulation of blood in the pericardial space raises intrapericardial pressure, compresses all four chambers, and prevents ventricular filling — stroke volume and cardiac output fall despite elevated venous pressure.</strong><br><br>The fibrous pericardium is relatively inelastic, so when fluid accumulates rapidly (as with traumatic hemopericardium), even 100–200 mL can raise intrapericardial pressure above the diastolic filling pressure of the right ventricle. The right ventricle is the most compliant and collapses first — exactly what the echocardiogram shows (RV diastolic collapse). This prevents normal ventricular filling, drops stroke volume, and causes obstructive shock. Neck vein distension and muffled heart sounds complete Beck’s triad.<br><br><strong>Option B</strong> is incorrect: pneumopericardium (air in the pericardial sac) is distinct from hemopericardium and does not specifically compress pulmonary veins; the mechanism described is tamponade physiology from blood, not air.<br><strong>Option C</strong> is incorrect: direct ventricular wall laceration can cause tamponade, but the hemodynamic mechanism is pericardial compression, not impaired contractility — cardiogenic shock is a pump failure mechanism, not an obstructive filling failure.<br><strong>Option D</strong> is incorrect: sympathetic activation in response to shock causes vasoconstriction and tachycardia (a compensatory response), not vasodilation; distributive shock requires loss of vascular tone, which is not the mechanism in traumatic tamponade.<br><br>Slide 19 · Transcript 13:30<br><img src=\"quizzes/media/cardio-w01-lec01-slide19.jpg\" alt=\"Slide 19\">"
+    },
+    {
+      "qid": "lec01-q08",
+      "text": "A 58-year-old woman with metastatic lung cancer is found to have 900 mL of pericardial effusion on echocardiography. She is hemodynamically stable with a blood pressure of 112/70 mm Hg and no JVD. Which of the following best explains why she tolerates this large volume without tamponade?",
+      "options": [
+        "Her malignancy has caused hyperalbuminemia, increasing oncotic pressure and drawing fluid back into the pericardial lymphatics",
+        "Thebesian veins have reabsorbed the excess fluid, preventing intrapericardial pressure from rising",
+        "The pericardium has gradually stretched over months as fluid slowly accumulated, increasing its compliance",
+        "The effusion is composed of serous fluid rather than blood, which exerts less pressure at equivalent volumes"
+      ],
+      "correct": 2,
+      "citation": "Slide 19 · Transcript 13:30",
+      "facts": [
+        "Lec01-F095"
+      ],
+      "explanation": "<strong>Slow, gradual accumulation allows the normally inelastic fibrous pericardium to stretch over time (C), shifting its pressure–volume curve and permitting large volumes before intrapericardial pressure rises enough to compromise filling.</strong><br><br>The rate of accumulation is the critical determinant of tamponade risk, not the absolute volume. The fibrous pericardium is initially stiff, but weeks-to-months of gradual distension cause structural remodeling that increases compliance. A malignant effusion that grows slowly (as in this case) can reach 1,000 mL or more without raising intrapericardial pressure above filling pressure. In contrast, as little as 150–200 mL accumulating over minutes (as in traumatic hemopericardium) exceeds the pericardium’s elastic limit and causes tamponade. This rate-dependence explains why the absolute effusion size on echocardiography must always be interpreted alongside the patient’s hemodynamic status.<br><br><strong>Option A</strong> is incorrect: hyperalbuminemia would increase plasma oncotic pressure, not promote pericardial lymphatic resorption; moreover, malignancy more commonly causes hypoalbuminemia. Lymphatic drainage of pericardial fluid is a normal background process, not a high-capacity reserve.<br><strong>Option B</strong> is incorrect: Thebesian veins drain venous blood from the myocardium directly into the cardiac chambers; they do not absorb pericardial effusion fluid and have no significant role in pericardial pressure regulation.<br><strong>Option D</strong> is incorrect: the physical pressure exerted by a fluid at a given volume depends on its volume and the compliance of the containing structure, not on whether it is serous or bloody; either fluid type causes tamponade if it accumulates rapidly.<br><br>Slide 19 · Transcript 13:30<br><img src=\"quizzes/media/cardio-w01-lec01-slide19.jpg\" alt=\"Slide 19\">"
+    },
+    {
+      "qid": "lec01-q09",
+      "text": "During an electrophysiology study of the right atrium, the mapping catheter identifies a prominent vertical muscular ridge that runs from the SVC to the IVC along the lateral wall. What is this structure’s primary anatomical significance?",
+      "options": [
+        "It carries the right bundle branch from the interventricular septum to the anterior papillary muscle of the right ventricle",
+        "It is the remnant of the fetal foramen ovale on the interatrial septum",
+        "It houses the AV node, which delays conduction between the atria and ventricles",
+        "It marks the boundary between the smooth posterior right atrium (sinus venarum) and the trabeculated anterior wall"
+      ],
+      "correct": 3,
+      "citation": "Slide 26 · Transcript 23:52",
+      "facts": [
+        "Lec01-F032"
+      ],
+      "explanation": "<strong>The crista terminalis (D) is a smooth vertical muscular ridge that delineates the smooth sinus venarum (posterior right atrium, derived from the sinus venosus) from the trabeculated anterior wall lined with musculi pectinati — an important boundary in atrial anatomy and electrophysiology.</strong><br><br>During cardiac development, the right atrium forms from two embryological sources: the smooth sinus venosus gives rise to the posterior right atrium (sinus venarum), which receives the SVC, IVC, and coronary sinus openings, while the primitive right atrium gives rise to the anterior trabeculated wall (with the right auricle and musculi pectinati). The crista terminalis is the internal ridge marking their junction. On external view, the corresponding groove is the sulcus terminalis. Clinically, the crista terminalis is an EP landmark because the SA node sits at its upper end, and ectopic atrial tachycardias frequently originate along it.<br><br><strong>Option A</strong> is incorrect: the right bundle branch travels in the moderator band (septomarginal trabecula), a structure of the right ventricle — not the crista terminalis.<br><strong>Option B</strong> is incorrect: the fossa ovalis is the embryonic remnant of the foramen ovale; it is located on the interatrial septum, not the lateral right atrial wall where the crista terminalis runs.<br><strong>Option C</strong> is incorrect: the AV node is located in the Koch’s triangle region of the interatrial septum near the coronary sinus orifice, not within the crista terminalis.<br><br>Slide 26 · Transcript 23:52<br><img src=\"quizzes/media/cardio-w01-lec01-slide26.jpg\" alt=\"Slide 26\">"
+    },
+    {
+      "qid": "lec01-q10",
+      "text": "An electrophysiologist is planning ablation of the sinoatrial node. Based on the anatomical location of the SA node, which site should be targeted?",
+      "options": [
+        "Lower right atrial wall immediately superior to the IVC orifice",
+        "Interatrial septum in Koch’s triangle near the coronary sinus opening",
+        "Upper crista terminalis at the junction of the SVC and the right atrium",
+        "Posterior left atrial wall near the ostia of the pulmonary veins"
+      ],
+      "correct": 2,
+      "citation": "Slide 57 · Transcript 40:49",
+      "facts": [
+        "Lec01-F033",
+        "Lec01-F058"
+      ],
+      "explanation": "<strong>The SA node is located in the upper part of the crista terminalis where the superior vena cava enters the right atrium (C) — it is the primary cardiac pacemaker, firing spontaneously at 60–100/min and driving the normal sinus rhythm.</strong><br><br>As the dominant pacemaker, the SA node generates the impulse that initiates each cardiac cycle. Its position at the SVC–right atrium junction on the upper crista terminalis places it near the superior right atrial wall. From there, the impulse spreads across the atria, reaches the AV node (Koch’s triangle, interatrial septum), passes through the bundle of His, and then distributes via left and right bundle branches and Purkinje fibers to both ventricles. Ablation of the SA node is rarely performed clinically; if needed, targeting this specific landmark is essential to avoid inadvertent damage to the sinus node artery, a branch of the right coronary artery.<br><br><strong>Option A</strong> is incorrect: the lower right atrium superior to the IVC is the location of the coronary sinus orifice (with the Thebesian valve) and the eustachian ridge — not the SA node.<br><strong>Option B</strong> is incorrect: Koch’s triangle is the home of the AV node, which coordinates atrial–ventricular conduction; the SA node is in a distinct location at the upper crista terminalis.<br><strong>Option D</strong> is incorrect: the posterior left atrial wall near the pulmonary vein ostia is a frequent source of ectopic foci triggering atrial fibrillation but does not normally harbor the SA node.<br><br>Slide 57 · Transcript 40:49<br><img src=\"quizzes/media/cardio-w01-lec01-slide57.jpg\" alt=\"Slide 57\">"
+    },
+    {
+      "qid": "lec01-q11",
+      "text": "A pathologist examining a cross-section of the right ventricle notes a prominent muscular band crossing the ventricular cavity. This band is surgically important because incising it during right ventriculotomy can produce a conduction abnormality. What does this band carry, and what structures does it connect?",
+      "options": [
+        "Carries the left bundle branch; connects the interventricular septum to the posterior papillary muscle",
+        "Carries the SA node’s pacemaker impulse; spans from the coronary sinus orifice to the tricuspid annulus",
+        "Carries the right bundle branch; connects the interventricular septum to the base of the anterior papillary muscle",
+        "Carries terminal Purkinje fibers; spans from the tricuspid annulus to the right ventricular apex"
+      ],
+      "correct": 2,
+      "citation": "Slide 30 · Transcript 28:33",
+      "facts": [
+        "Lec01-F040",
+        "Lec01-F061"
+      ],
+      "explanation": "<strong>The moderator band (septomarginal trabecula) carries the right bundle branch across the right ventricular cavity, running from the interventricular septum to the base of the anterior papillary muscle (C) — incising it causes right bundle branch block.</strong><br><br>The moderator band is a rounded muscular ridge that visibly bridges the right ventricular cavity. Anatomically, it runs from the lower interventricular septum to the base of the anterior papillary muscle. Within it travels the right bundle branch, conducting the impulse from the bundle of His directly to the anterior papillary muscle before it fans out as subendocardial Purkinje fibers. This anatomical shortcut allows the anterior papillary muscle to contract at the appropriate time to tense the chordae tendineae just before full ventricular pressure develops. The right ventricle has no left-sided equivalent of the moderator band.<br><br><strong>Option A</strong> is incorrect: the left bundle branch runs along the left ventricular septum, not across a moderator band; the left ventricle does not have a moderator band equivalent.<br><strong>Option B</strong> is incorrect: the SA node’s impulse is transmitted via the internodal pathways to the AV node, not via a band from the coronary sinus; the coronary sinus is a venous structure, not a conduction origin.<br><strong>Option D</strong> is incorrect: the moderator band does not span from annulus to apex; it is a transverse mid-cavity structure specifically connecting septum to anterior papillary muscle.<br><br>Slide 30 · Transcript 28:33<br><img src=\"quizzes/media/cardio-w01-lec01-slide30.jpg\" alt=\"Slide 30\">"
+    },
+    {
+      "qid": "lec01-q12",
+      "text": "A medical student argues that all four cardiac valves open and close purely by passive pressure gradients. The attending corrects this, noting that one group of valves requires active muscular contraction to close properly. Which statement accurately describes this active closure mechanism?",
+      "options": [
+        "Atrioventricular valves are active: papillary muscles contract during systole, maintaining chordal tension and preventing leaflet prolapse into the atrium",
+        "Atrioventricular valves open and close passively; the pressure difference between atria and ventricles alone drives both opening and closing without muscular input",
+        "Semilunar valves are active: smooth muscle within their cusps contracts during diastole to prevent backflow from the aorta and pulmonary trunk",
+        "All four cardiac valves require active muscular contraction; papillary muscles generate enough force to open and close both AV and semilunar valves"
+      ],
+      "correct": 0,
+      "citation": "Slide 44 · Transcript 29:36",
+      "facts": [
+        "Lec01-F097"
+      ],
+      "explanation": "<strong>The atrioventricular valves are active (A): during systole, papillary muscle contraction pulls on the chordae tendineae, maintaining tension on the leaflets and preventing them from everting into the atria under the high ventricular systolic pressure.</strong><br><br>The thin leaflets of the mitral and tricuspid valves would prolapse into the atria every systole if not actively restrained by the chordae tendineae under papillary muscle tension. When papillary muscles contract simultaneously with the ventricular myocardium, they shorten, keeping the chordae taut and the leaflet margins coaptated. The result is a competent valve closure. By contrast, the semilunar valves (aortic and pulmonary) are entirely passive: when ventricular pressure drops below aortic or pulmonary artery pressure during diastole, the backpressure fills the valve sinuses and closes the cusps without any muscular input. Diseases that disrupt papillary muscles (e.g., MI involving the posteromedial papillary muscle, which has a single blood supply) cause acute mitral regurgitation precisely because this active mechanism fails.<br><br><strong>Option B</strong> is incorrect: passive pressure gradients alone cannot keep thin AV leaflets from prolapsing under systolic ventricular pressure; the chordal tension provided by papillary muscle contraction is essential for competent closure.<br><strong>Option C</strong> is incorrect: semilunar valves contain no smooth muscle; their closure is entirely passive, driven by the reversal of the pressure gradient during diastole.<br><strong>Option D</strong> is incorrect: semilunar valves do not have papillary muscles and close passively; only AV valves have the active papillary muscle–chordal mechanism.<br><br>Slide 44 · Transcript 29:36<br><img src=\"quizzes/media/cardio-w01-lec01-slide44.jpg\" alt=\"Slide 44\">"
+    },
+    {
+      "qid": "lec01-q13",
+      "text": "During an anatomy lab, a student examines the right atrioventricular valve. Which of the following correctly identifies the number of leaflets and the names of all three papillary muscles that support this valve?",
+      "options": [
+        "2 leaflets (anterior, posterior); anterior and posterior papillary muscles only",
+        "3 leaflets (superior, inferior, and middle); superior, inferior, and lateral papillary muscles",
+        "3 leaflets (anterior, posterior, septal); right, left, and posterior papillary muscles",
+        "3 leaflets (anterior, posterior, septal); anterior, posterior, and septal papillary muscles"
+      ],
+      "correct": 3,
+      "citation": "Slide 30 · Transcript 26:28",
+      "facts": [
+        "Lec01-F036",
+        "Lec01-F037",
+        "Lec01-F038"
+      ],
+      "explanation": "<strong>The tricuspid (right AV) valve has 3 leaflets — anterior, posterior, and septal — supported by three correspondingly named papillary muscles (anterior, posterior, and septal) connected to the leaflets via chordae tendineae (D).</strong><br><br>The tricuspid valve is named for its three cusps. Each papillary muscle is named by its position relative to the right ventricular wall: the anterior papillary muscle is the largest and receives the moderator band’s right bundle branch; the posterior muscle is smallest; the septal papillary muscle arises from the interventricular septum. Chordae tendineae from each papillary muscle attach to the adjacent leaflets, distributing tension so no single papillary muscle bears sole responsibility for one leaflet. Contrast with the mitral valve on the left: 2 leaflets (anterior and posterior), 2 papillary muscles (anterior and posterior), single blood supply to the posteromedial papillary muscle.<br><br><strong>Option A</strong> is incorrect: 2 leaflets describes the mitral (bicuspid) valve of the left ventricle, not the tricuspid; the tricuspid also has a septal papillary muscle that Option A omits.<br><strong>Option B</strong> is incorrect: “superior, inferior, and lateral” are not the anatomical names for any cardiac papillary muscles; the named muscles are anterior, posterior, and septal.<br><strong>Option C</strong> is incorrect: “right, left, and posterior” mixes aortic valve cusp nomenclature with papillary muscle naming; these terms do not correctly identify any right-ventricular papillary muscles.<br><br>Slide 30 · Transcript 26:28<br><img src=\"quizzes/media/cardio-w01-lec01-slide30.jpg\" alt=\"Slide 30\">"
+    },
+    {
+      "qid": "lec01-q14",
+      "text": "A cardiac surgeon is inspecting the aortic valve before repair. She wants to avoid damaging the coronary artery ostia. Which cusps of the aortic valve contain these ostia?",
+      "options": [
+        "Posterior (non-coronary) and left cusps",
+        "Posterior (non-coronary) and right cusps",
+        "Right and left cusps",
+        "All three cusps each contain one coronary ostium"
+      ],
+      "correct": 2,
+      "citation": "Slide 38 · Slide 39 · Transcript 34:09",
+      "facts": [
+        "Lec01-F048"
+      ],
+      "explanation": "<strong>The right and left cusps of the aortic valve each contain a coronary ostium (C): the right coronary artery ostium opens in the right aortic sinus and the left coronary artery ostium opens in the left aortic sinus; the posterior cusp is the non-coronary cusp and has no ostium.</strong><br><br>The aortic valve has three semilunar cusps — right, left, and posterior (non-coronary) — each with a corresponding aortic sinus of Valsalva. The sinuses are small outpouchings of the aortic root just above each cusp; during diastole, blood pools in the sinuses and fills the coronary ostia. The right aortic sinus leads to the right coronary artery; the left aortic sinus leads to the left coronary artery (which divides into LAD and circumflex). The posterior sinus has no coronary artery and is called the non-coronary sinus. Surgeons must identify all three sinuses before placing sutures, and must avoid entering the right or left sinus to preserve coronary inflow.<br><br><strong>Option A</strong> is incorrect: the posterior cusp is the non-coronary cusp — it has no coronary ostium; the correct pair is right + left, not posterior + left.<br><strong>Option B</strong> is incorrect: the posterior cusp is the non-coronary cusp; the correct coronary-bearing cusps are right + left, not posterior + right.<br><strong>Option D</strong> is incorrect: only two of the three cusps have coronary ostia; the posterior (non-coronary) cusp has none.<br><br>Slide 38 · Slide 39 · Transcript 34:09<br><img src=\"quizzes/media/cardio-w01-lec01-slide38.jpg\" alt=\"Slide 38\"><img src=\"quizzes/media/cardio-w01-lec01-slide39.jpg\" alt=\"Slide 39\">"
+    },
+    {
+      "qid": "lec01-q15",
+      "text": "A cardiologist explains to a student that a faster heart rate can worsen myocardial ischemia not only by increasing oxygen demand but also by reducing supply. During which phase of the cardiac cycle does the majority of coronary blood flow occur, and why?",
+      "options": [
+        "During isovolumetric contraction, when rising ventricular pressure drives blood outward through the coronary ostia",
+        "During diastole, when ventricular relaxation allows blood from the aortic sinuses to enter the coronary ostia",
+        "Equally during systole and diastole, as the heart requires continuous perfusion throughout the full cardiac cycle",
+        "During atrial systole, when atrial contraction briefly increases aortic root pressure and forces blood into the coronary arteries"
+      ],
+      "correct": 1,
+      "citation": "Slide 39 · Transcript 34:41",
+      "facts": [
+        "Lec01-F049"
+      ],
+      "explanation": "<strong>Coronary blood flow is predominantly diastolic (B): when the ventricles relax, intramyocardial pressure falls, and blood pooling in the aortic sinuses of Valsalva enters the coronary ostia freely — systolic myocardial contraction compresses intramural vessels, actually impeding flow.</strong><br><br>During systole, ventricular contraction compresses the subendocardial coronary vessels (particularly in the thick-walled left ventricle), raising local intramyocardial pressure beyond coronary perfusion pressure and drastically reducing subendocardial flow. During diastole, ventricular relaxation removes that compressive force, intramyocardial resistance falls, and blood flows from the high-pressure aorta through the coronary ostia and down the epicardial–endocardial gradient. This is why a faster heart rate — by shortening diastolic time disproportionately — reduces the coronary perfusion window, increasing ischemia risk in patients with fixed coronary stenosis. The subendocardium is most vulnerable because it relies almost entirely on diastolic flow.<br><br><strong>Option A</strong> is incorrect: isovolumetric contraction is the briefest phase of systole, during which ventricular pressure is rising rapidly but no ejection occurs; intramyocardial compressive forces are increasing, not facilitating coronary inflow.<br><strong>Option C</strong> is incorrect: while trace coronary flow occurs in systole (particularly in the epicardial layers and right ventricle), the predominant — and physiologically critical — perfusion window for the left ventricular subendocardium is diastole.<br><strong>Option D</strong> is incorrect: atrial systole does not significantly raise aortic root pressure; the aortic pressure waveform is determined by left ventricular ejection, not atrial contraction. The aortic sinuses fill passively during diastole.<br><br>Slide 39 · Transcript 34:41<br><img src=\"quizzes/media/cardio-w01-lec01-slide39.jpg\" alt=\"Slide 39\">"
+    },
+    {
+      "qid": "lec01-q16",
+      "text": "A third-year student preparing for her first OSCE is reviewing cardiac auscultation sites. She wants to listen for a systolic ejection murmur caused by aortic stenosis. At which location on the chest wall should she place her stethoscope?",
+      "options": [
+        "Left 2nd intercostal space along the sternal border",
+        "Right 2nd intercostal space along the sternal border",
+        "Left 5th intercostal space at the midclavicular line",
+        "Left 4th intercostal space along the sternal border"
+      ],
+      "correct": 1,
+      "citation": "Transcript 38:47",
+      "facts": [
+        "Lec01-F054",
+        "Lec01-F055",
+        "Lec01-F056",
+        "Lec01-F057"
+      ],
+      "explanation": "<strong>The aortic valve is auscultated at the right 2nd intercostal space along the sternal border (B) — turbulent flow from the aortic valve is conducted along the ejection stream, which follows the ascending aorta toward the right clavicle.</strong><br><br>The four standard cardiac auscultation sites are: Aortic → right 2nd ICS at sternal border; Pulmonary → left 2nd ICS at sternal border; Tricuspid → left 4th ICS at sternal border; Mitral → left 5th ICS at midclavicular line. A mnemonic: All–Pulmonary–Tricuspid–Mitral going counterclockwise. Sound transmission follows blood flow direction, so the aortic site is on the right because the ejected stream ascends rightward toward the right brachiocephalic artery.<br><br><strong>Option A</strong> is incorrect: the left 2nd ICS is the auscultation site for the pulmonary valve; a pulmonary stenosis murmur would be loudest there.<br><strong>Option D</strong> is incorrect: the left 4th ICS at the sternal border is the tricuspid area; tricuspid regurgitation is best heard there, with radiation to the left sternal border.<br><strong>Option C</strong> is incorrect: the left 5th ICS at the midclavicular line is the mitral area (cardiac apex); mitral stenosis and regurgitation murmurs are heard there.<br><br>Transcript 38:47"
+    },
+    {
+      "qid": "lec01-q17",
+      "text": "A radiologist reading a coronary CT angiogram describes the patient’s coronary anatomy as “left dominant.” What does this designation specifically mean?",
+      "options": [
+        "The left circumflex artery gives rise to the posterior descending artery",
+        "The left anterior descending artery is larger in caliber than the right coronary artery",
+        "The left coronary artery supplies more than 60% of the total myocardial mass",
+        "The left main coronary artery has no hemodynamically significant stenosis on the angiogram"
+      ],
+      "correct": 0,
+      "citation": "Slide 50 · Transcript 48:05",
+      "facts": [
+        "Lec01-F072"
+      ],
+      "explanation": "<strong>Left dominance means the left circumflex artery (LCx) gives rise to the posterior descending artery (PDA) (A) — coronary dominance is defined exclusively by which vessel supplies the PDA and the inferior interventricular sulcus, regardless of overall caliber or territory supplied.</strong><br><br>Coronary dominance is a standard anatomical classification based solely on the PDA’s origin. In most people (~70%), the RCA provides the PDA — right dominance. In left dominance (~10%), the LCx provides it. The remaining ~20% are codominant (both vessels contribute). The clinical importance: in left dominance, an acute left main or LCx occlusion puts the entire posterior wall and inferior septum at risk simultaneously (a larger infarct territory than in right-dominant anatomy). The term “dominance” does NOT describe relative vessel size, total territory supplied, or disease burden.<br><br><strong>Option B</strong> is incorrect: relative caliber of the LAD vs. RCA is not part of the dominance definition; dominance refers specifically to the PDA’s origin, not vessel diameter comparisons.<br><strong>Option C</strong> is incorrect: myocardial territory percentage is not the basis of the dominance classification; the LCA often supplies most of the myocardium even in right-dominant anatomy via the LAD and circumflex.<br><strong>Option D</strong> is incorrect: “dominant” is an anatomical descriptor for the PDA origin, not a clinical disease severity rating; an angiographically dominant artery can be completely occluded.<br><br>Slide 50 · Transcript 48:05<br><img src=\"quizzes/media/cardio-w01-lec01-slide50.jpg\" alt=\"Slide 50\">"
+    },
+    {
+      "qid": "lec01-q18",
+      "text": "A cardiology attending asks a student which coronary artery is responsible for the highest proportion of myocardial infarctions and what percentage it accounts for. Which answer is correct?",
+      "options": [
+        "Left circumflex artery; 30–40% of coronary artery occlusions",
+        "Posterior descending artery; 40–50% of coronary artery occlusions",
+        "Left anterior descending (LAD) artery; 40–50% of coronary artery occlusions",
+        "Right coronary artery; 50–60% of coronary artery occlusions"
+      ],
+      "correct": 2,
+      "citation": "Slide 55 · Transcript 44:57",
+      "facts": [
+        "Lec01-F070",
+        "Lec01-F073"
+      ],
+      "explanation": "<strong>The left anterior descending (LAD) artery accounts for approximately 40–50% of all coronary artery occlusions (C), making it the most commonly affected vessel — its occlusion produces an anterior STEMI and is the primary cause of cardiac arrest in young people.</strong><br><br>The LAD runs in the anterior interventricular sulcus, supplying the anterior two-thirds of the interventricular septum, the anterior left ventricular free wall, the right bundle branch, and the left anterior fascicle. Because it perfuses a large and hemodynamically critical territory (including the conduction system), LAD occlusion is responsible for the majority of large myocardial infarctions and sudden cardiac deaths. The three most common sites of coronary occlusion are: (1) LAD — 40–50%, (2) RCA — approximately 30–40%, and (3) left circumflex — approximately 15–20%.<br><br><strong>Option A</strong> is incorrect: the left circumflex accounts for approximately 15–20% of occlusions; 30–40% is closer to the RCA’s share, not the circumflex.<br><strong>Option B</strong> is incorrect: the posterior descending artery (PDA) is a terminal branch of the dominant coronary (usually the RCA); PDA-specific occlusion rates are not separately cited at 40–50%.<br><strong>Option D</strong> is incorrect: the RCA accounts for approximately 30–40% of coronary occlusions, not 50–60%; it is the second most commonly affected vessel after the LAD.<br><br>Slide 55 · Transcript 44:57<br><img src=\"quizzes/media/cardio-w01-lec01-slide55.jpg\" alt=\"Slide 55\">"
+    },
+    {
+      "qid": "lec01-q19",
+      "text": "During a cadaver dissection, a student traces the venous drainage of the heart. Where does the majority of cardiac venous blood ultimately drain?",
+      "options": [
+        "Directly into the left atrium via Thebesian veins bypassing the right heart",
+        "Into the coronary sinus, which opens into the right atrium near the IVC orifice",
+        "Into the superior vena cava via the azygos venous system",
+        "Into the pulmonary veins, mixing with oxygenated blood returning from the lungs"
+      ],
+      "correct": 1,
+      "citation": "Slide 49 · Transcript 46:29",
+      "facts": [
+        "Lec01-F074",
+        "Lec01-F075"
+      ],
+      "explanation": "<strong>Most cardiac venous blood drains into the coronary sinus, which opens into the right atrium at its lower wall near the IVC orifice (B) — the coronary sinus is the main vein of the coronary circulation and runs in the posterior atrioventricular groove.</strong><br><br>The cardiac veins travel alongside the coronary arteries and converge on the coronary sinus. The great cardiac vein accompanies the LAD in the anterior interventricular sulcus; the middle cardiac vein accompanies the PDA in the posterior interventricular sulcus; the small cardiac vein travels with the right marginal artery. All drain into the coronary sinus, which lies in the posterior AV groove and is about 3 cm long. The coronary sinus opens into the right atrium at its lower wall, guarded by the valve of Thebesius. A small supplementary drainage route bypasses the coronary sinus: the Thebesian veins open directly into all four chambers (predominantly right-sided), contributing minimally to total drainage.<br><br><strong>Option B</strong> is incorrect: while Thebesian veins do drain some myocardial venous blood directly into the cardiac chambers, this is a minor route — and they drain predominantly into the right heart, not specifically the left atrium.<br><strong>Option C</strong> is incorrect: cardiac veins are a separate, self-contained system; they do not communicate with the azygos venous system or drain into the SVC.<br><strong>Option D</strong> is incorrect: cardiac veins carry deoxygenated blood from the myocardium; they have no anatomical connection to the pulmonary veins, which carry oxygenated blood from the lungs.<br><br>Slide 49 · Transcript 46:29<br><img src=\"quizzes/media/cardio-w01-lec01-slide49.jpg\" alt=\"Slide 49\">"
+    },
+    {
+      "qid": "lec01-q20",
+      "text": "A 67-year-old man with three-vessel coronary artery disease presents with crushing substernal chest pain radiating to his left arm and jaw. What is the anatomical basis for the referral of cardiac pain to the arm and jaw?",
+      "options": [
+        "The vagus nerve carries cardiac pain signals to the medulla oblongata, which then relays them through the brachial plexus to produce arm and jaw pain",
+        "The phrenic nerve (C3–C5) innervates both the pericardium and the arm dermatomes, producing shared pain referral",
+        "The heart and arm share a single peripheral nerve trunk in the majority of individuals, creating a direct anatomical connection",
+        "Cardiac pain afferents travel with sympathetic nerves to T1–T5, where they converge with somatic afferents from the arm, chest, and jaw"
+      ],
+      "correct": 3,
+      "citation": "Slide 56 · Transcript 53:50",
+      "facts": [
+        "Lec01-F081"
+      ],
+      "explanation": "<strong>Cardiac pain travels with sympathetic fibers to the T1–T5 spinal cord levels (D), where visceral afferents converge with somatic afferents from the arm, chest wall, shoulder, and jaw — the brain cannot distinguish the visceral source and interprets the pain as coming from those somatic structures.</strong><br><br>The myocardium and coronary vessels contain nociceptors whose afferent fibers travel with the sympathetic cardiac nerves (cardiac branches of the cervical and thoracic ganglia) into the cardiac plexus and enter the spinal cord via dorsal roots at T1–T5. At these dorsal horn levels, visceral cardiac afferents synapse on the same second-order neurons that receive somatic input from the anterior chest, arm, shoulder, and lower jaw (T1 dermatome extends to the medial arm; upper thoracic levels extend to the jaw via convergence). The brain’s interpretive limitation causes it to project the pain outward to the body regions normally served by T1–T5 — referred pain. This explains why cardiac ischemia can present as isolated arm pain or jaw pain without any chest discomfort.<br><br><strong>Option A</strong> is incorrect: the vagus nerve carries cardiac sensory afferents for reflex arcs (Bezold-Jarisch reflex, baroreceptors) but does not mediate the pain afferents responsible for angina; vagal cardiac afferents do not relay through brachial plexus pathways.<br><strong>Option B</strong> is incorrect: the phrenic nerve (C3–C5) innervates the fibrous pericardium and parietal serous pericardium; it mediates pericardial pain referral to the lateral neck and supraclavicular region (C3–C5 dermatomes) — not the arm. This is a distinct pathway from ischemic myocardial pain.<br><strong>Option C</strong> is incorrect: there is no shared peripheral nerve between the heart and arm; referred pain is a central nervous system phenomenon (dorsal horn convergence of visceral and somatic afferents) with no direct peripheral anatomical connection.<br><br>Slide 56 · Transcript 53:50<br><img src=\"quizzes/media/cardio-w01-lec01-slide56.jpg\" alt=\"Slide 56\">"
+    }
+  ]
+}
