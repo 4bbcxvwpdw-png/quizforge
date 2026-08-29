@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-08-29T04:30:00.000Z",
+ "generated": "2026-08-29T05:00:00.000Z",
  "sections": [
   {
    "id": "week-01",
@@ -137,6 +137,14 @@
      "file": "quizzes/Week03/cardio-w03-lec14.r2.json",
      "revision": 2,
      "question_count": 19
+    },
+    {
+     "id": "cardio-w03-lec15",
+     "title": "Lec 15 — Coronary Circulation & Myocardial Ischemia",
+     "subtitle": "Week 03 · Lec 15 · Coronary Circulation & Myocardial Ischemia | 20 questions",
+     "file": "quizzes/Week03/cardio-w03-lec15.r1.json",
+     "revision": 1,
+     "question_count": 20
     }
    ]
   },
