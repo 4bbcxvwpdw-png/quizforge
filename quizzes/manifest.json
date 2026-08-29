@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-08-29T05:00:00.000Z",
+ "generated": "2026-08-29T05:30:00.000Z",
  "sections": [
   {
    "id": "week-01",
@@ -145,6 +145,14 @@
      "file": "quizzes/Week03/cardio-w03-lec15.r1.json",
      "revision": 1,
      "question_count": 20
+    },
+    {
+     "id": "cardio-w03-labsupmed",
+     "title": "LAB — Superior Mediastinum",
+     "subtitle": "Week 03 · LAB Superior Mediastinum | 16 questions",
+     "file": "quizzes/Week03/cardio-w03-labsupmed.r1.json",
+     "revision": 1,
+     "question_count": 16
     }
    ]
   },
