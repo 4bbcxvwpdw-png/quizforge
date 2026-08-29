@@ -1,0 +1,301 @@
+{
+ "schema_version": 1,
+ "id": "cardio-w03-lec14",
+ "revision": 2,
+ "question_count": 19,
+ "title": "Lec 14 — Atherosclerosis",
+ "subtitle": "Week 03 · Lec 14 · Atherosclerosis | 19 questions",
+ "source_fingerprints": {
+  "Lec14_FactInventory.md": "9a45acd68d8e3e7b3d1ad3ba5ee808bbd5055756e671b4a7a415cda312f8bd62",
+  "quiz_selection.tsv": "684e70731b14cb71e02ac198817a5b420f666396ac6ca3c61e638c6170822f11",
+  "01_slides.txt": "2611d9313466d76bd6cc7b47b3b94d865ba66d2e54f71bcea5d1839f8bf0dd5d",
+  "transcript.vtt": "bf3d56e63200b4830b75d3d82e7d7667a0c1eaf49e02cda84bf19beecd1b3de8"
+ },
+ "questions": [
+  {
+   "qid": "lec14-q01",
+   "text": "In the atherosclerosis pathogenesis sequence, which step immediately follows fatty streak formation?",
+   "options": [
+    "Endothelial dysfunction triggered by turbulent flow and LDL accumulation at arterial bifurcation sites",
+    "Smooth muscle cell migration into the intima with extracellular matrix elaboration",
+    "Complex plaque formation with surface thrombosis, calcification, and neovascularization",
+    "Plaque rupture exposing the thrombogenic necrotic core to circulating blood",
+    "Foam cell accumulation from macrophage engulfment of oxidized LDL"
+   ],
+   "correct": 1,
+   "explanation": "<strong>Smooth muscle cell migration into the intima with extracellular matrix elaboration is the step that immediately follows fatty streak formation in the atherosclerosis pathogenesis sequence.</strong> According to the summary slide, the ordered sequence runs: endothelial dysfunction → LDL retention and modification → monocyte recruitment and macrophage foam cell formation → fatty streaks → smooth muscle cell migration and proliferation → extracellular matrix production → lipid necrotic core and fibrous cap → atheromatous plaque → endothelial erosion and surface thrombosis → deep hemorrhage and neovascularization → fragmentation and calcification → complex atheromatous plaque. Each step builds on the last; fatty streaks mark the accumulation phase, and what follows is the structural phase driven by medial smooth muscle cells entering the intima.<br><strong>Option A</strong> is incorrect: endothelial dysfunction is the first event in the sequence — it precedes, and in fact initiates, fatty streak formation, not the other way around.<br><strong>Option C</strong> is incorrect: complex plaque features (surface thrombosis, calcification, neovascularization) represent the final, most advanced stage; they follow atheromatous plaque formation, which itself follows many earlier steps.<br><strong>Option D</strong> is incorrect: plaque rupture is a complication of a complex, advanced plaque; it is many steps downstream from fatty streaks.<br><strong>Option E</strong> is incorrect: foam cell accumulation from macrophage engulfment of oxidized LDL is the step that creates fatty streaks, not the step that comes after them.<br>Slide 20 · Transcript 14:02<br><img src=\"quizzes/media/cardio-w03-lec14-slide20.jpg\" alt=\"Slide 20\">",
+   "citation": "Slide 20 · Transcript 14:02",
+   "facts": ["Lec14-F065"]
+  },
+  {
+   "qid": "lec14-q02",
+   "text": "Which of the following is recognized as a direct cause of endothelial activation and dysfunction that contributes to atherosclerosis initiation?",
+   "options": [
+    "Laminar blood flow",
+    "Normotension",
+    "VEGF-mediated endothelial growth signaling",
+    "Advanced glycation endproducts (AGEs)",
+    "Elevated HDL-cholesterol"
+   ],
+   "correct": 3,
+   "explanation": "<strong>Advanced glycation endproducts (AGEs) are a recognized cause of endothelial activation and dysfunction that promotes atherosclerosis, particularly in diabetic patients.</strong> The lecture lists multiple triggers of endothelial activation: turbulent flow, hypertension, cytokines, complement, bacterial products, lipid products, AGEs, hypoxia and acidosis, viruses, and cigarette smoke. AGEs form by non-enzymatic glycation of proteins and lipids in hyperglycemia and directly injure endothelial cells, creating the pro-inflammatory and pro-coagulant environment that allows LDL entry, monocyte adhesion, and plaque initiation.<br><strong>Option A</strong> is incorrect: laminar blood flow is a physiologically protective condition; it is turbulent (disturbed) flow that drives endothelial injury.<br><strong>Option B</strong> is incorrect: normotension is a normal endothelial health condition; hypertension is the pro-atherogenic state listed on this slide.<br><strong>Option C</strong> is incorrect: VEGF-mediated signaling is part of normal endothelial growth and maintenance, not a cause of atherogenic endothelial dysfunction.<br><strong>Option E</strong> is incorrect: elevated HDL-cholesterol promotes reverse cholesterol transport and is protective against atherosclerosis, not a cause of endothelial dysfunction.<br>Slide 8 · Transcript 05:56<br><img src=\"quizzes/media/cardio-w03-lec14-slide8.jpg\" alt=\"Slide 8\">",
+   "citation": "Slide 8 · Transcript 05:56",
+   "facts": ["Lec14-F009"]
+  },
+  {
+   "qid": "lec14-q03",
+   "text": "A 67-year-old man with a 30-year history of hypertension and hyperlipidemia dies suddenly after an acute coronary syndrome. At autopsy, coronary artery examination reveals several large atheromatous plaques. Which of the following features, if present, most distinguishes a <em>complex</em> (complicated) plaque from an uncomplicated atheromatous plaque?",
+   "options": [
+    "Endothelial surface erosion with overlying thrombus formation",
+    "Intimal accumulations of lipid-laden foam cells",
+    "A fibrous cap of collagen and smooth muscle cells overlying a lipid necrotic core",
+    "Outward compensatory dilatation of the vessel wall",
+    "Smooth muscle cell migration into the subendothelial intima"
+   ],
+   "correct": 0,
+   "explanation": "<strong>Endothelial surface erosion with overlying thrombus formation is a defining feature of a complex (complicated) plaque, distinguishing it from an uncomplicated atheromatous plaque.</strong> Complex plaques develop high-risk features beyond the basic lipid core and fibrous cap: endothelial erosion, surface thrombosis, deep hemorrhage, neovascularization, fragmentation, and calcification. These changes mark the transition from stable flow-limiting disease to the acute thrombotic events causing myocardial infarction and stroke. The exposed subendothelial lipid core and collagen are highly thrombogenic, triggering rapid clot formation when the endothelial surface is eroded or the cap ruptures.<br><strong>Option B</strong> is incorrect: foam cell accumulation in the intima defines the fatty streak — the earliest atherosclerotic lesion — not a complex plaque.<br><strong>Option C</strong> is incorrect: a fibrous cap over a necrotic core is the hallmark of an uncomplicated atheromatous plaque; it is present before the plaque becomes complex.<br><strong>Option D</strong> is incorrect: outward vascular remodeling is an early compensatory adaptation to plaque growth, not a feature distinguishing complex from simple plaques.<br><strong>Option E</strong> is incorrect: smooth muscle cell migration into the intima is an early step in atheromatous plaque formation, not specific to complex plaques.<br>Slide 18<br><img src=\"quizzes/media/cardio-w03-lec14-slide18.jpg\" alt=\"Slide 18\">",
+   "citation": "Slide 18",
+   "facts": ["Lec14-F032"]
+  },
+  {
+   "qid": "lec14-q04",
+   "text": "An investigator studying lipid dynamics in the arterial wall measures both the rate of LDL entry into the intima and the rate of HDL-mediated cholesterol removal. Under which condition does net lipid accumulation and atherosclerotic plaque formation occur?",
+   "options": [
+    "Whenever LDL enters the intima, regardless of HDL removal capacity",
+    "When scavenger receptor expression on macrophages is downregulated, impairing foam cell formation",
+    "When HDL becomes oxidized and loses its reverse cholesterol transport function",
+    "When LDL receptor expression on hepatocytes falls below 50% of normal",
+    "When net intimal LDL influx exceeds HDL-mediated cholesterol efflux"
+   ],
+   "correct": 4,
+   "explanation": "<strong>Plaque formation results from a net influx of lipid into the intima — when LDL entry exceeds HDL-mediated cholesterol removal from the intima.</strong> HDL plays an active role in reverse cholesterol transport, extracting cholesterol from foam cells and returning it to the liver for excretion. When endothelial dysfunction increases permeability or circulating LDL is very high, LDL influx overwhelms HDL's removal capacity, producing net accumulation. This explains why both lowering LDL and raising HDL are therapeutic targets: either reducing influx or increasing efflux shifts the balance against net accumulation.<br><strong>Option A</strong> is incorrect: HDL-mediated removal normally prevents net accumulation even when LDL enters the intima; net accumulation requires an imbalance, not simply LDL entry.<br><strong>Option B</strong> is incorrect: downregulated scavenger receptors would reduce foam cell formation and cholesterol uptake, not promote net lipid accumulation.<br><strong>Option C</strong> is incorrect: while HDL oxidation would impair removal capacity, the lecture frames the mechanism as a LDL-influx vs. HDL-efflux imbalance, not a primary HDL oxidation pathway.<br><strong>Option D</strong> is incorrect: reduced hepatic LDL receptor expression raises circulating LDL levels, but the intimal mechanism of net lipid accumulation is the entry/removal imbalance, not receptor density per se.<br>Slide 29 · Transcript 29:32<br><img src=\"quizzes/media/cardio-w03-lec14-slide29.jpg\" alt=\"Slide 29\">",
+   "citation": "Slide 29 · Transcript 29:32",
+   "facts": ["Lec14-F021"]
+  },
+  {
+   "qid": "lec14-q05",
+   "text": "A 72-year-old man with longstanding hypertension and atherosclerosis is found to have an infrarenal aortic aneurysm that has expanded from 4.2 cm to 5.5 cm over two years. His vascular surgeon explains that once an aneurysm reaches a critical size, continued expansion becomes self-sustaining. Which of the following mechanisms best explains this self-perpetuating enlargement?",
+   "options": [
+    "Macrophage-secreted MMPs progressively degrade the medial elastin and collagen framework, causing persistent wall weakness",
+    "Ischemic atrophy of medial smooth muscle cells from oxygen diffusion blockade by the thick overlying plaque",
+    "Rising aortic radius amplifies wall tension proportionally (Laplace's Law), self-perpetuating further expansion",
+    "Incorporated mural thrombus structurally displaces and thins the medial layer, reducing wall strength",
+    "Intraplaque neovascularization introduces fragile vessels that repeatedly rupture into the expanding lesion"
+   ],
+   "correct": 2,
+   "explanation": "<strong>Laplace's Law — wall tension rises proportionally with vessel radius — explains the self-perpetuating nature of aneurysm expansion once wall weakening has begun.</strong> Three mechanisms initially weaken the aortic wall: (1) ischemic atrophy, in which the thick intimal plaque blocks oxygen diffusion to medial smooth muscle cells, causing their death; (2) matrix degradation, in which intimal macrophages secrete MMPs that digest elastin and collagen scaffolding; and (3) biomechanical failure, the self-sustaining phase. Once the wall is weakened and the radius increases, Laplace's Law (wall tension = pressure × radius) demands proportionally higher tension on an already-thinner wall, creating a runaway cycle of dilation that does not require new inflammatory activity to continue.<br><strong>Option A</strong> is incorrect: MMP-mediated degradation is one of the initial wall-weakening mechanisms, not the explanation for why expansion accelerates automatically once the aneurysm forms.<br><strong>Option B</strong> is incorrect: ischemic atrophy of medial SMCs is also an initial weakening mechanism; it does not explain the self-sustaining biomechanical expansion that follows.<br><strong>Option D</strong> is incorrect: mural thrombus incorporation contributes to intimal thickening in general atherosclerosis but does not create the pressure-radius feedback loop that drives aneurysm self-propagation.<br><strong>Option E</strong> is incorrect: intraplaque neovascularization contributes to plaque instability, but it is not the biomechanical driver of progressive aortic aneurysm enlargement.<br>Slide 24 · Transcript 24:24<br><img src=\"quizzes/media/cardio-w03-lec14-slide24.jpg\" alt=\"Slide 24\">",
+   "citation": "Slide 24 · Transcript 24:24",
+   "facts": ["Lec14-F043"]
+  },
+  {
+   "qid": "lec14-q06",
+   "text": "Which of the following sets includes only established NON-MODIFIABLE risk factors for atherosclerosis?",
+   "options": [
+    "Family history, genotypic male sex, and increasing age",
+    "Hypertension, cigarette smoking, and elevated serum LDL",
+    "Cigarette smoking, genotypic male sex, and diabetes mellitus",
+    "Increasing age, hypertension, and sedentary lifestyle",
+    "Family history, elevated LDL, and obesity"
+   ],
+   "correct": 0,
+   "explanation": "<strong>Family history, genotypic male sex, and increasing age are all non-modifiable risk factors for atherosclerosis, meaning they cannot be reduced through lifestyle change or medication.</strong> The traditional risk factor list separates modifiable factors — hypertension, elevated serum cholesterol (LDL), cigarette smoking, and diabetes — from non-modifiable ones. Genotypic male sex confers higher risk because endogenous estrogen is cardioprotective (anti-inflammatory, vasodilatory); pre-menopausal women have significantly lower ischemic heart disease rates than age-matched males, and this advantage disappears after menopause. Recognizing non-modifiable factors guides screening intensity and early pharmacological intervention.<br><strong>Option B</strong> is incorrect: hypertension, cigarette smoking, and elevated LDL are all modifiable with treatment and lifestyle change.<br><strong>Option C</strong> is incorrect: cigarette smoking and diabetes mellitus are modifiable; only genotypic male sex in this set is non-modifiable.<br><strong>Option D</strong> is incorrect: hypertension and sedentary lifestyle are modifiable; only increasing age is non-modifiable in this set.<br><strong>Option E</strong> is incorrect: elevated LDL and obesity are modifiable; only family history is non-modifiable in this set.<br>Slide 29<br><img src=\"quizzes/media/cardio-w03-lec14-slide29.jpg\" alt=\"Slide 29\">",
+   "citation": "Slide 29",
+   "facts": ["Lec14-F052"]
+  },
+  {
+   "qid": "lec14-q07",
+   "text": "A pathologist examines two coronary artery plaques removed from a patient who died of a non-cardiac cause. One plaque had been clinically silent throughout the patient's life; the other caused an acute coronary event shortly before death. Compared to the ACS-causing plaque, which morphologic feature most reliably identifies the clinically silent plaque?",
+   "options": [
+    "A large lipid core occupying most of the plaque volume",
+    "Dense surface thrombosis over an eroded endothelium",
+    "Extensive dystrophic calcification extending through the fibrous cap",
+    "A thick fibrous cap overlying a relatively small lipid core",
+    "Abundant intraplaque neovascularization and hemorrhage"
+   ],
+   "correct": 3,
+   "explanation": "<strong>A thick fibrous cap overlying a relatively small lipid core is the hallmark of a stable (clinically silent) plaque, distinguishing it from the thin-capped, large-cored vulnerable plaque that caused the ACS.</strong> Stable and vulnerable plaques differ primarily in two morphologic features: <table><tr><th>Feature</th><th>Stable plaque</th><th>Vulnerable plaque</th></tr><tr><td>Fibrous cap</td><td>Thick</td><td>Thin</td></tr><tr><td>Lipid / necrotic core</td><td>Small</td><td>Large</td></tr><tr><td>Rupture risk</td><td>Low</td><td>High</td></tr></table> The thick cap, maintained by smooth muscle cell-derived collagen, keeps the thrombogenic lipid core separated from circulating blood. When macrophage-derived MMPs degrade the cap, or when the necrotic core expands, rupture risk rises sharply.<br><strong>Option A</strong> is incorrect: a large lipid core is a feature of the vulnerable plaque; it increases rupture risk by expanding the necrotic material beneath a thinner cap.<br><strong>Option B</strong> is incorrect: surface thrombosis over an eroded endothelium is a complex plaque feature present on the ACS-causing (vulnerable) plaque, not the stable one.<br><strong>Option C</strong> is incorrect: while dystrophic calcification occurs in complex plaques, it is not the morphologic feature that defines stability; cap thickness and core size are the discriminating criteria.<br><strong>Option E</strong> is incorrect: intraplaque neovascularization and hemorrhage are features of complex plaques and correlate with vulnerability, not stability.<br>Slide 21 · Transcript 25:49<br><img src=\"quizzes/media/cardio-w03-lec14-slide21.jpg\" alt=\"Slide 21\">",
+   "citation": "Slide 21 · Transcript 25:49",
+   "facts": ["Lec14-F035"]
+  },
+  {
+   "qid": "lec14-q08",
+   "text": "Which of the following correctly ranks medium and large arteries by decreasing frequency of severe atherosclerotic involvement?",
+   "options": [
+    "Coronary arteries > abdominal aorta > internal carotid artery > thoracic aorta > cerebral vessels",
+    "Abdominal aorta > coronary arteries > thoracic aorta/femoral/popliteal > internal carotid artery > cerebral vessels",
+    "Coronary arteries > abdominal aorta > cerebral vessels > internal carotid artery > thoracic aorta",
+    "Abdominal aorta > internal carotid artery > coronary arteries > thoracic aorta/femoral/popliteal arteries > cerebral vessels",
+    "Thoracic aorta > abdominal aorta > coronary arteries > internal carotid artery > cerebral vessels"
+   ],
+   "correct": 1,
+   "explanation": "<strong>The correct descending frequency order is abdominal aorta, coronary arteries, thoracic aorta/femoral/popliteal arteries, internal carotid artery, and cerebral vessels.</strong> The abdominal aorta is the most commonly and severely affected site — particularly near the bifurcation of the iliac arteries, where turbulent flow causes the greatest endothelial injury. Coronary arteries follow as the second most affected, which explains ischemic heart disease as the dominant clinical consequence of atherosclerosis. Cerebral vessels (vertebral, basilar, and middle cerebral arteries) are the least commonly affected of the named sites. This rank order matters clinically: it directs screening (abdominal aortic aneurysm surveillance in high-risk men, carotid duplex in cerebrovascular disease) and explains why coronary and peripheral artery disease are far more prevalent than primary cerebral atherosclerosis.<br><strong>Option A</strong> is incorrect: coronary arteries rank second, not first; abdominal aorta leads.<br><strong>Option C</strong> is incorrect: cerebral vessels rank fifth (last), not third; internal carotid ranks fourth.<br><strong>Option D</strong> is incorrect: internal carotid artery ranks fourth, not second; coronary arteries rank second, not third in this option.<br><strong>Option E</strong> is incorrect: the thoracic aorta ranks third, not first; both the abdominal aorta and coronary arteries precede it.<br>Slide 32 · Transcript 36:35<br><img src=\"quizzes/media/cardio-w03-lec14-slide32.jpg\" alt=\"Slide 32\">",
+   "citation": "Slide 32 · Transcript 36:35",
+   "facts": ["Lec14-F050"]
+  },
+  {
+   "qid": "lec14-q09",
+   "text": "A 55-year-old man undergoes carotid duplex ultrasound, which shows intimal thickening concentrated at the carotid bifurcation with relatively spared segments in the common carotid upstream. Which of the following best explains the preferential development of early atherosclerotic lesions at this anatomic site?",
+   "options": [
+    "LDL concentrations are locally elevated at bifurcation points because reduced flow velocity increases contact time with the endothelium",
+    "The internal elastic lamina is structurally thinner at bifurcation sites, making them inherently more permeable to LDL",
+    "Vasa vasorum density is lowest at arterial bifurcations, chronically starving the media of oxygen at these sites",
+    "Immune surveillance macrophages preferentially concentrate at arterial branch points, driving localized inflammation",
+    "Turbulent flow at branch points causes repeated endothelial injury, triggering smooth muscle cell migration into the intima"
+   ],
+   "correct": 4,
+   "explanation": "<strong>Turbulent and disturbed blood flow at arterial branch points causes repeated endothelial injury and activation, which triggers medial smooth muscle cell migration into the subendothelial intima — the structural basis for atherosclerotic predilection at bifurcations.</strong> At sites of rapidly fluctuating shear stress, endothelial cells are activated and dysfunctional: they increase permeability, express adhesion molecules, and signal medial SMCs to migrate. These migrating SMCs elaborate extracellular matrix that thickens the intima and forms the scaffold for subsequent lipid accumulation and plaque growth. The pattern on this ultrasound — focal thickening at the bifurcation, relatively spared upstream — is the anatomic signature of turbulent-flow-driven endothelial injury.<br><strong>Option A</strong> is incorrect: the atherogenic mechanism at bifurcations is turbulent shear stress causing endothelial injury; the lecture identifies disturbed flow, not LDL accumulation from slower velocity, as the site-specific driver.<br><strong>Option B</strong> is incorrect: structural IEL thinning at bifurcation sites is not an established mechanism for atherosclerotic predilection; the lecture attributes this specifically to disturbed blood flow.<br><strong>Option C</strong> is incorrect: vasa vasorum insufficiency contributes to medial ischemia when large plaques block oxygen diffusion, but it is not the initiating mechanism for endothelial injury at bifurcations.<br><strong>Option D</strong> is incorrect: macrophage accumulation is a consequence of endothelial injury and LDL retention, not the primary reason bifurcations are predilected sites.<br>Slide 20 · Transcript 37:10<br><img src=\"quizzes/media/cardio-w03-lec14-slide20.jpg\" alt=\"Slide 20\">",
+   "citation": "Slide 20 · Transcript 37:10",
+   "facts": ["Lec14-F022"]
+  },
+  {
+   "qid": "lec14-q10",
+   "text": "A 48-year-old woman with a 1.5-pack/day, 25-year smoking history presents with bilateral calf claudication from peripheral artery disease. Which of the following best describes the primary mechanism linking her smoking history to accelerated atherosclerosis?",
+   "options": [
+    "Nicotine stimulates beta-1 adrenergic receptors, increasing heart rate and creating a chronic demand-supply mismatch",
+    "Carbon monoxide displaces oxygen from hemoglobin, causing compensatory polycythemia that raises blood viscosity and vascular resistance",
+    "Smoke compounds directly injure the endothelium and oxidize LDL in a dose-dependent, pro-atherogenic manner",
+    "Chronic sympathetic activation from nicotine increases peripheral vascular resistance and promotes arterial wall hypertrophy",
+    "Tar compounds impair alveolar surfactant function, inducing hypoxia and secondary pulmonary hypertension with right heart strain"
+   ],
+   "correct": 2,
+   "explanation": "<strong>Cigarette smoke compounds directly injure endothelial cells and establish a pro-inflammatory, pro-atherogenic state that promotes LDL oxidation and foam cell formation, in a dose-dependent manner.</strong> Three convergent mechanisms link smoking to atherosclerosis: (1) direct endothelial cell toxicity from smoke compounds, which damages the endothelial barrier, increases adhesion molecule expression, and raises permeability to LDL; (2) systemic pro-inflammatory state, with increased leukocyte adhesion and activation; and (3) LDL oxidation, as reactive oxygen species in smoke oxidize LDL within the intima, accelerating macrophage conversion to foam cells. The dose-dependent relationship means even modest smoking reductions carry meaningful cardiovascular benefit.<br><strong>Option A</strong> is incorrect: while nicotine has cardiac chronotropic effects, the lecture identifies direct endothelial toxicity — not beta-1-mediated demand increase — as the primary atherogenic mechanism of smoking.<br><strong>Option B</strong> is incorrect: carbon monoxide effects on hemoglobin are a separate smoking complication; they do not explain the accelerated atherosclerotic plaque formation underlying her PAD.<br><strong>Option D</strong> is incorrect: sympathetic activation and afterload increase are secondary hemodynamic effects; the lecture specifically teaches direct endothelial toxicity as the primary atherogenic link for smoking.<br><strong>Option E</strong> is incorrect: tar and surfactant impairment drive pulmonary disease, not the vascular endothelial injury underlying atherosclerosis.<br>Slide 29<br><img src=\"quizzes/media/cardio-w03-lec14-slide29.jpg\" alt=\"Slide 29\">",
+   "citation": "Slide 29",
+   "facts": ["Lec14-F054"]
+  },
+  {
+   "qid": "lec14-q12",
+   "text": "Which of the following most accurately explains why lipoprotein(a) [Lp(a)] cardiovascular risk cannot be reliably reduced by dietary modification or statin therapy?",
+   "options": [
+    "Standard LDL-cholesterol assays accurately capture Lp(a), so no dedicated Lp(a) testing is typically needed",
+    "Lp(a) levels fall significantly with dietary saturated fat restriction and high-dose statin therapy",
+    "Because Lp(a) particles are larger than standard LDL, they enter the arterial intima more slowly, substantially limiting their independent atherogenic effect",
+    "Lp(a) is an LDL-like particle with apolipoprotein(a); its level is genetically determined rather than diet- or statin-responsive",
+    "Lp(a) raises cardiovascular risk only above the 95th percentile; below this threshold it confers no independent atherogenic or prothrombotic effect"
+   ],
+   "correct": 3,
+   "explanation": "<strong>Lp(a) is an LDL-like particle carrying an additional apolipoprotein(a) component; its circulating level is almost entirely genetically determined and is not meaningfully changed by diet or statin therapy.</strong> Unlike LDL-cholesterol, which responds to dietary change and statin therapy, Lp(a) levels are genetically determined — set by the LPA gene locus — and do not meaningfully change with diet or statins. The apolipoprotein(a) component shares structural homology with plasminogen, giving Lp(a) its prothrombotic character by competing with plasminogen for fibrin binding. Pro-inflammatory effects further accelerate plaque formation. Because routine lipid panels do not measure Lp(a), it requires dedicated testing in high-risk patients.<br><strong>Option A</strong> is incorrect: Lp(a) is not captured by standard LDL-cholesterol assays; it requires a specific Lp(a) assay, which is why it is classified as a non-traditional risk factor requiring dedicated testing.<br><strong>Option B</strong> is incorrect: Lp(a) levels are genetically determined and do not meaningfully change with dietary fat restriction or statin therapy — this is precisely the teaching point.<br><strong>Option C</strong> is incorrect: particle size does not reduce Lp(a)'s atherogenic potential; its prothrombotic and pro-inflammatory properties make it independently hazardous regardless of particle size.<br><strong>Option E</strong> is incorrect: Lp(a) exerts its prothrombotic and pro-inflammatory effects across its concentration range; the lecture does not describe a safe lower threshold below which it becomes inert.<br>Slide 30<br><img src=\"quizzes/media/cardio-w03-lec14-slide30.jpg\" alt=\"Slide 30\">",
+   "citation": "Slide 30",
+   "facts": ["Lec14-F059"]
+  },
+  {
+   "qid": "lec14-q13",
+   "text": "At autopsy, a pathologist examining the coronary arteries and aorta of an 11-year-old child who died in a motor vehicle accident identifies small intimal accumulations of lipid-laden macrophages. Which of the following statements about these lesions is most accurate?",
+   "options": [
+    "The finding indicates early-onset atherosclerosis that represents irreversible cardiovascular damage requiring urgent genetic evaluation",
+    "Fatty streaks develop as early as age 10 and are found in most 10-year-olds; they are subclinical and can regress with risk factor control",
+    "These lesions are pathognomonic for familial hypercholesterolemia and mandate urgent lipid testing in the child's first-degree relatives",
+    "Lipid-laden macrophage accumulations in pediatric vessels represent a normal immune response to viral endothelial injury, not early atherosclerosis",
+    "Once fatty streaks form in childhood, they inevitably progress to fibrous plaques over the following decade regardless of lifestyle intervention"
+   ],
+   "correct": 1,
+   "explanation": "<strong>Fatty streaks are the earliest identifiable atherosclerotic lesion, appear as early as age 10 and are found in the majority of children this age, are subclinical, and can regress if cardiovascular risk factors are controlled.</strong> Literature cited in this lecture demonstrates that the majority of 10-year-olds already have at least some fatty streaks in their aortas and coronary arteries — a finding that underscores how early the atherogenic process begins. At this stage, lesions consist only of foam cells without the fibrous reaction or smooth muscle proliferation that makes advanced plaques structurally entrenched. Controlling lipid levels, blood pressure, and smoking exposure in young people can allow these early lesions to regress.<br><strong>Option A</strong> is incorrect: fatty streaks are ubiquitous in children this age, not inherently pathological, and are reversible; they do not indicate irreversible damage or require genetic evaluation on their own.<br><strong>Option C</strong> is incorrect: fatty streaks at age 10-11 are normal population findings; they are not pathognomonic for familial hypercholesterolemia.<br><strong>Option D</strong> is incorrect: intimal accumulations of lipid-laden macrophages are the histologic definition of atherosclerotic fatty streaks, not a viral immune response.<br><strong>Option E</strong> is incorrect: the lecture explicitly states that fatty streaks are reversible; progression to fibrous plaques is not inevitable and depends on ongoing risk factor exposure.<br>Slide 12 · Transcript 11:13<br><img src=\"quizzes/media/cardio-w03-lec14-slide12.jpg\" alt=\"Slide 12\">",
+   "citation": "Slide 12 · Transcript 11:13",
+   "facts": ["Lec14-F016"]
+  },
+  {
+   "qid": "lec14-q14",
+   "text": "A 58-year-old man with hyperlipidemia undergoes both coronary angiography and intravascular ultrasound (IVUS) on the same vessel segment. Angiography shows only mild luminal irregularity. IVUS reveals a large eccentric plaque occupying 43% of the vessel's total cross-sectional area. Which process best accounts for this discrepancy?",
+   "options": [
+    "The plaque's collagen-rich fibrous cap reduces its radiographic density, making it invisible to contrast angiography",
+    "IVUS systematically overestimates plaque size because it measures the outer adventitia rather than intimal plaque alone",
+    "Calcification within the plaque absorbs contrast material, masking the full extent of luminal encroachment on angiography",
+    "Smooth muscle cell proliferation in the adventitia distorts total vessel diameter while leaving the lumen unaffected",
+    "Compensatory outward vascular remodeling preserves luminal area until the plaque exceeds approximately 50% stenosis"
+   ],
+   "correct": 4,
+   "explanation": "<strong>Outward vascular remodeling — compensatory dilatation of the total vessel diameter — preserves luminal area as plaque accumulates, explaining why angiography shows minimal narrowing while IVUS reveals a large plaque.</strong> In early and intermediate atherosclerosis, the artery remodels outward (the Glagov phenomenon) to maintain near-normal luminal caliber even as plaque grows. This compensatory capacity is exhausted at approximately 50% cross-sectional plaque involvement; beyond this threshold, further plaque growth encroaches on the lumen and becomes angiographically visible. The majority of atherosclerotic lesions therefore remain clinically silent and angiographically subtle until they become severe. This explains why IVUS and coronary CT angiography detect far greater atherosclerotic burden than standard contrast angiography alone.<br><strong>Option A</strong> is incorrect: angiography images the contrast-filled lumen, not plaque tissue; fibrous cap density does not create a relevant angiographic discrepancy.<br><strong>Option B</strong> is incorrect: IVUS measures intimal and medial layers and does not systematically overestimate plaque by including the adventitia.<br><strong>Option C</strong> is incorrect: calcification can create shadowing artifacts on IVUS but does not mask plaque from angiography; calcium may actually create luminal irregularities visible on angiography.<br><strong>Option D</strong> is incorrect: adventitial thickening from SMC proliferation is not a described mechanism of compensatory remodeling in atherosclerosis and would not explain a normal-appearing lumen on angiography.<br>Slide 17 · Transcript 18:18<br><img src=\"quizzes/media/cardio-w03-lec14-slide17.jpg\" alt=\"Slide 17\">",
+   "citation": "Slide 17 · Transcript 18:18",
+   "facts": ["Lec14-F029"]
+  },
+  {
+   "qid": "lec14-q15",
+   "text": "A 23-year-old man with autosomal recessive cystathionine beta-synthase deficiency has markedly elevated circulating homocysteine and severe premature atherosclerosis. His physician considers high-dose B12 and folate supplementation to lower homocysteine levels. Which statement about this intervention is most accurate?",
+   "options": [
+    "The disorder is autosomal dominant, and B-vitamin supplementation reliably corrects the underlying enzyme dysfunction and normalizes homocysteine to safe levels",
+    "High-dose folate reliably reduces cardiovascular events in homocystinuria by restoring endothelial nitric oxide synthase activity",
+    "Despite mechanistic plausibility, lowering homocysteine with B vitamins does not reliably reduce atherosclerotic events in homocystinuria",
+    "Homocysteine promotes atherosclerosis primarily by oxidizing LDL particles in the systemic circulation before intimal entry",
+    "Clinical trials confirm that B-vitamin homocysteine reduction prevents MI and stroke in proportion to the degree of reduction achieved"
+   ],
+   "correct": 2,
+   "explanation": "<strong>Although B-vitamin supplementation lowers homocysteine levels and the rationale is mechanistically sound, clinical evidence does not support a reliable reduction in atherosclerotic events in patients with homocystinuria.</strong> Homocystinuria is autosomal recessive, caused by cystathionine beta-synthase deficiency, and produces very high circulating homocysteine. The mechanism of vascular damage is endothelial toxicity: homocysteine generates oxidative stress, impairs normal anticoagulant endothelial function, and creates a pro-thrombotic, pro-inflammatory environment that accelerates atherosclerosis. While B12 and folate lower homocysteine by supporting its metabolic conversion, randomized trials have not confirmed that this biochemical reduction translates into proportional reductions in clinical cardiovascular events.<br><strong>Option A</strong> is incorrect: homocystinuria is autosomal recessive, not dominant; B vitamins lower homocysteine levels but do not correct the enzyme deficiency itself.<br><strong>Option B</strong> is incorrect: while folate does reduce homocysteine, the claim that it reliably reduces cardiovascular events is not supported by clinical trials.<br><strong>Option D</strong> is incorrect: homocysteine's atherogenic mechanism is endothelial toxicity and impaired anticoagulant function, not direct systemic LDL oxidation before intimal entry.<br><strong>Option E</strong> is incorrect: clinical trials have specifically failed to demonstrate proportional cardiovascular event reduction with homocysteine lowering — the opposite of what this option states.<br>Slide 30<br><img src=\"quizzes/media/cardio-w03-lec14-slide30.jpg\" alt=\"Slide 30\">",
+   "citation": "Slide 30",
+   "facts": ["Lec14-F062"]
+  },
+  {
+   "qid": "lec14-q16",
+   "text": "A cardiologist evaluates two 50-year-old men with identical LDL-cholesterol concentrations of 140 mg/dL. Patient A has predominantly small, dense LDL particles; Patient B has large, buoyant LDL particles. Which biomarker most accurately quantifies each patient's total atherogenic lipoprotein particle burden?",
+   "options": [
+    "Apolipoprotein B (ApoB) concentration",
+    "Total cholesterol-to-HDL ratio",
+    "Fasting triglyceride level",
+    "LDL particle size measured by nuclear magnetic resonance spectroscopy",
+    "High-sensitivity C-reactive protein (hsCRP)"
+   ],
+   "correct": 0,
+   "explanation": "<strong>Apolipoprotein B (ApoB) concentration most accurately quantifies atherogenic lipoprotein particle burden because each atherogenic lipoprotein particle carries exactly one ApoB molecule, making ApoB a direct particle-count assay.</strong> When two patients have the same LDL-cholesterol concentration but different particle sizes, the patient with small, dense LDL carries more particles per unit of cholesterol, and therefore more ApoB. More particles mean more opportunities for endothelial entry, intimal retention, and oxidative modification. LDL-cholesterol reflects cholesterol mass, not particle number, and systematically underestimates atherogenic risk in patients with small, dense LDL or elevated triglycerides. ApoB measurement is increasingly recognized as a superior cardiovascular risk predictor compared to LDL-cholesterol alone.<br><strong>Option B</strong> is incorrect: the total cholesterol-to-HDL ratio is a composite risk estimate but does not directly count atherogenic lipoprotein particles.<br><strong>Option C</strong> is incorrect: triglyceride levels reflect VLDL and metabolic state but cannot quantify total atherogenic particle number across LDL, IDL, VLDL, and Lp(a).<br><strong>Option D</strong> is incorrect: LDL particle size testing distinguishes dense from buoyant particles but does not provide an absolute particle count as comprehensively as ApoB.<br><strong>Option E</strong> is incorrect: hsCRP is an inflammatory marker that predicts cardiovascular risk but does not quantify atherogenic lipoprotein particle burden.<br>Slide 30<br><img src=\"quizzes/media/cardio-w03-lec14-slide30.jpg\" alt=\"Slide 30\">",
+   "citation": "Slide 30",
+   "facts": ["Lec14-F058"]
+  },
+  {
+   "qid": "lec14-q17",
+   "text": "Which of the following correctly distinguishes elastic arteries from muscular arteries in terms of their wall structure?",
+   "options": [
+    "Muscular arteries have elastic lamellae distributed throughout the tunica media, while elastic arteries rely mainly on smooth muscle contraction for wall compliance",
+    "Both elastic and muscular arteries have elastic lamellae throughout the tunica media and differ only in relative adventitia thickness",
+    "Elastic arteries resist atherosclerosis because distributed medial elastin buffers turbulent shear stress at arterial bifurcations",
+    "Elastic arteries lack an internal elastic lamina; instead, continuous elastic sheets replace it throughout the wall, and muscular arteries have no organized elastic tissue whatsoever",
+    "Elastic arteries have elastic lamellae throughout the tunica media; muscular arteries have a distinct internal elastic lamina and external elastic lamina flanking the media"
+   ],
+   "correct": 4,
+   "explanation": "<strong>Elastic arteries such as the aorta and pulmonary trunk have elastic lamellae distributed throughout the tunica media; muscular arteries such as the coronary, femoral, and renal arteries have a distinct internal elastic lamina and external elastic lamina flanking the media.</strong> This structural distinction reflects different physiological roles: elastic arteries act as a Windkessel reservoir using distributed elastin to store systolic energy; muscular arteries regulate regional blood flow through smooth muscle contraction. Atherosclerosis preferentially affects both categories — the abdominal aorta (elastic) and coronary/femoral arteries (muscular) are the two most commonly involved sites, so elastic architecture does not confer protection.<br><strong>Option A</strong> is incorrect: this description inverts the correct architecture; elastic lamellae throughout the media are the defining feature of elastic arteries, not muscular arteries.<br><strong>Option B</strong> is incorrect: muscular arteries do not have lamellae throughout the media; elastic lamellae are the distinguishing feature of elastic arteries and are not uniformly present in muscular artery media.<br><strong>Option C</strong> is incorrect: elastic arteries are among the most commonly affected by atherosclerosis — the abdominal aorta is the most frequently involved site; medial elastin does not protect against atherosclerosis.<br><strong>Option D</strong> is incorrect: elastic arteries do possess an internal elastic lamina in addition to their distributed lamellae; and muscular arteries do contain organized elastic tissue (the IEL and EEL) — this option inverts both structural facts.<br>Slide 7<br><img src=\"quizzes/media/cardio-w03-lec14-slide7.jpg\" alt=\"Slide 7\">",
+   "citation": "Slide 7",
+   "facts": ["Lec14-F008"]
+  },
+  {
+   "qid": "lec14-q18",
+   "text": "A 54-year-old man who smokes 1 pack/day, has hypertension, and has an LDL of 168 mg/dL develops crushing substernal chest pain while shoveling snow. He is diaphoretic and nauseated. Emergency angiography reveals complete occlusion of the mid-left anterior descending artery with no antegrade flow. Which sequence of events most directly led to the acute complete occlusion?",
+   "options": [
+    "Progressive stable plaque growth caused gradually increasing luminal narrowing until critical stenosis was reached at peak exertion",
+    "Rupture of a complicated atherosclerotic plaque exposed the thrombogenic necrotic core to blood, precipitating complete luminal thrombosis",
+    "Coronary artery vasospasm triggered by sympathetic activation during exertion transiently occluded the vessel without plaque involvement",
+    "Platelet microthrombi formed spontaneously at a turbulent coronary bifurcation without any pre-existing atherosclerotic plaque and then propagated to complete occlusion",
+    "A cholesterol embolus from a proximal aortic plaque migrated distally and lodged in the mid-LAD"
+   ],
+   "correct": 1,
+   "explanation": "<strong>Rupture of a complicated atherosclerotic plaque exposes the highly thrombogenic lipid core and subendothelial collagen to circulating platelets and coagulation factors, precipitating rapid complete luminal thrombosis — the precipitating cause of most acute myocardial infarctions.</strong> This patient's multiple risk factors (smoking, hypertension, elevated LDL, sedentary lifestyle) drove progressive plaque formation. The acute event was not caused by gradual luminal narrowing but by plaque rupture at a vulnerable plaque — likely with a thin fibrous cap and a large necrotic core — which exposed the thrombogenic core to blood. Physical exertion and sympathetic surge can increase shear stress on vulnerable plaque caps, precipitating rupture. The resulting thrombus propagates to complete occlusion within minutes.<br><strong>Option A</strong> is incorrect: gradual critical stenosis from stable plaque growth is the mechanism for stable exertional angina, not acute MI; most MIs result from plaque rupture at sites that may not have been critically stenotic beforehand.<br><strong>Option C</strong> is incorrect: Prinzmetal (vasospastic) angina can cause transient ischemia, but complete sustained occlusion in a patient with multiple atherosclerosis risk factors is explained by plaque rupture with thrombosis, not vasospasm alone.<br><strong>Option D</strong> is incorrect: platelet thrombus without a pre-existing atherosclerotic plaque substrate is not a recognized mechanism of acute MI; virtually all cases involve plaque rupture or erosion.<br><strong>Option E</strong> is incorrect: cholesterol embolism causes ischemia in small distal arterioles (blue toe syndrome, renal microinfarcts), not acute epicardial coronary artery occlusion.<br>Slide 34 · Transcript 01:35<br><img src=\"quizzes/media/cardio-w03-lec14-slide34.jpg\" alt=\"Slide 34\">",
+   "citation": "Slide 34 · Transcript 01:35",
+   "facts": ["Lec14-F039"]
+  },
+  {
+   "qid": "lec14-q19",
+   "text": "At approximately what degree of coronary artery luminal stenosis does the vessel lose its ability to meet increased metabolic demand during physical exertion, producing exertional angina?",
+   "options": [
+    "Approximately 50% luminal stenosis",
+    "Approximately 30% luminal stenosis",
+    "Approximately 90% luminal stenosis",
+    "Approximately 70% luminal stenosis",
+    "Approximately 85% luminal stenosis"
+   ],
+   "correct": 3,
+   "explanation": "<strong>Approximately 70% luminal stenosis is the critical threshold in coronary arteries at which resting flow may still be adequate but increased metabolic demand during exertion cannot be met, producing exertional angina.</strong> Below approximately 50% stenosis, outward vascular remodeling compensates and flow is adequate at rest and with exercise. Between 50% and 70%, coronary flow reserve is reduced but symptoms may be absent at rest. At approximately 70%, the vessel cannot increase perfusion sufficiently during exercise, creating the supply-demand mismatch that underlies stable exertional angina: predictable chest pain with exertion that reliably resolves with rest. Beyond this threshold, symptoms may occur at progressively lower levels of exertion.<br><strong>Option A</strong> is incorrect: 50% stenosis is the approximate threshold at which vascular remodeling is exhausted and some flow limitation begins, not the threshold for symptomatic exertional angina.<br><strong>Option B</strong> is incorrect: 30% stenosis is well within the compensated range; patients are typically asymptomatic at this degree of narrowing.<br><strong>Option C</strong> is incorrect: 90% stenosis would cause severe resting ischemia or rest angina rather than merely exertional symptoms; 70% is the clinically taught threshold for exertional angina onset.<br><strong>Option E</strong> is incorrect: while 85% stenosis exceeds the critical threshold, the lecture specifically identifies 70% as the important teaching number for the onset of exertional symptoms.<br>Slide 21<br><img src=\"quizzes/media/cardio-w03-lec14-slide21.jpg\" alt=\"Slide 21\">",
+   "citation": "Slide 21",
+   "facts": ["Lec14-F031"]
+  },
+  {
+   "qid": "lec14-q20",
+   "text": "Which of the following best explains why large arteries such as the aorta depend on vasa vasorum for oxygen delivery to the outer portions of their walls?",
+   "options": [
+    "Smooth muscle cells in the tunica adventitia have an unusually high metabolic rate that outstrips the diffusion capacity from any single oxygen source",
+    "The endothelial glycocalyx acts as an impermeable barrier to oxygen diffusion from the lumen into the vessel wall",
+    "Large artery walls exceed diffusion limits from the lumen; vasa vasorum supply the outer half of the wall while inner layers rely on luminal diffusion",
+    "Vasa vasorum only develop in response to hypoxic signaling from atherosclerotic plaques; they are absent from normal large arteries",
+    "The internal elastic lamina functions as a partial diffusion barrier, reducing oxygen delivery to the media and requiring a supplementary blood supply from vasa vasorum"
+   ],
+   "correct": 2,
+   "explanation": "<strong>Large artery walls are too thick for oxygen to diffuse from the lumen to the outer media and adventitia; vasa vasorum supply the outer half of the wall while the inner intima and inner media rely on diffusion from the lumen.</strong> This anatomic fact has direct pathological relevance in atherosclerosis: as plaques thicken the intima, they increase the diffusion distance from lumen to media, starving medial smooth muscle cells of oxygen. This is one of the three mechanisms driving aortic aneurysm formation — the ischemic atrophy mechanism — in which medial SMCs die when their oxygen supply is cut off by a thick overlying plaque.<br><strong>Option A</strong> is incorrect: the driving factor is wall thickness exceeding diffusion limits, not an elevated metabolic rate of adventitial smooth muscle cells.<br><strong>Option B</strong> is incorrect: the endothelial glycocalyx is a luminal surface structure involved in mechanosensing and permeability; it does not act as an impermeable barrier to oxygen diffusion into the wall.<br><strong>Option D</strong> is incorrect: vasa vasorum are normal anatomic structures in large vessels present before any atherosclerosis; they are not pathologic responses to ischemic signaling from plaques.<br><strong>Option E</strong> is incorrect: the internal elastic lamina does not function as a meaningful oxygen diffusion barrier; the primary limitation is wall thickness, and the IEL is a structural, not a diffusion-barrier, feature.<br>Slide 7<br><img src=\"quizzes/media/cardio-w03-lec14-slide7.jpg\" alt=\"Slide 7\">",
+   "citation": "Slide 7",
+   "facts": ["Lec14-F007"]
+  }
+ ]
+}
