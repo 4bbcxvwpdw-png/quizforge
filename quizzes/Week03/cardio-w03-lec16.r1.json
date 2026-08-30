@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "id": "cardio-w03-lec16",
+  "revision": 1,
+  "question_count": 18,
+  "title": "Myocardial Infarction",
+  "subtitle": "Week 03 · Lec 16 · Myocardial Infarction | 18 questions",
+  "source_fingerprints": {
+    "Lec16_FactInventory.md": "b53772a691e989d7183ce6c40cea2d62f2af37a80b3014613f867c991669c2bd",
+    "quiz_selection.tsv": "5cfc7723f70c95054ed2b3417698274c58cc359fc0c01cc007b605da287a308c",
+    "01_slides.txt": "6d809ab43a62b58d4de828e1dceca0393862ab6bf3e76c9db0305516a04c812c",
+    "transcript.vtt": "3b49cc380b01ad7616777e544aefebae9753cfbcc43562792c032eb775d163ba"
+  },
+  "questions": [
+    {
+      "qid": "lec16-q01",
+      "text": "A 54-year-old man presents with 30 minutes of rest chest pain. His ECG shows no ST-segment elevation or new Q waves, and his vitals are blood pressure 138/84 mm Hg, pulse 92/min. Serial cardiac biomarkers are ordered. Which laboratory finding would most directly distinguish NSTEMI from unstable angina in this patient?",
+      "options": [
+        "Presence of new Q waves on a 12-lead ECG",
+        "Ischemic ST-segment depression exceeding 1 mm",
+        "Troponin elevation above the reference limit",
+        "D-dimer level exceeding 500 ng/mL"
+      ],
+      "correct": 2,
+      "explanation": "<strong>NSTEMI is distinguished from unstable angina by a positive cardiac troponin above the 99th-percentile reference limit.</strong> Both conditions share identical presentations — rest pain, crescendo angina, or new-onset angina — and neither requires ST-segment elevation. The sole discriminator on the ACS classification slide is biomarker status: NSTEMI carries a positive troponin; unstable angina does not.<br><strong>Option A</strong> is incorrect: New Q waves can appear in established MI but are not a basis for the NSTEMI/UA distinction and are absent by definition in NSTEMI (positive biomarkers without Q waves).<br><strong>Option B</strong> is incorrect: ST-depression may be present in both NSTEMI and UA and does not by itself distinguish them; biomarker status does.<br><strong>Option D</strong> is incorrect: D-dimer is not a diagnostic criterion for any ACS subtype and is not referenced in the ACS classification framework.<br>Slide 7 · Transcript 07:39<br><img src=\"quizzes/media/cardio-w03-lec16-slide7.jpg\" alt=\"Slide 7\">",
+      "citation": "Slide 7 · Transcript 07:39",
+      "facts": ["Lec16-F002", "Lec16-F004", "Lec16-F005"]
+    },
+    {
+      "qid": "lec16-q02",
+      "text": "According to the classic MI pathology timeline taught in the lecture, at what time interval after coronary occlusion does irreversible cardiomyocyte injury begin?",
+      "options": [
+        "One to two minutes after ATP depletion begins",
+        "Within ten minutes of coronary occlusion",
+        "One to three hours when wavy myofibers appear",
+        "Between 20 and 24 minutes of ischemia"
+      ],
+      "correct": 3,
+      "explanation": "<strong>Irreversible myocardial cell injury begins at 20–24 minutes of sustained ischemia</strong> — the point after which cell death is committed regardless of reperfusion. This is a classic textbook timeline emphasized explicitly by the professor as foundational knowledge.<br><strong>Option A</strong> is incorrect: At 1–2 minutes, ATP falls and contractility ceases, but cell injury is still reversible at this stage.<br><strong>Option B</strong> is incorrect: By 10 minutes, ATP is 50% depleted and cells show edema and reduced membrane action potential — still reversible.<br><strong>Option C</strong> is incorrect: Wavy myofibers at 1–3 hours represent the first histologic change, occurring after the irreversible injury threshold has already been crossed at 20–24 minutes.<br>Slide 16 · Transcript 16:06<br><img src=\"quizzes/media/cardio-w03-lec16-slide16.jpg\" alt=\"Slide 16\">",
+      "citation": "Slide 16 · Transcript 16:06",
+      "facts": ["Lec16-F009"]
+    },
+    {
+      "qid": "lec16-q03",
+      "text": "What is the first identifiable histologic change in infarcted myocardium, appearing 1–3 hours after coronary occlusion?",
+      "options": [
+        "Wavy myofibers",
+        "Coagulative necrosis",
+        "Neutrophil infiltration with interstitial edema",
+        "Yellow softening from macrophage resorption"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Wavy myofibers are the earliest histologic sign of MI, appearing 1–3 hours after coronary occlusion.</strong> They result from mechanical stretching of non-contracting ischemic muscle fibers by the pull of adjacent viable myocardium that is still contracting.<br><strong>Option B</strong> is incorrect: Coagulative necrosis begins at 18–24 hours and is complete by 2–4 days — far later than the 1–3 hour window.<br><strong>Option C</strong> is incorrect: Neutrophil (PMN) infiltration with hemorrhage and edema begins at 4–12 hours.<br><strong>Option D</strong> is incorrect: Yellow softening from macrophage resorption of necrotic tissue occurs at 5–7 days.<br>Slide 16 · Transcript 16:06<br><img src=\"quizzes/media/cardio-w03-lec16-slide16.jpg\" alt=\"Slide 16\">",
+      "citation": "Slide 16 · Transcript 16:06",
+      "facts": ["Lec16-F010"]
+    },
+    {
+      "qid": "lec16-q04",
+      "text": "A 63-year-old man died 6 days after an anterior STEMI. At autopsy, the infarcted territory is grossly soft, pale-yellow, and friable compared to the surrounding myocardium. Which process accounts for this appearance?",
+      "options": [
+        "Peak neutrophil and monocyte infiltration of the infarct zone",
+        "Yellow softening from macrophage resorption of necrotic tissue",
+        "Completion of fibrosis and scar formation",
+        "Wavy myofibers at the infarct border zone"
+      ],
+      "correct": 1,
+      "explanation": "<strong>The yellow-softening appearance at 5–7 days reflects macrophage invasion and enzymatic resorption of necrotic myocardium.</strong> This is also the stage of maximum vulnerability to free wall rupture because wall integrity is lowest during macrophage digestion of the dead tissue.<br><strong>Option A</strong> is incorrect: Peak neutrophil and monocyte infiltration occurs at 2–4 days (the total coagulative necrosis stage), one to two days earlier than this specimen.<br><strong>Option C</strong> is incorrect: Fibrosis and complete scar formation take approximately 7 weeks — far later than day 6.<br><strong>Option D</strong> is incorrect: Wavy myofibers appear at 1–3 hours, the very earliest histologic change, and are long gone by day 6.<br>Slide 16<br><img src=\"quizzes/media/cardio-w03-lec16-slide16.jpg\" alt=\"Slide 16\">",
+      "citation": "Slide 16",
+      "facts": ["Lec16-F012"]
+    },
+    {
+      "qid": "lec16-q05",
+      "text": "Which serum marker rises earliest after the onset of acute MI?",
+      "options": [
+        "Troponin T",
+        "Troponin I",
+        "CK-MB",
+        "Myoglobin"
+      ],
+      "correct": 3,
+      "explanation": "<strong>Myoglobin rises earliest — within approximately 2 hours per the Wu 1994 data cited on Slide 12 — before any other listed marker.</strong> Its small molecular size allows rapid diffusion out of injured cells. However, myoglobin is not cardiac-specific and can be elevated by any skeletal muscle injury, limiting its diagnostic usefulness.<br><strong>Options A and B</strong> are incorrect: Troponin T and Troponin I both rise within 4–6 hours — later than myoglobin but far more specific for myocardial necrosis, and they remain elevated up to 7–10 days.<br><strong>Option C</strong> is incorrect: CK-MB rises within 4–6 hours as well. It returns to baseline by day 3–4, making it useful for detecting reinfarction (a second rise after return to baseline).<br>Slide 12 · Transcript 12:21<br><img src=\"quizzes/media/cardio-w03-lec16-slide12.jpg\" alt=\"Slide 12\">",
+      "citation": "Slide 12 · Transcript 12:21",
+      "facts": ["Lec16-F016"]
+    },
+    {
+      "qid": "lec16-q06",
+      "text": "A meta-analysis of 50,426 patients treated with thrombolytics for acute MI found that absolute survival benefit dropped sharply with time to treatment. Which treatment window provided the greatest absolute benefit per 1,000 patients?",
+      "options": [
+        "Before 3 hours from symptom onset",
+        "Three to six hours after symptom onset",
+        "Six to twelve hours after onset",
+        "Between twelve and twenty-four hours"
+      ],
+      "correct": 0,
+      "explanation": "<strong>The first 1–3 hours after symptom onset — the ‘golden hour’ — confer the greatest absolute benefit from reperfusion therapy.</strong> The Boersma 1996 meta-analysis (slide 19) demonstrates a steep initial curve: at 1 hour of treatment the absolute benefit per 1,000 patients approaches 65 lives saved, falling sharply to roughly 20 by 6 hours, with a near-flat slope thereafter. This time-sensitivity is the foundation of the door-to-balloon goal.<br><strong>Option B</strong> is incorrect: Three to six hours still yields benefit but at a substantially reduced absolute gain compared to the golden-hour window.<br><strong>Option C</strong> is incorrect: Six to twelve hours carries modest and less reliable benefit.<br><strong>Option D</strong> is incorrect: Twelve to twenty-four hours provides the smallest absolute benefit on the meta-analysis curve.<br>Slide 19<br><img src=\"quizzes/media/cardio-w03-lec16-slide19.jpg\" alt=\"Slide 19\">",
+      "citation": "Slide 19",
+      "facts": ["Lec16-F017"]
+    },
+    {
+      "qid": "lec16-q07",
+      "text": "A 58-year-old man is started on clopidogrel plus aspirin after NSTEMI. Platelet function testing 5 days later shows less than 10% reduction in ADP-induced platelet aggregation, consistent with clopidogrel “resistance.” Which mechanism best explains this finding?",
+      "options": [
+        "Clopidogrel binds directly to ADP receptors without metabolic conversion",
+        "P2Y12 receptor downregulation explains variable clopidogrel response with chronic use",
+        "Clopidogrel requires CYP450-mediated oxidation to generate its active metabolite",
+        "Ticagrelor shares identical CYP2C19 dependence and would show the same resistance"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Clopidogrel requires two metabolic steps to become active: esterase-mediated hydrolysis followed by cytochrome P450 oxidation, primarily via CYP2C19, to generate the active thiol metabolite.</strong> CYP2C19 loss-of-function polymorphisms impair this oxidation step; in the Gurbel 2003 cohort cited on Slide 26, resistance (defined as &lt;10% change in ADP-induced aggregation) was found in a substantial minority of patients. This was the professor’s single emphasized takeaway for clopidogrel pharmacology.<br><strong>Option A</strong> is incorrect: Clopidogrel is a prodrug and is not directly active; metabolic conversion is required.<br><strong>Option B</strong> is incorrect: P2Y12 receptor downregulation is not the mechanism of resistance; poor metabolizer status from CYP2C19 polymorphism is.<br><strong>Option D</strong> is incorrect: Ticagrelor does not require CYP2C19 activation — it is directly active, which is why it is preferred in CYP2C19 poor metabolizers.<br>Slide 27 · Transcript 26:50<br><img src=\"quizzes/media/cardio-w03-lec16-slide27.jpg\" alt=\"Slide 27\">",
+      "citation": "Slide 27 · Transcript 26:50",
+      "facts": ["Lec16-F023"]
+    },
+    {
+      "qid": "lec16-q08",
+      "text": "According to the STEMI management summary in the lecture, which of the following is explicitly classified as NOT effective?",
+      "options": [
+        "Dual antiplatelet therapy",
+        "Prophylactic lidocaine",
+        "ACE inhibitors in patients with reduced ejection fraction",
+        "Aldosterone antagonists post-MI in eligible patients"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Prophylactic lidocaine is listed on slide 35 under “Not effective” alongside calcium channel blockers.</strong> Lidocaine can suppress ventricular arrhythmias acutely but does not improve mortality when given prophylactically in STEMI, and thus is not recommended.<br><strong>Option A</strong> is incorrect: Dual antiplatelet therapy (aspirin + P2Y12 inhibitor) is in the proven-effective category on slide 35.<br><strong>Option C</strong> is incorrect: ACE inhibitors/ARBs are proven effective, particularly in patients with reduced EF or heart failure post-MI.<br><strong>Option D</strong> is incorrect: Aldosterone antagonists (e.g., eplerenone) are proven effective and are on the proven list for eligible post-MI patients.<br>Slide 35<br><img src=\"quizzes/media/cardio-w03-lec16-slide35.jpg\" alt=\"Slide 35\">",
+      "citation": "Slide 35",
+      "facts": ["Lec16-F031"]
+    },
+    {
+      "qid": "lec16-q09",
+      "text": "A 70-year-old woman presents with 2 hours of chest pain, diaphoresis, and ST-segment depression in the anterior leads. Troponin returns elevated. Regarding thrombolytic therapy, which statement is correct?",
+      "options": [
+        "Thrombolytics reduce mortality in NSTEMI when given within 30 minutes",
+        "Thrombolytics are preferred over PCI when door-to-balloon time exceeds 90 minutes",
+        "Thrombolytics improve coronary flow in NSTEMI even without full vessel occlusion",
+        "Thrombolytics provide no benefit in NSTE-ACS regardless of presentation timing"
+      ],
+      "correct": 3,
+      "explanation": "<strong>Slide 36 states explicitly: “No benefit from thrombolytic therapy” in Non-ST Elevation ACS.</strong> Unlike STEMI — where a fully occluded vessel with ST elevation responds to fibrinolysis — NSTEMI and unstable angina typically involve platelet-rich, partially obstructing thrombus that does not lyse reliably with fibrinolytic agents. Risk stratification (not lysis) is the key management step.<br><strong>Option A</strong> is incorrect: Thrombolytics provide no mortality benefit in NSTEMI regardless of timing; this is not a door-to-drug issue.<br><strong>Option B</strong> is incorrect: Thrombolytics as a fallback for delayed PCI applies to STEMI only, not NSTEMI.<br><strong>Option C</strong> is incorrect: Coronary flow benefit from thrombolytics in NSTEMI is not supported; the underlying thrombus is not amenable to fibrinolysis in the same way.<br>Slide 36 · Transcript 37:58<br><img src=\"quizzes/media/cardio-w03-lec16-slide36.jpg\" alt=\"Slide 36\">",
+      "citation": "Slide 36 · Transcript 37:58",
+      "facts": ["Lec16-F032"]
+    },
+    {
+      "qid": "lec16-q10",
+      "text": "Two patients present with chest pain. Patient A has a troponin T of 0.1 ng/mL (borderline positive); Patient B has a troponin T of 8.5 ng/mL (markedly elevated). According to the risk-stratification data presented in the lecture, what does the magnitude of troponin elevation most directly predict?",
+      "options": [
+        "Time elapsed since myocardial injury began",
+        "Whether PCI or thrombolytics should be used",
+        "Short-term mortality risk in patients with ACS",
+        "Duration of antithrombotic therapy required after discharge"
+      ],
+      "correct": 2,
+      "explanation": "<strong>The magnitude of troponin elevation correlates directly with short-term mortality risk in ACS.</strong> Slide 39 presents data from Newby (Circ 1998) and Antman (NEJM 1996): troponin T-positive patients have approximately a 14% 30-day event rate vs 5% for troponin-negative patients; and troponin I levels show a graded mortality relationship from 1.0% at the lowest quartile to 7.5% at the highest. Troponin is therefore both a diagnostic and prognostic marker.<br><strong>Option A</strong> is incorrect: Time since injury is not reliably inferred from troponin magnitude — the kinetic curve varies with infarct size and clearance.<br><strong>Option B</strong> is incorrect: Reperfusion strategy choice is governed by ECG findings (ST elevation vs no elevation) and time, not troponin magnitude.<br><strong>Option D</strong> is incorrect: Antithrombotic duration is determined by procedure type, stent characteristics, and bleeding risk, not troponin level.<br>Slide 39<br><img src=\"quizzes/media/cardio-w03-lec16-slide39.jpg\" alt=\"Slide 39\">",
+      "citation": "Slide 39",
+      "facts": ["Lec16-F034"]
+    },
+    {
+      "qid": "lec16-q11",
+      "text": "A patient is recovering from STEMI. The team reviews the evidence-based management checklist. Which of the following belongs in the “proven effective” category on the STEMI management slide?",
+      "options": [
+        "Aldosterone antagonists post-MI",
+        "Calcium channel blockers for rate control",
+        "Prophylactic lidocaine for arrhythmia prevention",
+        "Intravenous nitrates for acute chest pain relief"
+      ],
+      "correct": 0,
+      "explanation": "<strong>Aldosterone antagonists are listed under “Proven effective” on slide 35’s STEMI management summary.</strong> They are supported by randomized trial data (eplerenone reduces mortality post-MI in eligible patients) and belong to the seven-item proven list alongside aspirin, dual antiplatelet therapy, early reperfusion, beta-blockers, ACE inhibitors/ARBs, and lipid-lowering agents.<br><strong>Option B</strong> is incorrect: Calcium channel blockers appear explicitly on the “Not effective” list on the same slide.<br><strong>Option C</strong> is incorrect: Prophylactic lidocaine is also on the “Not effective” list.<br><strong>Option D</strong> is incorrect: Intravenous nitrates appear in a separate, intermediate category — “Probably effective in hospital” — not the proven-effective tier.<br>Slide 35<br><img src=\"quizzes/media/cardio-w03-lec16-slide35.jpg\" alt=\"Slide 35\">",
+      "citation": "Slide 35",
+      "facts": ["Lec16-F030"]
+    },
+    {
+      "qid": "lec16-q12",
+      "text": "A 68-year-old man with NSTEMI is hemodynamically stable on aspirin, clopidogrel, and anticoagulation. A colleague argues for a conservative medical approach and reserves catheterization only for refractory ischemia. Which statement best reflects guideline-based management for this patient?",
+      "options": [
+        "Administer thrombolytics to open the culprit lesion before any catheterization",
+        "Early invasive strategy is recommended unless bleeding risk is elevated",
+        "Reserve catheterization for patients with proven reduced ejection fraction only",
+        "Pursue medical therapy alone since invasive and conservative arms are equivalent"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Slide 42 states: “Invasive therapy recommended (mortality benefit) unless bleeding risk elevated.”</strong> For NSTEMI and unstable angina, an early invasive strategy — cardiac catheterization with intent to revascularize — carries a mortality benefit over purely conservative management in most patients. Elevated bleeding risk is the recognized exception.<br><strong>Option A</strong> is incorrect: Thrombolytics provide no benefit in NSTE-ACS (slide 36) and should not precede or substitute for catheterization.<br><strong>Option C</strong> is incorrect: The invasive recommendation applies broadly to NSTEMI, not only to those with reduced EF.<br><strong>Option D</strong> is incorrect: The invasive strategy is superior to medical management in NSTEMI; they are not equivalent in the lecture’s evidence base.<br>Slide 42<br><img src=\"quizzes/media/cardio-w03-lec16-slide42.jpg\" alt=\"Slide 42\">",
+      "citation": "Slide 42",
+      "facts": ["Lec16-F036"]
+    },
+    {
+      "qid": "lec16-q13",
+      "text": "A 55-year-old woman is discharged after NSTEMI. She is currently on moderate-dose pravastatin. According to the PROVE-IT trial data presented in the lecture, which statin strategy is most supported by evidence?",
+      "options": [
+        "Continue moderate-dose pravastatin; high-intensity therapy is not indicated post-ACS",
+        "Switch to a less expensive generic statin to improve long-term adherence",
+        "Intensify to atorvastatin 80 mg to reduce subsequent CV events",
+        "Stop statin and use ezetimibe monotherapy if LDL is below 100 mg/dL"
+      ],
+      "correct": 2,
+      "explanation": "<strong>The PROVE-IT trial (slide 34) showed that atorvastatin 80 mg reduced death or major CV events by 16% relative risk compared to pravastatin 40 mg post-ACS (22.4% vs 26.3%, P=0.005).</strong> This established high-intensity statin therapy as the evidence-based standard after any ACS, with a target LDL below 70 mg/dL. The slide title emphasizes: “Lipid Lowering is Most Important of All.”<br><strong>Option A</strong> is incorrect: Moderate-dose pravastatin was the inferior comparator arm in PROVE-IT; continuing it after ACS is not guideline-concordant.<br><strong>Option B</strong> is incorrect: Switching to a different statin for adherence reasons does not address the intensity requirement; the evidence mandates high-intensity therapy.<br><strong>Option D</strong> is incorrect: Ezetimibe monotherapy is not supported for secondary prevention post-MI; statin therapy is the backbone, with ezetimibe as an add-on if LDL targets are not met.<br>Slide 34<br><img src=\"quizzes/media/cardio-w03-lec16-slide34.jpg\" alt=\"Slide 34\">",
+      "citation": "Slide 34",
+      "facts": ["Lec16-F029"]
+    },
+    {
+      "qid": "lec16-q14",
+      "text": "A 72-year-old man presents with inferior STEMI. After reperfusion, he remains hypotensive with a blood pressure of 74/48 mm Hg and a pulse of 108/min. Exam shows markedly elevated jugular venous pressure and clear lung fields bilaterally. Which management approach is most appropriate?",
+      "options": [
+        "Furosemide 40 mg IV to relieve right-sided congestion",
+        "IV nitroglycerin to reduce preload",
+        "Noninvasive positive-pressure ventilation for pulmonary edema",
+        "IV fluids and inotropic support with urgent reperfusion"
+      ],
+      "correct": 3,
+      "explanation": "<strong>This is the classic triad of right ventricular (RV) infarction: elevated JVP + clear lungs + hypotension in the setting of inferior MI — explicitly called a “cardiology board” topic at 46:25.</strong> The RV functions as a volume-dependent pump; when it infarcts, output falls and left-sided filling drops (“no left-sided failure without right-sided success”). Treatment is aggressive volume expansion to increase RV preload, plus inotropic support — the two anchored management principles slide 51 explicitly states. Agents that reduce preload (nitrates, diuretics) worsen hypotension in this setting, a consequence entailed directly by the preload-dependence the slide establishes.<br><strong>Option A</strong> is incorrect: Furosemide reduces preload, worsening the already-inadequate RV filling; slide 51 specifies volume expansion, not diuresis.<br><strong>Option B</strong> is incorrect: IV nitroglycerin reduces preload; given the RV's dependence on volume shown by slide 51, this worsens hypotension rather than relieving it.<br><strong>Option C</strong> is incorrect: The lungs are clear — there is no pulmonary edema. Positive-pressure ventilation would additionally impair venous return and RV filling.<br>Slide 51 · Transcript 47:32<br><img src=\"quizzes/media/cardio-w03-lec16-slide51.jpg\" alt=\"Slide 51\">",
+      "citation": "Slide 51 · Transcript 47:32",
+      "facts": ["Lec16-F044"]
+    },
+    {
+      "qid": "lec16-q15",
+      "text": "A 67-year-old woman develops sudden cardiogenic shock with hypotension and pulmonary edema 2 days after an MI. Transesophageal echocardiography demonstrates a flail posterior mitral leaflet prolapsing into the left atrium with severe mitral regurgitation on color Doppler. Which MI territory is most often responsible for this mechanical complication?",
+      "options": [
+        "Anterior MI involving the left anterior descending artery",
+        "Inferior MI involving the posteromedial papillary muscle",
+        "Lateral MI involving the obtuse marginal coronary branch",
+        "Right ventricular MI from proximal right coronary artery occlusion"
+      ],
+      "correct": 1,
+      "explanation": "<strong>Inferior MI is the most common cause of papillary muscle rupture because, as slide 50 states, the posteromedial papillary muscle has a single blood supply</strong> — unlike the anterolateral papillary muscle, which receives dual supply. Loss of that sole feeding vessel leaves the posteromedial muscle with no collateral protection, predisposing it to infarction and rupture even with small inferior infarcts.<br><strong>Option A</strong> is incorrect: Anterior MI can ischemia the anterolateral papillary muscle, but its dual blood supply (LAD + circumflex marginals) significantly reduces rupture risk.<br><strong>Option C</strong> is incorrect: Lateral MI via obtuse marginal branches injures the anterolateral papillary muscle; dual supply makes rupture uncommon.<br><strong>Option D</strong> is incorrect: RV infarction does not typically cause mitral papillary muscle rupture; the tricuspid valve papillary muscles may be affected but this is not the classic scenario described.<br>Slide 50 · Transcript 47:13<br><img src=\"quizzes/media/cardio-w03-lec16-slide50.jpg\" alt=\"Slide 50\">",
+      "citation": "Slide 50 · Transcript 47:13",
+      "facts": ["Lec16-F042"]
+    },
+    {
+      "qid": "lec16-q16",
+      "text": "Five days after anterior STEMI, a 71-year-old man develops worsening dyspnea and a new harsh holosystolic murmur at the left lower sternal border with a palpable parasternal thrill. Right heart catheterization shows an oxygen saturation of 72% in the right atrium and 85% in the right ventricle. Which post-MI complication has occurred?",
+      "options": [
+        "Ventricular septal rupture with left-to-right shunting",
+        "Acute mitral regurgitation from chordal rupture",
+        "Right ventricular infarct with secondary tricuspid regurgitation",
+        "Contained free wall rupture forming a pseudoaneurysm"
+      ],
+      "correct": 0,
+      "explanation": "<strong>An oxygen saturation step-up from right atrium (72%) to right ventricle (85%) is pathognomonic for a left-to-right shunt at the ventricular level — a ventricular septal rupture (VSR).</strong> Post-MI VSR allows oxygenated LV blood to enter the RV, raising RV saturation measurably above RA saturation — the intracardiac left-to-right shunt slide 48 describes. The pan-systolic murmur and parasternal thrill are generated by high-velocity flow across the defect. Early surgical repair is required after medical stabilization.<br><strong>Option B</strong> is incorrect: Papillary muscle rupture with acute MR also causes a holosystolic murmur, but it is loudest at the apex radiating to the axilla, and RA/RV oxygen saturations would be equal — no O2 step-up occurs.<br><strong>Option C</strong> is incorrect: RV infarction presents with JVP elevation and clear lungs, not an O2 step-up or parasternal thrill of this magnitude.<br><strong>Option D</strong> is incorrect: Pseudoaneurysm presents with recurrent hypotension and bradycardia; it does not cause an intracardiac shunt or O2 step-up.<br>Slide 48<br><img src=\"quizzes/media/cardio-w03-lec16-slide48.jpg\" alt=\"Slide 48\">",
+      "citation": "Slide 48",
+      "facts": ["Lec16-F040"]
+    },
+    {
+      "qid": "lec16-q17",
+      "text": "Which statement regarding ventricular free wall rupture as a complication of acute MI is most accurate?",
+      "options": [
+        "It occurs within the first 24 hours due to severe ischemia",
+        "It is most common 2-4 weeks after MI during scar remodeling",
+        "It typically occurs 5-7 days post-MI at the infarct border zone",
+        "It presents with a new systolic murmur detectable at the apex"
+      ],
+      "correct": 2,
+      "explanation": "<strong>Free wall rupture classically occurs 5–7 days after MI, during the yellow-softening phase when macrophage digestion has maximally weakened the infarct zone.</strong> The 5–7 day window is the same phase slide 16 defines as yellow softening from macrophage resorption. Rupture occurs at the border between necrotic and viable myocardium where shear forces are highest. Uncontained rupture causes immediate electromechanical dissociation (EMD) or asystole; a contained rupture forms a pseudoaneurysm, which may present with recurrent hypotension and bradycardia.<br><strong>Option A</strong> is incorrect: Free wall rupture within 24 hours is uncommon; the wall has not yet undergone the softening that predisposes to mechanical failure.<br><strong>Option B</strong> is incorrect: By 2–4 weeks, early fibroplasia is restoring wall integrity, making late rupture rare.<br><strong>Option D</strong> is incorrect: A new apical systolic murmur suggests papillary muscle rupture with mitral regurgitation or VSD, not free wall rupture — free wall rupture causes EMD without a murmur.<br>Slide 16 · Slide 46<br><img src=\"quizzes/media/cardio-w03-lec16-slide16.jpg\" alt=\"Slide 16\"><img src=\"quizzes/media/cardio-w03-lec16-slide46.jpg\" alt=\"Slide 46\">",
+      "citation": "Slide 16 · Slide 46",
+      "facts": ["Lec16-F038"]
+    },
+    {
+      "qid": "lec16-q18",
+      "text": "A 58-year-old man with type 2 diabetes mellitus is discharged after NSTEMI with a blood pressure of 138/84 mm Hg. According to the secondary prevention targets taught in the lecture, what is the recommended blood pressure goal for this patient?",
+      "options": [
+        "Below 150/90 mm Hg, acceptable for patients with diabetes",
+        "Below 140/90 mm Hg, the standard target for all post-MI patients",
+        "Below 135/85 mm Hg, intermediate between standard and strict targets",
+        "Below 130/80 mm Hg for patients with diabetes or renal disease"
+      ],
+      "correct": 3,
+      "explanation": "<strong>Slide 54 specifies a stricter blood pressure target of &lt;130/80 mm Hg for patients with diabetes mellitus or chronic kidney disease post-MI.</strong> The general post-MI target is &lt;140/90 mm Hg, but the additional cardiovascular risk conferred by diabetes or renal disease justifies this lower threshold.<br><strong>Option A</strong> is incorrect: &lt;150/90 mm Hg is sometimes applied in frail elderly patients; it is too lenient for a patient with diabetes and recent MI.<br><strong>Option B</strong> is incorrect: &lt;140/90 mm Hg is the correct general target but not the diabetic-specific target taught on slide 54.<br><strong>Option C</strong> is incorrect: &lt;135/85 mm Hg is not a defined target on slide 54; the lecture identifies exactly two tiers (&lt;140/90 general; &lt;130/80 for DM or renal disease).<br>Slide 54<br><img src=\"quizzes/media/cardio-w03-lec16-slide54.jpg\" alt=\"Slide 54\">",
+      "citation": "Slide 54",
+      "facts": ["Lec16-F048"]
+    }
+  ]
+}

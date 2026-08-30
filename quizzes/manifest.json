@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated": "2026-08-29T05:30:00.000Z",
+ "generated": "2026-08-30T04:00:00.000Z",
  "sections": [
   {
    "id": "week-01",
@@ -153,6 +153,14 @@
      "file": "quizzes/Week03/cardio-w03-labsupmed.r1.json",
      "revision": 1,
      "question_count": 16
+    },
+    {
+     "id": "cardio-w03-lec16",
+     "title": "Lec 16 — Myocardial Infarction",
+     "subtitle": "Week 03 · Lec 16 · Myocardial Infarction | 18 questions",
+     "file": "quizzes/Week03/cardio-w03-lec16.r1.json",
+     "revision": 1,
+     "question_count": 18
     }
    ]
   },
