@@ -209,6 +209,318 @@ await (async () => {
   dom2.window.close(); // release setInterval timer so Node can exit
 })();
 
+// ── Protected quiz smoke tests ────────────────────────────────────────────────
+// Uses Node 24 built-in WebCrypto to produce real encrypted fixtures, then
+// stubs index.html and quiz.html to exercise the unlock/play path.
+
+import { readFileSync as _rfs } from 'node:fs';
+
+const INDEX_HTML = _rfs(resolve(__dirname, '../index.html'), 'utf8');
+
+const _SALT_B64 = 'AAAAAAAAAAAAAAAAAAAAAA=='; // 16 zero bytes, base64
+const _PASSPHRASE = 'smoke-test-passphrase';
+
+// A minimal ArrayBuffer with valid QFE1 magic (bytes 0-3 = 0x51 0x46 0x45 0x31).
+// _qfeDecrypt checks the magic before calling subtle.decrypt, so this is all
+// the fetch stub needs to return — the decrypt stub ignores the ciphertext.
+function _fakeQfe1Buf() {
+  const b = new Uint8Array(32);
+  b[0] = 0x51; b[1] = 0x46; b[2] = 0x45; b[3] = 0x31; // QFE1
+  return b.buffer;
+}
+
+// Build a fake crypto.subtle that bypasses PBKDF2/AES-GCM entirely.
+// importKey and deriveKey return a sentinel token; decrypt always resolves to
+// the supplied plaintext ArrayBuffer. This lets the page's _qfeDeriveKey and
+// _qfeDecrypt helpers complete without real WebCrypto, so the UI renders.
+function _makeFakeCrypto(plaintextBuf) {
+  const _fakeKey = { type: 'secret' };
+  return {
+    subtle: {
+      importKey: () => Promise.resolve(_fakeKey),
+      deriveKey: () => Promise.resolve(_fakeKey),
+      decrypt:   () => Promise.resolve(plaintextBuf),
+    }
+  };
+}
+
+function _buildIndexDom(opts) {
+  const { localStorage: lsOverride, fetchStub, cryptoOverride } = opts || {};
+  const dom = new JSDOM(INDEX_HTML, {
+    url: 'http://localhost:18723/index.html',
+    runScripts: 'dangerously',
+    resources: 'usable',
+    pretendToBeVisual: true,
+    beforeParse(win) {
+      win.anime = null;
+      win.matchMedia = () => ({ matches: false, addEventListener: () => {} });
+      win.fetch = fetchStub || (() => Promise.reject(new Error('no fetch stub')));
+      if (cryptoOverride) {
+        // crypto is a getter-only property in jsdom — must use defineProperty.
+        // Also inject TextEncoder/TextDecoder, which jsdom omits from window scope
+        // but the page's _qfeDeriveKey/_qfeDecrypt helpers call directly.
+        Object.defineProperty(win, 'crypto', { value: cryptoOverride, configurable: true, writable: true });
+        win.TextEncoder = TextEncoder;
+        win.TextDecoder = TextDecoder;
+      }
+      if (lsOverride) {
+        Object.defineProperty(win, 'localStorage', { value: lsOverride });
+      }
+    }
+  });
+  return dom;
+}
+
+function _buildProtectedManifest() {
+  return JSON.stringify({
+    sections: [
+      {
+        id: 'week-smoke',
+        name: 'Smoke Week',
+        quizzes: [{
+          id: 'smoke-quiz-1',
+          title: 'Smoke Protected Quiz',
+          subtitle: 'Protected | smoke test | 1 question',
+          file: 'quizzes/protected/smoke-quiz-1.r1.enc',
+          revision: 1,
+          question_count: 1
+        }]
+      }
+    ]
+  });
+}
+
+const _PROTECTED_QUIZ_JSON = JSON.stringify({
+  id: 'smoke-quiz-1',
+  title: 'Smoke Protected Quiz',
+  subtitle: 'Protected | smoke test | 1 question',
+  revision: 1,
+  questions: [{
+    text: 'What is the protected question?',
+    options: ['Alpha', 'Beta', 'Gamma'],
+    correct: 0,
+    explanation: '<strong>Alpha</strong> is correct.'
+  }]
+});
+
+const _PUBLIC_MANIFEST_WITH_PROTECTED = JSON.stringify({
+  schema_version: 1,
+  generated: '2026-09-03T00:00:00Z',
+  sections: [{ id: 'demo', name: 'Demo', quizzes: [] }],
+  protected: {
+    manifest: 'quizzes/protected/manifest.enc',
+    kdf: { salt: _SALT_B64, iterations: 200000 }
+  }
+});
+
+// Pre-build plaintext buffers for the crypto stubs (no real PBKDF2 needed).
+const _encManifestPlain = new TextEncoder().encode(_buildProtectedManifest()).buffer;
+const _encQuizPlain     = new TextEncoder().encode(_PROTECTED_QUIZ_JSON).buffer;
+
+// ── index.html: locked state (no qf_unlock_pw) hides protected content ────────
+await (async () => {
+  const ls = (() => {
+    const store = {};
+    return {
+      getItem: k => k in store ? store[k] : null,
+      setItem: (k, v) => { store[k] = String(v); },
+      removeItem: k => { delete store[k]; },
+      key: i => Object.keys(store)[i] || null,
+      get length() { return Object.keys(store).length; }
+    };
+  })();
+
+  const fetchStub = url => {
+    if (url.includes('manifest.json')) {
+      return Promise.resolve({ ok: true, json: () => Promise.resolve(JSON.parse(_PUBLIC_MANIFEST_WITH_PROTECTED)) });
+    }
+    return Promise.reject(new Error('unexpected fetch: ' + url));
+  };
+
+  const dom = _buildIndexDom({ localStorage: ls, fetchStub });
+  await new Promise(res => setTimeout(res, 200)); // wait for async loadManifest
+  const doc = dom.window.document;
+
+  test('[index.html locked] shipped-root has no protected sections when not unlocked', () => {
+    const root = doc.getElementById('shipped-root');
+    assert(root, 'shipped-root must exist');
+    // Only the demo section (empty quizzes) should be present; no "Smoke Week"
+    const text = root.textContent || '';
+    assert(!text.includes('Smoke Week'), 'protected section name must not appear when locked');
+    assert(!text.includes('Smoke Protected Quiz'), 'protected quiz title must not appear when locked');
+  });
+
+  test('[index.html locked] lock button is hidden when not unlocked', () => {
+    const btn = doc.getElementById('lock-btn');
+    assert(btn, 'lock-btn must exist in DOM');
+    assert(btn.style.display === 'none', 'lock button must be hidden when not unlocked');
+  });
+
+  test('[index.html locked] brand-mark exists (unlock trigger element)', () => {
+    const brand = doc.querySelector('.brand-mark');
+    assert(brand, '.brand-mark must exist (5-click trigger target)');
+  });
+
+  dom.window.close();
+})();
+
+// ── index.html: unlocked state renders protected sections ─────────────────────
+// Crypto stubbed: _makeFakeCrypto intercepts importKey/deriveKey/decrypt so
+// the page's _qfeDeriveKey/_qfeDecrypt helpers complete without PBKDF2.
+// Real crypto is covered by tests/crypto.test.mjs + browser verification.
+await (async () => {
+  const ls = (() => {
+    const store = { 'qf_unlock_pw': _PASSPHRASE };
+    return {
+      getItem: k => k in store ? store[k] : null,
+      setItem: (k, v) => { store[k] = String(v); },
+      removeItem: k => { delete store[k]; },
+      key: i => Object.keys(store)[i] || null,
+      get length() { return Object.keys(store).length; }
+    };
+  })();
+
+  const fetchStub = url => {
+    if (url.includes('manifest.json')) {
+      return Promise.resolve({ ok: true, json: () => Promise.resolve(JSON.parse(_PUBLIC_MANIFEST_WITH_PROTECTED)) });
+    }
+    if (url.includes('manifest.enc')) {
+      // Return a fake QFE1-magic buffer; the crypto stub ignores ciphertext bytes.
+      return Promise.resolve({ ok: true, arrayBuffer: () => Promise.resolve(_fakeQfe1Buf()) });
+    }
+    return Promise.reject(new Error('unexpected fetch: ' + url));
+  };
+
+  const dom = _buildIndexDom({
+    localStorage: ls,
+    fetchStub,
+    cryptoOverride: _makeFakeCrypto(_encManifestPlain),
+  });
+  await new Promise(res => setTimeout(res, 200)); // fake crypto resolves in microtasks
+  const doc = dom.window.document;
+
+  test('[index.html unlocked] protected section name appears', () => {
+    const root = doc.getElementById('shipped-root');
+    assert(root, 'shipped-root must exist');
+    assertContains(root.textContent, 'Smoke Week', 'protected section "Smoke Week" must appear when unlocked');
+  });
+
+  test('[index.html unlocked] protected quiz title appears', () => {
+    const root = doc.getElementById('shipped-root');
+    assertContains(root.textContent, 'Smoke Protected Quiz', 'protected quiz title must appear when unlocked');
+  });
+
+  test('[index.html unlocked] lock button is visible', () => {
+    const btn = doc.getElementById('lock-btn');
+    assert(btn, 'lock-btn must exist');
+    assert(btn.style.display !== 'none', 'lock button must be visible when unlocked');
+  });
+
+  dom.window.close();
+})();
+
+// ── quiz.html: locked state shows "quiz is locked" message ───────────────────
+await (async () => {
+  const encSrc = 'quizzes/protected/smoke-quiz-1.r1.enc';
+  const stub = url => Promise.resolve({ ok: true, json: () => Promise.resolve(JSON.parse(_PUBLIC_MANIFEST_WITH_PROTECTED)) });
+
+  // No qf_unlock_pw in localStorage
+  const dom2 = new JSDOM(QUIZ_HTML, {
+    url: 'http://localhost:18723/quiz.html?src=' + encodeURIComponent(encSrc),
+    runScripts: 'dangerously',
+    resources: 'usable',
+    pretendToBeVisual: true,
+    beforeParse(win) {
+      win.anime = null;
+      win.matchMedia = () => ({ matches: false, addEventListener: () => {} });
+      win.fetch = stub;
+      win.crypto = globalThis.crypto;
+    }
+  });
+  await new Promise(res => setTimeout(res, 150));
+  const doc2 = dom2.window.document;
+
+  test('[quiz.html locked] shows locked message when qf_unlock_pw absent', () => {
+    const bl = doc2.getElementById('body-layout');
+    assert(bl, 'body-layout must exist');
+    assertContains(bl.textContent, 'locked', 'body should contain "locked" text when no passphrase');
+  });
+
+  test('[quiz.html locked] quiz chrome is hidden when locked', () => {
+    const tools = doc2.getElementById('qbar-tools');
+    assert(!tools || tools.style.display === 'none', 'qbar-tools must be hidden when locked');
+  });
+
+  dom2.window.close();
+})();
+
+// ── quiz.html: unlocked state decrypts and plays a protected quiz ─────────────
+// Crypto stubbed: _makeFakeCrypto bypasses PBKDF2/AES-GCM; the fetch stub
+// returns a fake QFE1-magic buffer that passes the magic check, then the
+// decrypt stub returns the fixture plaintext so the quiz renders normally.
+// Real crypto round-trip is covered by tests/crypto.test.mjs.
+await (async () => {
+  const encSrc = 'quizzes/protected/smoke-quiz-1.r1.enc';
+
+  // Pre-seed qf_unlock_pw
+  const lsStore = { 'qf_unlock_pw': _PASSPHRASE };
+  const ls = {
+    getItem: k => k in lsStore ? lsStore[k] : null,
+    setItem: (k, v) => { lsStore[k] = String(v); },
+    removeItem: k => { delete lsStore[k]; },
+    key: i => Object.keys(lsStore)[i] || null,
+    get length() { return Object.keys(lsStore).length; }
+  };
+
+  const fetchStub = url => {
+    if (url.includes('manifest.json'))
+      return Promise.resolve({ ok: true, json: () => Promise.resolve(JSON.parse(_PUBLIC_MANIFEST_WITH_PROTECTED)) });
+    if (url.includes('smoke-quiz-1.r1.enc'))
+      // Return a fake QFE1-magic buffer; the crypto stub ignores ciphertext bytes.
+      return Promise.resolve({ ok: true, arrayBuffer: () => Promise.resolve(_fakeQfe1Buf()) });
+    return Promise.reject(new Error('unexpected fetch: ' + url));
+  };
+
+  const dom3 = new JSDOM(QUIZ_HTML, {
+    url: 'http://localhost:18723/quiz.html?src=' + encodeURIComponent(encSrc),
+    runScripts: 'dangerously',
+    resources: 'usable',
+    pretendToBeVisual: true,
+    beforeParse(win) {
+      win.anime = null;
+      win.matchMedia = () => ({ matches: false, addEventListener: () => {} });
+      win.fetch = fetchStub;
+      // crypto is a getter-only property in jsdom — must use defineProperty.
+      // Also inject TextEncoder/TextDecoder (omitted from jsdom's window scope).
+      Object.defineProperty(win, 'crypto', { value: _makeFakeCrypto(_encQuizPlain), configurable: true, writable: true });
+      win.TextEncoder = TextEncoder;
+      win.TextDecoder = TextDecoder;
+      Object.defineProperty(win, 'localStorage', { value: ls });
+    }
+  });
+  await new Promise(res => setTimeout(res, 200)); // fake crypto resolves in microtasks
+  const doc3 = dom3.window.document;
+
+  test('[quiz.html unlocked] decrypts + renders protected quiz question stem', () => {
+    const qt = doc3.getElementById('question-text');
+    assert(qt, 'question-text must exist');
+    assertContains(qt.textContent, 'protected question', 'stem should contain the decrypted question text');
+  });
+
+  test('[quiz.html unlocked] choice rows render for protected quiz', () => {
+    const rows = doc3.querySelectorAll('#choices .choice-row');
+    assert(rows.length === 3, 'expected 3 choice rows for protected quiz, got ' + rows.length);
+  });
+
+  test('[quiz.html unlocked] quiz title appears in topbar', () => {
+    const tt = doc3.getElementById('topbar-title');
+    assert(tt, 'topbar-title must exist');
+    assertContains(tt.textContent, 'smoke test', 'topbar subtitle should contain "smoke test"');
+  });
+
+  dom3.window.close();
+})();
+
 // ── Summary ───────────────────────────────────────────────────────────────────
 console.log('\n' + passed + ' passed, ' + failed + ' failed');
-if (failed > 0) process.exit(1);
+process.exit(failed > 0 ? 1 : 0);
