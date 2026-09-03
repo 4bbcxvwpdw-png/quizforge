@@ -23,6 +23,10 @@ If you keep QuizForge in a subfolder of a larger repo, point people at that subf
 
 Everything runs in your browser. Quizzes and scores are saved to the browser's own storage (localStorage), and nothing is uploaded anywhere. That has two practical effects: your library is private to the device and browser you're using, and clearing your browser data will wipe it. Use the **Export** button on any quiz card to save a copy of its JSON that you can reload later or share.
 
+## Protected quizzes
+
+Some deployments ship encrypted quizzes alongside the public demo content. These quizzes are stored in an encrypted format and only become visible after entering a passphrase; without it the library page looks like an ordinary public QuizForge with no indication that protected content exists.
+
 ## Known limitation: text only
 
 Questions are text. Chatbots paste text, not slide images, so a diagram from your slides won't come across on its own. If you really need a picture in a question, an advanced user can hand-edit the quiz JSON and drop a `data:` image URI into an `explanation` field before loading it. For everyday use, plain text questions cover the ground.

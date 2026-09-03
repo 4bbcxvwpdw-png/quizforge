@@ -395,6 +395,9 @@ button:active,.take:active{transform:translateY(1px)}
   .prompt-disclosure{transition:none !important}
 }
 
+/* ── UNLOCK MODAL ── */
+.unlock-hint{font-size:.82rem;color:var(--ink-2);margin-bottom:14px;line-height:1.5}
+
 /* ── SHIPPED QUIZZES ── */
 .shipped-banner{
   background:var(--flag-bg);color:var(--flag);
@@ -420,6 +423,10 @@ button:active,.take:active{transform:translateY(1px)}
     <span class="topbar-title">Make-your-own quiz studio</span>
   </div>
   <div class="topbar-right">
+    <button class="tb-btn" id="lock-btn" style="display:none" onclick="lockSite()" aria-label="Lock protected quizzes">
+      <svg viewBox="0 0 20 20"><rect x="4" y="9" width="12" height="9" rx="2"/><path d="M7 9V6a3 3 0 016 0v3"/></svg>
+      Lock
+    </button>
     <div class="dropdown" id="settings-dd">
       <button class="tb-btn" onclick="toggleDropdown('settings-dd')">
         <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="2.6"/><path d="M10 1.8v2.1M10 16.1v2.1M3.2 3.2l1.5 1.5M15.3 15.3l1.5 1.5M1.8 10h2.1M16.1 10h2.1M3.2 16.8l1.5-1.5M15.3 4.7l1.5-1.5"/></svg>
@@ -572,6 +579,24 @@ button:active,.take:active{transform:translateY(1px)}
     <div class="modal-actions">
       <button class="btn-cancel" onclick="closeDeleteFolderModal()">Keep it</button>
       <button class="btn-danger" onclick="confirmDeleteFolder()">Delete folder</button>
+    </div>
+  </div>
+</div>
+
+<!-- PASSPHRASE UNLOCK MODAL (hidden; opened only by the 5-click brand trigger) -->
+<div class="overlay" id="unlock-overlay" onclick="closeUnlockModal()">
+  <div class="modal" onclick="event.stopPropagation()" style="max-width:380px">
+    <h2>Unlock quizzes</h2>
+    <p class="unlock-hint">Enter your passphrase to access course quizzes on this device.</p>
+    <div>
+      <label class="modal-label" for="unlock-pw-input">Passphrase</label>
+      <input class="modal-input" id="unlock-pw-input" type="password" autocomplete="off"
+        onkeydown="unlockModalKeydown(event)" placeholder="">
+      <div id="unlock-modal-err" style="font-size:.82rem;color:var(--wrong);margin-top:6px;display:none">Incorrect passphrase</div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeUnlockModal()">Cancel</button>
+      <button class="btn btn-primary" id="unlock-modal-btn" onclick="attemptUnlock()">Unlock</button>
     </div>
   </div>
 </div>
@@ -1428,6 +1453,7 @@ document.addEventListener('keydown', e => {
   if(document.getElementById('del-overlay').classList.contains('open'))        closeDeleteModal();
   if(document.getElementById('folder-modal-overlay').classList.contains('open')) closeFolderModal();
   if(document.getElementById('del-folder-overlay').classList.contains('open'))   closeDeleteFolderModal();
+  if(document.getElementById('unlock-overlay').classList.contains('open'))     closeUnlockModal();
 });
 /* Close card/folder move menus on outside click */
 document.addEventListener('click', e => {
@@ -1723,6 +1749,171 @@ function loadManifest() {
       if(!data || data.schema_version !== 1 || !Array.isArray(data.sections))
         throw new Error('invalid manifest schema');
       renderShippedSections(data.sections);
+    })
+    .catch(err => {
+      showShippedBanner('Shipped quizzes unavailable — ' + (err && err.message ? err.message : 'fetch failed'));
+    });
+}
+
+/* ── QFE1 Crypto helper (duplicated inline; identical to quiz.html) ─────���────
+   _qfeDeriveKey(passphrase, saltB64, usage?) → Promise<CryptoKey>
+   _qfeDecrypt(buf, key) → Promise<ArrayBuffer>  */
+async function _qfeDeriveKey(passphrase, saltB64, usage) {
+  const enc = new TextEncoder();
+  const km = await crypto.subtle.importKey('raw', enc.encode(passphrase), 'PBKDF2', false, ['deriveKey']);
+  const salt = Uint8Array.from(atob(saltB64), c => c.charCodeAt(0));
+  return crypto.subtle.deriveKey(
+    { name: 'PBKDF2', hash: 'SHA-256', salt, iterations: 200000 },
+    km, { name: 'AES-GCM', length: 256 }, false, usage || ['decrypt']
+  );
+}
+async function _qfeDecrypt(buf, key) {
+  const d = new Uint8Array(buf instanceof ArrayBuffer ? buf : buf.buffer || buf);
+  if (d[0] !== 0x51 || d[1] !== 0x46 || d[2] !== 0x45 || d[3] !== 0x31)
+    throw new Error('invalid QFE1 magic');
+  const iv = d.slice(4, 16), ct = d.slice(16);
+  return crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct);
+}
+
+/* ── Protected manifest state ───────────────────────────────────────────────── */
+const UNLOCK_PW_KEY = 'qf_unlock_pw';
+let _protSalt = null;          /* base64 salt from public manifest.protected.kdf */
+let _protManifestUrl = null;   /* URL string from public manifest.protected.manifest */
+
+/* Try to load + decrypt the protected manifest. Throws on any failure. */
+async function _fetchProtectedManifest(pw) {
+  if (!_protSalt || !_protManifestUrl) throw new Error('protected metadata not loaded');
+  const key = await _qfeDeriveKey(pw, _protSalt, ['decrypt']);
+  const r = await fetch(_protManifestUrl + '?v=' + Date.now());
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  const buf = await r.arrayBuffer();
+  const plain = await _qfeDecrypt(buf, key);
+  const pm = JSON.parse(new TextDecoder().decode(plain));
+  if (!pm || !Array.isArray(pm.sections)) throw new Error('invalid protected manifest');
+  return pm;
+}
+
+/* Show or hide the Lock button in the topbar. */
+function _showLockControl(visible) {
+  const btn = document.getElementById('lock-btn');
+  if (btn) btn.style.display = visible ? '' : 'none';
+}
+
+/* Clear qf_unlock_pw and re-render the page without protected content. */
+function lockSite() {
+  try { localStorage.removeItem(UNLOCK_PW_KEY); } catch(e) {}
+  _showLockControl(false);
+  document.getElementById('shipped-root').innerHTML = '';
+  const ch = document.getElementById('custom-heading');
+  if (ch) ch.style.display = 'none';
+  loadManifest();
+}
+
+/* Passphrase modal functions */
+function openUnlockModal() {
+  const inp = document.getElementById('unlock-pw-input');
+  const err = document.getElementById('unlock-modal-err');
+  const btn = document.getElementById('unlock-modal-btn');
+  if (inp) inp.value = '';
+  if (err) err.style.display = 'none';
+  if (btn) { btn.disabled = false; btn.textContent = 'Unlock'; }
+  document.getElementById('unlock-overlay').classList.add('open');
+  if (inp) setTimeout(() => inp.focus(), 40);
+}
+function closeUnlockModal() {
+  document.getElementById('unlock-overlay').classList.remove('open');
+}
+function unlockModalKeydown(e) {
+  if (e.key === 'Enter') { e.preventDefault(); attemptUnlock(); }
+  if (e.key === 'Escape') { closeUnlockModal(); }
+}
+async function attemptUnlock() {
+  const inp = document.getElementById('unlock-pw-input');
+  const errEl = document.getElementById('unlock-modal-err');
+  const btn = document.getElementById('unlock-modal-btn');
+  const pw = inp ? inp.value : '';
+  if (!pw) return;
+  if (btn) { btn.disabled = true; btn.textContent = 'Checking…'; }
+  if (errEl) errEl.style.display = 'none';
+  try {
+    await _fetchProtectedManifest(pw); /* validate by decrypting */
+    store.set(UNLOCK_PW_KEY, pw);
+    closeUnlockModal();
+    /* Re-render: clear shipped-root so loadManifest can rebuild from scratch */
+    document.getElementById('shipped-root').innerHTML = '';
+    const ch = document.getElementById('custom-heading');
+    if (ch) ch.style.display = 'none';
+    loadManifest();
+  } catch(e) {
+    if (errEl) { errEl.textContent = 'Incorrect passphrase'; errEl.style.display = 'block'; }
+    if (btn) { btn.disabled = false; btn.textContent = 'Unlock'; }
+  }
+}
+
+/* ── Hidden 5-click trigger on the brand-mark ───────────────────────────────
+   5 clicks within 3 seconds opens the passphrase modal.
+   Nothing in the visible UI advertises this. */
+(function() {
+  let clicks = 0, timer = null;
+  const brand = document.querySelector('.brand-mark');
+  if (!brand) return;
+  brand.addEventListener('click', function() {
+    clicks++;
+    if (clicks === 1) {
+      timer = setTimeout(function() { clicks = 0; timer = null; }, 3000);
+    }
+    if (clicks >= 5) {
+      clicks = 0;
+      if (timer) { clearTimeout(timer); timer = null; }
+      /* Only show modal if there is actually a protected manifest to unlock */
+      if (_protSalt && _protManifestUrl) openUnlockModal();
+    }
+  });
+})();
+
+/* ── Shipped-quiz manifest loader (replaces the original loadManifest) ───────
+   Loads the public manifest (always).
+   If manifest.protected exists and qf_unlock_pw is set: tries to also load
+   the encrypted protected manifest and prepends its sections.
+   If not unlocked: the page renders exactly like a public QuizForge. */
+function loadManifest() {
+  if(location.protocol === 'file:') return;
+  fetch('quizzes/manifest.json?v=' + Date.now())
+    .then(r => {
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(async function(data) {
+      if(!data || data.schema_version !== 1 || !Array.isArray(data.sections))
+        throw new Error('invalid manifest schema');
+
+      /* Stash protected metadata for the hidden trigger and unlock modal */
+      if (data.protected && data.protected.kdf && data.protected.manifest) {
+        _protSalt = data.protected.kdf.salt;
+        _protManifestUrl = data.protected.manifest;
+      } else {
+        _protSalt = null; _protManifestUrl = null;
+      }
+
+      let allSections = data.sections.slice(); /* starts with demo */
+
+      if (_protSalt && _protManifestUrl) {
+        const pw = store.get(UNLOCK_PW_KEY, '');
+        if (pw) {
+          try {
+            const pm = await _fetchProtectedManifest(pw);
+            /* Protected sections first (week groups), demo last */
+            allSections = pm.sections.concat(allSections);
+            _showLockControl(true);
+          } catch(e) {
+            _showLockControl(false);
+            showShippedBanner('Protected quizzes unavailable — ' + (e && e.message ? e.message : 'decrypt failed'));
+          }
+        }
+        /* If not unlocked: render nothing about protected content */
+      }
+
+      renderShippedSections(allSections);
     })
     .catch(err => {
       showShippedBanner('Shipped quizzes unavailable — ' + (err && err.message ? err.message : 'fetch failed'));

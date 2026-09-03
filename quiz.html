@@ -1191,6 +1191,63 @@ function sanitizeHtml(rawHtml, context) {
   return div.innerHTML;
 }
 
+/* ── QFE1 Crypto helper (duplicated inline; identical to index.html) ────────
+   _qfeDeriveKey(passphrase, saltB64, usage?) → Promise<CryptoKey>
+   _qfeDecrypt(buf, key) → Promise<ArrayBuffer>  */
+async function _qfeDeriveKey(passphrase, saltB64, usage) {
+  const enc = new TextEncoder();
+  const km = await crypto.subtle.importKey('raw', enc.encode(passphrase), 'PBKDF2', false, ['deriveKey']);
+  const salt = Uint8Array.from(atob(saltB64), c => c.charCodeAt(0));
+  return crypto.subtle.deriveKey(
+    { name: 'PBKDF2', hash: 'SHA-256', salt, iterations: 200000 },
+    km, { name: 'AES-GCM', length: 256 }, false, usage || ['decrypt']
+  );
+}
+async function _qfeDecrypt(buf, key) {
+  const d = new Uint8Array(buf instanceof ArrayBuffer ? buf : (buf.buffer ? buf.buffer : buf));
+  if (d[0] !== 0x51 || d[1] !== 0x46 || d[2] !== 0x45 || d[3] !== 0x31)
+    throw new Error('invalid QFE1 magic');
+  const iv = d.slice(4, 16), ct = d.slice(16);
+  return crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct);
+}
+
+/* ── Protected quiz state ───────────────────────────────────────────────────── */
+let _isProtectedQuiz = false;          /* true when loaded via quizzes/protected/*.enc */
+let _protectedQuizKey = null;          /* CryptoKey for decrypting this quiz's media */
+const _mediaBlobCache = new Map();     /* basename → blob URL */
+const _mediaBlobUrls  = [];            /* all blob URLs created (revoke on unload) */
+window.addEventListener('unload', function() {
+  _mediaBlobUrls.forEach(function(u) { try { URL.revokeObjectURL(u); } catch(e){} });
+});
+
+/* Post-process img[src^="quizzes/media/"] in container for protected quizzes.
+   Fetches quizzes/protected/media/<basename>.enc, decrypts, swaps to blob URL.
+   Called fire-and-forget (not awaited) after each innerHTML assignment. */
+async function _postProcessMedia(container) {
+  if (!_isProtectedQuiz || !_protectedQuizKey) return;
+  const imgs = container.querySelectorAll('img[src^="quizzes/media/"]');
+  for (const img of imgs) {
+    const srcAttr  = img.getAttribute('src');
+    const baseName = srcAttr.replace('quizzes/media/', '');
+    if (_mediaBlobCache.has(baseName)) {
+      img.src = _mediaBlobCache.get(baseName);
+      continue;
+    }
+    try {
+      const r = await fetch('quizzes/protected/media/' + encodeURIComponent(baseName) + '.enc?v=' + Date.now());
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const plain = await _qfeDecrypt(await r.arrayBuffer(), _protectedQuizKey);
+      const blob  = new Blob([plain]);
+      const url   = URL.createObjectURL(blob);
+      _mediaBlobCache.set(baseName, url);
+      _mediaBlobUrls.push(url);
+      img.src = url;
+    } catch(e) {
+      /* broken img is acceptable; don't crash the quiz */
+    }
+  }
+}
+
 /* ── Load quiz from localStorage (?id= path) ─────────────────────────────── */
 function loadQuizRecord(){
   try{
@@ -1212,13 +1269,19 @@ function loadQuizRecord(){
 /* ── Load shipped quiz from file (?src= path) ───────────────────────────────
    Validates the path, fetches the JSON, populates the shared questions[] array.
    Returns true on success (caller should then run initUI), false on any error
-   (error is shown on-page; caller should NOT call initUI/showEmptyState). */
+   (error is shown on-page; caller should NOT call initUI/showEmptyState).
+   Accepts either plaintext .json paths or encrypted .enc paths. */
 async function loadShippedQuiz(src) {
-  /* Path validation: must match the allow-list regex and contain no traversal */
-  if(!/^quizzes\/[A-Za-z0-9._\/-]+\.json$/.test(src) || src.indexOf('..') !== -1){
+  /* Path guard: allow either plaintext JSON or protected .enc */
+  const isEnc  = /^quizzes\/protected\/[A-Za-z0-9._-]+\.enc$/.test(src);
+  const isJson = /^quizzes\/[A-Za-z0-9._\/-]+\.json$/.test(src) && src.indexOf('..') === -1;
+  if (!isEnc && !isJson) {
     _showQuizError('Invalid quiz path.');
     return false;
   }
+  if (isEnc) return _loadProtectedQuiz(src);
+
+  /* ── Plaintext JSON path (unchanged) ── */
   try{
     const r = await fetch(src + '?v=' + Date.now());
     if(!r.ok) throw new Error('HTTP ' + r.status);
@@ -1239,6 +1302,66 @@ async function loadShippedQuiz(src) {
     return true;
   }catch(err){
     _showQuizError('Could not load quiz — ' + (err && err.message ? err.message : 'network error'));
+    return false;
+  }
+}
+
+/* ── Encrypted quiz path (quizzes/protected/*.enc) ───────────────────────────
+   Requires qf_unlock_pw in localStorage. Fetches kdf params from the public
+   manifest, derives the key, fetches+decrypts the quiz, then continues as the
+   normal shipped path. */
+async function _loadProtectedQuiz(src) {
+  const pw = (() => { try { return localStorage.getItem('qf_unlock_pw') || ''; } catch(e) { return ''; } })();
+  if (!pw) {
+    /* Show locked message — do NOT show the quiz chrome */
+    const bl = document.getElementById('body-layout');
+    const qt = document.getElementById('qbar-tools');      if (qt) qt.style.display = 'none';
+    const ec = document.getElementById('exam-controls-dd'); if (ec) ec.style.display = 'none';
+    const ef = document.getElementById('exam-footer');      if (ef) ef.style.display = 'none';
+    const div = document.createElement('div');
+    div.className = 'empty-state';
+    const h2 = document.createElement('h2'); h2.textContent = 'This quiz is locked.';
+    const p  = document.createElement('p');  p.textContent  = 'Return to the library to unlock.';
+    const a  = document.createElement('a');  a.href = 'index.html'; a.textContent = '← Back to library';
+    div.appendChild(h2); div.appendChild(p); div.appendChild(a);
+    if (bl) { bl.innerHTML = ''; bl.appendChild(div); }
+    return false;
+  }
+  try {
+    /* Fetch public manifest to get kdf params */
+    const mr = await fetch('quizzes/manifest.json?v=' + Date.now());
+    if (!mr.ok) throw new Error('manifest HTTP ' + mr.status);
+    const mdata = await mr.json();
+    if (!mdata.protected || !mdata.protected.kdf || !mdata.protected.kdf.salt)
+      throw new Error('public manifest missing protected kdf params');
+    const { salt } = mdata.protected.kdf;
+
+    const key = await _qfeDeriveKey(pw, salt, ['decrypt']);
+
+    /* Fetch + decrypt quiz */
+    const r = await fetch(src + '?v=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const plain = await _qfeDecrypt(await r.arrayBuffer(), key);
+    const data  = JSON.parse(new TextDecoder().decode(plain));
+    if (!data || !Array.isArray(data.questions) || !data.questions.length)
+      throw new Error('invalid quiz JSON — missing questions array');
+
+    _isShipped       = true;
+    _isProtectedQuiz = true;
+    _protectedQuizKey = key;
+    _shippedQuizId   = (typeof data.id === 'string' && data.id) ? data.id : null;
+    _quizRevision    = Number.isInteger(data.revision) ? data.revision : null;
+    _quizTitle       = (typeof data.title === 'string' && data.title) ? data.title : 'Quiz';
+    _quizSubtitle    = (typeof data.subtitle === 'string') ? data.subtitle : '';
+    questions = data.questions.map(q => ({
+      text: q.text,
+      options: Array.isArray(q.options) ? q.options.slice() : [],
+      correct: q.correct,
+      explanation: _composeExplanation(q)
+    }));
+    return true;
+  } catch(err) {
+    _showQuizError('Could not load quiz — ' + (err && err.message ? err.message : 'decrypt failed'));
     return false;
   }
 }
@@ -1365,7 +1488,9 @@ function render() {
   }
 
   // Question text (sanitized before innerHTML)
-  document.getElementById('question-text').innerHTML = sanitizeHtml(q.text, _isShipped ? 'shipped' : 'pasted');
+  const _qtEl = document.getElementById('question-text');
+  _qtEl.innerHTML = sanitizeHtml(q.text, _isShipped ? 'shipped' : 'pasted');
+  if (_isProtectedQuiz) _postProcessMedia(_qtEl); /* fire-and-forget: decrypts media async */
 
   // Answers range label (examsoft only; CSS hides it in ledger)
   const arDiv = document.getElementById('answers-range');
@@ -1462,7 +1587,9 @@ function render() {
   // Explanation
   const expBox = document.getElementById('explanation-box');
   if (showFeedback) {
-    document.getElementById('exp-text').innerHTML = sanitizeHtml(q.explanation, _isShipped ? 'shipped' : 'pasted');
+    const _etEl = document.getElementById('exp-text');
+    _etEl.innerHTML = sanitizeHtml(q.explanation, _isShipped ? 'shipped' : 'pasted');
+    if (_isProtectedQuiz) _postProcessMedia(_etEl); /* fire-and-forget */
     expBox.classList.add('visible');
   } else {
     expBox.classList.remove('visible');

@@ -1,182 +1,27 @@
 {
- "schema_version": 1,
- "generated": "2026-08-30T04:00:00.000Z",
- "sections": [
-  {
-   "id": "week-01",
-   "name": "Week 01",
-   "quizzes": [
+  "schema_version": 1,
+  "generated": "2026-09-03T18:59:23.705Z",
+  "sections": [
     {
-     "id": "cardio-w01-labembryo",
-     "title": "LAB — Embryology of the Cardiovascular System",
-     "subtitle": "Week 01 · LAB · Embryology | 20 questions",
-     "file": "quizzes/Week01/cardio-w01-labembryo.r1.json",
-     "revision": 1,
-     "question_count": 20
-    },
-    {
-     "id": "cardio-w01-labhisto",
-     "title": "LAB — Histology of the Cardiovascular System",
-     "subtitle": "Week 01 · LAB · Histology | 20 questions",
-     "file": "quizzes/Week01/cardio-w01-labhisto.r1.json",
-     "revision": 1,
-     "question_count": 20
-    },
-    {
-     "id": "cardio-w01-lec01",
-     "title": "Lec 01 — Anatomy of the Heart",
-     "subtitle": "Week 01 · Lec 01 · Anatomy of the Heart | 20 questions",
-     "file": "quizzes/Week01/cardio-w01-lec01.r3.json",
-     "revision": 3,
-     "question_count": 20
-    },
-    {
-     "id": "cardio-w01-lec02",
-     "title": "Lec 02 — Cardiac Contraction",
-     "subtitle": "Week 01 · Lec 02 · Cardiac Contraction | 20 questions",
-     "file": "quizzes/Week01/cardio-w01-lec02.r1.json",
-     "revision": 1,
-     "question_count": 20
-    },
-    {
-     "id": "cardio-w01-lec03",
-     "title": "Lec 03 — Cardiac Function",
-     "subtitle": "Week 01 · Lec 03 · Cardiac Function | 20 questions",
-     "file": "quizzes/Week01/cardio-w01-lec03.r1.json",
-     "revision": 1,
-     "question_count": 20
-    },
-    {
-     "id": "cardio-w01-lec04",
-     "title": "Lec 04 — Hemodynamics",
-     "subtitle": "Week 01 · Lec 04 · Hemodynamics | 20 questions",
-     "file": "quizzes/Week01/cardio-w01-lec04.r1.json",
-     "revision": 1,
-     "question_count": 20
-    },
-    {
-     "id": "cardio-w01-lec05",
-     "title": "Lec 05 — Mitral Valve Disease",
-     "subtitle": "Week 01 · Lec 05 · Mitral Valve Disease | 19 questions",
-     "file": "quizzes/Week01/cardio-w01-lec05.r1.json",
-     "revision": 1,
-     "question_count": 19
-    },
-    {
-     "id": "cardio-w01-lec06",
-     "title": "Lec 06 — Aortic Valve Disease",
-     "subtitle": "Week 01 · Lec 06 · Aortic Valve Disease | 20 questions",
-     "file": "quizzes/Week01/cardio-w01-lec06.r1.json",
-     "revision": 1,
-     "question_count": 20
+      "id": "demo",
+      "name": "Demo",
+      "quizzes": [
+        {
+          "id": "qf-demo-sample",
+          "title": "Sample Quiz - Human Body Basics",
+          "subtitle": "Demo | How QuizForge works | 10 questions",
+          "file": "quizzes/Demo/qf-demo-sample.r1.json",
+          "revision": 1,
+          "question_count": 10
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "week-02",
-   "name": "Week 02",
-   "quizzes": [
-    {
-     "id": "cardio-w02-labecg",
-     "title": "LAB — ECG Interactive Session",
-     "subtitle": "Week 02 · LAB · ECG Interactive Session | 18 questions",
-     "file": "quizzes/Week02/cardio-w02-labecg.r1.json",
-     "revision": 1,
-     "question_count": 18
-    },
-    {
-     "id": "cardio-w02-lec07",
-     "title": "Lec 07 — Cardiac Cellular Electrophysiology",
-     "subtitle": "Week 02 · Lec 07 · Cardiac Cellular Electrophysiology | 18 questions",
-     "file": "quizzes/Week02/cardio-w02-lec07.r1.json",
-     "revision": 1,
-     "question_count": 18
-    },
-    {
-     "id": "cardio-w02-lec08",
-     "title": "Lec 08 — Cardiac Conduction",
-     "subtitle": "Week 02 · Lec 08 · Cardiac Conduction | 21 questions",
-     "file": "quizzes/Week02/cardio-w02-lec08.r2.json",
-     "revision": 2,
-     "question_count": 21
-    },
-    {
-     "id": "cardio-w02-lec11",
-     "title": "Lec 11 — Pharmacology of Cardiac Rhythm",
-     "subtitle": "Week 02 · Lec 11 · Pharmacology of Cardiac Rhythm | 20 questions",
-     "file": "quizzes/Week02/cardio-w02-lec11.r1.json",
-     "revision": 1,
-     "question_count": 20
-    },
-    {
-     "id": "cardio-w02-lec12",
-     "title": "Lec 12 — ECG Review",
-     "subtitle": "Week 02 · Lec 12 · ECG Review | 16 questions",
-     "file": "quizzes/Week02/cardio-w02-lec12.r1.json",
-     "revision": 1,
-     "question_count": 16
+  ],
+  "protected": {
+    "manifest": "quizzes/protected/manifest.enc",
+    "kdf": {
+      "salt": "C+tSyoDsYyWC6xEb/JgTOw==",
+      "iterations": 200000
     }
-   ]
-  },
-  {
-   "id": "week-03",
-   "name": "Week 03",
-   "quizzes": [
-    {
-     "id": "cardio-w03-lec13",
-     "title": "Lec 13 — Epidemiology and Risk Factors for Coronary Disease",
-     "subtitle": "Week 03 · Lec 13 · Epidemiology & Risk Factors | 20 questions",
-     "file": "quizzes/Week03/cardio-w03-lec13.r1.json",
-     "revision": 1,
-     "question_count": 20
-    },
-    {
-     "id": "cardio-w03-lec14",
-     "title": "Lec 14 — Atherosclerosis",
-     "subtitle": "Week 03 · Lec 14 · Atherosclerosis | 19 questions",
-     "file": "quizzes/Week03/cardio-w03-lec14.r2.json",
-     "revision": 2,
-     "question_count": 19
-    },
-    {
-     "id": "cardio-w03-lec15",
-     "title": "Lec 15 — Coronary Circulation & Myocardial Ischemia",
-     "subtitle": "Week 03 · Lec 15 · Coronary Circulation & Myocardial Ischemia | 20 questions",
-     "file": "quizzes/Week03/cardio-w03-lec15.r1.json",
-     "revision": 1,
-     "question_count": 20
-    },
-    {
-     "id": "cardio-w03-labsupmed",
-     "title": "LAB — Superior Mediastinum",
-     "subtitle": "Week 03 · LAB Superior Mediastinum | 16 questions",
-     "file": "quizzes/Week03/cardio-w03-labsupmed.r1.json",
-     "revision": 1,
-     "question_count": 16
-    },
-    {
-     "id": "cardio-w03-lec16",
-     "title": "Lec 16 — Myocardial Infarction",
-     "subtitle": "Week 03 · Lec 16 · Myocardial Infarction | 18 questions",
-     "file": "quizzes/Week03/cardio-w03-lec16.r1.json",
-     "revision": 1,
-     "question_count": 18
-    }
-   ]
-  },
-  {
-   "id": "demo",
-   "name": "Demo",
-   "quizzes": [
-    {
-     "id": "qf-demo-sample",
-     "title": "Sample Quiz - Human Body Basics",
-     "subtitle": "Demo | How QuizForge works | 10 questions",
-     "file": "quizzes/Demo/qf-demo-sample.r1.json",
-     "revision": 1,
-     "question_count": 10
-    }
-   ]
   }
- ]
 }
